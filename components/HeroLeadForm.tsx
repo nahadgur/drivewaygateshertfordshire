@@ -18,7 +18,7 @@ const GATE_TYPES = [
 ];
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbzO3JHqZBfqP95SeuyFCwFWDfzxShx7n-jcS3M4aqc-iY-h5zYMHQMZKrDBzuehEGlB/exec';
+  'https://script.google.com/macros/s/AKfycbzPwtFtpK_ChLARoqlehndwwD_Gd6EMkiEN-NUvjp70D4753vkmnmLq5Ei9MvC__x6e/exec';
 
 export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
