@@ -161,44 +161,38 @@ export default function HomePage() {
                   icon: <Shield className="w-6 h-6" />,
                   title: 'St Albans and Harpenden Conservation Areas',
                   desc: 'Victorian and Edwardian houses with established streetscapes. Wrought iron or fabricated steel matching existing boundary ironwork, underground motors concealed below the post, and designs that planning officers accept without negotiation.',
-                  link: '/services/metal-driveway-gates/',
                 },
                 {
                   icon: <TreePine className="w-6 h-6" />,
                   title: 'Chilterns AONB Cottages and Farmhouses',
                   desc: 'Tring, Berkhamsted, Aldbury, and the surrounding villages. European oak or iroko in simple profiles that respect the landscape. Close-boarded for privacy, open-framed where the boundary character calls for it.',
-                  link: '/services/wooden-driveway-gates/',
                 },
                 {
                   icon: <Star className="w-6 h-6" />,
                   title: 'Radlett, Bushey, and the Premium South',
                   desc: 'High-specification residential properties close to the London border. Bespoke wrought iron, underground motors, HD video intercom with recording, proximity fob access. The full entrance treatment.',
-                  link: '/services/automated-gate-systems/',
                 },
                 {
                   icon: <Zap className="w-6 h-6" />,
                   title: 'Welwyn, Hatfield, and Modern Builds',
                   desc: 'Garden city architecture and contemporary estates. Aluminium sliding or powder-coated steel in anthracite. Practical, automated, low-maintenance, and suited to the clean lines of newer construction.',
-                  link: '/services/electric-sliding-gates/',
                 },
                 {
                   icon: <Cloud className="w-6 h-6" />,
                   title: 'Rural East Hertfordshire',
                   desc: 'Farmhouses, converted barns, and period properties across Hertford, Ware, Bishops Stortford, and Much Hadham. Bespoke hardwood and traditional ironwork, specified for clay soil foundations and exposed positions.',
-                  link: '/services/wooden-driveway-gates/',
                 },
                 {
                   icon: <Award className="w-6 h-6" />,
                   title: 'North Herts Market Towns',
                   desc: 'Hitchin, Letchworth, Baldock, and Royston. Period town houses and village properties with conservation area and Green Belt considerations. Material and design chosen to sit within the established boundary character.',
-                  link: '/services/electric-swing-gates/',
                 },
               ].map((item, i) => (
-                <Link key={i} href={item.link} className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg hover:border-brand-200 transition-all">
+                <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                   <div className="bg-brand-100 p-3 rounded-xl text-brand-600 w-fit mb-4">{item.icon}</div>
-                  <h3 className="font-display font-bold text-gray-900 mb-2 group-hover:text-brand-600 transition-colors">{item.title}</h3>
+                  <h3 className="font-display font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
