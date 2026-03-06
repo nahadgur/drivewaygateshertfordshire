@@ -107,7 +107,7 @@ export default function HomePage() {
         <Hero
           title="Driveway Gates Hertfordshire: Vetted Specialists, Honest Quotes"
           subtitle="From wrought iron in the St Albans conservation area to hardwood in the Chilterns AONB. We connect Hertfordshire homeowners with gate installers who know the county. Free surveys, no obligation."
-          image="/images/gates/gate-wrought-iron-open-manor-brick-pillars.png"
+          image="/images/gates/herts-grand-iron-gates-brick-piers-tree-lined-drive.png"
           onOpenModal={() => setIsModalOpen(true)}
         />
 
@@ -138,11 +138,11 @@ export default function HomePage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/gates/gate-wrought-iron-open-stone-pillars-lanterns-estate.png" alt="Wrought iron entrance gates with stone pillars and lanterns on a Hertfordshire estate property" className="rounded-2xl object-cover w-full h-48 col-span-2" loading="lazy" />
+                <img src="/images/gates/herts-ornate-iron-entrance-pillars-lanterns-driveway.png" alt="Wrought iron entrance gates with stone pillars and lanterns on a Hertfordshire estate property" className="rounded-2xl object-cover w-full h-48 col-span-2" loading="lazy" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/gates/gate-aluminium-sliding-horizontal-modern-new-build.png" alt="Aluminium sliding gate on a contemporary Hertfordshire new-build property" className="rounded-2xl object-cover w-full h-36" loading="lazy" />
+                <img src="/images/gates/herts-contemporary-aluminium-slider-dark-finish.png" alt="Aluminium sliding gate on a contemporary Hertfordshire new-build property" className="rounded-2xl object-cover w-full h-36" loading="lazy" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/gates/gate-wooden-painted-cream-hertfordshire-countryside.png" alt="Hardwood driveway gate on a Hertfordshire countryside property" className="rounded-2xl object-cover w-full h-36" loading="lazy" />
+                <img src="/images/gates/herts-cream-hardwood-swing-rural-cottage-entrance.png" alt="Hardwood driveway gate on a Hertfordshire countryside property" className="rounded-2xl object-cover w-full h-36" loading="lazy" />
               </div>
             </div>
           </div>
