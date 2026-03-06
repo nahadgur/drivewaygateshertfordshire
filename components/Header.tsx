@@ -30,7 +30,7 @@ export function Header({ onOpenModal }: HeaderProps) {
       <div className="bg-brand-900 text-brand-50 py-2 px-4 text-sm hidden md:block">
         <div className="container-width flex justify-between items-center">
           <span className="flex items-center gap-2">
-            <MapPin className="w-4 h-4" /> Vetted Driveway Gate Installers Across Hertfordshire
+            <MapPin className="w-4 h-4" /> Specialist Driveway Gate Installers Covering All of Hertfordshire
           </span>
         </div>
       </div>

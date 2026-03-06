@@ -32,8 +32,8 @@ export default function LocationIndexPage() {
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
         <Hero
-          title="Find a Gate Installer Near You in Hertfordshire"
-          subtitle="75 Hertfordshire towns from St Albans to Hitchin, Watford to Tring. Search your area below and get matched with vetted local specialists."
+          title="Driveway Gate Installers by Hertfordshire Location"
+          subtitle="75 towns covered across the county, from the Chilterns in the west to Bishops Stortford in the east. Search for your area and see which specialists cover it."
           image="/images/gates/gate-aerial-wrought-iron-closed-topiary-gravel-circle.png"
           onOpenModal={() => setIsModalOpen(true)}
         />

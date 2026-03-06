@@ -19,8 +19,8 @@ export default function ServicesIndexPage() {
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
         <Hero
-          title="Driveway Gate Services Across Hertfordshire"
-          subtitle="From bespoke hardwood for rural Hertfordshire farmhouses to weather-resistant aluminium for the more exposed eastern Hertfordshire countryside. Sliding, swing, automated, and manual. Pick your gate type below and find a vetted Hertfordshire installer."
+          title="Hertfordshire Gate Installation Services"
+          subtitle="Six categories of specialist gate work, each handled by installers who do that type of project as their primary trade. Select the service that matches your requirements and get connected with vetted Hertfordshire professionals."
           image="/images/gates/gate-aluminium-sliding-horizontal-modern-new-build.png"
           showCta={false}
           showTrust={false}

@@ -16,48 +16,48 @@ import { FAQ } from '@/components/FAQ';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { siteConfig } from '@/data/site';
 
-const topAreas = ['St Albans', 'Harpenden', 'Hertford', 'Welwyn Garden City', 'Radlett', 'Watford', 'Hitchin', 'Berkhamsted', 'Bishops Stortford', 'Potters Bar', 'Ware', 'Tring'];
+const topAreas = ['St Albans', 'Harpenden', 'Hertford', 'Radlett', 'Berkhamsted', 'Welwyn Garden City', 'Hitchin', 'Watford', 'Bishops Stortford', 'Potters Bar', 'Ware', 'Tring'];
 
 const homepageFaqs = [
   {
-    question: 'What do driveway gates cost to install in Hertfordshire in 2026?',
-    answer: 'The Hertfordshire market ranges from around \u00a32,800 for a manual hardwood swing gate up to \u00a312,500 or more for a fully automated sliding or wrought iron system. Electric swing gates typically fall between \u00a33,800 and \u00a311,500. The West Hertfordshire commuter corridor around St Albans and Harpenden sits at the higher end of these ranges, while North Hertfordshire and rural East Hertfordshire are closer to the national average. Exposed rural Hertfordshire properties may pay a premium for weather-resistant surface treatments. The only way to get a figure you can rely on is a site survey, which every installer in our network provides free of charge.',
+    question: 'What is the price range for driveway gate installation in Hertfordshire in 2026',
+    answer: 'Hertfordshire pricing reflects the strong commuter market and high property values across much of the county. Manual hardwood gates start at approximately £3,000 installed. Electric swing gates range from £4,000 to £12,000 depending on material and motor type. Electric sliding systems run from £5,000 to £13,000. Bespoke wrought iron with underground motors and full access management, which is a common specification in the St Albans, Harpenden, and Radlett belt, regularly exceeds £12,000. The figures vary significantly between west and north Hertfordshire, so a site survey is the only route to a number you can rely on.',
   },
   {
-    question: 'Which Hertfordshire properties need planning permission for gates?',
-    answer: 'Standard residential gates under 2 metres that open inward are covered by permitted development in most cases. The limit drops to 1 metre if the gate fronts a classified road. Where it gets more complex in Hertfordshire is the overlap of designations: the Chilterns AONB runs from the Buckinghamshire border to Hitchin, the Green Belt covers the southern Weald, Green Belt applies along the M25 corridor, and conservation areas exist in Hertford, Ware, Tring, Sandwich, and dozens of villages. Listed buildings need separate consent regardless. Hertfordshire has ten district councils, each with its own local plan policies on boundary treatments. Our installers know which authority covers your postcode and what the position is likely to be.',
+    question: 'Does the Green Belt designation in Hertfordshire affect whether I can install gates',
+    answer: 'Green Belt covers the majority of Hertfordshire, making it one of the most heavily designated counties in England. Standard driveway gates generally remain within permitted development under Green Belt rules, provided they are under 2 metres and open inward. However, specific Article 4 Directions can remove permitted development rights in certain areas. The Chilterns AONB in western Hertfordshire adds a further layer. Conservation areas in St Albans, Hitchin, Hertford, Berkhamsted, and dozens of villages carry their own requirements. Listed buildings need separate consent. With ten district and borough councils, each with their own local plan policies, confirming the planning position before you proceed is essential. Our installers do this at the site survey.',
   },
   {
-    question: 'Do gates near the more exposed parts of Hertfordshire need a different specification?',
-    answer: 'Yes. Properties in the more exposed parts of Hertfordshire face harsher weather conditions. Heavy clay soils, persistent dampness, and greater wind exposure in open countryside can affect both foundation stability and finish longevity. The correct specification for exposed Hertfordshire sites is hot-dip galvanising with a quality polyester powder coat on any steel, and hardwood species such as iroko or Accoya rather than treated softwood. Foundation depth should account for the clay soils common across much of the county, which move seasonally with moisture changes. An installer experienced in rural Hertfordshire work will specify appropriately for your site conditions at the survey.',
+    question: 'What type of gate works best on the different property styles found across Hertfordshire',
+    answer: 'Hertfordshire has genuine variety. The Victorian and Edwardian housing across St Albans, Harpenden, and Hitchin pairs naturally with wrought iron or fabricated steel in heritage profiles. Chilterns AONB properties around Berkhamsted, Tring, and Aldbury suit hardwood in oak or iroko that respects the landscape character. Modern builds in Welwyn Garden City, Hatfield, and the newer parts of Stevenage work well with clean-lined aluminium or anthracite steel. Rural farmhouses and converted barns across the east of the county call for timber or traditional ironwork. Your installer will recommend the right material for your property and its planning context.',
   },
   {
-    question: 'How long does a typical Hertfordshire gate installation take from start to finish?',
-    answer: 'The on-site work takes 2 to 4 days for a standard residential project. Groundwork goes in first and needs curing time before the gate is hung. The gate, motor, safety sensors, and access control follow. If your gates are being fabricated to a bespoke design, which is standard for wrought iron and hardwood in Hertfordshire, the workshop lead time adds 3 to 6 weeks before the installation date. Your installer will confirm a full programme at the survey stage, covering both the manufacturing and installation timeline.',
+    question: 'How quickly can a gate installation be completed once I confirm the order',
+    answer: 'The on-site work takes 2 to 4 days on a typical project. If the gates are off-the-shelf or pre-made, installation can start within a week or two of confirmation. Bespoke fabrication, which is the norm for wrought iron, hardwood, and any custom metal design, adds a workshop lead time of 3 to 6 weeks before the installation date. Your installer provides a clear programme covering manufacturing, delivery, and installation at the quotation stage so you know the full timeline before committing.',
   },
   {
-    question: 'What type of gate suits a period Hertfordshire property like an period farmhouse or barn conversion?',
-    answer: 'Hardwood is almost always the right answer for period farmhouses, barn conversions, timber-frame houses, and timber-frame farmhouses across the Hertfordshire Weald. European oak left to weather to silver grey sits naturally alongside the aged timber and local flint and brick found on these buildings. Iroko is a more cost-effective alternative with similar durability. In conservation areas and both AONBs, timber is often the material that raises least resistance from the planning authority. Wrought iron is the appropriate alternative for larger period properties where the entrance scale justifies a more formal treatment. Your installer will advise on which material the local planning context is likely to favour.',
+    question: 'Is relay vehicle theft from driveways a real issue in Hertfordshire',
+    answer: 'In the premium commuter belt around St Albans, Harpenden, Radlett, and Bushey, it is a documented concern. Relay attacks exploit keyless vehicle entry by amplifying the fob signal from inside the house to start the car on the driveway. A closed automated gate puts a physical barrier between the vehicle and the road, adding time and risk to the theft attempt. Combined with video intercom recording every approach and auto-close removing the possibility of the gate being left open accidentally, automated gates are one of the most practical deterrent measures available to Hertfordshire homeowners with high-value vehicles.',
   },
   {
-    question: 'Is vehicle theft from driveways a real concern in Hertfordshire?',
-    answer: 'In parts of the county, yes. The St Albans and Harpenden corridor has a concentration of high-value vehicles on residential driveways, and relay theft, where criminals amplify a keyless fob signal to unlock and start a vehicle without the key, is a documented problem. A closed automated gate between the road and the vehicle forces a second obstacle into the theft chain. Combined with video intercom that records gate activity and auto-close that removes the risk of leaving the gate open by mistake, automated gates are one of the most effective physical deterrents available. Some vehicle insurers offer reduced premiums for properties with electric gates.',
+    question: 'Can I add automation to gates I already have without replacing them',
+    answer: 'Almost always, provided the gates are structurally sound and the posts have decent foundations. Gate automation retrofits are one of the most requested jobs across Hertfordshire, especially in the established residential areas where quality wrought iron or hardwood gates were installed years ago without electric operation. The retrofit adds the motor and access control without disturbing the existing gates. Typical cost is £1,400 to £4,000 depending on motor type and what access features you want. Underground motors are achievable on most retrofit sites where the posts can accommodate the chamber.',
   },
   {
-    question: 'Can my existing manual gates be automated without replacing them?',
-    answer: 'In most cases, yes. If the gates are structurally sound, correctly hung, and the posts sit in adequate foundations, a motor system can be added without disturbing the gates themselves. This is one of the most common projects across Hertfordshire, particularly in West Hertfordshire where existing wrought iron gates are often in excellent condition but manually operated. The typical cost is \u00a31,400 to \u00a33,800 depending on gate weight, motor type, and what access control you add. Underground motors are achievable on most retrofit sites where the post condition allows.',
+    question: 'How exactly does the free installer matching process work',
+    answer: 'You provide your Hertfordshire postcode, the gate type you have in mind, and a rough budget. We identify up to three specialist installers from our vetted network whose experience matches your project type and location. Each one contacts you directly to arrange a site visit at a time that works for you. After the survey, each provides a detailed written quote. You compare them side by side and decide whether to proceed, with no time pressure and no obligation. The service is free throughout because we receive a referral contribution from the installer after a completed project.',
   },
   {
-    question: 'What does the free matching service actually involve?',
-    answer: 'You tell us your Hertfordshire postcode, the type of gate you want, and a rough budget. We identify up to three specialist gate installers from our vetted network whose experience matches your project and location. Each one contacts you directly to arrange a free site survey at a time that works for you. After the surveys you receive a detailed written quote from each installer. You compare them at your own pace and decide whether to proceed. There is no fee at any stage and no obligation. We receive a referral contribution from the installer after a completed project, which does not affect the price you pay.',
+    question: 'What separates a good gate installer from an average one in Hertfordshire',
+    answer: 'Three things. First, specialisation. A firm that installs gates as its primary trade every week will produce better foundations, better motor specification, and better safety commissioning than a general builder who fits a gate once a quarter. Second, local knowledge. An installer who understands Hertfordshire will know the Chilterns AONB planning sensitivities, the Green Belt rules, the clay soil behaviour that affects foundation depth, and the ten district council planning frameworks before they arrive. Third, accountability. Written warranties, documented BS EN 12453 commissioning, and a business that will still exist when you need a service in year three.',
   },
   {
-    question: 'How do I know the installers in your Hertfordshire network are any good?',
-    answer: 'Every installer is assessed before they receive a single referral. We require evidence of at least 50 completed residential gate installations, current public liability insurance, and a standard practice of providing separate written warranties for the gate structure and the automation system. We monitor customer feedback on an ongoing basis. Installers whose quality or responsiveness drops below our threshold are removed. Hertfordshire-specific knowledge matters too: we only refer firms that understand the county, including both AONBs, the conservation area landscape, the Green Belt rules, and the ten district council planning frameworks.',
+    question: 'What safety systems are required on electric gates in the UK',
+    answer: 'BS EN 12453 mandates photocell beams spanning the full gate opening, pressure-sensitive safety edges on the leading face of each gate leaf, auto-reverse that stops and reverses the gate when it meets resistance, and force limits measured with calibrated equipment at commissioning. Every automated gate in the UK must meet this standard before handover. A written commissioning record documenting the safety test results should be provided on the day. All installers in our Hertfordshire network commission to BS EN 12453 as a non-negotiable standard.',
   },
   {
-    question: 'What safety standards apply to electric gates in the UK?',
-    answer: 'BS EN 12453 is the safety standard that every automated gate installation in the UK must meet. It requires photocell beams across the full gate opening, safety edges on the leading face that stop and reverse the gate on contact, force limits tested with calibrated equipment, and auto-reverse that triggers if the motor detects resistance. A competent installer commissions and tests every safety system before handover and provides a written commissioning record documenting the results. Every installer in our Hertfordshire network commissions to this standard on every project without exception.',
+    question: 'What ongoing maintenance do automated driveway gates require',
+    answer: 'An annual professional service is the minimum. This covers motor lubrication, gearbox and drive mechanism inspection, hinge assessment, safety sensor recalibration and testing, battery backup load test, and a structural check of the gate and posts. Hardwood gates also need re-oiling every 18 to 24 months. Powder-coated metal gates need nothing beyond an occasional wash. The annual service costs £130 to £220 in Hertfordshire and is consistently cheaper than waiting for a failure and paying for an emergency callout plus repair.',
   },
 ];
 
@@ -70,7 +70,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'LocalBusiness',
+          '@type': 'HomeAndConstructionBusiness',
           '@id': siteConfig.url,
           name: siteConfig.name,
           description: siteConfig.description,
@@ -105,37 +105,155 @@ export default function HomePage() {
       <main className="flex-grow">
 
         <Hero
-          title="Driveway Gates Hertfordshire: Vetted Installers, Free Site Surveys"
-          subtitle="Connecting Hertfordshire homeowners with specialist gate installers across the county. From St Albans to Hertford, Watford to Hitchin. Three free quotes, no obligation, no cost to you."
+          title="Driveway Gates Hertfordshire: Vetted Specialists, Honest Quotes"
+          subtitle="From wrought iron in the St Albans conservation area to hardwood in the Chilterns AONB. We connect Hertfordshire homeowners with gate installers who know the county. Free surveys, no obligation."
           image="/images/gates/gate-wrought-iron-open-manor-brick-pillars.png"
           onOpenModal={() => setIsModalOpen(true)}
         />
 
         <TrustBadges />
 
-        {/* How It Works - moved up for conversion */}
+        {/* Problem framing */}
+        <section className="section-padding bg-white">
+          <div className="container-width">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-6">
+                  Hertfordshire Is Almost Entirely Green Belt. Your Installer Needs to Know That.
+                </h2>
+                <div className="space-y-5 text-gray-600 leading-relaxed">
+                  <p>
+                    More of Hertfordshire is covered by Green Belt than almost any other English county. Add the Chilterns AONB across the western portion, conservation areas in every market town from St Albans to Hitchin, and a substantial stock of listed buildings in the older settlements, and you have a planning environment where a gate project is rarely just an engineering question. The installer who turns up and starts digging without checking the designation at postcode level is the installer who creates problems.
+                  </p>
+                  <p>
+                    The specification challenges go beyond planning. Hertfordshire sits on a patchwork of clay and chalk subsoils that behave differently under post foundations. The Chiltern escarpment creates steep driveways in the west. Period properties across the commuter towns demand materials and designs that suit the architecture, not generic gates that could be anywhere. And the high-value residential belt along the M1 and A1 corridors expects a standard of automation, access control, and finish that general building firms are not equipped to deliver.
+                  </p>
+                  <p>
+                    Every installer in our network has gate installation as their core trade, a verified record of at least 50 completed residential projects, and the Hertfordshire-specific knowledge to handle the county. We match you with up to three who cover your area and have the experience your project needs. Site surveys are free, quotes are free, and you decide on your own terms.
+                  </p>
+                </div>
+                <button onClick={() => setIsModalOpen(true)} className="btn-primary mt-8">
+                  Get Your Free Quotes
+                </button>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/gates/gate-wrought-iron-open-stone-pillars-lanterns-estate.png" alt="Wrought iron entrance gates with stone pillars and lanterns on a Hertfordshire estate property" className="rounded-2xl object-cover w-full h-48 col-span-2" loading="lazy" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/gates/gate-aluminium-sliding-horizontal-modern-new-build.png" alt="Aluminium sliding gate on a contemporary Hertfordshire new-build property" className="rounded-2xl object-cover w-full h-36" loading="lazy" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/gates/gate-wooden-painted-cream-hertfordshire-countryside.png" alt="Hardwood driveway gate on a Hertfordshire countryside property" className="rounded-2xl object-cover w-full h-36" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Property types - unique to Herts */}
+        <section className="section-padding bg-gray-50">
+          <div className="container-width">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Different Properties, Different Gate Requirements</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">Hertfordshire runs from Chilterns countryside to London commuter belt. The right gate for each setting depends on the building, the boundary, and the planning designation.</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: <Shield className="w-6 h-6" />,
+                  title: 'St Albans and Harpenden Conservation Areas',
+                  desc: 'Victorian and Edwardian houses with established streetscapes. Wrought iron or fabricated steel matching existing boundary ironwork, underground motors concealed below the post, and designs that planning officers accept without negotiation.',
+                  link: '/services/metal-driveway-gates/',
+                },
+                {
+                  icon: <TreePine className="w-6 h-6" />,
+                  title: 'Chilterns AONB Cottages and Farmhouses',
+                  desc: 'Tring, Berkhamsted, Aldbury, and the surrounding villages. European oak or iroko in simple profiles that respect the landscape. Close-boarded for privacy, open-framed where the boundary character calls for it.',
+                  link: '/services/wooden-driveway-gates/',
+                },
+                {
+                  icon: <Star className="w-6 h-6" />,
+                  title: 'Radlett, Bushey, and the Premium South',
+                  desc: 'High-specification residential properties close to the London border. Bespoke wrought iron, underground motors, HD video intercom with recording, proximity fob access. The full entrance treatment.',
+                  link: '/services/automated-gate-systems/',
+                },
+                {
+                  icon: <Zap className="w-6 h-6" />,
+                  title: 'Welwyn, Hatfield, and Modern Builds',
+                  desc: 'Garden city architecture and contemporary estates. Aluminium sliding or powder-coated steel in anthracite. Practical, automated, low-maintenance, and suited to the clean lines of newer construction.',
+                  link: '/services/electric-sliding-gates/',
+                },
+                {
+                  icon: <Cloud className="w-6 h-6" />,
+                  title: 'Rural East Hertfordshire',
+                  desc: 'Farmhouses, converted barns, and period properties across Hertford, Ware, Bishops Stortford, and Much Hadham. Bespoke hardwood and traditional ironwork, specified for clay soil foundations and exposed positions.',
+                  link: '/services/wooden-driveway-gates/',
+                },
+                {
+                  icon: <Award className="w-6 h-6" />,
+                  title: 'North Herts Market Towns',
+                  desc: 'Hitchin, Letchworth, Baldock, and Royston. Period town houses and village properties with conservation area and Green Belt considerations. Material and design chosen to sit within the established boundary character.',
+                  link: '/services/electric-swing-gates/',
+                },
+              ].map((item, i) => (
+                <Link key={i} href={item.link} className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg hover:border-brand-200 transition-all">
+                  <div className="bg-brand-100 p-3 rounded-xl text-brand-600 w-fit mb-4">{item.icon}</div>
+                  <h3 className="font-display font-bold text-gray-900 mb-2 group-hover:text-brand-600 transition-colors">{item.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Gate types */}
         <section className="section-padding bg-white">
           <div className="container-width">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Three Steps to Your Hertfordshire Gate Installer</h2>
-              <p className="text-gray-600 max-w-xl mx-auto">No searching, no cold calls, no sales pressure. Tell us what you need and we handle the rest.</p>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Sliding, Swing, Hardwood, Metal, Automation, Repair</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">Six service categories. Each covered by installers who do that type of work as their primary trade. Pick the one that matches your project.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map(service => (
+                <Link key={service.id} href={`/services/${service.slug}/`} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <div className="h-44 overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={service.image} alt={`${service.title} installed on a Hertfordshire residential property`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-display font-bold text-gray-900 group-hover:text-brand-600 mb-2">{service.title}</h3>
+                    <p className="text-sm text-gray-500 mb-4 line-clamp-2">{service.description}</p>
+                    <span className="text-brand-600 font-medium text-sm flex items-center">
+                      View Hertfordshire installers <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How it works */}
+        <section className="section-padding bg-gray-50">
+          <div className="container-width">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">From Enquiry to Quote in Three Simple Steps</h2>
+              <p className="text-gray-600 max-w-xl mx-auto">No trawling through directories. No cold calls. No one trying to close you on the first visit. Just a sensible process that puts you in control.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
                   step: '1',
-                  title: 'Describe Your Project',
-                  desc: 'Your Hertfordshire postcode, the type of gate, and a rough budget. Takes under two minutes. We use this to identify the right specialists for your site, your property type, and your specification.',
+                  title: 'Share Your Requirements',
+                  desc: 'Your Hertfordshire postcode, the type of gate, and a ballpark budget. Takes under two minutes. We use this to identify which specialists in our network are the right match for your site and specification.',
                 },
                 {
                   step: '2',
-                  title: 'Meet Your Matched Installers',
-                  desc: 'Up to three vetted gate specialists contact you to arrange free site visits. They assess the driveway, check planning if relevant, and provide detailed written quotes with no obligation attached.',
+                  title: 'Receive Your Matched Installers',
+                  desc: 'Up to three vetted gate specialists get in touch to arrange free site visits. They assess the driveway, confirm any planning considerations, and each provide a fully itemised written quote.',
                 },
                 {
                   step: '3',
-                  title: 'Compare and Choose',
-                  desc: 'Three independent quotes, each based on a physical survey of your property. Compare on your terms. Proceed when you are ready, or not at all. There is no fee to you at any stage of this process.',
+                  title: 'Compare Quotes at Your Own Pace',
+                  desc: 'Three independent quotes, each based on an actual site survey. Compare them when you are ready. Proceed with one, or none. No time pressure, no follow-up sales calls from us.',
                 },
               ].map(item => (
                 <div key={item.step} className="text-center">
@@ -149,140 +267,38 @@ export default function HomePage() {
               <button onClick={() => setIsModalOpen(true)} className="btn-primary text-lg !px-8 !py-4">
                 Start Your Free Enquiry
               </button>
-              <p className="text-gray-500 text-sm mt-3">Free for homeowners. No fees. No obligation.</p>
+              <p className="text-gray-500 text-sm mt-3">Completely free. No strings. No obligation.</p>
             </div>
           </div>
         </section>
 
-        {/* Why Specialist Matters */}
-        <section className="section-padding bg-gray-50">
-          <div className="container-width">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-6">
-                  Most Hertfordshire Gate Problems Start With the Wrong Installer
-                </h2>
-                <div className="space-y-5 text-gray-600 leading-relaxed">
-                  <p>
-                    A general builder who occasionally installs a gate is not the same thing as a gate specialist. The difference shows in the foundation depth, the motor sizing, the surface treatment specification, and the safety commissioning. It shows in whether the installer knows that a property in the Chilterns AONB faces different planning rules from one in Watford, or that a steel gate half a mile from the Bishops Stortford seafront needs weather-resistant powder coat rather than a standard formulation.
-                  </p>
-                  <p>
-                    Hertfordshire is a county where these details matter more than most. The terrain varies from the chalk ridge of the Chiltern Hills to the clay hills of the Hertfordshire countryside. The planning landscape involves two Areas of Outstanding Natural Beauty, Green Belt along the M25 corridor, conservation areas in every historic town, and ten separate district councils. The property types run from medieval timber-frame houses in Hertford to modern estates in Watford. Getting the specification right for each context is not something a generalist does well.
-                  </p>
-                  <p>
-                    Every installer in our network does gate work as their primary trade, has completed at least 50 residential installations, carries full public liability insurance, and provides written warranties on both the gate and the automation. We match you with up to three who cover your area and have the right experience for your project. You compare their quotes and decide.
-                  </p>
-                </div>
-                <button onClick={() => setIsModalOpen(true)} className="btn-primary mt-8">
-                  Get Your Free Quotes
-                </button>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/gates/gate-wrought-iron-open-stone-pillars-lanterns-estate.png" alt="Wrought iron driveway gates with stone pillars and lanterns on a Hertfordshire estate" className="rounded-2xl object-cover w-full h-48 col-span-2" loading="lazy" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/gates/gate-aluminium-sliding-horizontal-modern-new-build.png" alt="Contemporary aluminium sliding gate on a modern Hertfordshire property" className="rounded-2xl object-cover w-full h-36" loading="lazy" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/gates/gate-wooden-painted-cream-hertfordshire-countryside.png" alt="Painted hardwood gate on a rural Hertfordshire driveway surrounded by countryside" className="rounded-2xl object-cover w-full h-36" loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Gate Types */}
-        <section className="section-padding bg-white">
-          <div className="container-width">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Electric Gates, Wooden Gates, Metal Gates: Hertfordshire Specialists for Each</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">Whether you need a <Link href="/services/electric-sliding-gates/" className="text-brand-600 hover:underline">sliding gate</Link> for a steep Chiltern Hills driveway or a <Link href="/services/wooden-driveway-gates/" className="text-brand-600 hover:underline">hardwood gate</Link> for a rural Hertfordshire farmhouse, we have the right specialist.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map(service => (
-                <Link key={service.id} href={`/services/${service.slug}/`} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="h-44 overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={service.image} alt={`${service.title} installation in Hertfordshire`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-lg font-display font-bold text-gray-900 group-hover:text-brand-600 mb-2">{service.title}</h3>
-                    <p className="text-sm text-gray-500 mb-4 line-clamp-2">{service.description}</p>
-                    <span className="text-brand-600 font-medium text-sm flex items-center">
-                      Find Hertfordshire installers <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Hertfordshire Property Types - unique section */}
-        <section className="section-padding bg-gray-50">
-          <div className="container-width">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Gates for the Garden of England: Every Hertfordshire Property Type</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">Hertfordshire&apos;s residential stock is unusually varied. The right gate specification depends as much on the building&apos;s character as on your personal preference.</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: <TreePine className="w-6 h-6" />,
-                  title: 'Period Farmhouses and Barn Conversions',
-                  desc: 'The rural Hertfordshire landscape between Paddock Wood and Tring is dotted with converted period farmhouses and agricultural barns. European oak or iroko, close-boarded or open-framed to suit the boundary, is the instinctive specification. Our Green Belt installers know what works.',
-                  link: '/services/wooden-driveway-gates/',
-                },
-                {
-                  icon: <Shield className="w-6 h-6" />,
-                  title: 'Victorian and Edwardian Commuter Belt',
-                  desc: 'The period housing stock across St Albans, Harpenden, and Radlett calls for gates with heritage character. Wrought iron or fabricated steel with traditional profiles, on brick piers with underground motors concealed below.',
-                  link: '/services/metal-driveway-gates/',
-                },
-                {
-                  icon: <Cloud className="w-6 h-6" />,
-                  title: 'Rural and Exposed Hertfordshire Properties',
-                  desc: 'Open rural positions across north and east Hertfordshire face greater weather exposure. Correct post foundation depth for clay soils, hot-dip galvanising on all steel, and durable timber species like iroko or Accoya. Our rural installers know these conditions.',
-                  link: '/services/electric-sliding-gates/',
-                },
-                {
-                  icon: <Award className="w-6 h-6" />,
-                  title: 'Hertford Conservation Area',
-                  desc: 'The historic core of Hertford and surrounding villages carry conservation designations that affect boundary treatments. Gate material and design need to respect the street scene. Our Hertford-area installers handle this regularly.',
-                  link: '/services/metal-driveway-gates/',
-                },
-                {
-                  icon: <Zap className="w-6 h-6" />,
-                  title: 'Modern Builds in North Hertfordshire',
-                  desc: 'New-build estates across Watford, Potters Bar, and the Ebbsfleet corridor suit clean-lined aluminium sliding gates or fabricated steel in anthracite. Practical, low-maintenance, and fully automated.',
-                  link: '/services/electric-sliding-gates/',
-                },
-                {
-                  icon: <Star className="w-6 h-6" />,
-                  title: 'Premium West Hertfordshire Estates',
-                  desc: 'St Albans, Shenley, and the Harpenden belt produce some of the highest-specification gate installations in the South East. Hand-forged wrought iron, underground motors, video intercom, and proximity access.',
-                  link: '/services/automated-gate-systems/',
-                },
-              ].map((item, i) => (
-                <Link key={i} href={item.link} className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg hover:border-brand-200 transition-all">
-                  <div className="bg-brand-100 p-3 rounded-xl text-brand-600 w-fit mb-4">{item.icon}</div>
-                  <h3 className="font-display font-bold text-gray-900 mb-2 group-hover:text-brand-600 transition-colors">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Hertfordshire Planning and Geography */}
+        {/* Regional context */}
         <section className="section-padding bg-white">
           <div className="container-width">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-6">
+                  Chilterns AONB. Ten Councils. Green Belt Everywhere. That Takes Local Knowledge.
+                </h2>
+                <div className="space-y-5 text-gray-600 leading-relaxed">
+                  <p>
+                    The Chilterns AONB covers the western edge of the county from Tring and Berkhamsted through to parts of the St Albans district. Green Belt applies to the overwhelming majority of Hertfordshire outside the main urban areas. The M25, M1, and A1(M) corridors all pass through heavily designated land. Conservation areas exist in St Albans, Hertford, Hitchin, Ware, Berkhamsted, and in villages across every district.
+                  </p>
+                  <p>
+                    Ten separate district and borough councils administer planning across Hertfordshire, each with its own local plan and supplementary guidance on boundary treatments. An installer who works regularly in Hertfordshire will know which council covers a given postcode, what its current stance on gates in the Green Belt is, and whether a pre-application enquiry is worth the effort or not.
+                  </p>
+                  <p>
+                    The physical landscape creates its own installation demands. The chalk hills of the Chilterns produce driveways with gradients that need articulated hinges or cantilever sliding systems. Central and eastern Hertfordshire sits on heavy clay that swells in winter and shrinks in dry summers, directly affecting foundation specification. Our installers work across these conditions and adjust their approach accordingly.
+                  </p>
+                </div>
+              </div>
               <div className="space-y-4">
                 {[
-                  { label: 'West Hertfordshire', towns: 'St Albans, Shenley, Bovingdon, Harpenden', detail: 'London commuter wealth, Chilterns AONB and Green Belt overlap, premium wrought iron and concealed automation' },
-                  { label: 'The Weald', towns: 'Berkhamsted, Much Hadham, Tring, Hawkhurst', detail: 'Green Belt, period farmhouses, farmsteads, barn conversions. Bespoke hardwood the dominant specification' },
-                  { label: 'North Hertfordshire', towns: 'Watford, Potters Bar, Borehamwood, Bushey', detail: 'M25 commuter belt, contemporary and period mix. Sliding and swing automation, practical specifications' },
-                  { label: 'Mid Hertfordshire', towns: 'Welwyn Garden City, Bearsted, West Malling, Lenham', detail: 'County town and garden villages. Bespoke metal and hardwood across a range of property ages and styles' },
-                  { label: 'East Hertfordshire', towns: 'Hertford, Bishops Stortford, Ware, Sawbridgeworth, Much Hadham', detail: 'Historic market towns, conservation areas, period properties, bespoke hardwood and traditional ironwork' },
+                  { label: 'West Hertfordshire', towns: 'St Albans, Harpenden, Berkhamsted, Tring, Hemel Hempstead', detail: 'Chilterns AONB, conservation areas, premium commuter market, wrought iron and hardwood dominant' },
+                  { label: 'South Hertfordshire', towns: 'Radlett, Bushey, Watford, Potters Bar, Borehamwood', detail: 'London border premium belt, high-specification automation, Green Belt sensitivity, wrought iron and contemporary aluminium' },
+                  { label: 'Central Hertfordshire', towns: 'Welwyn Garden City, Hatfield, Brookmans Park, Knebworth', detail: 'Garden city architecture, modern builds alongside period villages, mixed specification range' },
+                  { label: 'East Hertfordshire', towns: 'Hertford, Ware, Bishops Stortford, Much Hadham, Sawbridgeworth', detail: 'Historic market towns, rural farmhouses, converted barns, bespoke hardwood and traditional metalwork' },
+                  { label: 'North Hertfordshire', towns: 'Hitchin, Letchworth, Stevenage, Baldock, Royston', detail: 'Market town conservation areas, Green Belt villages, period and modern mix, practical and heritage specifications' },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-100">
                     <MapPin className="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" />
@@ -293,22 +309,6 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-6">
-                  Chilterns AONB. Green Belt Everywhere. Ten Districts. Hertfordshire Demands Local Knowledge.
-                </h2>
-                <div className="space-y-5 text-gray-600 leading-relaxed">
-                  <p>
-                    The Chilterns AONB covers western Hertfordshire from Tring and Berkhamsted through to parts of St Albans district. Green Belt designation covers the majority of the county, making Hertfordshire one of the most Green Belt-constrained counties in England. The M25, M1, and A1(M) corridors all run through heavily designated Green Belt land. Conservation areas exist in St Albans, Hertford, Hitchin, Ware, Berkhamsted, and in villages across the county.
-                  </p>
-                  <p>
-                    Add ten separate district planning authorities, each with its own policies on boundary treatments, and you have a planning landscape that rewards experience and punishes assumptions. An installer who knows Hertfordshire will identify the relevant designation at postcode level, advise on whether a pre-application enquiry makes sense, and design a gate that the planning authority is likely to accept.
-                  </p>
-                  <p>
-                    Then there is the physical landscape. Chiltern Hills properties sit on chalk with steep gradients that need specific hinge and motor engineering. Central and eastern Hertfordshire sits on clay that behaves differently under foundation loads compared to chalk. Open rural positions face greater weather exposure that needs accounting for in the surface treatment specification. Our network installers work across all of these conditions and adjust accordingly.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -317,8 +317,8 @@ export default function HomePage() {
         <section className="section-padding bg-gray-50">
           <div className="container-width">
             <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Driveway Gate Installers Near You in Hertfordshire</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">75 towns covered across every part of the county. Select your area to see what is available locally.</p>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Find a Gate Installer in Your Part of Hertfordshire</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">75 towns covered from Tring to Bishops Stortford, Royston to Bushey. Select your area below.</p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-8">
               {topAreas.map(area => (
@@ -344,8 +344,8 @@ export default function HomePage() {
         <section className="section-padding bg-white">
           <div className="container-width">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Hertfordshire Driveway Gate Prices: What Installations Actually Cost in 2026</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">Real prices from completed Hertfordshire projects. West Hertfordshire runs higher than the national average; North and East Hertfordshire are closer to it. Every figure includes full installation.</p>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Hertfordshire Gate Installation Prices in 2026</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">Based on completed Hertfordshire projects, not national averages. Every figure includes full installation, motor, safety commissioning, and handover.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {pricingTiers.map(tier => (
@@ -360,43 +360,43 @@ export default function HomePage() {
               ))}
             </div>
             <div className="mt-8 bg-brand-900 rounded-2xl p-6 md:p-10 text-white text-center">
-              <h3 className="text-2xl font-display font-bold mb-2">0% Finance From &pound;99 Per Month</h3>
-              <p className="text-brand-200 text-sm mb-6 max-w-xl mx-auto">Available through most Hertfordshire installers in our network. Spread the cost over 6 to 36 months with nothing to pay upfront at many providers. Subject to status.</p>
+              <h3 className="text-2xl font-display font-bold mb-2">0% Interest Finance From &pound;99 Per Month</h3>
+              <p className="text-brand-200 text-sm mb-6 max-w-xl mx-auto">Most Hertfordshire installers in our network offer interest-free payment plans. Spread the cost over 6 to 36 months. Subject to status and approval.</p>
               <button onClick={() => setIsModalOpen(true)} className="bg-white text-brand-900 font-bold py-3 px-8 rounded-xl hover:bg-brand-50 transition-colors">
-                Check Finance Options
+                Check Finance Availability
               </button>
             </div>
           </div>
         </section>
 
-        {/* Trust / Why Choose Us */}
+        {/* Trust points */}
         <section className="section-padding bg-gray-50">
           <div className="container-width">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">What You Get From Our Free Matching Service</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">We are not a gate company. We are the filter between you and the county&apos;s best gate installers.</p>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Why Use a Matching Service Instead of Finding an Installer Yourself</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">Because the vetting takes longer than the enquiry. We have already done it.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
                   icon: <Award className="w-6 h-6" />,
-                  title: 'Minimum 50 Installs',
-                  desc: 'No one enters our Hertfordshire network without a verified track record. Every installer has completed at least 50 residential gate projects before they receive a single referral from us.',
+                  title: '50+ Completed Projects',
+                  desc: 'Every installer in the Hertfordshire network has a verified history of at least 50 residential gate installations before they see a single referral from us.',
                 },
                 {
                   icon: <Shield className="w-6 h-6" />,
-                  title: 'Insured, Warranted, Tested',
-                  desc: 'Public liability insurance, separate written warranties for gate and automation, and BS EN 12453 safety commissioning with force testing documented at handover. Non-negotiable.',
+                  title: 'Warranties That Mean Something',
+                  desc: 'Separate written warranties on the gate and the automation. Not a vague promise. A document that covers you if the motor fails in year three or the finish deteriorates prematurely.',
                 },
                 {
                   icon: <MapPin className="w-6 h-6" />,
-                  title: 'Matched to Your Area',
-                  desc: 'A rural Hitchin farmhouse and a St Albans conservation area entrance need different experience. We match by location and project type, not just availability.',
+                  title: 'Matched to Your Area and Project',
+                  desc: 'A Chilterns AONB hardwood project and a Welwyn Garden City aluminium sliding gate need different installers. We match on experience and location, not just who is free this week.',
                 },
                 {
                   icon: <Phone className="w-6 h-6" />,
-                  title: 'Still There in Five Years',
-                  desc: 'We refer established businesses, not sole traders who might not be around when you need a service or warranty call. Longevity and responsiveness are part of our ongoing assessment.',
+                  title: 'Established Businesses Only',
+                  desc: 'We refer firms with premises, employees, and a track record. Not a sole trader who might not answer the phone when you need a warranty repair in two years.',
                 },
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
@@ -414,15 +414,15 @@ export default function HomePage() {
         {/* FAQ */}
         <section className="section-padding bg-gray-50">
           <div className="container-width max-w-3xl">
-            <FAQ faqs={homepageFaqs} title="Driveway Gates Hertfordshire: Your Questions Answered" />
+            <FAQ faqs={homepageFaqs} title="Driveway Gates Hertfordshire: Common Questions Answered" />
           </div>
         </section>
 
-        {/* Bottom CTA */}
+        {/* CTA */}
         <section className="section-padding bg-brand-900 text-white">
           <div className="container-width text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Get Matched With Hertfordshire Gate Installers Today</h2>
-            <p className="text-brand-200 max-w-2xl mx-auto mb-8">Two minutes is all it takes. Tell us what you need and we connect you with up to three vetted specialists for free site surveys and written quotes. No fees, no obligation, no pressure.</p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Ready to Find Your Hertfordshire Gate Installer?</h2>
+            <p className="text-brand-200 max-w-2xl mx-auto mb-8">Two minutes to submit your enquiry. Up to three vetted specialists matched to your project. Free site surveys, written quotes, and zero obligation at any point.</p>
             <button onClick={() => setIsModalOpen(true)} className="bg-white text-brand-900 font-bold text-lg py-4 px-10 rounded-xl hover:bg-brand-50 transition-colors">
               Get Free Quotes Now
             </button>

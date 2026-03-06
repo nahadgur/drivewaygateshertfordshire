@@ -35,8 +35,8 @@ function BlogCtaBanner({ onOpenModal }: { onOpenModal: () => void }) {
         </div>
         <div className="flex-1 text-center md:text-left">
           <p className="text-[10px] font-bold uppercase tracking-widest text-brand-400 mb-1">No Cost, No Obligation</p>
-          <h3 className="text-lg md:text-xl font-bold text-white leading-snug mb-1">Looking for a Hertfordshire gate installer?</h3>
-          <p className="text-brand-200 text-sm">We match you with up to three vetted specialists. Free site surveys, written quotes, zero fees.</p>
+          <h3 className="text-lg md:text-xl font-bold text-white leading-snug mb-1">Need gate quotes for your Hertfordshire property?</h3>
+          <p className="text-brand-200 text-sm">Submit your details and we connect you with up to three screened Hertfordshire gate installers. Completely free.</p>
         </div>
         <div className="flex-shrink-0">
           <button
@@ -283,8 +283,8 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
 
                 {/* CTA */}
                 <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                  <h3 className="text-lg font-display font-bold text-gray-900 mb-3">Get matched with Hertfordshire installers</h3>
-                  <p className="text-gray-500 text-sm mb-5">Up to 3 vetted specialists, free site surveys, no obligation at any stage.</p>
+                  <h3 className="text-lg font-display font-bold text-gray-900 mb-3">Find vetted Hertfordshire gate specialists</h3>
+                  <p className="text-gray-500 text-sm mb-5">Free site surveys, written quotes from up to 3 matched installers, zero fees.</p>
                   <button onClick={() => setIsModalOpen(true)} className="block w-full btn-primary text-center">
                     Find Installers
                   </button>

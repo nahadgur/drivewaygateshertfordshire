@@ -112,13 +112,13 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
                   Free Matching Service
                 </span>
                 <h2 className="text-2xl font-display font-bold text-gray-900">Find Your Gate Installer</h2>
-                <p className="text-gray-600 text-sm mt-1">Complete the form to get matched with vetted Hertfordshire gate installers.</p>
+                <p className="text-gray-600 text-sm mt-1">Fill in your details below and we will connect you with screened Hertfordshire gate specialists.</p>
               </div>
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                 <input required type="text" placeholder="Full name" className={inputClass} />
                 <input required type="email" placeholder="Email address" className={inputClass} />
-                <input required type="text" placeholder="Your Hertfordshire town or postcode" className={inputClass} />
+                <input required type="text" placeholder="Town or postcode in Hertfordshire" className={inputClass} />
 
                 <button
                   type="submit"

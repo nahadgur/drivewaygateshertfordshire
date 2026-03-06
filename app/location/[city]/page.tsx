@@ -68,7 +68,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
                   Driveway Gates in <span className="text-brand-400">{cityName}</span>
                 </h1>
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  Specialist driveway gate installers covering {cityName} and the surrounding area. Vetted, insured, and experienced with the property types and planning landscape across this part of Hertfordshire.
+                  Vetted gate installation specialists working in and around {cityName}. Every installer in our network focuses on residential gates as their primary trade and has completed a minimum of 50 projects before we send them a single lead.
                 </p>
               </div>
               <div>
@@ -84,14 +84,14 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
               <section className="mb-12">
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
-                  Why {cityName} Homeowners Need a Gate Specialist, Not a General Builder
+                  Gate Installation in {cityName} Requires County-Level Knowledge
                 </h2>
                 <div className="prose prose-gray max-w-none text-gray-600 space-y-4">
                   <p>
-                    Driveway gate installation in Hertfordshire involves variables that a general builder is unlikely to anticipate. Two AONBs, ten district planning authorities, clay and chalk subsoils that behave differently under post foundations, heavy clay soils that move seasonally, and a terrain that ranges from the flat arable land in the north around Royston to the Chiltern Hills in the west and the undulating terrain around Hertford and Ware. An installer who works regularly in the {cityName} area understands how these factors affect the specification for your specific site. Every firm we refer has gate installation as their core trade, a minimum of 50 completed residential projects, and current public liability insurance.
+                    Hertfordshire has one of the most complex planning landscapes in southern England. Green Belt covers the vast majority of the county. The Chilterns AONB applies in the west. Conservation areas exist across every historic market town. Ten district and borough councils each apply their own local plan policies to boundary treatments. An installer unfamiliar with the planning position at your {cityName} postcode risks specifying a gate that needs consent nobody applied for, or a design that the local authority will not accept. Every firm in our network works regularly in Hertfordshire and checks the planning position at the site survey before committing to a specification.
                   </p>
                   <p>
-                    The process is straightforward: each installer we introduce arranges a free site visit at a time that suits you, walks the driveway, checks any planning considerations, and provides a fully itemised written quote. You receive up to three independent quotes and decide on your own terms. There is no cost to you at any point and no obligation to proceed with any of them.
+                    Beyond planning, your installer needs to know the soil conditions under the post positions and how the local terrain affects the gate type choice. Each installer we introduce visits the property in person, assesses the driveway, confirms any planning considerations, and provides a written quote with full line-by-line detail. You receive up to three quotes from independent specialists and choose whether to proceed entirely on your own terms.
                   </p>
                 </div>
               </section>
@@ -118,13 +118,13 @@ export default function CityPage({ params }: { params: { city: string } }) {
               <PricingSection cityName={cityName} />
 
               <section className="mb-16">
-                <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6">What the {cityName} Matching Service Gives You</h2>
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6">What You Get When We Match You in {cityName}</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
-                    { icon: <Star className="w-5 h-5" />, title: 'Gate-Only Firms', desc: `We only refer firms in ${cityName} whose primary trade is residential gate installation. That means they specify, fabricate, install, and commission gates every week, not as a sideline to general building or landscaping work.` },
-                    { icon: <Shield className="w-5 h-5" />, title: 'Separate Gate and Motor Warranties', desc: `Every ${cityName} installer provides written warranties for the gate structure and the automation system as two distinct documents. If a motor fails in year three, the warranty covers it without ambiguity about what is and is not included.` },
-                    { icon: <Clock className="w-5 h-5" />, title: 'Survey Within 7 Days', desc: `Installers covering ${cityName} typically offer a free site survey slot within a week of your enquiry. Evening and Saturday appointments are available if weekdays do not work for your schedule.` },
-                    { icon: <CheckCircle className="w-5 h-5" />, title: 'Zero Cost at Every Stage', desc: `The matching is free. The site surveys are free. The written quotes are free. You pay nothing unless you choose to go ahead with an installer, and then you pay them directly under your own contract.` },
+                    { icon: <Star className="w-5 h-5" />, title: 'Dedicated Gate Firms Only', desc: `No general builders, no landscapers, no one-off gate fitters. Every installer we introduce in ${cityName} does gate work as their main trade, every week, with a documented project history to prove it.` },
+                    { icon: <Shield className="w-5 h-5" />, title: 'Documented Warranty Coverage', desc: `Each ${cityName} installer issues separate written warranties for the gate and the automation. If the motor develops a fault in year three, the warranty covers it with no grey area about what is included.` },
+                    { icon: <Clock className="w-5 h-5" />, title: 'Site Survey Within the Week', desc: `Most installers covering ${cityName} can visit within 7 days of your enquiry. Evening and Saturday survey slots are available for homeowners who cannot take time during the working week.` },
+                    { icon: <CheckCircle className="w-5 h-5" />, title: 'Free Throughout, No Strings', desc: `The matching costs nothing. The surveys cost nothing. The quotes cost nothing. You pay only if you choose to instruct an installer, and that payment goes to them under your direct agreement.` },
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-100">
                       <div className="bg-brand-100 p-2 rounded-lg text-brand-600 flex-shrink-0 h-fit">{item.icon}</div>
@@ -150,14 +150,14 @@ export default function CityPage({ params }: { params: { city: string } }) {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-8">
                 <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                  <h3 className="text-lg font-display font-bold text-gray-900 mb-4">Find Installers in {cityName}</h3>
-                  <p className="text-gray-600 text-sm mb-6">Describe your project and we match you with up to 3 vetted gate specialists covering {cityName}. Free, no strings.</p>
+                  <h3 className="text-lg font-display font-bold text-gray-900 mb-4">Get Quotes in {cityName}</h3>
+                  <p className="text-gray-600 text-sm mb-6">Tell us what you need and we connect you with up to 3 screened installers near {cityName}. Completely free.</p>
                   <button onClick={() => setIsModalOpen(true)} className="block w-full btn-primary text-center">Find an Installer</button>
                   <div className="mt-6 pt-6 border-t border-gray-100 space-y-4">
                     {[
-                      { icon: <Clock className="w-4 h-4 text-brand-500" />, text: "Survey slots within 7 days" },
-                      { icon: <Shield className="w-4 h-4 text-brand-500" />, text: "Min. 50 completed installs" },
-                      { icon: <Star className="w-4 h-4 text-brand-500" />, text: "Insured with written warranties" },
+                      { icon: <Clock className="w-4 h-4 text-brand-500" />, text: "Free survey within the week" },
+                      { icon: <Shield className="w-4 h-4 text-brand-500" />, text: "50+ verified gate projects" },
+                      { icon: <Star className="w-4 h-4 text-brand-500" />, text: "Insurance and warranty guaranteed" },
                     ].map((item, i) => (
                       <div key={i} className="flex items-center gap-3">
                         <div className="bg-brand-100 p-1.5 rounded-full">{item.icon}</div>
@@ -167,8 +167,8 @@ export default function CityPage({ params }: { params: { city: string } }) {
                   </div>
                 </div>
                 <div className="bg-brand-900 text-white p-6 rounded-2xl shadow-lg">
-                  <h3 className="text-lg font-display font-bold mb-3">0% Finance Available</h3>
-                  <p className="text-brand-100 text-sm mb-4">Most {cityName} installers offer interest-free payment plans. Spread over 6 to 36 months, from £99 per month. Subject to status.</p>
+                  <h3 className="text-lg font-display font-bold mb-3">Interest-Free Finance</h3>
+                  <p className="text-brand-100 text-sm mb-4">Spread the cost from £99/month over 6 to 36 months at 0% through most {cityName} installers. Subject to status and approval.</p>
                   <button onClick={() => setIsModalOpen(true)} className="block w-full bg-white text-brand-900 text-center font-bold py-3 px-6 rounded-xl hover:bg-brand-50 transition-colors text-sm">Check Eligibility</button>
                 </div>
               </div>
@@ -176,8 +176,8 @@ export default function CityPage({ params }: { params: { city: string } }) {
           </div>
 
           <div className="bg-brand-900 rounded-2xl p-8 md:p-12 text-center mt-12">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">Find Your Gate Installer in {cityName}</h2>
-            <p className="text-brand-200 mb-8 max-w-2xl mx-auto">Tell us what you need and we handle the matching. Up to three vetted Hertfordshire specialists, each offering a free site survey and a written quote. Takes two minutes to start, costs nothing, and commits you to nothing.</p>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">Get Gate Quotes for Your {cityName} Property</h2>
+            <p className="text-brand-200 mb-8 max-w-2xl mx-auto">Submit your details in two minutes. We match you with up to three screened Hertfordshire gate installers who will each visit, survey, and provide a written quote at no cost and with no obligation.</p>
             <button onClick={() => setIsModalOpen(true)} className="bg-white text-brand-900 font-bold text-lg py-4 px-10 rounded-xl hover:bg-brand-50 transition-colors">Get Your Free Quotes</button>
           </div>
         </div>

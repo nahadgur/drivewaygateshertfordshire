@@ -4,7 +4,7 @@ export const siteConfig = {
   name: 'Driveway Gates Hertfordshire',
   tagline: 'Hertfordshire Gate Installers, Vetted and Ready',
   url: 'https://www.drivewaygateshertfordshire.co.uk',
-  description: 'Find vetted driveway gate installers across Hertfordshire. Compare free quotes for electric sliding gates, swing gates, hardwood gates, metal gates, automation systems, and repairs.',
+  description: 'Compare free quotes from vetted driveway gate installers across Hertfordshire. Electric sliding gates, swing gates, hardwood gates, wrought iron, automation retrofits, and repair services.',
 };
 
 export const TESTIMONIALS = [
@@ -14,7 +14,7 @@ export const TESTIMONIALS = [
     location: 'St Albans',
     service: 'Electric Swing Gates',
     rating: 5,
-    text: 'We needed gates that would respect the conservation area streetscape while giving us the security and privacy we wanted. The installer specified wrought iron swing gates with underground motors that are completely invisible from the road. The council had no objections and the result is exactly what we pictured.',
+    text: 'Living in the St Albans conservation area meant the design had to satisfy both us and the planning officer. The installer produced drawings that referenced our existing Victorian railings, fabricated a pair of wrought iron gates with underground motors, and the finished result looks as though it has always been part of the house. Not a single objection from the council.',
   },
   {
     id: '2',
@@ -22,7 +22,7 @@ export const TESTIMONIALS = [
     location: 'Harpenden',
     service: 'Gate Automation',
     rating: 5,
-    text: 'Existing hardwood gates in excellent condition but manually operated for fifteen years. The retrofit added underground motors, a video intercom with smartphone access, and proximity fobs for the cars. The whole installation took a day and a half and the gates work as though they were built with automation from the start.',
+    text: 'Fifteen years of getting out of the car in the rain to open heavy oak gates finally became too much. The engineer assessed the gates, confirmed they were solid enough for automation, and fitted underground motors with a video intercom connected to our phones. The whole thing took a day and a half. Should have done it a decade ago.',
   },
   {
     id: '3',
@@ -30,7 +30,7 @@ export const TESTIMONIALS = [
     location: 'Berkhamsted',
     service: 'Wooden Driveway Gates',
     rating: 5,
-    text: 'Our Chilterns AONB cottage needed something sympathetic to the landscape. The installer recommended iroko with a simple close-boarded design and iron strap hinges. It looks as though it has been there for decades. They understood the planning sensitivity from the first conversation and the whole process was smooth.',
+    text: 'Our cottage sits within the Chilterns AONB and we were worried about getting the material wrong. The installer recommended iroko with a simple boarded design and hand-forged strap hinges. It blends perfectly with the flint boundary wall and the planning adviser had zero concerns. The attention to the landscape context made all the difference.',
   },
   {
     id: '4',
@@ -38,7 +38,7 @@ export const TESTIMONIALS = [
     location: 'Radlett',
     service: 'Metal Driveway Gates',
     rating: 5,
-    text: 'Full entrance treatment on a substantial property. Bespoke wrought iron gates with matching railings, new brick piers, underground motors, HD video intercom, and proximity readers for both cars. The fabrication quality is outstanding and the installation team managed the entire project without a single issue.',
+    text: 'We wanted a complete entrance overhaul on a large property. The fabricator produced bespoke wrought iron gates with matching side railings, rebuilt the brick piers with lighting, fitted concealed motors, and installed an HD intercom with fob access for both cars. The quality of the metalwork is genuinely outstanding and the project was managed without a single delay.',
   },
   {
     id: '5',
@@ -46,79 +46,79 @@ export const TESTIMONIALS = [
     location: 'Hitchin',
     service: 'Gate Repair',
     rating: 5,
-    text: 'Motor failure on a BFT underground system that another company said needed a full replacement. This engineer diagnosed a control board fault, had the replacement part on the van, and had the gate running again within two hours. Honest assessment and fair pricing. Will use them for the annual service from now on.',
+    text: 'Another company told us the entire BFT underground motor needed replacing. This engineer diagnosed a failed control board, swapped it from van stock in under two hours, and the gate has been running perfectly since. Saved us over a thousand pounds compared to the replacement quote. Genuinely honest tradesperson.',
   },
 ];
 
 export const TRUST_BADGES = [
   {
     icon: 'Award',
-    title: 'Verified Specialists Only',
-    description: 'Every Hertfordshire installer in our network is a gate specialist with a verified project history, not a general builder who takes occasional gate work',
+    title: 'Vetted Gate Specialists',
+    description: 'Only dedicated gate installation firms make it into our Hertfordshire network. General builders and part-time fitters are not accepted regardless of price',
   },
   {
     icon: 'ShieldCheck',
-    title: 'Insured and Warranted',
-    description: 'Public liability cover and written warranties on both the gate and the automation are required from every installer before we refer a single enquiry',
+    title: 'Full Insurance and Warranties',
+    description: 'Public liability cover and separate written warranties on both the gate structure and the automation are mandatory before any installer receives a referral from us',
   },
   {
     icon: 'UserCheck',
-    title: 'Free Site Survey Guaranteed',
-    description: 'Every installer offers a no-obligation site survey before quoting. No pressure, no commitment required until you are ready to proceed',
+    title: 'No-Obligation Site Survey',
+    description: 'Every installer visits your property and provides a written quote before you commit to anything. No remote pricing, no estimates based on photographs',
   },
   {
     icon: 'PoundSterling',
-    title: '0% Finance Available',
-    description: 'Spread your installation cost over 6 to 36 months interest-free through selected Hertfordshire installers in our network, subject to status',
+    title: 'Interest-Free Finance',
+    description: 'Spread the cost over 6 to 36 months at 0% through selected Hertfordshire installers in our network. Subject to status and approval',
   },
 ];
 
 export const FAQS_HOME = [
   {
-    question: 'How is using this service different from finding an installer yourself?',
-    answer: 'The difference is the vetting. Any installer can appear in a Google search. Every installer we refer has been assessed against specific criteria: a minimum of 50 completed residential gate installations, active public liability insurance, and a track record of providing written warranties on both the gate and the automation. We also monitor ongoing customer feedback and remove firms whose standards slip. You get the benefit of that due diligence without spending hours researching it yourself.',
+    question: 'How does this matching service differ from searching for an installer myself?',
+    answer: 'The difference is the screening. Anyone with a van and a website can appear in search results. Every installer we connect you with has passed a specific vetting process before receiving their first referral. We verify a minimum of 50 completed residential gate projects, confirm active public liability insurance, and require evidence that written warranties covering both the gate and the motor are provided on every job as standard. We also track customer feedback and remove firms that stop meeting the standard.',
   },
   {
-    question: 'How do you match me with the right Hertfordshire installer?',
-    answer: 'We use your postcode, gate type, and budget to identify the most relevant specialists in our network for your specific project. An installer who specialises in contemporary aluminium gates for modern properties in Welwyn Garden City may not be the right fit for a bespoke hardwood project in a Chilterns AONB village, and we account for those differences. You receive contact from up to three relevant installers who will each arrange a free site survey and provide a detailed written quote.',
+    question: 'How do you decide which Hertfordshire installer to match me with?',
+    answer: 'Your postcode, the type of gate, and your approximate budget determine which installers we recommend. A homeowner looking for bespoke hardwood gates on a Chilterns AONB property needs a very different installer from someone fitting aluminium sliding gates on a modern build in Welwyn Garden City. We match based on relevant experience and geographical coverage, not just whoever has availability. You receive contact from up to three specialists, each of whom arranges a free site survey.',
   },
   {
-    question: 'What does this service cost?',
-    answer: 'Nothing. The matching service is free at every stage for homeowners. You pay nothing to us before, during, or after your enquiry. If your project goes ahead, you pay the installer directly under your agreed contract. We receive a referral contribution from the installer on completion, which does not affect the price you are quoted.',
+    question: 'Is there any cost to using the matching service?',
+    answer: 'None at all. The service is free to homeowners at every stage. You pay nothing to submit an enquiry, nothing for the site surveys, and nothing for the written quotes. If you decide to go ahead with a project, you pay the installer directly under your own agreement with them. We receive a referral contribution from the installer after a completed job, which has no effect on the price you are quoted.',
   },
 ];
 
 export const FAQS_SERVICES = [
   {
-    question: 'How long does a driveway gate installation take in Hertfordshire?',
-    answer: 'Standard installations take 2 to 4 working days from the first day on site. Groundwork and foundations are completed on day one, the gate is hung and automation is wired on day two, and commissioning, intercom setup, and handover are completed on the final day. Bespoke fabricated gates, particularly wrought iron or hardwood designs made to measure, require a manufacturing lead time of 3 to 6 weeks before the installation date. Your installer will provide a confirmed programme at the site survey stage.',
+    question: 'What is the typical timeline for a driveway gate installation in Hertfordshire?',
+    answer: 'The physical on-site work runs 2 to 4 working days for a standard residential project. Day one is groundwork and post foundations. Day two covers gate hanging and motor installation. Days three and four handle wiring, safety commissioning, intercom configuration, and handover. If the gates are being fabricated to a bespoke design, add a workshop lead time of 3 to 6 weeks before the installation date. Your installer confirms the complete schedule at the site survey stage.',
   },
   {
-    question: 'Do I need planning permission for driveway gates in Hertfordshire?',
-    answer: 'Most residential driveway gates fall under permitted development and do not require an application. The general rule is that gates under 2 metres in height that open inward onto your property are exempt, with the limit dropping to 1 metre for gates adjacent to a classified road. Listed buildings, conservation area properties, Chilterns AONB sites, and Green Belt land with Article 4 Directions are outside standard permitted development and may require consent. Hertfordshire is heavily designated with Green Belt covering the majority of the county, and your installer will confirm the planning position at the site survey.',
+    question: 'When is planning permission required for driveway gates in Hertfordshire?',
+    answer: 'Standard residential gates below 2 metres in height that open inward onto the property fall under permitted development and do not need planning permission. The threshold drops to 1 metre for gates fronting a classified road. Properties within a conservation area, the Chilterns AONB, the Green Belt (which covers most of Hertfordshire), or listed buildings may need specific consent. Hertfordshire has ten district and borough councils, each with their own interpretation of these rules. Your installer will confirm the planning position at the survey and advise on pre-application enquiries where there is any uncertainty.',
   },
   {
-    question: 'What warranty should I expect from a Hertfordshire gate installer?',
-    answer: 'A reputable installer provides separate warranties for the gate and the automation. Motor and control board warranties from quality manufacturers such as FAAC, BFT, CAME, and Nice are typically 2 to 5 years. The gate structure and finish should be warranted for a minimum of 5 years, with better manufacturers offering 10 to 25 years on powder-coated aluminium and certified timber products such as Accoya. Always ask for the warranty terms in writing before signing off a quote.',
+    question: 'What level of warranty is standard from a Hertfordshire gate installer?',
+    answer: 'A professional installer provides separate warranties for the gate structure and the automation equipment. Motor warranties from the established brands (FAAC, BFT, CAME, Nice) typically run 2 to 5 years. The gate itself should carry a minimum 5-year structural warranty, with better manufacturers offering 10 to 25 years on powder-coated aluminium and certified timber products like Accoya. Get the terms in writing before you sign anything.',
   },
   {
-    question: 'What motor brands do Hertfordshire installers use?',
-    answer: 'The quality brands installed across the Hertfordshire residential market are FAAC, BFT, CAME, Nice, and Beninca. All maintain active parts availability for their motor ranges for at least a decade after production, which matters when a component needs replacing several years into the installation. Be cautious of quotes specifying unbranded or unfamiliar motors without a clear justification.',
+    question: 'Which gate motor brands do Hertfordshire installers work with?',
+    answer: 'FAAC, BFT, CAME, Nice, and Beninca are the five brands installed most widely across Hertfordshire residential properties. All five maintain UK spare parts availability for at least a decade after a model goes out of production, which is what matters when a component fails in year eight. Avoid quotes that specify unbranded or obscure motors without a clear explanation of why.',
   },
 ];
 
 export const FAQS_LOCATION = [
   {
-    question: 'How do you vet installers before adding them to your Hertfordshire network?',
-    answer: 'We require evidence of at least 50 completed residential gate installations before any installer is accepted into the network. We check that public liability insurance is current and covers the full scope of gate installation work. We confirm that written warranties are offered on both the gate and the automation as a standard practice, not an optional extra. We monitor customer feedback on an ongoing basis and remove any firm whose quality or responsiveness falls below our standards.',
+    question: 'What does your vetting process involve for Hertfordshire installers?',
+    answer: 'We require documented evidence of at least 50 completed residential gate installations before any firm joins the network. We verify that public liability insurance is current and covers the full scope of gate work. We confirm that separate written warranties on gate and automation are offered as standard practice, not as an add-on. We track ongoing customer feedback and remove any installer whose work quality or communication falls below our threshold.',
   },
   {
-    question: 'Do you cover my area of Hertfordshire?',
-    answer: 'Our network covers the whole of Hertfordshire, from Tring and Berkhamsted in the west to Bishops Stortford and Sawbridgeworth in the east, and from Royston and Baldock in the north to Bushey, Radlett, and Potters Bar in the south. We also cover the Hertfordshire borders into parts of Buckinghamshire, Bedfordshire, Essex, and North London. If your town is not listed on the site, submit an enquiry with your postcode and we will confirm coverage directly.',
+    question: 'Which parts of Hertfordshire does your network cover?',
+    answer: 'Every part. From Tring and Berkhamsted in the Chilterns to Bishops Stortford and Sawbridgeworth in the east. From Royston and Baldock in the north to Bushey, Radlett, and Potters Bar along the London border. We also cover the fringes where Hertfordshire meets Buckinghamshire, Bedfordshire, Essex, and North London. If your town is not listed on the site, submit your postcode and we will confirm coverage.',
   },
   {
-    question: 'Can Hertfordshire installers handle planning applications for conservation areas and the AONB?',
-    answer: 'Installers in our Hertfordshire network who regularly work in the Chilterns AONB, the extensive Green Belt areas, and the historic centres of St Albans, Hitchin, Hertford, and Ware are familiar with the planning requirements for these areas. They can advise on whether a planning application is required, help you design a gate that is sympathetic to the area character, and support a pre-application enquiry to the local authority where needed.',
+    question: 'Can Hertfordshire installers manage planning requirements in the AONB and Green Belt?',
+    answer: 'The installers in our network who work regularly in the Chilterns AONB, the Green Belt corridors around St Albans and the M25, and the conservation areas of Hitchin, Hertford, and Ware understand the planning requirements for these designations. They can advise on whether consent is needed, help specify a gate design that respects the landscape character, and support a pre-application enquiry to the relevant district council if there is any doubt.',
   },
 ];
 

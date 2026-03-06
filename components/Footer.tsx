@@ -16,10 +16,10 @@ export function Footer() {
               <span className="font-display font-bold text-lg text-white">Driveway Gates Hertfordshire</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-4">
-              Independent matching service connecting Hertfordshire homeowners with vetted, experienced driveway gate installers across every corner of the county.
+              Free matching service for Hertfordshire homeowners. We connect you with screened, experienced gate installation specialists across every part of the county.
             </p>
             <p className="text-xs text-gray-500 italic border-l-2 border-gray-700 pl-3">
-              Driveway Gates Hertfordshire is a referral service. We connect you with independent gate installers. We do not carry out installations ourselves.
+              We are a referral and matching service, not a gate installation company. All work is carried out by independent installers in our vetted network.
             </p>
           </div>
 

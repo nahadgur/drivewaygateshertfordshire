@@ -45,10 +45,10 @@ export default function BlogIndexPage() {
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
             <p className="text-[10px] font-bold uppercase tracking-widest text-brand-400 mb-3">Expert Advice</p>
             <h1 className="text-3xl md:text-5xl font-display font-bold text-white max-w-3xl leading-tight mb-4">
-              Hertfordshire Gate Guides: Planning, Pricing, and Specification
+              Hertfordshire Gate Advice: Costs, Planning, Materials, and Maintenance
             </h1>
             <p className="text-brand-100 text-sm md:text-base max-w-xl">
-              AONB planning rules, material specification for exposed sites, cost breakdowns by area, and how to tell a specialist from a generalist. Written specifically for Hertfordshire homeowners.
+              Green Belt rules, Chilterns AONB guidance, pricing breakdowns, timber versus metal comparisons, and how to avoid the most common installation mistakes. Practical guides for Hertfordshire homeowners.
             </p>
           </div>
         </div>
@@ -194,10 +194,10 @@ export default function BlogIndexPage() {
                 <div className="flex-1">
                   <p className="text-[10px] font-bold uppercase tracking-widest text-brand-400 mb-2">Free Service</p>
                   <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
-                    Need a Gate Installer in Hertfordshire?
+                    Looking for Hertfordshire Gate Quotes?
                   </h3>
                   <p className="text-brand-200 text-sm">
-                    Vetted specialists, free site surveys, up to three written quotes. No fees at any stage.
+                    Up to three vetted specialists, each offering a free site survey and a written quote. No cost, no obligation.
                   </p>
                 </div>
                 <div className="flex-shrink-0">
