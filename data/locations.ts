@@ -23,7 +23,7 @@ export const LOCATIONS: Record<string, string[]> = {
   ],
   'North Hertfordshire': [
     'Hitchin', 'Letchworth', 'Baldock', 'Royston', 'Stevenage',
-    'Knebworth', 'Ashwell', 'Pirton', 'Ickleford', 'St Ippolyts',
+    'Stotfold', 'Ashwell', 'Pirton', 'Ickleford', 'St Ippolyts',
     'Weston', 'Graveley', 'Walkern', 'Benington', 'Ardeley',
   ],
 };
