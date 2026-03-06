@@ -34,7 +34,7 @@ export default function LocationIndexPage() {
         <Hero
           title="Driveway Gate Installers by Hertfordshire Location"
           subtitle="75 towns covered across the county, from the Chilterns in the west to Bishops Stortford in the east. Search for your area and see which specialists cover it."
-          image="/images/gates/gate-aerial-wrought-iron-closed-topiary-gravel-circle.png"
+          image="/images/gates/herts-overhead-iron-gates-gravel-circle-topiary.png"
           onOpenModal={() => setIsModalOpen(true)}
         />
 
