@@ -125,7 +125,7 @@ const article4: BlogArticle = {
   metaDescription: 'Choosing between wood, steel, and aluminium for your Hertfordshire driveway gate? This guide covers durability, maintenance, design options, and which material suits different Hertfordshire property types.',
   category: 'Materials',
   publishDate: '2026-01-28',
-  featuredImage: '/images/gates/gate-wooden-painted-cream-hertfordshireish-countryside.png',
+  featuredImage: '/images/gates/gate-wooden-painted-cream-hertfordshire-countryside.png',
   excerpt: 'The right material depends on your property type, your proximity to the countryside, and whether your installation falls within a planning designation. Here is how to choose.',
   content: [
     { type: 'p', text: 'Hertfordshire properties span everything from medieval timber-frame houses in the St Albans villages to modern estates in North Hertfordshire. The material you choose for your driveway gate should reflect the architectural character of the property, the environmental conditions of the location, and the level of maintenance you are prepared to commit to over the next twenty years.' },
@@ -242,7 +242,7 @@ const article8: BlogArticle = {
   metaDescription: 'Installing driveway gates in the Chiltern Hills or Green Belt in Hertfordshire? This guide covers planning rules, material choices, and how to get the design right for a designated landscape.',
   category: 'Planning',
   publishDate: '2026-02-12',
-  featuredImage: '/images/gates/gate-wooden-painted-cream-hertfordshireish-countryside.png',
+  featuredImage: '/images/gates/gate-wooden-painted-cream-hertfordshire-countryside.png',
   excerpt: 'Hertfordshire sits within two AONBs with distinct landscape characters. Getting the gate specification right for each requires understanding what the designation means in practice.',
   content: [
     { type: 'p', text: 'The Chilterns AONB and the Green Belt between them cover a substantial part of Hertfordshire. The Chiltern Hills run along the chalk hills from the Buckinghamshire border through St Albans and onward past Wye toward Hitchin. The Green Belt villages covers the southern portion of the county including Berkhamsted, Much Hadham, Aldbury, Knebworth, and the surrounding countryside. Each carries a distinct landscape character that gate installations should respect.' },
@@ -749,7 +749,7 @@ const article20: BlogArticle = {
   metaDescription: 'Wooden driveway gates will last decades with the right maintenance. This guide covers oiling schedules, what to inspect, how to handle damage, and the differences between iroko, oak, and Accoya.',
   category: 'Maintenance',
   publishDate: '2026-03-20',
-  featuredImage: '/images/gates/gate-wooden-iroko-closeup-hertfordshire-weald-countryside.png',
+  featuredImage: '/images/gates/gate-wooden-iroko-closeup-hertfordshire-village.png',
   excerpt: 'A hardwood gate is a long-term investment that rewards a modest maintenance commitment. Neglect it and you will see deterioration within five years. Look after it and it will outlast the house.',
   content: [
     { type: 'p', text: 'Hardwood driveway gates are among the most durable external fixtures you can install on a Hertfordshire property. Iroko gates that were hung in the 1990s are still in sound condition across the rural Hertfordshire countryside. European oak gates on St Albans conservation area properties have decades of service ahead of them. Accoya gates installed in rural western Hertfordshire carry a 50-year manufacturer guarantee that most homeowners will never need to test. But all of this longevity depends on one condition. The gates need to be looked after.' },
