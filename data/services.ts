@@ -22,7 +22,7 @@ export const services: Service[] = [
     title: 'Electric Sliding Gates',
     slug: 'electric-sliding-gates',
     description: 'Built for driveways where swing clearance is tight or the gradient makes swing gates impractical. Sliding gates travel on a ground track or cantilever rail and handle wide openings that other formats struggle with.',
-    image: '/images/gates/gate-aluminium-sliding-horizontal-modern-new-build.png',
+    image: '/images/gates/herts-contemporary-aluminium-slider-dark-finish.png',
     icon: 'Zap',
     color: 'slate',
     faqs: [
@@ -45,7 +45,7 @@ export const services: Service[] = [
     title: 'Electric Swing Gates',
     slug: 'electric-swing-gates',
     description: 'The standard format on detached Hertfordshire properties. A single or double leaf gate powered by underground or surface-mounted motors, delivering the traditional entrance appearance with fully automated operation.',
-    image: '/images/gates/gate-steel-sage-green-swing-period-brick-spring.png',
+    image: '/images/gates/herts-powder-coated-green-swing-victorian-brick.png',
     icon: 'Shield',
     color: 'emerald',
     faqs: [
@@ -68,7 +68,7 @@ export const services: Service[] = [
     title: 'Wooden Driveway Gates',
     slug: 'wooden-driveway-gates',
     description: 'Bespoke hardwood gates in iroko, European oak, or Accoya. Suited to Chilterns cottages, rural farmhouses, Green Belt properties, and any Hertfordshire entrance where a natural material belongs.',
-    image: '/images/gates/gate-wooden-painted-cream-hertfordshire-countryside.png',
+    image: '/images/gates/herts-cream-hardwood-swing-rural-cottage-entrance.png',
     icon: 'Sparkles',
     color: 'amber',
     faqs: [
@@ -91,7 +91,7 @@ export const services: Service[] = [
     title: 'Metal Driveway Gates',
     slug: 'metal-driveway-gates',
     description: 'Fabricated steel, aluminium, and wrought iron gates engineered for longevity. Ornate ironwork for St Albans and Radlett period properties through to clean-lined aluminium for contemporary Welwyn and Hatfield builds.',
-    image: '/images/gates/gate-wrought-iron-open-stone-pillars-lanterns-estate.png',
+    image: '/images/gates/herts-ornate-iron-entrance-pillars-lanterns-driveway.png',
     icon: 'Globe',
     color: 'sky',
     faqs: [
@@ -114,7 +114,7 @@ export const services: Service[] = [
     title: 'Automated Gate Systems',
     slug: 'automated-gate-systems',
     description: 'Automation packages for new and existing gates. Underground and surface motors, safety systems, video intercom, keypad and fob access, smart home connectivity, and battery backup included as standard.',
-    image: '/images/gates/gate-video-intercom-panel-brick-wall-closeup.png',
+    image: '/images/gates/herts-video-intercom-flush-mounted-pillar-detail.png',
     icon: 'Medal',
     color: 'indigo',
     faqs: [
@@ -137,7 +137,7 @@ export const services: Service[] = [
     title: 'Gate Repair and Maintenance',
     slug: 'gate-repair-and-maintenance',
     description: 'Diagnostic callouts, motor and board replacement, hinge correction, safety recalibration, and scheduled annual servicing across Hertfordshire. The majority of faults resolved in a single visit.',
-    image: '/images/gates/gate-split-wrought-iron-vs-aluminium-sliding.png',
+    image: '/images/gates/herts-comparison-traditional-iron-vs-modern-aluminium.png',
     icon: 'Users',
     color: 'rose',
     faqs: [
