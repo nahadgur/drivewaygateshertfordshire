@@ -30,7 +30,7 @@ const article1: BlogArticle = {
   metaDescription: 'What do driveway gates cost in Hertfordshire in 2026? Real prices for electric sliding gates, swing gates, hardwood gates, metal gates, automation, and repairs across the county.',
   category: 'Pricing',
   publishDate: '2026-01-15',
-  featuredImage: '/images/gates/gate-wrought-iron-open-manor-brick-pillars.png',
+  featuredImage: '/images/gates/herts-grand-iron-gates-brick-piers-tree-lined-drive.png',
   excerpt: 'Hertfordshire gate prices vary considerably between the premium West Hertfordshire commuter belt and the more rural east of the county. Here is what installations actually cost across different parts of Hertfordshire in 2026.',
   content: [
     { type: 'p', text: 'Hertfordshire spans a wider range of residential markets than most English counties. The St Albans and Harpenden corridor produces gate specifications that rival anything in the Home Counties, driven by commuter wealth and high-value rural properties. North Hertfordshire around Watford and Potters Bar operates at a different price point, with practical automation on modern builds forming the bulk of demand. East Hertfordshire, from St Albans through to the historic towns of Berkhamsted, Ware, and Hitchin, brings its own considerations: period properties in the historic centres, and weather exposure on exposed rural installations that affects material specification.' },
@@ -62,7 +62,7 @@ const article2: BlogArticle = {
   metaDescription: 'Deciding between electric sliding and swing gates for your Hertfordshire property? We compare both on space requirements, cost, gradient handling, and suitability for different Hertfordshire driveways.',
   category: 'Buying Guide',
   publishDate: '2026-01-20',
-  featuredImage: '/images/gates/gate-aluminium-sliding-horizontal-modern-new-build.png',
+  featuredImage: '/images/gates/herts-contemporary-aluminium-slider-dark-finish.png',
   excerpt: 'The sliding versus swing decision usually comes down to what your driveway physically allows. Here is how to work out which type fits your Hertfordshire property.',
   content: [
     { type: 'p', text: 'The sliding versus swing question is the first practical decision most Hertfordshire homeowners face when planning a driveway gate installation. Both types are proven, widely installed across the county, and available in every material and finish. The right answer for your property is almost always dictated by the physical characteristics of your driveway rather than preference alone.' },
@@ -96,7 +96,7 @@ const article3: BlogArticle = {
   metaDescription: 'Hertfordshire has two AONBs, extensive Green Belt, and conservation areas across all ten districts. Find out when you need planning consent for driveway gates in Hertfordshire.',
   category: 'Planning',
   publishDate: '2026-01-25',
-  featuredImage: '/images/gates/gate-wrought-iron-open-stone-pillars-lanterns-estate.png',
+  featuredImage: '/images/gates/herts-ornate-iron-entrance-pillars-lanterns-driveway.png',
   excerpt: 'Two Areas of Outstanding Natural Beauty, Green Belt along the entire M25 corridor, ten district planning authorities, and conservation areas in every historic town. Hertfordshire planning for gates is not straightforward.',
   content: [
     { type: 'p', text: 'Hertfordshire presents one of the more complex planning landscapes for residential gate installations in England. The county contains two Areas of Outstanding Natural Beauty (the Chiltern Hills and the Green Belt villages), a substantial belt of Green Belt land along the M25 corridor through St Albans and Watford, ten separate district councils each with their own local plan policies, and conservation areas in towns and villages across the county from St Albans and Hertford to Harpenden and Shenley.' },
@@ -125,7 +125,7 @@ const article4: BlogArticle = {
   metaDescription: 'Choosing between wood, steel, and aluminium for your Hertfordshire driveway gate? This guide covers durability, maintenance, design options, and which material suits different Hertfordshire property types.',
   category: 'Materials',
   publishDate: '2026-01-28',
-  featuredImage: '/images/gates/gate-wooden-painted-cream-hertfordshire-countryside.png',
+  featuredImage: '/images/gates/herts-cream-hardwood-swing-rural-cottage-entrance.png',
   excerpt: 'The right material depends on your property type, your proximity to the countryside, and whether your installation falls within a planning designation. Here is how to choose.',
   content: [
     { type: 'p', text: 'Hertfordshire properties span everything from medieval timber-frame houses in the St Albans villages to modern estates in North Hertfordshire. The material you choose for your driveway gate should reflect the architectural character of the property, the environmental conditions of the location, and the level of maintenance you are prepared to commit to over the next twenty years.' },
@@ -159,7 +159,7 @@ const article5: BlogArticle = {
   metaDescription: 'Retrofit automation to your existing Hertfordshire driveway gates. This guide covers feasibility, motor options, access control, and what the process involves from survey to commissioning.',
   category: 'Automation',
   publishDate: '2026-02-01',
-  featuredImage: '/images/gates/gate-underground-motor-installation-engineer.png',
+  featuredImage: '/images/gates/herts-engineer-fitting-underground-motor-chamber.png',
   excerpt: 'Existing manual gates that are structurally sound can almost always be automated. The retrofit adds electric operation without disturbing the gates themselves.',
   content: [
     { type: 'p', text: 'Gate automation retrofits are among the most frequently requested projects for installers covering Hertfordshire. The typical brief is straightforward: a homeowner with manual gates that are the right look for the property, still in sound condition, but no longer acceptable as a daily manual task. The retrofit adds the motor, safety systems, and access control without replacing the gates.' },
@@ -186,7 +186,7 @@ const article6: BlogArticle = {
   metaDescription: 'Not all gate installers in Hertfordshire are equal. This guide explains what to check, what questions to ask, and what separates a specialist from a generalist.',
   category: 'Buying Guide',
   publishDate: '2026-02-05',
-  featuredImage: '/images/gates/gate-steel-installation-two-engineers-suburban.png',
+  featuredImage: '/images/gates/herts-two-fitters-hanging-steel-panel-residential.png',
   excerpt: 'The quality of the installation matters more than the brand of gate or motor. Here is how to identify a Hertfordshire gate installer who will get the job right first time.',
   content: [
     { type: 'p', text: 'A gate installer who specialises in residential gate work and has a documented track record of completed projects in Hertfordshire is a fundamentally different proposition from a general builder who occasionally takes on gate jobs. The difference shows in the foundation specification, the motor sizing, the safety commissioning, and the quality of the handover documentation. It also shows three years later when something needs attention and the installer is still in business and still answering the phone.' },
@@ -215,7 +215,7 @@ const article7: BlogArticle = {
   metaDescription: 'Annual servicing prevents the majority of electric gate failures. This guide covers what a proper Hertfordshire gate service includes, what it costs, and why skipping it is a false economy.',
   category: 'Maintenance',
   publishDate: '2026-02-08',
-  featuredImage: '/images/gates/gate-underground-motor-installation-engineer.png',
+  featuredImage: '/images/gates/herts-engineer-fitting-underground-motor-chamber.png',
   excerpt: 'A proper annual service covers motor, gearbox, hinges, safety sensors, battery backup, and the gate structure. Here is what to expect and what it should cost in Hertfordshire.',
   content: [
     { type: 'p', text: 'An automated gate system is a piece of machinery that operates outdoors through every season. It needs annual professional servicing for the same reason a boiler or a vehicle does: mechanical components wear, lubricants break down, electronic calibrations drift, and the safety systems that protect your family need to be tested and confirmed working at regular intervals.' },
@@ -242,7 +242,7 @@ const article8: BlogArticle = {
   metaDescription: 'Installing driveway gates in the Chiltern Hills or Green Belt in Hertfordshire? This guide covers planning rules, material choices, and how to get the design right for a designated landscape.',
   category: 'Planning',
   publishDate: '2026-02-12',
-  featuredImage: '/images/gates/gate-wooden-painted-cream-hertfordshire-countryside.png',
+  featuredImage: '/images/gates/herts-cream-hardwood-swing-rural-cottage-entrance.png',
   excerpt: 'Hertfordshire sits within two AONBs with distinct landscape characters. Getting the gate specification right for each requires understanding what the designation means in practice.',
   content: [
     { type: 'p', text: 'The Chilterns AONB and the Green Belt between them cover a substantial part of Hertfordshire. The Chiltern Hills run along the chalk hills from the Buckinghamshire border through St Albans and onward past Wye toward Hitchin. The Green Belt villages covers the southern portion of the county including Berkhamsted, Much Hadham, Aldbury, Knebworth, and the surrounding countryside. Each carries a distinct landscape character that gate installations should respect.' },
@@ -276,7 +276,7 @@ const article9: BlogArticle = {
   metaDescription: 'West Hertfordshire has the highest concentration of premium residential gate installations in the county. This guide covers what the market expects and how to specify correctly.',
   category: 'Local Guide',
   publishDate: '2026-02-15',
-  featuredImage: '/images/gates/gate-wrought-iron-open-stone-pillars-lanterns-estate.png',
+  featuredImage: '/images/gates/herts-ornate-iron-entrance-pillars-lanterns-driveway.png',
   excerpt: 'The St Albans and Harpenden corridor produces some of the highest-specification gate installations in the South East. Here is what the premium West Hertfordshire market requires.',
   content: [
     { type: 'p', text: 'West Hertfordshire is the wealthiest part of the county and the area where gate installation standards are highest. The St Albans district, Harpenden, and the villages between them contain a concentration of high-value residential properties that sustain a genuine premium market for bespoke gate work. This is not about cost alone: it is about the expectation that the gate entrance will be architecturally coherent with the property it serves, that the automation will be invisible, and that the specification will be right for the next twenty years.' },
@@ -303,7 +303,7 @@ const article10: BlogArticle = {
   metaDescription: 'How effective are driveway gates against vehicle theft and burglary in Hertfordshire? This guide covers what works, what does not, and how to specify a gate for security.',
   category: 'Security',
   publishDate: '2026-02-18',
-  featuredImage: '/images/gates/gate-video-intercom-panel-brick-wall-closeup.png',
+  featuredImage: '/images/gates/herts-video-intercom-flush-mounted-pillar-detail.png',
   excerpt: 'A closed automated gate is a proven deterrent against driveway vehicle theft. Here is how to specify your Hertfordshire gate installation with security as a priority.',
   content: [
     { type: 'p', text: 'Vehicle theft from driveways, primarily through relay attacks on keyless entry systems, is a documented concern across the wealthier parts of Hertfordshire. The St Albans and Harpenden corridor, with its concentration of high-value vehicles on residential driveways, is a consistent target. A closed automated driveway gate is one of the most effective physical deterrents available, not because it is impossible to breach, but because it makes the property a significantly harder target than a neighbouring property without one.' },
@@ -312,7 +312,7 @@ const article10: BlogArticle = {
     { type: 'h2', text: 'Auto-Close and Timed Locking' },
     { type: 'p', text: 'Automatic closing after a set delay is a standard feature on all automated gate systems and should be enabled for any installation where security is a primary consideration. Most control boards allow the auto-close delay to be set between fifteen seconds and several minutes. The gate closes automatically after the delay whether the remote was used or the gate was opened by any other means. This removes the risk of leaving the gate open through forgetfulness.' },
     { type: 'h2', text: 'Access Control That Adds Security Value' },
-    { type: 'image', src: '/images/gates/gate-proximity-fob-reader-closeup.png', alt: 'Close-up of proximity key fob access reader mounted on a gate post' },
+    { type: 'image', src: '/images/gates/herts-proximity-reader-post-mount-keyring-detail.png', alt: 'Close-up of proximity key fob access reader mounted on a gate post' },
     { type: 'p', text: 'A video intercom with recording capability is the most security-relevant access control addition beyond basic remote controls. A camera at the gate records activity regardless of whether anyone answers, creating both a deterrent and an evidence source. Push notifications to a smartphone give real-time awareness of gate activity from anywhere. Activity logs from keypad and proximity reader systems show a timestamped record of every opening event.' },
     { type: 'h2', text: 'Gate Construction and Physical Resistance' },
     { type: 'p', text: 'A heavy wrought iron or steel gate on reinforced posts offers more physical resistance than a lightweight aluminium gate on standard hinges. However, the primary security benefit of a residential gate in the Hertfordshire context is deterrence rather than physical resistance. A gate of 1.8 metres or above is significantly harder to scale and is the standard recommendation for security-priority installations. Most Hertfordshire planning authorities accept 1.8 metre gates under permitted development.' },
@@ -334,7 +334,7 @@ const article11: BlogArticle = {
   metaDescription: 'Getting the width wrong is the most common driveway gate mistake. This guide covers standard widths, how to measure your opening accurately, and what Hertfordshire installers need from you before quoting.',
   category: 'Buying Guide',
   publishDate: '2026-03-05',
-  featuredImage: '/images/gates/gate-opening-driver-pov-tree-lined-driveway.png',
+  featuredImage: '/images/gates/herts-driver-view-gates-opening-approaching-home.png',
   excerpt: 'The width of your driveway gates affects everything from the motor specification to the post foundations. Getting it wrong is expensive to fix after installation. Here is how to get it right first time.',
   content: [
     { type: 'p', text: 'Getting the gate width wrong is one of the most common and most expensive mistakes in residential gate installation. Gates that are too narrow force careful positioning every time you drive through, damage wing mirrors on a regular basis, and make life difficult for larger vehicles like delivery vans and skips. Gates that are unnecessarily wide cost more to fabricate, need heavier motors to drive them, put greater load on the post foundations, and can look out of proportion with the entrance. The right width is determined by your actual traffic requirements, the physical dimensions of your driveway, and the type of gate you are installing.' },
@@ -389,7 +389,7 @@ const article12: BlogArticle = {
   metaDescription: 'Electric driveway gates can increase property value in Hertfordshire by 5% or more in the right area. This guide covers where gates add value, where they do not, and what buyers actually look for.',
   category: 'Buying Guide',
   publishDate: '2026-03-06',
-  featuredImage: '/images/gates/gate-aerial-estate-closed-autumn-trees.png',
+  featuredImage: '/images/gates/herts-aerial-closed-gates-autumn-estate-foliage.png',
   excerpt: 'Estate agents in Hertfordshire regularly cite electric gates as a value-adding feature. But the reality is more nuanced than a simple yes or no. Where you live and what you install both matter.',
   content: [
     { type: 'p', text: 'The question of whether electric gates add property value comes up in almost every conversation between a homeowner considering gates and the people advising them. Estate agents tend to say yes. Builders tend to shrug. The honest answer sits somewhere between the two and depends heavily on where in Hertfordshire your property is, what type of property it is, and what specification of gate you install.' },
@@ -436,7 +436,7 @@ const article13: BlogArticle = {
   metaDescription: 'A well-specified electric gate should last 20 to 30 years for the gate itself and 10 to 15 years for the motor. This guide covers what affects lifespan and how to get the most from your installation.',
   category: 'Maintenance',
   publishDate: '2026-03-07',
-  featuredImage: '/images/gates/gate-wrought-iron-detail-spear-finials-closeup.png',
+  featuredImage: '/images/gates/herts-blacksmith-ironwork-finial-scroll-macro.png',
   excerpt: 'Electric gates are a significant investment. Knowing how long the gate, the motor, and the access control will last helps you plan maintenance and budget for eventual replacement.',
   content: [
     { type: 'p', text: 'The lifespan of an electric gate is not a single number because the system has several components that age at different rates. The gate structure itself, whether timber, steel, aluminium, or wrought iron, has the longest potential life. The motor and gearbox sit in the middle. The electronic control board, safety sensors, and access control devices have the shortest expected service life. Understanding these different timelines helps you plan servicing, anticipate replacement costs, and make specification decisions at the point of installation that pay off over the full ownership period.' },
@@ -478,7 +478,7 @@ const article14: BlogArticle = {
   metaDescription: 'FAAC, BFT, CAME, Nice, and Beninca dominate the UK residential gate motor market. This guide compares them on reliability, parts availability, features, and which suits different gate types.',
   category: 'Automation',
   publishDate: '2026-03-08',
-  featuredImage: '/images/gates/gate-underground-motor-installation-engineer.png',
+  featuredImage: '/images/gates/herts-engineer-fitting-underground-motor-chamber.png',
   excerpt: 'The motor is the hardest-working component in your gate system. Choosing the right brand affects reliability, parts availability, and how long the system lasts. Here is how the main brands compare.',
   content: [
     { type: 'p', text: 'The gate motor market in the UK is dominated by five Italian manufacturers. FAAC, BFT, CAME, Nice, and Beninca between them account for the vast majority of residential gate automation installed across Hertfordshire and the wider South East. All five produce motors that are technically competent and well-supported. The differences between them are real but more nuanced than a simple ranking from best to worst. The right brand for your project depends on your gate type, the weight of the gate, whether you want underground or surface-mounted motors, and what access control features matter to you.' },
@@ -521,7 +521,7 @@ const article15: BlogArticle = {
   metaDescription: 'Choosing between wooden and metal driveway gates for your Hertfordshire property? This guide compares timber and metal on durability, maintenance, cost, appearance, and suitability for different settings.',
   category: 'Materials',
   publishDate: '2026-03-10',
-  featuredImage: '/images/gates/gate-wooden-oak-open-interior-tree-lined-lane.png',
+  featuredImage: '/images/gates/herts-weathered-oak-open-view-country-lane.png',
   excerpt: 'Wood and metal are the two main material categories for driveway gates in Hertfordshire. Each has genuine advantages and neither is the right answer for every property. Here is how to choose.',
   content: [
     { type: 'p', text: 'The material decision is one of the first and most consequential choices in any driveway gate project. Timber and metal gates serve the same practical function, but they behave differently over time, demand different maintenance, suit different architectural settings, and cost different amounts to buy, install, and maintain over a 20-year period. Neither is objectively better. The right choice depends on your property, your area, your maintenance tolerance, and what you want the entrance to say about the house behind it.' },
@@ -573,7 +573,7 @@ const article16: BlogArticle = {
   metaDescription: 'Choosing gates for a Victorian, Edwardian, Georgian, or medieval Hertfordshire property? This guide covers design principles, materials, planning rules, and how to get the aesthetic right.',
   category: 'Design',
   publishDate: '2026-03-12',
-  featuredImage: '/images/gates/gate-steel-sage-green-swing-period-brick-spring.png',
+  featuredImage: '/images/gates/herts-powder-coated-green-swing-victorian-brick.png',
   excerpt: 'Period properties need gates that respect the architecture without looking like a museum piece. The right design references the building without copying it, and the material should belong in the setting.',
   content: [
     { type: 'p', text: 'Hertfordshire has one of the densest concentrations of period residential properties in England. The medieval streets of St Albans and Wheathampstead, the Georgian and Victorian terraces of Harpenden, the Edwardian suburbs of St Albans and Radlett, and the rural Hertfordshire countrysideen farmsteads and period farmhouses scattered across the countryside from Berkhamsted to Harpenden all create contexts where a gate needs to do more than close off a driveway. It needs to sit within the visual language of the building and the street without drawing attention to itself as something new.' },
@@ -618,7 +618,7 @@ const article17: BlogArticle = {
   metaDescription: 'Driveway gates cost thousands to install and maintain. Are they worth the investment? This honest assessment covers convenience, security, property value, and when gates are not the right answer.',
   category: 'Buying Guide',
   publishDate: '2026-03-14',
-  featuredImage: '/images/gates/gate-opening-driver-pov-tree-lined-driveway.png',
+  featuredImage: '/images/gates/herts-driver-view-gates-opening-approaching-home.png',
   excerpt: 'A quality gate installation is a significant investment. Before committing, it is worth understanding what you actually get for the money and whether your situation genuinely benefits from it.',
   content: [
     { type: 'p', text: 'Electric driveway gates cost between £3,800 and £12,500 to install in Hertfordshire, with annual servicing at £120 to £210 and component replacements over a 20-year ownership period adding another £3,000 to £6,000 on top. That is a total cost of ownership in the range of £6,000 to £20,000 over two decades. It is a genuine investment, and like any investment it deserves an honest assessment of what you get back in return.' },
@@ -660,7 +660,7 @@ const article18: BlogArticle = {
   metaDescription: 'Your electric gates have stopped. Before you call an engineer, there are several things you can check yourself and steps to take to keep the property secure while you wait for a repair.',
   category: 'Maintenance',
   publishDate: '2026-03-16',
-  featuredImage: '/images/gates/gate-automation-commissioning-tablet-installer.png',
+  featuredImage: '/images/gates/herts-installer-commissioning-system-tablet-van.png',
   excerpt: 'Electric gate failures are stressful, especially when the gate is stuck open and the property feels exposed. Here is what to do immediately, what to check yourself, and when to call a professional.',
   content: [
     { type: 'p', text: 'An electric gate that stops working is one of those household failures that feels more urgent than it actually is, because the gate sits between your property and the public road and a gate stuck open creates an immediate feeling of vulnerability. The good news is that most gate faults are caused by a small number of well-understood problems, many of which can be identified or even resolved without an engineer visit. This guide walks you through what to do first, what to check yourself, and when you need professional help.' },
@@ -704,7 +704,7 @@ const article19: BlogArticle = {
   metaDescription: 'Sloped driveways across the Chiltern Hills and the Hertfordshire countryside create challenges for gate installation. This guide covers what works, what does not, and how experienced installers handle the gradient.',
   category: 'Buying Guide',
   publishDate: '2026-03-18',
-  featuredImage: '/images/gates/gate-aerial-wrought-iron-closed-topiary-gravel-circle.png',
+  featuredImage: '/images/gates/herts-overhead-iron-gates-gravel-circle-topiary.png',
   excerpt: 'A sloped driveway does not rule out electric gates. It does rule out certain configurations and it does require an installer who has solved this problem before. Here is what you need to know.',
   content: [
     { type: 'p', text: 'Sloped driveways are common across Hertfordshire. The Chiltern Hills chalk hills creates sharp elevation changes between the road and properties along its length from Shenley through St Albans, Wheathampstead, and onward to the countryside above Hitchin. The Hertfordshire clay hills between Radlett and Harpenden produce rolling terrain where driveways frequently slope, curve, or both. And many Hertfordshire villages sit on hillsides where the road is at one level and the property is at another.' },
@@ -749,7 +749,7 @@ const article20: BlogArticle = {
   metaDescription: 'Wooden driveway gates will last decades with the right maintenance. This guide covers oiling schedules, what to inspect, how to handle damage, and the differences between iroko, oak, and Accoya.',
   category: 'Maintenance',
   publishDate: '2026-03-20',
-  featuredImage: '/images/gates/gate-wooden-iroko-closeup-hertfordshire-village.png',
+  featuredImage: '/images/gates/herts-iroko-grain-detail-hinge-warm-tones.png',
   excerpt: 'A hardwood gate is a long-term investment that rewards a modest maintenance commitment. Neglect it and you will see deterioration within five years. Look after it and it will outlast the house.',
   content: [
     { type: 'p', text: 'Hardwood driveway gates are among the most durable external fixtures you can install on a Hertfordshire property. Iroko gates that were hung in the 1990s are still in sound condition across the rural Hertfordshire countryside. European oak gates on St Albans conservation area properties have decades of service ahead of them. Accoya gates installed in rural western Hertfordshire carry a 50-year manufacturer guarantee that most homeowners will never need to test. But all of this longevity depends on one condition. The gates need to be looked after.' },
