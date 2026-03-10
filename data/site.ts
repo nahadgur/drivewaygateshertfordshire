@@ -3,7 +3,7 @@
 export const siteConfig = {
   name: 'Driveway Gates Hertfordshire',
   tagline: 'Hertfordshire Gate Installers, Vetted and Ready',
-  url: 'https://www.drivewaygateshertfordshire.co.uk',
+  url: 'https://www.drivewaygateshertfordshire.com',
   description: 'Compare free quotes from vetted driveway gate installers across Hertfordshire. Electric sliding gates, swing gates, hardwood gates, wrought iron, automation retrofits, and repair services.',
 };
 
