@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { MapPin, ArrowRight, CheckCircle, Clock, Shield, Star } from 'lucide-react';
 import { services } from '@/data/services';
 import { getCityBySlug } from '@/data/locations';
+import { CITY_INTROS } from '@/data/city-intros';
 import { FAQS_SERVICES, FAQS_LOCATION } from '@/data/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -26,6 +27,9 @@ export default function CityPage({ params }: { params: { city: string } }) {
   if (!cityName) notFound();
 
   const cityFaqs = [...FAQS_LOCATION, ...FAQS_SERVICES];
+
+  // Prefer hand-written city-specific intro; fall back to county-level boilerplate if not yet written
+  const cityIntroParagraphs = CITY_INTROS[params.city]?.cityIntro;
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -82,12 +86,18 @@ export default function CityPage({ params }: { params: { city: string } }) {
                   Gate Installation in {cityName} Requires County-Level Knowledge
                 </h2>
                 <div className="prose prose-gray max-w-none text-gray-600 space-y-4">
-                  <p>
-                    Hertfordshire has one of the most complex planning landscapes in southern England. Green Belt covers the vast majority of the county. The Chilterns AONB applies in the west. Conservation areas exist across every historic market town. Ten district and borough councils each apply their own local plan policies to boundary treatments. An installer unfamiliar with the planning position at your {cityName} postcode risks specifying a gate that needs consent nobody applied for, or a design that the local authority will not accept. Every firm in our network works regularly in Hertfordshire and checks the planning position at the site survey before committing to a specification.
-                  </p>
-                  <p>
-                    Beyond planning, your installer needs to know the soil conditions under the post positions and how the local terrain affects the gate type choice. Each installer we introduce visits the property in person, assesses the driveway, confirms any planning considerations, and provides a written quote with full line-by-line detail. You receive up to three quotes from independent specialists and choose whether to proceed entirely on your own terms.
-                  </p>
+                  {cityIntroParagraphs && cityIntroParagraphs.length > 0 ? (
+                    cityIntroParagraphs.map((p, i) => <p key={i}>{p}</p>)
+                  ) : (
+                    <>
+                      <p>
+                        Hertfordshire has one of the most complex planning landscapes in southern England. Green Belt covers the vast majority of the county. The Chilterns AONB applies in the west. Conservation areas exist across every historic market town. Ten district and borough councils each apply their own local plan policies to boundary treatments. An installer unfamiliar with the planning position at your {cityName} postcode risks specifying a gate that needs consent nobody applied for, or a design that the local authority will not accept. Every firm in our network works regularly in Hertfordshire and checks the planning position at the site survey before committing to a specification.
+                      </p>
+                      <p>
+                        Beyond planning, your installer needs to know the soil conditions under the post positions and how the local terrain affects the gate type choice. Each installer we introduce visits the property in person, assesses the driveway, confirms any planning considerations, and provides a written quote with full line-by-line detail. You receive up to three quotes from independent specialists and choose whether to proceed entirely on your own terms.
+                      </p>
+                    </>
+                  )}
                 </div>
               </section>
 

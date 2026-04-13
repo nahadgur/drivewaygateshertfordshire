@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { CheckCircle, MapPin, Star, Clock, Shield, Award, Users } from 'lucide-react';
 import { services, getServiceBySlug } from '@/data/services';
 import { LOCATIONS, getCityBySlug } from '@/data/locations';
+import { CITY_INTROS, ServiceSlug } from '@/data/city-intros';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
@@ -161,7 +162,14 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
 
   const allCities = Object.values(LOCATIONS).flat();
   const content = serviceLocationContent[service.id] || serviceLocationContent['electric-swing'];
-  const intro = content.intro(cityName);
+
+  // Prefer hand-written city-specific intro; fall back to templated content if not yet written
+  const cityIntroData = CITY_INTROS[params.locationSlug];
+  const cityIntroParagraphs = cityIntroData?.intros?.[service.slug as ServiceSlug];
+  const intro = cityIntroParagraphs && cityIntroParagraphs.length > 0
+    ? cityIntroParagraphs
+    : content.intro(cityName);
+
   const steps = content.steps(cityName);
   const whyPoints = content.whyPoints(cityName);
 
