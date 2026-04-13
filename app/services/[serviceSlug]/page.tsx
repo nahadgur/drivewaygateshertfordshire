@@ -17,6 +17,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
 import { PricingSection } from '@/components/PricingSection';
+import { siteConfig } from '@/data/site';
 
 const serviceContent: Record<string, { intro: string[]; benefits: { title: string; desc: string }[]; candidateIntro: string; candidates: string[]; process: { title: string; desc: string }[] }> = {
   'electric-sliding': {
@@ -212,8 +213,33 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
     ...FAQS_SERVICES,
   ];
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${siteConfig.url}/services/${service.slug}/#service`,
+    name: service.title,
+    serviceType: service.title,
+    url: `${siteConfig.url}/services/${service.slug}/`,
+    description: service.description,
+    provider: { '@id': `${siteConfig.url}/#organization` },
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Hertfordshire',
+      containedInPlace: { '@type': 'Country', name: 'United Kingdom' },
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `${service.title} across Hertfordshire`,
+      itemListElement: Object.values(LOCATIONS).flat().slice(0, 15).map(city => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: `${service.title} in ${city}` },
+      })),
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">

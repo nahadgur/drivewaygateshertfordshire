@@ -72,6 +72,11 @@ export function Footer() {
             <Link href="/sitemap.xml" className="hover:text-gray-300">Sitemap</Link>
             <Link href="/services/" className="hover:text-gray-300">Services</Link>
             <Link href="/location/" className="hover:text-gray-300">Locations</Link>
+            <Link href="/how-we-match-you/" className="hover:text-gray-300">How We Match You</Link>
+            <Link href="/costs/" className="hover:text-gray-300">Costs</Link>
+            <Link href="/guides/" className="hover:text-gray-300">Guides</Link>
+            <Link href="/planning-permissions/" className="hover:text-gray-300">Planning Permissions</Link>
+            <Link href="/join-our-network/" className="hover:text-gray-300">For Installers</Link>
           </div>
         </div>
       </div>

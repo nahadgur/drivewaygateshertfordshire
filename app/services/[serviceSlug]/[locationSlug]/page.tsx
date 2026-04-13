@@ -173,17 +173,27 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'HomeAndConstructionBusiness',
+    '@type': 'Service',
+    '@id': `${siteConfig.url}/services/${service.slug}/${params.locationSlug}/#service`,
     name: `${service.title} in ${cityName}`,
+    serviceType: service.title,
     url: `${siteConfig.url}/services/${service.slug}/${params.locationSlug}/`,
     description: `Find vetted ${service.title.toLowerCase()} specialists in ${cityName}, Hertfordshire. Free site survey, written quotes, no obligation.`,
+    provider: { '@id': `${siteConfig.url}/#organization` },
     areaServed: {
       '@type': 'City',
       name: cityName,
       containedInPlace: { '@type': 'AdministrativeArea', name: 'Hertfordshire' },
     },
-    serviceType: service.title,
-    priceRange: '\u00a3\u00a3',
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'GBP',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'GBP',
+        description: `${service.title} installation quotes for homeowners in ${cityName}`,
+      },
+    },
   };
 
   return (

@@ -70,34 +70,32 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'HomeAndConstructionBusiness',
-          '@id': siteConfig.url,
-          name: siteConfig.name,
-          description: siteConfig.description,
-          url: siteConfig.url,
-          logo: `${siteConfig.url}/android-chrome-512x512.png`,
-          image: `${siteConfig.url}/android-chrome-512x512.png`,
-          areaServed: {
-            '@type': 'AdministrativeArea',
-            name: 'Hertfordshire',
-            containedInPlace: { '@type': 'Country', name: 'United Kingdom' },
-          },
-          hasOfferCatalog: {
-            '@type': 'OfferCatalog',
-            name: 'Driveway Gate Installation Services',
-            itemListElement: [
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Electric Sliding Gate Installation' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Electric Swing Gate Installation' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wooden Driveway Gate Installation' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Metal Driveway Gate Installation' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gate Automation Retrofit' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gate Repair and Maintenance' } },
-            ],
-          },
-          priceRange: '\u00a3\u00a3',
-          currenciesAccepted: 'GBP',
-          paymentAccepted: 'Cash, Credit Card, Bank Transfer, Finance',
-          openingHours: 'Mo-Sa 08:00-18:00',
+          '@graph': [
+            {
+              '@type': 'WebPage',
+              '@id': `${siteConfig.url}/`,
+              name: siteConfig.name,
+              description: siteConfig.description,
+              url: siteConfig.url,
+              about: { '@id': `${siteConfig.url}/#organization` },
+            },
+            {
+              '@type': 'Organization',
+              '@id': `${siteConfig.url}/#organization`,
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Driveway Gate Installation Services',
+                itemListElement: [
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Electric Sliding Gate Installation' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Electric Swing Gate Installation' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wooden Driveway Gate Installation' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Metal Driveway Gate Installation' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gate Automation Retrofit' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gate Repair and Maintenance' } },
+                ],
+              },
+            },
+          ],
         }) }}
       />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

@@ -28,24 +28,30 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'HomeAndConstructionBusiness',
+    '@type': 'Service',
+    '@id': `${siteConfig.url}/location/${params.city}/#service`,
     name: `Driveway Gate Installers in ${cityName}`,
+    serviceType: 'Driveway Gate Installation',
     url: `${siteConfig.url}/location/${params.city}/`,
     description: `Find vetted driveway gate installers in ${cityName}, Hertfordshire. Free site surveys, written quotes, and up to 3 options with no obligation.`,
+    provider: { '@id': `${siteConfig.url}/#organization` },
     areaServed: {
       '@type': 'City',
       name: cityName,
       containedInPlace: { '@type': 'AdministrativeArea', name: 'Hertfordshire' },
     },
-    serviceType: [
-      'Electric Sliding Gate Installation',
-      'Electric Swing Gate Installation',
-      'Wooden Driveway Gate Installation',
-      'Metal Driveway Gate Installation',
-      'Gate Automation Installation',
-      'Gate Repair and Maintenance',
-    ],
-    priceRange: '££',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `Driveway Gate Services in ${cityName}`,
+      itemListElement: [
+        'Electric Sliding Gate Installation',
+        'Electric Swing Gate Installation',
+        'Wooden Driveway Gate Installation',
+        'Metal Driveway Gate Installation',
+        'Gate Automation Installation',
+        'Gate Repair and Maintenance',
+      ].map(name => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })),
+    },
   };
 
   return (

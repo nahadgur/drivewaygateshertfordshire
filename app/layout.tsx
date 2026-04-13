@@ -53,9 +53,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/icon-512x512.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteConfig.url}/icon-512x512.png`,
+      width: 512,
+      height: 512,
+    },
     description: siteConfig.description,
     areaServed: {
       '@type': 'AdministrativeArea',

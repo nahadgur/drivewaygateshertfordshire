@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { services } from '@/data/services';
+import { siteConfig } from '@/data/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero';
@@ -13,8 +14,29 @@ import { LeadFormModal } from '@/components/LeadFormModal';
 export default function ServicesIndexPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${siteConfig.url}/services/`,
+    name: 'Hertfordshire Gate Installation Services',
+    url: `${siteConfig.url}/services/`,
+    isPartOf: { '@id': `${siteConfig.url}/#organization` },
+    about: { '@id': `${siteConfig.url}/#organization` },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: services.length,
+      itemListElement: services.map((s, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: s.title,
+        url: `${siteConfig.url}/services/${s.slug}/`,
+      })),
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">

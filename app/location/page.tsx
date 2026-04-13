@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { MapPin, Search } from 'lucide-react';
 import { LOCATIONS, toSlug } from '@/data/locations';
 import { FAQS_LOCATION } from '@/data/site';
+import { siteConfig } from '@/data/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero';
@@ -15,6 +16,27 @@ import { LeadFormModal } from '@/components/LeadFormModal';
 export default function LocationIndexPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+
+  const allCities = Object.values(LOCATIONS).flat();
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${siteConfig.url}/location/`,
+    name: 'Driveway Gate Installation Locations Across Hertfordshire',
+    url: `${siteConfig.url}/location/`,
+    isPartOf: { '@id': `${siteConfig.url}/#organization` },
+    about: { '@id': `${siteConfig.url}/#organization` },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: allCities.length,
+      itemListElement: allCities.map((city, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: city,
+        url: `${siteConfig.url}/location/${toSlug(city)}/`,
+      })),
+    },
+  };
 
   const filteredLocations = useMemo(() => {
     if (!searchQuery) return LOCATIONS;
@@ -28,6 +50,7 @@ export default function LocationIndexPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
