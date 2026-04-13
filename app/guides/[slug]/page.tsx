@@ -14,6 +14,14 @@ import { COMPARISON_GUIDES, getGuideBySlug } from '@/data/guides';
 import { getServiceBySlug } from '@/data/services';
 import { siteConfig } from '@/data/site';
 
+const GUIDE_IMAGES: Record<string, string> = {
+  'hardwood-vs-softwood-driveway-gates': '/images/gates/herts-cream-hardwood-swing-rural-cottage-entrance.png',
+  'aluminium-vs-steel-driveway-gates':   '/images/gates/herts-comparison-traditional-iron-vs-modern-aluminium.png',
+  'underground-vs-ram-gate-motors':      '/images/gates/herts-engineer-fitting-underground-motor-chamber.png',
+  'sliding-vs-swing-driveway-gates':     '/images/gates/herts-two-fitters-hanging-steel-panel-residential.png',
+  'manual-vs-automated-driveway-gates':  '/images/gates/herts-driver-view-gates-opening-approaching-home.png',
+};
+
 export default function GuideDetailPage({ params }: { params: { slug: string } }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const guide = getGuideBySlug(params.slug);
@@ -70,6 +78,7 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
           headline={guide.title}
           byline={guide.summary}
           meta="10 min read · Apr 2026"
+          image={GUIDE_IMAGES[guide.slug]}
           imageLabel={guide.shortTitle}
         />
 

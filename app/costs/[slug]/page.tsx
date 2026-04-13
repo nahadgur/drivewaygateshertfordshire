@@ -13,6 +13,15 @@ import { HeritageHeroEditorial } from '@/components/HeritageHeroEditorial';
 import { COST_GUIDES, getCostBySlug } from '@/data/costs';
 import { siteConfig } from '@/data/site';
 
+const COST_IMAGES: Record<string, string> = {
+  'electric-sliding-gates':      '/images/gates/herts-contemporary-aluminium-slider-dark-finish.png',
+  'electric-swing-gates':        '/images/gates/herts-ornate-iron-entrance-pillars-lanterns-driveway.png',
+  'wooden-driveway-gates':       '/images/gates/herts-weathered-oak-open-view-country-lane.png',
+  'metal-driveway-gates':        '/images/gates/herts-grand-iron-gates-brick-piers-tree-lined-drive.png',
+  'automated-gate-systems':      '/images/gates/herts-engineer-fitting-underground-motor-chamber.png',
+  'gate-repair-and-maintenance': '/images/gates/erts-installer-commissioning-system-tablet-van.png',
+};
+
 export default function CostDetailPage({ params }: { params: { slug: string } }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const cost = getCostBySlug(params.slug);
@@ -46,6 +55,7 @@ export default function CostDetailPage({ params }: { params: { slug: string } })
           headline={<>{cost.service} cost in <em>Hertfordshire.</em></>}
           byline={`${cost.typicalRange} · ${cost.summary}`}
           meta="Updated April 2026"
+          image={COST_IMAGES[cost.slug]}
           imageLabel={cost.service}
         />
 

@@ -48,7 +48,8 @@ export default function GuidesPage() {
           headline={<>Driveway gate <em>buying guides.</em></>}
           byline="The real trade-offs between materials, motors, and gate formats — written to help Hertfordshire homeowners decide without installer sales pressure."
           meta="Updated April 2026"
-          imageLabel="Gate comparison, Hertfordshire"
+          image="/images/gates/herts-iroko-grain-detail-hinge-warm-tones.png"
+          imageLabel="Iroko hardwood detail"
         />
 
         <section className="section-padding bg-white">

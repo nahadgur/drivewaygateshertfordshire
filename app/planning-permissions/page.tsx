@@ -48,7 +48,8 @@ export default function PlanningPermissionsPage() {
           headline={<>Driveway gate <em>planning permission</em> in Hertfordshire.</>}
           byline="What the rules actually say, how each Hertfordshire council applies them, and when a gate installation will or will not need planning permission."
           meta="Updated April 2026"
-          imageLabel="Conservation area, Hertfordshire"
+          image="/images/gates/herts-powder-coated-green-swing-victorian-brick.png"
+          imageLabel="Period property, conservation area"
         />
 
         <section className="section-padding bg-white">

@@ -48,7 +48,8 @@ export default function CostsPage() {
           headline={<>Driveway gate <em>costs</em> in Hertfordshire.</>}
           byline="Honest price ranges, what drives the cost up or down, and the hidden extras that turn up on quotes so you can spot them before you sign."
           meta="Updated April 2026"
-          imageLabel="Installation detail"
+          image="/images/gates/herts-comparison-traditional-iron-vs-modern-aluminium.png"
+          imageLabel="Traditional vs modern comparison"
         />
 
         <section className="section-padding bg-white">

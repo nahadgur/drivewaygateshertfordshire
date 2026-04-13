@@ -14,6 +14,14 @@ import { PLANNING_REGIONS, UNIVERSAL_RULES } from '@/data/planning';
 import { LOCATIONS, toSlug } from '@/data/locations';
 import { siteConfig } from '@/data/site';
 
+const REGION_IMAGES: Record<string, string> = {
+  'west-hertfordshire':    '/images/gates/herts-aerial-closed-gates-autumn-estate-foliage.png',
+  'south-hertfordshire':   '/images/gates/herts-overhead-iron-gates-gravel-circle-topiary.png',
+  'central-hertfordshire': '/images/gates/herts-powder-coated-green-swing-victorian-brick.png',
+  'east-hertfordshire':    '/images/gates/herts-cream-hardwood-swing-rural-cottage-entrance.png',
+  'north-hertfordshire':   '/images/gates/herts-weathered-oak-open-view-country-lane.png',
+};
+
 export default function RegionalPlanningPage({ params }: { params: { region: string } }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const region = PLANNING_REGIONS.find(r => r.slug === params.region);
@@ -47,6 +55,7 @@ export default function RegionalPlanningPage({ params }: { params: { region: str
           headline={<>Gate planning in <em>{region.name}.</em></>}
           byline={`Local conservation controls, AONB considerations, and council-specific practice. Covers ${region.councils.join(', ')}.`}
           meta="Updated April 2026"
+          image={REGION_IMAGES[region.slug]}
           imageLabel={`${region.name} streetscape`}
         />
 
