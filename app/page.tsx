@@ -103,9 +103,9 @@ export default function HomePage() {
       <main className="flex-grow">
 
         <HeritageHeroMoney
-          eyebrow="Hertfordshire · Gate Installer Network"
-          headline={<>A gate <em>worthy</em> of the house behind it.</>}
-          lede="From wrought iron in the St Albans conservation area to hardwood in the Chilterns AONB. Vetted specialists who know the county. Free surveys, no obligation."
+          eyebrow="Hertfordshire · Vetted Gate Installer Network"
+          headline={<>Driveway Gates Hertfordshire — <em>vetted</em> specialists, honest quotes.</>}
+          lede="Electric sliding gates, wooden gates, wrought iron and automation specialists across St Albans, Harpenden, Watford, and every Hertfordshire town. Free site surveys, written quotes, no obligation."
           image="/images/gates/herts-grand-iron-gates-brick-piers-tree-lined-drive.png"
           imageLabel="Grand iron gates, tree-lined drive"
         />
