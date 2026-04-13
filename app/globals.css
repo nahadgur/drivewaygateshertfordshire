@@ -23,10 +23,55 @@
     @apply font-body antialiased;
     background: var(--cream);
     color: var(--ink);
+    font-family: 'Space Grotesk', system-ui, sans-serif;
   }
-  h1, h2, h3, h4, h5, h6 { @apply font-display; font-weight: 400; letter-spacing: -0.02em; }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Fraunces', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
   h1 { font-variation-settings: 'opsz' 144; }
   h2 { font-variation-settings: 'opsz' 96; }
+
+  /* Force sans on all non-heading body elements — overrides inherited defaults */
+  p, span, a, button, input, select, textarea, label, li, div, td, th {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  /* Editorial prose areas keep Fraunces explicitly */
+  .prose-editorial, .prose-editorial p, .prose-editorial span,
+  .lede, .pullquote, .font-display, .font-italic-serif,
+  blockquote, .h1-display, .h2-display, .h1-display em, .h2-display em {
+    font-family: 'Fraunces', Georgia, serif !important;
+  }
+  .font-italic-serif, .h1-display em, .h2-display em, .h1-display-light em {
+    font-family: 'Instrument Serif', Georgia, serif !important;
+  }
+
+  /* Kill rounded corners sitewide — editorial = sharp edges */
+  .rounded-xs, .rounded-sm, .rounded, .rounded-md, .rounded-lg,
+  .rounded-xl, .rounded-2xl, .rounded-3xl, .rounded-full {
+    border-radius: 0 !important;
+  }
+  /* Small allowance for pill badges that genuinely need a curve */
+  .keep-rounded { border-radius: 9999px !important; }
+
+  /* Remap Tailwind grayscale backgrounds to Heritage cream tones */
+  .bg-white { background-color: var(--cream-soft) !important; }
+  .bg-gray-50 { background-color: var(--cream-deep) !important; }
+  .bg-gray-100 { background-color: var(--cream-deep) !important; }
+
+  /* Remap Tailwind gray text to heritage ink */
+  .text-gray-900 { color: var(--ink) !important; }
+  .text-gray-800 { color: var(--ink) !important; }
+  .text-gray-700 { color: var(--ink-soft) !important; }
+  .text-gray-600 { color: var(--muted) !important; }
+  .text-gray-500 { color: var(--muted) !important; }
+
+  /* Remap borders to heritage line */
+  .border-gray-100, .border-gray-200, .border-gray-300 { border-color: var(--line) !important; }
+
+  /* Kill shadows — editorial doesn't need them */
+  .shadow-sm, .shadow, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl {
+    box-shadow: none !important;
+  }
+  /* Only form-heritage floating form keeps shadow — inline via style prop */
 }
 
 @layer components {
