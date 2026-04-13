@@ -13,6 +13,7 @@ import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { FAQ } from '@/components/FAQ';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
+import { HeritageHeroMoney } from '@/components/HeritageHeroMoney';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { PricingSection } from '@/components/PricingSection';
 import { NearbyAreasGrid } from '@/components/NearbyAreasGrid';
@@ -61,28 +62,16 @@ export default function CityPage({ params }: { params: { city: string } }) {
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
 
-        <section className="bg-gray-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-900/30 via-gray-900/0 to-transparent pointer-events-none" />
-          <div className="container-width py-12 md:py-20 relative z-10">
-            <Breadcrumbs items={[{ label: 'Locations', href: '/location/' }, { label: cityName }]} />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-6">
-              <div>
-                <div className="inline-flex items-center gap-2 bg-brand-500/20 text-brand-300 px-3 py-1 rounded-full text-sm font-medium mb-6 border border-brand-500/30">
-                  <MapPin className="w-4 h-4" /> Vetted Gate Installers in {cityName}
-                </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">
-                  Driveway Gates in <span className="text-brand-400">{cityName}</span>
-                </h1>
-                <p className="text-xl text-gray-300 leading-relaxed">
-                  Vetted gate installation specialists working in and around {cityName}. Every installer in our network focuses on residential gates as their primary trade and has completed a minimum of 50 projects before we send them a single lead.
-                </p>
-              </div>
-              <div>
-                <HeroLeadForm city={cityName} />
-              </div>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'Locations', href: '/location/' }, { label: cityName }]} />
+        </div>
+        <HeritageHeroMoney
+          eyebrow={`Driveway Gates · ${cityName}`}
+          headline={<>Driveway gates in <em>{cityName}.</em></>}
+          lede={`Vetted gate installation specialists working in and around ${cityName}. Every installer focuses on residential gates as their primary trade with a minimum of 50 completed projects.`}
+          imageLabel={`${cityName}, Hertfordshire`}
+          city={cityName}
+        />
 
         <div className="container-width py-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

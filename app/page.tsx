@@ -9,7 +9,7 @@ import { toSlug } from '@/data/locations';
 import { pricingTiers, financeInfo } from '@/data/pricing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Hero } from '@/components/Hero';
+import { HeritageHeroMoney } from '@/components/HeritageHeroMoney';
 import { TrustBadges } from '@/components/TrustBadges';
 import { Testimonials } from '@/components/Testimonials';
 import { FAQ } from '@/components/FAQ';
@@ -102,11 +102,12 @@ export default function HomePage() {
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
 
-        <Hero
-          title="Driveway Gates Hertfordshire: Vetted Specialists, Honest Quotes"
-          subtitle="From wrought iron in the St Albans conservation area to hardwood in the Chilterns AONB. We connect Hertfordshire homeowners with gate installers who know the county. Free surveys, no obligation."
+        <HeritageHeroMoney
+          eyebrow="Hertfordshire · Gate Installer Network"
+          headline={<>A gate <em>worthy</em> of the house behind it.</>}
+          lede="From wrought iron in the St Albans conservation area to hardwood in the Chilterns AONB. Vetted specialists who know the county. Free surveys, no obligation."
           image="/images/gates/herts-grand-iron-gates-brick-piers-tree-lined-drive.png"
-          onOpenModal={() => setIsModalOpen(true)}
+          imageLabel="Grand iron gates, tree-lined drive"
         />
 
         <TrustBadges />

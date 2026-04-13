@@ -7,6 +7,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { HeritageHeroEditorial } from '@/components/HeritageHeroEditorial';
 import { COMPARISON_GUIDES } from '@/data/guides';
 import { siteConfig } from '@/data/site';
 
@@ -39,15 +40,16 @@ export default function GuidesPage() {
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-        <section className="bg-gray-900 text-white">
-          <div className="container-width py-12 md:py-20">
-            <Breadcrumbs items={[{ label: 'Guides' }]} />
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Driveway gate buying guides</h1>
-              <p className="text-lg md:text-xl text-gray-300">The real trade-offs between materials, motors, and gate formats — written to help Hertfordshire homeowners decide without installer sales pressure.</p>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'Guides' }]} />
+        </div>
+        <HeritageHeroEditorial
+          eyebrow="Buying Guides · Hertfordshire"
+          headline={<>Driveway gate <em>buying guides.</em></>}
+          byline="The real trade-offs between materials, motors, and gate formats — written to help Hertfordshire homeowners decide without installer sales pressure."
+          meta="Updated April 2026"
+          imageLabel="Gate comparison, Hertfordshire"
+        />
 
         <section className="section-padding bg-white">
           <div className="container-width max-w-5xl">

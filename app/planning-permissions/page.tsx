@@ -7,6 +7,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { HeritageHeroEditorial } from '@/components/HeritageHeroEditorial';
 import { PLANNING_REGIONS, UNIVERSAL_RULES } from '@/data/planning';
 import { siteConfig } from '@/data/site';
 
@@ -39,15 +40,16 @@ export default function PlanningPermissionsPage() {
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-        <section className="bg-gray-900 text-white">
-          <div className="container-width py-12 md:py-20">
-            <Breadcrumbs items={[{ label: 'Planning Permissions' }]} />
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Driveway gate planning permission in Hertfordshire</h1>
-              <p className="text-lg md:text-xl text-gray-300">What the rules actually say, how each Hertfordshire council applies them, and when a gate installation will or will not need planning permission.</p>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'Planning Permissions' }]} />
+        </div>
+        <HeritageHeroEditorial
+          eyebrow="Planning Permissions · Hertfordshire"
+          headline={<>Driveway gate <em>planning permission</em> in Hertfordshire.</>}
+          byline="What the rules actually say, how each Hertfordshire council applies them, and when a gate installation will or will not need planning permission."
+          meta="Updated April 2026"
+          imageLabel="Conservation area, Hertfordshire"
+        />
 
         <section className="section-padding bg-white">
           <div className="container-width max-w-5xl">

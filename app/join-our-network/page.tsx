@@ -6,6 +6,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { HeritageHeroEditorial } from '@/components/HeritageHeroEditorial';
 import { siteConfig } from '@/data/site';
 
 export default function JoinOurNetworkPage() {
@@ -49,15 +50,16 @@ export default function JoinOurNetworkPage() {
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-        <section className="bg-gray-900 text-white">
-          <div className="container-width py-12 md:py-20">
-            <Breadcrumbs items={[{ label: 'Join Our Network' }]} />
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Join the Hertfordshire installer network</h1>
-              <p className="text-lg md:text-xl text-gray-300">Qualified homeowner enquiries from across Hertfordshire, matched to your gate specialism. No monthly fees, no bidding wars, no shared leads with dozens of competitors.</p>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'Join Our Network' }]} />
+        </div>
+        <HeritageHeroEditorial
+          eyebrow="For Installers · Join the Network"
+          headline={<>Join the Hertfordshire <em>installer</em> network.</>}
+          byline="Qualified homeowner enquiries matched to your gate specialism. No monthly fees, no bidding wars, no shared leads."
+          meta="B2B · Applications open"
+          imageLabel="Hertfordshire workshop"
+        />
 
         <section className="section-padding bg-white">
           <div className="container-width max-w-6xl">

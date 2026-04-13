@@ -9,6 +9,7 @@ import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
+import { HeritageHeroEditorial } from '@/components/HeritageHeroEditorial';
 import { COMPARISON_GUIDES, getGuideBySlug } from '@/data/guides';
 import { getServiceBySlug } from '@/data/services';
 import { siteConfig } from '@/data/site';
@@ -61,18 +62,16 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-        <section className="bg-gray-900 text-white">
-          <div className="container-width py-12 md:py-20">
-            <Breadcrumbs items={[{ label: 'Guides', href: '/guides/' }, { label: guide.shortTitle }]} />
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
-              <div>
-                <h1 className="text-3xl md:text-4xl font-display font-bold mb-6">{guide.title}</h1>
-                <p className="text-gray-300 leading-relaxed">{guide.summary}</p>
-              </div>
-              <div className="lg:pl-8"><HeroLeadForm /></div>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'Guides', href: '/guides/' }, { label: guide.shortTitle }]} />
+        </div>
+        <HeritageHeroEditorial
+          eyebrow={`Buying Guide · ${guide.shortTitle}`}
+          headline={guide.title}
+          byline={guide.summary}
+          meta="10 min read · Apr 2026"
+          imageLabel={guide.shortTitle}
+        />
 
         <section className="section-padding bg-white">
           <div className="container-width max-w-5xl">

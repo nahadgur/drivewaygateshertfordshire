@@ -9,6 +9,7 @@ import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
+import { HeritageHeroEditorial } from '@/components/HeritageHeroEditorial';
 import { PLANNING_REGIONS, UNIVERSAL_RULES } from '@/data/planning';
 import { LOCATIONS, toSlug } from '@/data/locations';
 import { siteConfig } from '@/data/site';
@@ -38,19 +39,16 @@ export default function RegionalPlanningPage({ params }: { params: { region: str
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-        <section className="bg-gray-900 text-white">
-          <div className="container-width py-12 md:py-20">
-            <Breadcrumbs items={[{ label: 'Planning Permissions', href: '/planning-permissions/' }, { label: region.name }]} />
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Gate planning permission in {region.name}</h1>
-                <p className="text-lg text-gray-300 mb-4">Covers the councils of {region.councils.join(', ')}.</p>
-                <p className="text-gray-400">Local conservation controls, AONB considerations, and council-specific practice for homeowners planning a driveway gate installation.</p>
-              </div>
-              <div className="lg:pl-8"><HeroLeadForm /></div>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'Planning Permissions', href: '/planning-permissions/' }, { label: region.name }]} />
+        </div>
+        <HeritageHeroEditorial
+          eyebrow={`Planning · ${region.name}`}
+          headline={<>Gate planning in <em>{region.name}.</em></>}
+          byline={`Local conservation controls, AONB considerations, and council-specific practice. Covers ${region.councils.join(', ')}.`}
+          meta="Updated April 2026"
+          imageLabel={`${region.name} streetscape`}
+        />
 
         <section className="section-padding bg-white">
           <div className="container-width max-w-4xl">

@@ -7,6 +7,7 @@ import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
+import { HeritageHeroEditorial } from '@/components/HeritageHeroEditorial';
 import { siteConfig } from '@/data/site';
 
 export default function HowWeMatchYouPage() {
@@ -38,19 +39,16 @@ export default function HowWeMatchYouPage() {
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-        <section className="bg-gray-900 text-white relative overflow-hidden">
-          <div className="container-width py-12 md:py-20 relative z-10">
-            <Breadcrumbs items={[{ label: 'How We Match You' }]} />
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">How we match you with a Hertfordshire gate installer</h1>
-                <p className="text-lg md:text-xl text-gray-300 mb-6">Driveway Gates Hertfordshire is a matching network, not a single installer. We connect homeowners with vetted local specialists and we take the vetting seriously because our reputation depends on the people we refer.</p>
-                <p className="text-gray-400">Every installer listed has been checked against the six standards below before receiving any enquiry. We do not pay for placement, we do not accept sponsored listings, and we do not refer work to anyone who cannot meet the entry criteria.</p>
-              </div>
-              <div className="lg:pl-8"><HeroLeadForm /></div>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'How We Match You' }]} />
+        </div>
+        <HeritageHeroEditorial
+          eyebrow="How We Match You · Vetting Standards"
+          headline={<>How we match you with a <em>vetted</em> Hertfordshire installer.</>}
+          byline="Driveway Gates Hertfordshire is a matching network, not a single installer. We take the vetting seriously because our reputation depends on the people we refer."
+          meta="Updated April 2026"
+          imageLabel="Vetting process, West Hertfordshire"
+        />
 
         <section className="section-padding bg-white">
           <div className="container-width max-w-5xl">

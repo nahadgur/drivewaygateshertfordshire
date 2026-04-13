@@ -7,6 +7,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { HeritageHeroEditorial } from '@/components/HeritageHeroEditorial';
 import { COST_GUIDES } from '@/data/costs';
 import { siteConfig } from '@/data/site';
 
@@ -39,15 +40,16 @@ export default function CostsPage() {
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-        <section className="bg-gray-900 text-white">
-          <div className="container-width py-12 md:py-20">
-            <Breadcrumbs items={[{ label: 'Costs' }]} />
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Driveway gate costs in Hertfordshire</h1>
-              <p className="text-lg md:text-xl text-gray-300">Honest price ranges from Hertfordshire installers, what actually drives the cost up or down, and the hidden extras that turn up on quotes so you can spot them before you sign.</p>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'Costs' }]} />
+        </div>
+        <HeritageHeroEditorial
+          eyebrow="Cost Guides · Hertfordshire"
+          headline={<>Driveway gate <em>costs</em> in Hertfordshire.</>}
+          byline="Honest price ranges, what drives the cost up or down, and the hidden extras that turn up on quotes so you can spot them before you sign."
+          meta="Updated April 2026"
+          imageLabel="Installation detail"
+        />
 
         <section className="section-padding bg-white">
           <div className="container-width max-w-5xl">

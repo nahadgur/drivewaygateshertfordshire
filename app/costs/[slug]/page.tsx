@@ -9,6 +9,7 @@ import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
+import { HeritageHeroEditorial } from '@/components/HeritageHeroEditorial';
 import { COST_GUIDES, getCostBySlug } from '@/data/costs';
 import { siteConfig } from '@/data/site';
 
@@ -37,21 +38,16 @@ export default function CostDetailPage({ params }: { params: { slug: string } })
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-        <section className="bg-gray-900 text-white">
-          <div className="container-width py-12 md:py-20">
-            <Breadcrumbs items={[{ label: 'Costs', href: '/costs/' }, { label: cost.service }]} />
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">{cost.service} cost in Hertfordshire</h1>
-                <div className="inline-flex items-center gap-2 bg-brand-600/20 border border-brand-400/30 text-brand-200 px-4 py-2 rounded-lg font-bold text-lg mb-6">
-                  <PoundSterling className="w-5 h-5" /> {cost.typicalRange}
-                </div>
-                <p className="text-gray-300 leading-relaxed">{cost.summary}</p>
-              </div>
-              <div className="lg:pl-8"><HeroLeadForm service={cost.service} /></div>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'Costs', href: '/costs/' }, { label: cost.service }]} />
+        </div>
+        <HeritageHeroEditorial
+          eyebrow={`Cost Guide · ${cost.service}`}
+          headline={<>{cost.service} cost in <em>Hertfordshire.</em></>}
+          byline={`${cost.typicalRange} · ${cost.summary}`}
+          meta="Updated April 2026"
+          imageLabel={cost.service}
+        />
 
         <section className="section-padding bg-white">
           <div className="container-width max-w-4xl">

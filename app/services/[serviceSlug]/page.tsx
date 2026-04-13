@@ -16,6 +16,7 @@ import { FAQ } from '@/components/FAQ';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
+import { HeritageHeroMoney } from '@/components/HeritageHeroMoney';
 import { PricingSection } from '@/components/PricingSection';
 import { siteConfig } from '@/data/site';
 
@@ -243,35 +244,17 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-        <section className="bg-gray-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={service.image} alt="" className="w-full h-full object-cover opacity-40" loading="eager" />
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/40" />
-          </div>
-          <div className="container-width py-12 md:py-20 relative z-10">
-            <Breadcrumbs items={[{ label: 'Gate Types', href: '/services/' }, { label: service.title }]} />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-6">
-              <div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">
-                  {service.title}
-                </h1>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">{service.description}</p>
-                <div className="space-y-3">
-                  {['Compare up to 3 free quotes', 'Every installer vetted and insured', `${totalCities}+ Hertfordshire locations covered`].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-brand-400 flex-shrink-0" />
-                      <span className="text-lg">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <HeroLeadForm service={service.title} />
-              </div>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'Gate Types', href: '/services/' }, { label: service.title }]} />
+        </div>
+        <HeritageHeroMoney
+          eyebrow={`Gate Type · ${service.title}`}
+          headline={<>{service.title.split(' ').slice(0, -1).join(' ')} <em>{service.title.split(' ').slice(-1)}</em></>}
+          lede={service.description}
+          image={service.image}
+          imageLabel={service.title}
+          service={service.title}
+        />
 
         <TrustBadges />
 

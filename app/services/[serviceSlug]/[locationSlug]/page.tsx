@@ -10,6 +10,7 @@ import { LOCATIONS, getCityBySlug } from '@/data/locations';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
+import { HeritageHeroMoney } from '@/components/HeritageHeroMoney';
 import { FAQ } from '@/components/FAQ';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Testimonials } from '@/components/Testimonials';
@@ -202,52 +203,22 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-        <section className="bg-gray-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={service.image} alt="" className="w-full h-full object-cover opacity-50" loading="eager" />
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/70 to-gray-900/30" />
-          </div>
-          <div className="container-width py-12 md:py-20 relative z-10">
-            <Breadcrumbs items={[
-              { label: 'Gate Types', href: '/services/' },
-              { label: service.title, href: `/services/${service.slug}/` },
-              { label: cityName }
-            ]} />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-6">
-              <div>
-                <div className="inline-flex items-center gap-2 bg-brand-500/20 text-brand-300 px-3 py-1 rounded-full text-sm font-medium mb-6 border border-brand-500/30">
-                  <MapPin className="w-4 h-4" /> Vetted Installers in {cityName}
-                </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">
-                  {service.title} in <span className="text-brand-400">{cityName}</span>
-                </h1>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Hertfordshire {service.title.toLowerCase()} specialists covering {cityName}. Site survey at no charge, written quotes, no obligation to proceed.
-                </p>
-                <div className="space-y-4 mb-8">
-                  {[
-                    `${service.title} specialists in ${cityName}, verified and active in Hertfordshire`,
-                    'Up to three independent quotes, each with a free site survey',
-                    'Insured, warranted, and commissioned to BS EN 12453 as standard',
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <CheckCircle className="w-6 h-6 text-brand-400 flex-shrink-0" />
-                      <span className="text-lg">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex items-center gap-4 text-sm text-gray-400">
-                  <div className="flex text-yellow-400">{[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-current" />)}</div>
-                  <span>Highly rated by Hertfordshire homeowners</span>
-                </div>
-              </div>
-              <div>
-                <HeroLeadForm city={cityName} service={service.title} />
-              </div>
-            </div>
-          </div>
-        </section>
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[
+            { label: 'Gate Types', href: '/services/' },
+            { label: service.title, href: `/services/${service.slug}/` },
+            { label: cityName }
+          ]} />
+        </div>
+        <HeritageHeroMoney
+          eyebrow={`${service.title} · ${cityName}`}
+          headline={<>{service.title} in <em>{cityName}.</em></>}
+          lede={`Hertfordshire ${service.title.toLowerCase()} specialists covering ${cityName}. Site survey at no charge, written quotes, no obligation to proceed.`}
+          image={service.image}
+          imageLabel={`${service.title}, ${cityName}`}
+          city={cityName}
+          service={service.title}
+        />
 
         <div className="container-width py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">

@@ -1,4 +1,4 @@
-// tailwind.config.js
+// tailwind.config.js - V5 Heritage Editorial
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,23 +9,38 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          50:  '#F4F5F0',
-          100: '#E4E7D9',
-          200: '#CBD0B5',
-          300: '#ADB58C',
-          400: '#889457',
-          500: '#6B7A2E',
-          600: '#5A6727',
-          700: '#48521F',
-          800: '#333A16',
-          900: '#22270E',
-          950: '#131508',
+          50:  '#faf5ea',
+          100: '#f5ede0',
+          200: '#ede3d1',
+          300: '#e0d5c0',
+          400: '#b8914a',
+          500: '#a88548',
+          600: '#8f6d2c',
+          700: '#6d5322',
+          800: '#2d3344',
+          900: '#1a1f2e',
+          950: '#0f1420',
         },
+        cream:        '#f5ede0',
+        'cream-soft': '#faf5ea',
+        'cream-deep': '#ede3d1',
+        ink:          '#1a1f2e',
+        'ink-soft':   '#2d3344',
+        brass:        '#b8914a',
+        'brass-deep': '#8f6d2c',
+        line:         '#e0d5c0',
+        'line-soft':  '#ebe0ca',
       },
       fontFamily: {
-        sans: ['DM Sans', 'system-ui', 'sans-serif'],
-        body: ['DM Sans', 'system-ui', 'sans-serif'],
+        sans:    ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        body:    ['"Space Grotesk"', 'system-ui', 'sans-serif'],
         display: ['Fraunces', 'Georgia', 'serif'],
+        italic:  ['"Instrument Serif"', 'Georgia', 'serif'],
+        prose:   ['Fraunces', 'Georgia', 'serif'],
+      },
+      letterSpacing: {
+        'cta': '0.18em',
+        'eyebrow': '0.22em',
       },
       keyframes: {
         'backdrop-in':  { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
