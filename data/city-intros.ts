@@ -56,7 +56,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'St Albans City & District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Harpenden typically serve properties along the Luton Road, Station Road, and the Leyton Road residential belt where driveway lengths are substantial but swing clearances are often limited by mature tree planting. Cantilever systems in premium aluminium or aged steel are the dominant specification, chosen both for the clean contemporary aesthetic that suits post-war architect-designed properties and for the reduced visual impact on wooded settings.',
+        'Cantilever and ground-track sliders in Harpenden typically serve properties along the Luton Road, Station Road, and the Leyton Road residential belt where driveway lengths are substantial but swing clearances are often limited by mature tree planting. Cantilever systems in premium aluminium or aged steel are the dominant specification, chosen both for the clean contemporary aesthetic that suits post-war architect-designed properties and for the reduced visual impact on wooded settings.',
         'The Harpenden planning context falls under St Albans District Council, with specific conservation controls in the village centre around the Common and the High Street. Outside these core areas, sliding gate applications face fewer constraints than in St Albans proper, though the mature tree canopy across the town requires careful root-zone assessment before foundation excavation begins.',
       ],
       'electric-swing-gates': [
@@ -68,7 +68,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The Harpenden design vocabulary tends toward restraint — simple boarded or framed-and-panelled designs in honest timber rather than elaborate ornamental work. This aligns well with both the Arts and Crafts heritage of much of the housing stock and the planning context at the edges of the town where it meets AONB-adjacent countryside.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Harpenden divide between two distinct markets: contemporary aluminium and steel on the newer estate developments around the south and east edges of the town, and hand-forged wrought iron on the grand Edwardian and inter-war properties of the central ridge. The wrought iron market specifically is served by a small number of genuine forge-working fabricators — not cold-bent mild steel dressed as ironwork.',
+        'In Harpenden, metal gate installations divide between two distinct markets: contemporary aluminium and steel on the newer estate developments around the south and east edges of the town, and hand-forged wrought iron on the grand Edwardian and inter-war properties of the central ridge. The wrought iron market specifically is served by a small number of genuine forge-working fabricators — not cold-bent mild steel dressed as ironwork.',
         'Any Harpenden specification at the upper end of the metal market should include hot-dip galvanising before powder coating and a clear written guarantee on the finish. Paint-only finishes on exposed metal gates fail predictably within 8-10 years in the local climate, and the cost of rectification far exceeds the initial saving on the cheaper specification.',
       ],
       'automated-gate-systems': [
@@ -76,7 +76,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The most common retrofit challenge in Harpenden is cable runs. The large plot sizes typical of the town mean mains cable distances from the consumer unit to the gate position often exceed 30 metres, and the landscaping quality makes disruptive trenching unacceptable. Directional boring or careful route planning through existing service corridors adds to the install cost but preserves the garden investment.',
       ],
       'gate-repair-and-maintenance': [
-        'The Harpenden gate stock skews older and higher-quality than most Hertfordshire towns. Many of the automated systems still in daily service were installed in the 1990s and 2000s — usually from specifier brands like FAAC, BFT, and CAME — and remain fully repairable with current parts. A repair technician who diagnoses honestly will save most Harpenden owners thousands of pounds compared to replacement quotes.',
+        'Harpenden gate owners draw on a stock that skews older and higher-quality than most Hertfordshire towns. Many of the automated systems still in daily service were installed in the 1990s and 2000s — usually from specifier brands like FAAC, BFT, and CAME — and remain fully repairable with current parts. A repair technician who diagnoses honestly will save most Harpenden owners thousands of pounds compared to replacement quotes.',
         'The repair issues specific to Harpenden\'s conditions include tree root displacement of underground motor chambers, photocell interference from dense vegetation growing into the beam path, and control board corrosion on installations where original drainage was under-specified. These are all repairable conditions with proper diagnosis.',
       ],
     },
@@ -90,7 +90,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Dacorum Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Berkhamsted face a specific challenge that defines the town: every application is AONB-adjacent or AONB-proper, and Dacorum Borough Council planning officers apply the Chilterns management plan criteria rigorously. Bright finishes, exposed machinery, and aggressive contemporary profiles generate planning objections almost automatically. Muted powder-coated steel or aged timber cladding over a steel frame are the specifications that pass scrutiny.',
+        'Across Berkhamsted, sliding gate work face a specific challenge that defines the town: every application is AONB-adjacent or AONB-proper, and Dacorum Borough Council planning officers apply the Chilterns management plan criteria rigorously. Bright finishes, exposed machinery, and aggressive contemporary profiles generate planning objections almost automatically. Muted powder-coated steel or aged timber cladding over a steel frame are the specifications that pass scrutiny.',
         'The valley topography of Berkhamsted — the town sitting along the Bulbourne valley between the Chilterns escarpments — creates genuine gradient challenges for ground-track sliders on properties set back from the valley floor. Cantilever systems avoid the track issue but demand proper foundation design for the local clay-with-flints subsoil. Any quote that doesn\'t mention foundation depth explicitly is incomplete.',
       ],
       'electric-swing-gates': [
@@ -170,7 +170,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Watford Borough Council planning treatment of timber gates is generally accommodating outside specific conservation zones. Within the Cassiobury conservation area and around the Town Hall campus, material restraint and sympathy to streetscape character become more important and pre-application consultation is worth considering for substantial installations.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Watford span a broad range: galvanised-and-powder-coated mild steel at the practical end of the market, hand-forged wrought iron on the grand Edwardian villas of Cassiobury, and contemporary aluminium on the newer estate developments. The specification that rarely makes sense in Watford is paint-only steel — the local climate and pollution load degrades these finishes within 8-10 years.',
+        'In Watford, metal gate installations span a broad range: galvanised-and-powder-coated mild steel at the practical end of the market, hand-forged wrought iron on the grand Edwardian villas of Cassiobury, and contemporary aluminium on the newer estate developments. The specification that rarely makes sense in Watford is paint-only steel — the local climate and pollution load degrades these finishes within 8-10 years.',
         'The premium wrought iron market in Watford is served by a limited number of genuine forge-working fabricators. Much of what\'s sold as wrought iron is cold-bent mild steel, which looks acceptable at first but lacks the character and durability of true forge work. If wrought iron is specified for aesthetic reasons, it\'s worth specifying genuine forge work explicitly in the quote.',
       ],
       'automated-gate-systems': [
@@ -192,7 +192,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Hertsmere Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Radlett serve a distinct market — substantial detached houses on generous plots along Watling Street, Loom Lane, and the Aldenham Road belt, typically with driveways long enough to accommodate any configuration. The choice between cantilever and ground-track is driven more by aesthetic preference and planning sensitivity than by physical constraint.',
+        'Sliding systems specified in Radlett serve a distinct market — substantial detached houses on generous plots along Watling Street, Loom Lane, and the Aldenham Road belt, typically with driveways long enough to accommodate any configuration. The choice between cantilever and ground-track is driven more by aesthetic preference and planning sensitivity than by physical constraint.',
         'Hertsmere Borough Council planning treatment of Radlett applications is notably more conservative than some adjacent boroughs. Article 4 directions apply in parts of the town, removing permitted development rights and requiring full planning consent for installations that would proceed automatically elsewhere. Local knowledge of which streets fall within article 4 zones is genuinely useful before committing to a design.',
       ],
       'electric-swing-gates': [
@@ -204,7 +204,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The mature tree cover across Radlett creates genuine advantages for timber gates — they sit naturally against the greenery and age with the landscape rather than against it. The challenge is sourcing — FSC certification is non-negotiable for any specification at the Radlett market level, and proper provenance documentation should be volunteered by the fabricator without needing to be requested.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Radlett trend toward the high end of the market — hand-forged wrought iron in ornamental designs, substantial matching side railings, integrated lighting within the piers, and coordinating pedestrian gates. The specifications routinely approach £10,000-£25,000 for a complete entrance package appropriate to the neighbourhood.',
+        'Across Radlett, metalwork installations trend toward the high end of the market — hand-forged wrought iron in ornamental designs, substantial matching side railings, integrated lighting within the piers, and coordinating pedestrian gates. The specifications routinely approach £10,000-£25,000 for a complete entrance package appropriate to the neighbourhood.',
         'At this specification level, the distinction between genuine forge work and cold-bent mild steel becomes economically and aesthetically significant. Real wrought iron from a working forge has character and longevity that machine-fabricated substitutes lack. Honest fabricators will arrange a forge visit as part of the quotation process for serious commissions.',
       ],
       'automated-gate-systems': [
@@ -226,7 +226,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'East Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Hertford are shaped by the town\'s unusually dense concentration of conservation areas and listed buildings. The historic core — the streets radiating from Fore Street and Parliament Square — contains multiple overlapping conservation designations, and East Hertfordshire District Council planning officers assess applications against both conservation area controls and listed building consent requirements where applicable.',
+        'In Hertford, sliding gate installations are shaped by the town\'s unusually dense concentration of conservation areas and listed buildings. The historic core — the streets radiating from Fore Street and Parliament Square — contains multiple overlapping conservation designations, and East Hertfordshire District Council planning officers assess applications against both conservation area controls and listed building consent requirements where applicable.',
         'Outside the historic core, the Victorian terraces of Bengeo and the substantial detached houses along Hertingfordbury Road have more latitude, though the wider Hertford context still shapes expectations toward traditional or sympathetic modern specifications. Ground-track sliders work well on the flat riverside sites; cantilever systems are preferred where ground disturbance raises conservation concerns.',
       ],
       'electric-swing-gates': [
@@ -238,11 +238,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'East Hertfordshire District Council treatment of timber gate applications in Hertford conservation areas is generally accommodating where the specification is appropriate to the streetscape. Designs that echo neighbouring properties tend to progress without issue; elaborate ornamental work in premium hardwoods can require more careful justification but typically succeeds with proper pre-application engagement.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Hertford work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the Victorian terraces of Bengeo and the Georgian frontages near Parliament Square; bright contemporary metal specifications routinely attract planning objections in conservation zones.',
+        'Hertford metal gate specifications work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the Victorian terraces of Bengeo and the Georgian frontages near Parliament Square; bright contemporary metal specifications routinely attract planning objections in conservation zones.',
         'Listed building consent is a specific consideration in Hertford that doesn\'t apply in most Hertfordshire towns. Many properties in the historic core carry listed status, and any metal gate work on a curtilage structure requires listed building consent in addition to conservation area consent. Processing time is longer but the permissions, once granted, are substantial.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Hertford is constrained by the density of heritage designations across the town more than by any technical consideration. Any visible surface equipment — ram arms, above-ground motors, safety signage — requires particular sensitivity in conservation and listed building contexts. Underground motor specifications are effectively standard for any installation in the historic core.',
+        'Hertford automation work constrained by the density of heritage designations across the town more than by any technical consideration. Any visible surface equipment — ram arms, above-ground motors, safety signage — requires particular sensitivity in conservation and listed building contexts. Underground motor specifications are effectively standard for any installation in the historic core.',
         'The practical consequence is that Hertford automation installations often take longer in planning than in installation. Pre-application engagement with East Herts planning is genuinely useful for any substantial project, and the small investment in formal pre-app advice typically saves months of rework later.',
       ],
       'gate-repair-and-maintenance': [
@@ -260,7 +260,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'North Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Hitchin divide between the historic core — with its dense concentration of conservation area controls — and the substantial residential belts of Tilehouse Street, Oughtonhead, and the newer developments on the town\'s southern and western edges. North Hertfordshire District Council planning treatment is more accommodating of modern sliding gate specifications than the conservation-heavy adjacent districts, though the town\'s historic character shapes expectations.',
+        'Owners fitting sliders in Hitchin find that installations divide between the historic core — with its dense concentration of conservation area controls — and the substantial residential belts of Tilehouse Street, Oughtonhead, and the newer developments on the town\'s southern and western edges. North Hertfordshire District Council planning treatment is more accommodating of modern sliding gate specifications than the conservation-heavy adjacent districts, though the town\'s historic character shapes expectations.',
         'The clay-based subsoil typical of Hitchin requires proper foundation engineering for ground-track installations, particularly on the level floodplain sites near the Hiz and Purwell rivers. Cantilever systems avoid the track issue and are often the aesthetic preference on properties where the historic character matters; ground-track systems remain the economical choice where the boundary configuration supports them.',
       ],
       'electric-swing-gates': [
@@ -272,7 +272,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The Hitchin context benefits timber gate installations — the streetscape, the mature garden planting typical across the town, and the general material vocabulary all support hardwood as a natural choice. Planning treatment from North Herts is consistently accommodating of timber specifications, even within the Bancroft and Market Place conservation zones.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Hitchin span from practical galvanised-and-powder-coated specifications on the newer developments through to hand-forged wrought iron on the grand Victorian houses of Tilehouse Street and Bearton. The specification expectations vary significantly by location — understanding which metal treatment suits which neighbourhood is genuine local knowledge.',
+        'Hitchin\'s metal gate installations span from practical galvanised-and-powder-coated specifications on the newer developments through to hand-forged wrought iron on the grand Victorian houses of Tilehouse Street and Bearton. The specification expectations vary significantly by location — understanding which metal treatment suits which neighbourhood is genuine local knowledge.',
         'At the upper end of the Hitchin market, genuine forge-worked wrought iron with proper hot-dip galvanising and polyester powder coat finish is the specification that lasts. Paint-only finishes and cold-bent mild steel dressed as wrought iron both look acceptable at first but fail within a decade in the local climate. Honest specification matters here.',
       ],
       'automated-gate-systems': [
@@ -281,7 +281,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Gate repair work in Hitchin reflects the town\'s mature installed base — many systems from the 1990s and 2000s are still in daily service, and proper diagnosis typically identifies specific repairable faults rather than justifying wholesale replacement. The second-opinion principle applies strongly here: any replacement quote above £1,500 is worth verifying with an independent diagnostic visit.',
-        'The specific Hitchin failure patterns include photocell alignment drift from seasonal ground movement in the clay substrate, control board corrosion in valley-floor installations where drainage has been marginal, and safety edge degradation from UV exposure on south-facing entrances. All of these are repairable for a fraction of replacement cost with proper diagnostic work.',
+        'Hitchin repair records show failure patterns that include photocell alignment drift from seasonal ground movement in the clay substrate, control board corrosion in valley-floor installations where drainage has been marginal, and safety edge degradation from UV exposure on south-facing entrances. All of these are repairable for a fraction of replacement cost with proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -314,7 +314,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The specific local consideration is the aesthetic treatment of visible surface equipment. The Garden City planning ethos and the streetscape expectations push specifications toward underground motor systems with concealed control boxes and flush-mounted access control. Visible ram-arm motors and surface-mounted keypads work technically but sit awkwardly against the town\'s visual character.',
       ],
       'gate-repair-and-maintenance': [
-        'The Welwyn Garden City gate stock includes substantial installations from the 1990s and 2000s, many still in daily service and fully repairable with current parts. The local installer network includes specialists familiar with older BFT, CAME, and FAAC systems and able to diagnose repair-or-replace questions honestly rather than defaulting to wholesale replacement quotes.',
+        'The local gate stock in Welwyn Garden City includes substantial installations from the 1990s and 2000s, many still in daily service and fully repairable with current parts. The local installer network includes specialists familiar with older BFT, CAME, and FAAC systems and able to diagnose repair-or-replace questions honestly rather than defaulting to wholesale replacement quotes.',
         'The specific Welwyn failure patterns include control board corrosion from ground-water ingress in under-drained installations, photocell drift from seasonal clay movement, and access control system obsolescence as manufacturer software support is retired. Modernisation retaining the existing mechanical system is often substantially cheaper than replacement.',
       ],
     },
@@ -329,7 +329,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Bishops Stortford\'s position on the Essex border and the dense concentration of residential development around the M11 corridor creates a distinctive gate market. The town combines a substantial historic core — the Castle Street and Windhill conservation areas — with significant post-war and recent residential expansion across Thorley Park, Bishops Park, and the Stansted-adjacent developments.',
-        'Sliding gate installations in the newer developments face few constraints and standard ground-track or cantilever configurations both work. Within the historic core, East Hertfordshire District Council planning treatment is substantially more restrictive, and conservation area consent considerations typically favour cantilever systems with concealed mechanisms over visible ground-track installations.',
+        'Where sliders make sense, these are the newer developments face few constraints and standard ground-track or cantilever configurations both work. Within the historic core, East Hertfordshire District Council planning treatment is substantially more restrictive, and conservation area consent considerations typically favour cantilever systems with concealed mechanisms over visible ground-track installations.',
       ],
       'electric-swing-gates': [
         'Swing gates are the aesthetic default across most of Bishops Stortford\'s residential streets. The Victorian terraces of Havers Lane and the substantial detached properties along Warwick Road and St Michaels Mead support traditional swing configurations well, and East Herts planning treatment of swing gate applications is generally accommodating.',
@@ -378,7 +378,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The Stevenage market supports a broad specification range. Budget-conscious installations using galvanised-and-powder-coated mild steel work well on practical terms; premium installations in hand-forged wrought iron suit the pre-war housing of Old Stevenage and the renovated Edwardian stock. Honest specification advice from the installer is the valuable differentiator.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Stevenage benefits from the New Town infrastructure. Mains power availability at typical gate positions is reliable, cable routing through landscaped gardens is generally manageable, and the clay substrate across most of the borough is well-understood by local specialists. Installation conditions are among the most straightforward in Hertfordshire.',
+        'Automated gate projects in Stevenage benefits from the New Town infrastructure. Mains power availability at typical gate positions is reliable, cable routing through landscaped gardens is generally manageable, and the clay substrate across most of the borough is well-understood by local specialists. Installation conditions are among the most straightforward in Hertfordshire.',
         'The retrofit market in Stevenage is substantial, driven by the ageing installed base across properties fitted in the 1990s and 2000s. Many of these systems remain fully serviceable with current parts and benefit more from careful upgrade than from wholesale replacement. Access control modernisation — current intercom systems, smartphone integration, cloud recording — is a common sensible upgrade.',
       ],
       'gate-repair-and-maintenance': [
@@ -408,11 +408,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Both North Hertfordshire District Council planning and the Letchworth Garden City Heritage Foundation typically favour timber gate specifications in the town. European oak with natural silvered weathering, iroko with restrained finish, or Accoya for premium low-maintenance installations all generally progress through the approvals process without significant friction provided the designs are appropriately restrained.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Letchworth require particular specification care. The Heritage Foundation Scheme of Management has historically preferred timber or restrained traditional ironwork over contemporary metal specifications, and bright aluminium or galvanised steel finishes generate Foundation concerns even where they would pass ordinary planning without issue.',
+        'For metal gate installations in Letchworth, specifications require particular specification care. The Heritage Foundation Scheme of Management has historically preferred timber or restrained traditional ironwork over contemporary metal specifications, and bright aluminium or galvanised steel finishes generate Foundation concerns even where they would pass ordinary planning without issue.',
         'Where metal is the appropriate choice, hand-forged wrought iron in dark-oxidised or aged bronze finishes sits correctly in the Letchworth streetscape. The specification should reference the original Garden City vocabulary — restrained ornamental work, proportionate presence, traditional forge techniques rather than cold-bent mild steel substitutes.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Letchworth is constrained by visual considerations rather than technical ones. The Garden City planning ethos and the Heritage Foundation design review combine to favour specifications where motors, control boxes, and access control equipment are concealed or unobtrusively integrated. Underground motor systems with flush-mounted keypads are effectively the standard at the Letchworth market level.',
+        'Letchworth\'s gate automation constrained by visual considerations rather than technical ones. The Garden City planning ethos and the Heritage Foundation design review combine to favour specifications where motors, control boxes, and access control equipment are concealed or unobtrusively integrated. Underground motor systems with flush-mounted keypads are effectively the standard at the Letchworth market level.',
         'The practical consequence is that Letchworth automation installations benefit from specialist local knowledge. An installer familiar with the Heritage Foundation approvals process saves months of rework compared to a generic specialist who may propose specifications appropriate elsewhere but inappropriate for Letchworth.',
       ],
       'gate-repair-and-maintenance': [
@@ -450,8 +450,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The specific Bushey automation considerations include the access control requirements of the Jewish community neighbourhoods, the visual sympathy demanded by Bushey Heath streetscape controls, and the article 4 planning restrictions that apply in specific streets. A local specialist understands these nuances and specifies accordingly.',
       ],
       'gate-repair-and-maintenance': [
-        'The Bushey gate stock is substantial and includes many high-value installations on substantial properties. The economic case for careful diagnostic-led repair rather than wholesale replacement is strong at this market level, and the local specialist network includes technicians familiar with older specifier brands and capable of honest assessment.',
-        'The typical Bushey failure patterns include control board corrosion in under-drained underground motor chambers, photocell alignment drift from mature tree root movement in Bushey Heath gardens, access control obsolescence across multiple manufacturer generations, and safety edge degradation on south-facing installations. Each is repairable with proper diagnostic work.',
+        'Bushey\'s electric gate stock is substantial and includes many high-value installations on substantial properties. The economic case for careful diagnostic-led repair rather than wholesale replacement is strong at this market level, and the local specialist network includes technicians familiar with older specifier brands and capable of honest assessment.',
+        'Common Bushey gate failures include control board corrosion in under-drained underground motor chambers, photocell alignment drift from mature tree root movement in Bushey Heath gardens, access control obsolescence across multiple manufacturer generations, and safety edge degradation on south-facing installations. Each is repairable with proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -465,10 +465,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Potters Bar sits at the southern edge of Hertfordshire on the Greater London boundary, creating a distinct residential market shaped by its proximity to London and the Underground Northern Line connection via High Barnet. The housing stock combines substantial inter-war detached properties across Old Potters Bar, post-war semi-detached development through the central neighbourhoods, and recent estate expansion on the town\'s edges.',
-        'Sliding gate installations in Potters Bar are generally straightforward from a planning perspective. Hertsmere Borough Council treatment is pragmatic outside the specific conservation and article 4 zones, and the standard ground-track or cantilever specifications both work on the town\'s typically level terrain. The commuter profile justifies investment in premium access control integration.',
+        'Potters Bar\'s sliding gate installations are generally straightforward from a planning perspective. Hertsmere Borough Council treatment is pragmatic outside the specific conservation and article 4 zones, and the standard ground-track or cantilever specifications both work on the town\'s typically level terrain. The commuter profile justifies investment in premium access control integration.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit the inter-war housing character that dominates much of Potters Bar. The substantial detached properties along Mutton Lane, the Barnet Road residential belt, and the older Parkfield neighbourhoods support traditional swing configurations with appropriate motor specifications.',
+        'Potters Bar\'s housing stock suits the swing gate format, reflecting the inter-war housing character that dominates much of the town. The substantial detached properties along Mutton Lane, the Barnet Road residential belt, and the older Parkfield neighbourhoods support traditional swing configurations with appropriate motor specifications.',
         'The Potters Bar commuter profile — driven by the 30-minute central London connection via High Barnet and the direct Kings Cross service — creates strong demand for premium access control integration. Video intercom with smartphone apps, vehicle recognition cameras, and cloud recording are common baseline specifications rather than premium extras at the local market level.',
       ],
       'wooden-driveway-gates': [
@@ -476,16 +476,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Hertsmere Borough Council planning treatment of timber applications in Potters Bar is generally accommodating. The specific consideration is the article 4 direction coverage in parts of the town that removes permitted development rights — checking the article 4 status of a specific address before committing to specification prevents unexpected planning requirements later.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Potters Bar span from practical galvanised-and-powder-coated specifications on the mid-range properties through to substantial hand-forged wrought iron on the larger inter-war houses. The town\'s mixed character accommodates a broad specification range, with the right choice depending substantially on the property\'s individual architectural context.',
+        'Owners fitting metal gates in Potters Bar find installations span from practical galvanised-and-powder-coated specifications on the mid-range properties through to substantial hand-forged wrought iron on the larger inter-war houses. The town\'s mixed character accommodates a broad specification range, with the right choice depending substantially on the property\'s individual architectural context.',
         'The specific specification consideration across the Potters Bar market is finish durability. The town\'s proximity to the M25 and the general London fringe pollution load means airborne particulates accelerate finish degradation compared to more rural Hertfordshire locations. Hot-dip galvanising beneath polyester powder coat substantially outperforms paint-only specifications over 20-30 year timeframes.',
       ],
       'automated-gate-systems': [
-        'Gate automation demand in Potters Bar is strong, driven by the commuter profile and the security considerations that apply to properties with high-value commuter vehicles regularly visible from the street. The installed base spans decades of installations, with retrofit work a substantial share of the local specialist market.',
+        'Gate automation across Potters Bar strong, driven by the commuter profile and the security considerations that apply to properties with high-value commuter vehicles regularly visible from the street. The installed base spans decades of installations, with retrofit work a substantial share of the local specialist market.',
         'The practical automation considerations in Potters Bar include cable routing through mature gardens, mains power availability at typical gate positions, and access control software currency on older installations. The local specialist market includes technicians familiar with these specific considerations and capable of appropriate specification.',
       ],
       'gate-repair-and-maintenance': [
-        'The Potters Bar gate stock is substantial and ageing, creating steady demand for diagnostic-led repair and maintenance work across the town. The local specialist network includes technicians familiar with older-generation installations and capable of honest assessment rather than replacement-first sales.',
-        'The typical Potters Bar failure patterns include control board corrosion from the general London fringe environment, photocell drift from mature tree movement in established gardens, and access control obsolescence as original manufacturer backends are retired. All are repairable with proper diagnosis, and the economic case for repair rather than replacement is consistently strong.',
+        'The local gate stock in Potters Bar is substantial and ageing, creating steady demand for diagnostic-led repair and maintenance work across the town. The local specialist network includes technicians familiar with older-generation installations and capable of honest assessment rather than replacement-first sales.',
+        'Failure modes on Potters Bar gates include control board corrosion from the general London fringe environment, photocell drift from mature tree movement in established gardens, and access control obsolescence as original manufacturer backends are retired. All are repairable with proper diagnosis, and the economic case for repair rather than replacement is consistently strong.',
       ],
     },
     cityIntro: [
@@ -499,7 +499,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Ware combines a significant historic core along the River Lea with extensive post-war residential development across Musley, Wareside, and the newer neighbourhoods on the town\'s southern and eastern edges. The gate market reflects this mix, with conservation area constraints in the historic centre and generally pragmatic planning treatment elsewhere.',
-        'Sliding gate installations in the post-war Ware neighbourhoods face few planning obstacles, and standard ground-track or cantilever specifications both work. Within the historic core — particularly along High Street, Baldock Street, and the riverside conservation zone — East Hertfordshire District Council treatment becomes substantially more restrictive and cantilever systems with concealed mechanisms generally progress more reliably than visible ground-track installations.',
+        'Slider projects focus on the post-war Ware neighbourhoods face few planning obstacles, and standard ground-track or cantilever specifications both work. Within the historic core — particularly along High Street, Baldock Street, and the riverside conservation zone — East Hertfordshire District Council treatment becomes substantially more restrictive and cantilever systems with concealed mechanisms generally progress more reliably than visible ground-track installations.',
       ],
       'electric-swing-gates': [
         'The Ware historic core contains a significant concentration of listed buildings and conservation area controls, and swing gate installations in these zones typically require both conservation area consent and listed building consent where curtilage structures are involved. The planning context rewards careful pre-application engagement and punishes attempts to proceed without it.',
@@ -510,16 +510,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The practical consideration for hardwood installations in Ware is the river-adjacent water table. Properties close to the Lea or its tributaries require foundation designs that account for seasonal water levels — proper drainage engineering from the start prevents post-rot and foundation displacement that appears within a decade on poorly-specified installations.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Ware work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the Victorian terraces of Musley and the river-facing frontages of the historic core; bright contemporary specifications routinely attract planning objections in conservation zones.',
+        'In Ware, metal gates work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the Victorian terraces of Musley and the river-facing frontages of the historic core; bright contemporary specifications routinely attract planning objections in conservation zones.',
         'Listed building consent is a specific consideration across parts of Ware. Many properties in the historic core carry listed status, and any metal gate work on a curtilage structure requires listed building consent in addition to conservation area consent where applicable. Processing time is longer but the permissions, once granted, are substantial.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Ware is shaped by the density of heritage designations across the historic core and by the river-adjacent installation conditions that affect foundation and drainage work. The combination demands specialist local knowledge — a generic automation installer may propose specifications appropriate elsewhere but inappropriate for the specific Ware context.',
+        'Automated gate projects in Ware shaped by the density of heritage designations across the historic core and by the river-adjacent installation conditions that affect foundation and drainage work. The combination demands specialist local knowledge — a generic automation installer may propose specifications appropriate elsewhere but inappropriate for the specific Ware context.',
         'The practical consequences include longer planning lead times for installations in conservation zones, more extensive foundation work on river-adjacent properties, and access control specifications that respect the visual character of heritage streetscapes. Pre-application engagement with East Herts is genuinely valuable for substantial Ware projects.',
       ],
       'gate-repair-and-maintenance': [
         'The Ware gate stock includes substantial installations spanning several decades, many located in conditions that accelerate specific failure patterns. River-adjacent installations experience elevated humidity and occasional flood exposure; conservation-area installations are often constrained by consent considerations that shape repair approaches.',
-        'The typical Ware failure patterns include control board water damage from flooding or elevated water tables, photocell drift from seasonal ground movement in valley-floor installations, post rot where drainage was under-specified at original installation, and hinge degradation accelerated by the humid local microclimate. Each is addressable with proper diagnosis and experienced local specialist work.',
+        'Failure modes on Ware gates include control board water damage from flooding or elevated water tables, photocell drift from seasonal ground movement in valley-floor installations, post rot where drainage was under-specified at original installation, and hinge degradation accelerated by the humid local microclimate. Each is addressable with proper diagnosis and experienced local specialist work.',
       ],
     },
     cityIntro: [
@@ -544,7 +544,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Dacorum Borough Council planning treatment of timber gate applications across Hemel is generally accommodating. Within the Old Town conservation area around the High Street, timber is often the preferred material from the planning perspective, though the specific controls require more careful specification than in the newer parts of the borough.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Hemel Hempstead span from practical galvanised-and-powder-coated specifications on the post-war estate properties through to hand-forged wrought iron on the older houses around Boxmoor Common and Gadebridge. The specification choice depends substantially on the individual property character and the owner\'s preference rather than on any town-wide pattern.',
+        'Across Hemel Hempstead, metalwork installations span from practical galvanised-and-powder-coated specifications on the post-war estate properties through to hand-forged wrought iron on the older houses around Boxmoor Common and Gadebridge. The specification choice depends substantially on the individual property character and the owner\'s preference rather than on any town-wide pattern.',
         'The practical consideration at any specification level in Hemel is finish durability. The town\'s New Town infrastructure and proximity to the M1 mean airborne particulate load is higher than in more rural Hertfordshire locations, and hot-dip galvanising beneath polyester powder coat substantially outperforms paint-only finishes over a 20-30 year life.',
       ],
       'automated-gate-systems': [
@@ -552,7 +552,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The practical automation considerations in Hemel include mains power routing through established gardens, access control software currency on older installations, and drainage in underground motor chambers. The local specialist market includes technicians capable of honest retrofit assessment rather than defaulting to replacement-first sales.',
       ],
       'gate-repair-and-maintenance': [
-        'The Hemel Hempstead gate stock is substantial and ageing. Many automated systems installed across the borough in the 1990s and 2000s remain fully repairable with current parts, and the economic case for careful diagnosis before replacement is strong at most price points.',
+        'Across Hemel Hempstead, the gate stock is substantial and ageing. Many automated systems installed across the borough in the 1990s and 2000s remain fully repairable with current parts, and the economic case for careful diagnosis before replacement is strong at most price points.',
         'The typical Hemel failure patterns include control board corrosion from clay-substrate water ingress, photocell alignment drift from seasonal ground movement, and safety edge degradation from UV exposure on exposed south-facing entrances. All are repairable with proper diagnostic work, typically at a fraction of replacement cost.',
       ],
     },
@@ -578,11 +578,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The specific Hatfield consideration is the Hatfield House estate context. Properties visible from or adjacent to the estate face additional heritage sensitivity considerations that don\'t apply elsewhere in the borough, and specifications appropriate in New Hatfield can attract planning concerns near the estate. Local knowledge matters.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Hatfield span from practical galvanised steel on the New Town estates through to substantial hand-forged wrought iron on the properties along Great North Road and the estate-adjacent neighbourhoods. The specification expectations vary significantly by neighbourhood character.',
+        'Metalwork specification in Hatfield produces installations that span from practical galvanised steel on the New Town estates through to substantial hand-forged wrought iron on the properties along Great North Road and the estate-adjacent neighbourhoods. The specification expectations vary significantly by neighbourhood character.',
         'At the upper end of the Hatfield market, particularly around the estate-adjacent properties, genuine forge-worked wrought iron is the specification that sits correctly against the historic context. Cold-bent mild steel dressed as wrought iron looks acceptable at first but lacks the character appropriate to the streetscape.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Hatfield is straightforward from a technical standpoint across most of the borough. Mains power availability is reliable, clay substrate conditions are well-understood by local specialists, and cable routing through typical Hatfield gardens is generally manageable.',
+        'Hatfield automation work straightforward from a technical standpoint across most of the borough. Mains power availability is reliable, clay substrate conditions are well-understood by local specialists, and cable routing through typical Hatfield gardens is generally manageable.',
         'The specific Hatfield considerations are the visual sensitivities near the Hatfield House estate and within the Old Hatfield conservation area. Visible surface equipment — ram arms, above-ground motors, external control boxes — can attract planning concerns in these locations that don\'t apply in the newer neighbourhoods. Underground motor specification is the conservative choice near the estate.',
       ],
       'gate-repair-and-maintenance': [
@@ -601,10 +601,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Rickmansworth sits in the premium South West Hertfordshire commuter belt, with the Metropolitan Line connection driving a specific residential profile — substantial detached houses, generous plots, strong security consciousness, and a gate market skewed toward higher average specifications. The town combines the Chilterns AONB edge around Chorleywood Road with substantial residential development through Moor Park and across Rickmansworth proper.',
-        'Sliding gate installations in the Moor Park private estate specifically face restrictive covenants that pre-date ordinary planning requirements — the Moor Park Heritage Foundation operates design controls above and beyond Three Rivers District Council planning, and specifications appropriate elsewhere may face Foundation concerns. Outside Moor Park, Three Rivers treatment is generally pragmatic, with conservation controls specific to the town centre along High Street.',
+        'Where sliders make sense, these are the Moor Park private estate specifically face restrictive covenants that pre-date ordinary planning requirements — the Moor Park Heritage Foundation operates design controls above and beyond Three Rivers District Council planning, and specifications appropriate elsewhere may face Foundation concerns. Outside Moor Park, Three Rivers treatment is generally pragmatic, with conservation controls specific to the town centre along High Street.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the dominant format across Rickmansworth, suiting both the inter-war detached housing that defines much of the town and the substantial properties in Moor Park. Underground motor specification is effectively the standard at the Rickmansworth market level — property values and streetscape expectations both push toward premium installations.',
+        'Across Rickmansworth, swing configurations dominate the market, suiting both the inter-war detached housing that defines much of the town and the substantial properties in Moor Park. Underground motor specification is effectively the standard at the Rickmansworth market level — property values and streetscape expectations both push toward premium installations.',
         'The Moor Park context specifically requires design review by the Moor Park Heritage Foundation in addition to Three Rivers planning consent. The Foundation process is well-established and entirely manageable, but installations proceeding without Foundation engagement create problems later. Local specialist experience here is genuinely valuable.',
       ],
       'wooden-driveway-gates': [
@@ -621,7 +621,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Gate repair work in Rickmansworth tends toward substantial interventions on substantial installations. The housing stock skews toward properties where original installations were premium, and the economic case for careful diagnostic-led repair rather than wholesale replacement is strong at most price points.',
-        'The specific Rickmansworth failure patterns include control board corrosion in Moor Park installations where original drainage was marginal, photocell drift from mature tree root movement in established gardens, and access control software obsolescence on older premium systems. Modernisation retaining the existing mechanical system is frequently substantially cheaper than replacement.',
+        'In Rickmansworth, the distinctive failure modes include control board corrosion in Moor Park installations where original drainage was marginal, photocell drift from mature tree root movement in established gardens, and access control software obsolescence on older premium systems. Modernisation retaining the existing mechanical system is frequently substantially cheaper than replacement.',
       ],
     },
     cityIntro: [
@@ -635,7 +635,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Chorleywood sits firmly within the Chilterns AONB, with the AONB designation covering essentially the entire town and shaping every gate installation decision. Three Rivers District Council planning officers apply the Chilterns management plan rigorously in Chorleywood, and material specifications that generate no comment elsewhere in the district routinely face conditions or refusal here.',
-        'Sliding gate installations in Chorleywood face the same AONB scrutiny as Tring or Berkhamsted. Cantilever systems with concealed counterweights and restrained material finishes — muted powder-coated steel, aged bronze, timber cladding — progress through planning more reliably than visible ground-track installations or bright contemporary metal profiles.',
+        'Chorleywood sliding gate projects face the same AONB scrutiny as Tring or Berkhamsted. Cantilever systems with concealed counterweights and restrained material finishes — muted powder-coated steel, aged bronze, timber cladding — progress through planning more reliably than visible ground-track installations or bright contemporary metal profiles.',
       ],
       'electric-swing-gates': [
         'Swing gates echo the historic entrance pattern of the Chilterns villages and attract fewer planning concerns than sliding configurations in Chorleywood. Underground motor specification is effectively mandatory at the Chorleywood market level — property values justify the additional cost, and visible ram-arm motors are routinely flagged as inappropriate in AONB contexts.',
@@ -646,7 +646,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak silvered naturally to grey, or iroko with a clear oil finish, sits correctly against the Chorleywood landscape. FSC certification should be non-negotiable given the AONB context and local buyer expectations. Accoya is increasingly specified for the 50-year durability guarantee on exposed properties where ongoing maintenance access is difficult.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Chorleywood work only when specified with genuine landscape awareness. Hand-forged wrought iron in aged-bronze or dark-oxidised finishes reads correctly against the flint, brick, and hedgerow boundaries typical of the town. Bright galvanised or white-painted finishes generate planning objections routinely and look wrong regardless of approval.',
+        'For metal gate projects in Chorleywood, designs work only when specified with genuine landscape awareness. Hand-forged wrought iron in aged-bronze or dark-oxidised finishes reads correctly against the flint, brick, and hedgerow boundaries typical of the town. Bright galvanised or white-painted finishes generate planning objections routinely and look wrong regardless of approval.',
         'Three Rivers District Council planning treatment of metal gates in Chorleywood is among the most restrictive in the district. Pre-application engagement with Three Rivers before committing to fabrication saves substantial rework, and the modest pre-app cost is consistently worthwhile for any substantial metal gate specification.',
       ],
       'automated-gate-systems': [
@@ -654,8 +654,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The practical consequence is that Chorleywood automation work benefits from specialist local knowledge. Installers familiar with the Three Rivers planning context and the Chilterns management plan considerations specify correctly from the start; generic automation installers may propose specifications that technically work but sit inappropriately in the AONB context.',
       ],
       'gate-repair-and-maintenance': [
-        'The Chorleywood gate stock skews toward high-quality installations on substantial properties, reflecting the AONB residential profile and the Metropolitan Line commuter market. Repair work is typically substantial intervention on substantial systems rather than generic motor replacement, and the economic case for careful diagnostic work is consistently strong.',
-        'The specific Chorleywood failure patterns include control board water damage in installations where original drainage was marginal, photocell drift from seasonal ground movement in the chalk substrate, and access control obsolescence on older premium systems. All are repairable with proper diagnostic work at a fraction of replacement cost.',
+        'Across Chorleywood, the gate stock skews toward high-quality installations on substantial properties, reflecting the AONB residential profile and the Metropolitan Line commuter market. Repair work is typically substantial intervention on substantial systems rather than generic motor replacement, and the economic case for careful diagnostic work is consistently strong.',
+        'Failure patterns unique to Chorleywood include control board water damage in installations where original drainage was marginal, photocell drift from seasonal ground movement in the chalk substrate, and access control obsolescence on older premium systems. All are repairable with proper diagnostic work at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -669,7 +669,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Borehamwood combines substantial post-war residential development with significant commercial and studio infrastructure — the Elstree Film Studios and BBC Elstree presence shapes the town\'s character and drives a particular residential profile around the studio-adjacent neighbourhoods. The gate market here is generally pragmatic, with most installations facing few planning complications outside the specific conservation zones.',
-        'Sliding gate installations in Borehamwood progress through Hertsmere Borough Council planning typically without significant friction. Ground-track and cantilever systems both work well on the town\'s generally level terrain, and the post-war architectural vocabulary accommodates contemporary aluminium or powder-coated steel specifications naturally.',
+        'Across Borehamwood, sliding gate work progress through Hertsmere Borough Council planning typically without significant friction. Ground-track and cantilever systems both work well on the town\'s generally level terrain, and the post-war architectural vocabulary accommodates contemporary aluminium or powder-coated steel specifications naturally.',
       ],
       'electric-swing-gates': [
         'Swing gates work well across most Borehamwood residential streets. The inter-war and post-war detached housing that defines much of the town supports traditional swing configurations, and motor specification follows standard Hertfordshire patterns — underground for premium installations, ram-arm for practical mid-range and retrofit work.',
@@ -680,16 +680,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Hertsmere Borough Council planning treatment of timber applications in Borehamwood is generally accommodating, with the specific consideration being the article 4 direction coverage in parts of the town that removes permitted development rights. Checking article 4 status before committing to specification saves rework.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Borehamwood span from practical galvanised-and-powder-coated specifications through to substantial hand-forged wrought iron on the larger inter-war properties. The town\'s mixed character accommodates a broad specification range, and the right choice depends substantially on the individual property context rather than on any town-wide pattern.',
+        'Metalwork specification in Borehamwood produces installations that span from practical galvanised-and-powder-coated specifications through to substantial hand-forged wrought iron on the larger inter-war properties. The town\'s mixed character accommodates a broad specification range, and the right choice depends substantially on the individual property context rather than on any town-wide pattern.',
         'The practical finish consideration in Borehamwood is the general London fringe environment. Airborne particulates and pollution load accelerate finish degradation compared to more rural Hertfordshire locations, and hot-dip galvanising beneath polyester powder coat substantially outperforms paint-only specifications over a 20-30 year life.',
       ],
       'automated-gate-systems': [
-        'Gate automation demand in Borehamwood is strong, driven by the studio-adjacent residential profile, general commuter market, and security consciousness across the town. The installed base spans decades, with retrofit work a substantial share of the local specialist market.',
+        'Borehamwood\'s gate automation strong, driven by the studio-adjacent residential profile, general commuter market, and security consciousness across the town. The installed base spans decades, with retrofit work a substantial share of the local specialist market.',
         'The specific Borehamwood automation considerations include the access control integration expectations in studio-adjacent neighbourhoods, the article 4 planning restrictions in specific streets, and the general London fringe pollution load that affects long-term component reliability. Local specialist knowledge matters for correct specification.',
       ],
       'gate-repair-and-maintenance': [
-        'The Borehamwood gate stock is substantial and ageing. Many automated systems installed across the town in the 1990s and 2000s remain fully serviceable with current parts, and the local specialist network includes technicians familiar with older specifier brands and capable of honest diagnostic work.',
-        'The typical Borehamwood failure patterns include control board corrosion from the London fringe environment, photocell drift from mature tree root movement, and access control obsolescence on older systems as manufacturer backends are retired. All are repairable with proper diagnosis, typically at a fraction of replacement cost.',
+        'Across Borehamwood, the gate stock is substantial and ageing. Many automated systems installed across the town in the 1990s and 2000s remain fully serviceable with current parts, and the local specialist network includes technicians familiar with older specifier brands and capable of honest diagnostic work.',
+        'Failure modes on Borehamwood gates include control board corrosion from the London fringe environment, photocell drift from mature tree root movement, and access control obsolescence on older systems as manufacturer backends are retired. All are repairable with proper diagnosis, typically at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -703,10 +703,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Baldock\'s historic market town character — centred on the substantial High Street conservation area and the junction of ancient routes where Icknield Way crosses the Great North Road — shapes the gate market substantially. The town combines a dense historic core with post-war residential development on the edges, and planning treatment varies significantly between the two contexts.',
-        'Sliding gate installations in the historic core face North Hertfordshire District Council conservation area scrutiny that favours cantilever systems with concealed mechanisms over visible ground-track installations. Outside the conservation zones, specification is generally pragmatic, with standard systems progressing through planning without significant friction.',
+        'Where sliders make sense, these are the historic core face North Hertfordshire District Council conservation area scrutiny that favours cantilever systems with concealed mechanisms over visible ground-track installations. Outside the conservation zones, specification is generally pragmatic, with standard systems progressing through planning without significant friction.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit the Baldock streetscape character well, particularly in the conservation area streets radiating from the High Street where traditional entrance patterns define the town\'s visual identity. The substantial Georgian and Victorian properties across Whitehorse Street and Hitchin Street support classical swing configurations with restrained material treatments.',
+        'For Baldock owners, swing gates suit the local streetscape character well, particularly in the conservation area streets radiating from the High Street where traditional entrance patterns define the town\'s visual identity. The substantial Georgian and Victorian properties across Whitehorse Street and Hitchin Street support classical swing configurations with restrained material treatments.',
         'Underground motor specification is typical at the upper end of the Baldock market; ram-arm systems serve the mid-range and retrofit applications well. The mixed brick, flint, and render streetscape of the conservation area favours traditional material specifications over contemporary approaches, and local planning officer preferences reflect this.',
       ],
       'wooden-driveway-gates': [
@@ -714,15 +714,15 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak and iroko are both well-used in Baldock. Oak is preferred where the silvered weathering is the aesthetic objective; iroko provides reliable durability with a more stable colour for owners preferring consistent appearance. Both work well against the historic streetscape character.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Baldock work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the Georgian and Victorian frontages of the High Street and the conservation area residential streets; bright contemporary specifications attract planning concerns.',
+        'Across Baldock, metal gate installations work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the Georgian and Victorian frontages of the High Street and the conservation area residential streets; bright contemporary specifications attract planning concerns.',
         'At the upper end of the Baldock market, genuine forge-worked wrought iron is the appropriate specification. The cold-bent mild steel dressed as wrought iron available from generic fabricators lacks the character that suits the historic streetscape, and the difference becomes more noticeable over years as the finishes age differently.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Baldock is shaped more by heritage considerations than by technical factors. Any visible surface equipment requires particular sensitivity in conservation-area contexts, and underground motor specifications are effectively standard for installations in the historic core.',
+        'Gate automation across Baldock shaped more by heritage considerations than by technical factors. Any visible surface equipment requires particular sensitivity in conservation-area contexts, and underground motor specifications are effectively standard for installations in the historic core.',
         'Outside the conservation area, Baldock automation installations are generally straightforward. The clay-based subsoil is well-understood by local specialists, cable routing through typical plot sizes is manageable, and mains power availability at gate positions is reliable across most of the town.',
       ],
       'gate-repair-and-maintenance': [
-        'The Baldock gate stock includes installations spanning decades, from 1990s retrofits on the historic properties through to recent specifications on the newer residential streets. The economic case for careful diagnostic-led repair is strong — many older systems remain fully serviceable with proper maintenance.',
+        'Gate stock across Baldock includes installations spanning decades, from 1990s retrofits on the historic properties through to recent specifications on the newer residential streets. The economic case for careful diagnostic-led repair is strong — many older systems remain fully serviceable with proper maintenance.',
         'The specific Baldock failure patterns include control board corrosion in under-drained clay-substrate installations, photocell drift from seasonal ground movement, and safety edge degradation from UV exposure. All are repairable with proper diagnostic work rather than defaulting to replacement.',
       ],
     },
@@ -737,7 +737,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Royston sits at the northern edge of Hertfordshire on the Cambridgeshire border, with the town\'s character shaped by its market town heritage, its position on the chalk hills, and the A505 corridor commuter profile toward Cambridge. The gate market combines a significant historic core with substantial post-war residential development across the town\'s edges.',
-        'Sliding gate installations in Royston are generally pragmatic outside the specific Royston High Street conservation area and the Priory Gardens zone. Standard ground-track or cantilever systems work well on the generally level terrain, and the post-war residential vocabulary accommodates contemporary specifications naturally.',
+        'Cantilever and tracked sliders in Royston are generally pragmatic outside the specific Royston High Street conservation area and the Priory Gardens zone. Standard ground-track or cantilever systems work well on the generally level terrain, and the post-war residential vocabulary accommodates contemporary specifications naturally.',
       ],
       'electric-swing-gates': [
         'Swing gates work well across most of Royston. The older housing around the town centre supports traditional configurations; the post-war development accommodates swing systems with contemporary material treatments; the rural edges toward the Cambridgeshire border favour more substantial traditional specifications that sit against the open countryside character.',
@@ -748,16 +748,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'North Hertfordshire District Council planning treatment of timber applications in Royston is generally accommodating. Within the High Street and Priory Gardens conservation areas, timber is often the preferred material from the planning perspective, though specific design controls require more careful specification than in the newer parts of the town.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Royston span from practical galvanised-and-powder-coated specifications on the post-war estates through to hand-forged wrought iron on the larger older properties. The specification depends on the individual property context, and the mixed character of the town accommodates a broad range.',
+        'Across Royston, metalwork installations span from practical galvanised-and-powder-coated specifications on the post-war estates through to hand-forged wrought iron on the larger older properties. The specification depends on the individual property context, and the mixed character of the town accommodates a broad range.',
         'The practical consideration in Royston is the exposed chalk hills location. Wind exposure on ridgeline properties accelerates specific finish failure patterns, and substantial gates require appropriate structural specification to handle wind load. Proper foundation design addresses both issues simultaneously.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Royston is generally straightforward from a technical standpoint. The chalk substrate provides reliable foundation conditions, mains power availability is dependable across most of the town, and cable routing through typical Royston plots is manageable.',
+        'Automated gate projects in Royston generally straightforward from a technical standpoint. The chalk substrate provides reliable foundation conditions, mains power availability is dependable across most of the town, and cable routing through typical Royston plots is manageable.',
         'The specific consideration is wind exposure on ridgeline properties — underground motor installations on exposed sites require particular attention to gate weight and wind-load ratings. Local specialists familiar with these conditions specify appropriately; generic automation contractors may under-specify for the Royston context.',
       ],
       'gate-repair-and-maintenance': [
-        'The Royston gate stock is substantial and includes installations across decades. Many older systems remain fully serviceable with current parts, and the local specialist market includes technicians familiar with diagnostic-led work rather than replacement-first approaches.',
-        'The specific Royston failure patterns include wind-load damage on exposed ridgeline installations, photocell alignment drift from seasonal ground movement, and standard component degradation consistent with the installation age profile. All are repairable with proper diagnostic work.',
+        'Royston\'s electric gate stock is substantial and includes installations across decades. Many older systems remain fully serviceable with current parts, and the local specialist market includes technicians familiar with diagnostic-led work rather than replacement-first approaches.',
+        'In Royston, the distinctive failure modes include wind-load damage on exposed ridgeline installations, photocell alignment drift from seasonal ground movement, and standard component degradation consistent with the installation age profile. All are repairable with proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -771,10 +771,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Sawbridgeworth is an historic market town along the River Stort in East Hertfordshire, with a dense concentration of listed buildings and conservation area controls that shape gate installations substantially. The town combines the significant heritage of the historic core with substantial post-war residential development on the edges, and planning treatment varies dramatically between the two contexts.',
-        'Sliding gate installations in the historic core face East Hertfordshire District Council conservation area scrutiny that consistently favours cantilever systems with concealed mechanisms. Listed building consent may also apply where curtilage structures are involved. Outside the conservation zones, standard specifications progress without significant friction.',
+        'Slider projects focus on the historic core face East Hertfordshire District Council conservation area scrutiny that consistently favours cantilever systems with concealed mechanisms. Listed building consent may also apply where curtilage structures are involved. Outside the conservation zones, standard specifications progress without significant friction.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit the Sawbridgeworth historic streetscape well. The Georgian and Victorian properties across Knight Street, Church Street, and the riverside conservation area support traditional swing configurations with restrained material treatments and careful design sympathy to the historic context.',
+        'The swing gate format suits the Sawbridgeworth historic streetscape well. The Georgian and Victorian properties across Knight Street, Church Street, and the riverside conservation area support traditional swing configurations with restrained material treatments and careful design sympathy to the historic context.',
         'Listed building consent is a specific Sawbridgeworth consideration that doesn\'t apply in most Hertfordshire towns. A significant share of properties in the historic core carry listed status, and any gate work on a curtilage structure typically requires listed building consent in addition to conservation area consent where both apply.',
       ],
       'wooden-driveway-gates': [
@@ -782,7 +782,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'East Herts planning treatment of timber applications in Sawbridgeworth conservation areas is generally accommodating where the specification is appropriate to the streetscape. The practical consideration is the river-adjacent water table on properties close to the Stort — proper foundation drainage is essential for timber gate longevity.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Sawbridgeworth work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the period properties of the conservation area; bright contemporary specifications routinely attract planning objections.',
+        'Sawbridgeworth metal gate specifications work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the period properties of the conservation area; bright contemporary specifications routinely attract planning objections.',
         'The listed building consent consideration applies strongly to metal gate work in Sawbridgeworth. Properties carrying listed status face additional consent requirements beyond conservation area controls, and the processing time is longer but the permissions, once granted, are substantial.',
       ],
       'automated-gate-systems': [
@@ -790,7 +790,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Pre-application engagement with East Herts is genuinely valuable for substantial Sawbridgeworth projects, particularly where listed building consent is involved. The modest pre-app investment saves months of rework and eliminates the risk of specifying something that cannot receive consent.',
       ],
       'gate-repair-and-maintenance': [
-        'The Sawbridgeworth gate stock is substantial and includes installations in conditions that accelerate specific failure patterns. River-adjacent installations experience elevated humidity and occasional flood exposure; conservation-area installations are often constrained by consent considerations that shape repair approaches.',
+        'Across Sawbridgeworth, the gate stock is substantial and includes installations in conditions that accelerate specific failure patterns. River-adjacent installations experience elevated humidity and occasional flood exposure; conservation-area installations are often constrained by consent considerations that shape repair approaches.',
         'The typical Sawbridgeworth failure patterns include water damage from flooding or elevated water tables, photocell drift from seasonal ground movement, post rot where drainage was under-specified at original installation, and hinge degradation accelerated by the humid local microclimate. Each is addressable with proper diagnosis and experienced local specialist work.',
       ],
     },
@@ -805,7 +805,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Kings Langley combines a significant historic core around the High Street with substantial residential development across the village and along the A4251 corridor. The town sits within the Chilterns AONB buffer zone, and Dacorum Borough Council planning officers apply heightened material sensitivity to installations visible from public vantage points.',
-        'Sliding gate installations in Kings Langley typically favour cantilever systems over visible ground-track configurations, particularly on properties facing the High Street or the conservation area streets. The clay-based subsoil across most of the village demands proper foundation drainage engineering — an element that separates reliable local specialists from generic contractors.',
+        'Sliding systems specified in Kings Langley typically favour cantilever systems over visible ground-track configurations, particularly on properties facing the High Street or the conservation area streets. The clay-based subsoil across most of the village demands proper foundation drainage engineering — an element that separates reliable local specialists from generic contractors.',
       ],
       'electric-swing-gates': [
         'Swing gates remain the dominant format across Kings Langley, suiting both the Georgian and Victorian properties in the conservation area and the inter-war detached housing across the newer residential streets. Underground motor specification is typical at the upper end of the market; ram-arm systems serve mid-range and retrofit applications well.',
@@ -816,16 +816,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Dacorum Borough Council planning treatment of timber applications in Kings Langley is generally accommodating. Within the High Street conservation area, timber is often the preferred material from the planning perspective, and pre-application engagement for substantial installations saves time on any necessary design refinements.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Kings Langley work best with restraint. The AONB buffer context and the village streetscape character favour hand-forged wrought iron in aged finishes over bright contemporary aluminium or galvanised specifications. Paint-only finishes fail predictably in the local climate within 8-10 years and are a false economy at any specification level.',
+        'Across Kings Langley, metalwork installations work best with restraint. The AONB buffer context and the village streetscape character favour hand-forged wrought iron in aged finishes over bright contemporary aluminium or galvanised specifications. Paint-only finishes fail predictably in the local climate within 8-10 years and are a false economy at any specification level.',
         'Hot-dip galvanising beneath polyester powder coat is the specification that lasts in Kings Langley conditions. Honest fabricators will specify this explicitly rather than quoting cheaper alternatives that need rectification within a decade.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Kings Langley is generally straightforward from a technical standpoint, though the AONB buffer context constrains visible surface equipment. Underground motor systems with concealed control boxes are the standard at the village market level; visible ram-arm motors can attract planning concerns even outside the strict AONB boundary.',
+        'In Kings Langley, gate automation generally straightforward from a technical standpoint, though the AONB buffer context constrains visible surface equipment. Underground motor systems with concealed control boxes are the standard at the village market level; visible ram-arm motors can attract planning concerns even outside the strict AONB boundary.',
         'The practical consideration in Kings Langley is cable routing. The substantial plot sizes typical of the village mean mains cable distances often exceed 20 metres, and careful route planning through existing service corridors or via directional boring preserves the garden investment.',
       ],
       'gate-repair-and-maintenance': [
-        'The Kings Langley gate stock includes installations from several decades, and many older systems remain fully repairable with current parts. The local specialist network includes technicians capable of honest diagnostic work rather than replacement-first approaches.',
-        'The typical Kings Langley failure patterns include control board corrosion in under-drained clay-substrate installations, photocell drift from seasonal ground movement, and safety edge degradation from UV exposure on south-facing entrances. All are repairable with proper diagnosis at a fraction of replacement cost.',
+        'Kings Langley\'s electric gate stock includes installations from several decades, and many older systems remain fully repairable with current parts. The local specialist network includes technicians capable of honest diagnostic work rather than replacement-first approaches.',
+        'Gate faults reported across Kings Langley include control board corrosion in under-drained clay-substrate installations, photocell drift from seasonal ground movement, and safety edge degradation from UV exposure on south-facing entrances. All are repairable with proper diagnosis at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -839,7 +839,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Abbots Langley combines the historic village centre around the Parish Church with substantial post-war residential expansion across Leavesden and the wider commuter belt toward Watford. The gate market here is generally pragmatic, with Three Rivers District Council planning treatment straightforward outside the specific conservation zones in the village core.',
-        'Sliding gate installations in Abbots Langley work well on the generally level terrain typical of the village and the newer residential streets. Ground-track systems are economical where the boundary configuration supports them; cantilever systems suit properties with aesthetic preferences for concealed mechanisms or where track installation would require significant wall modification.',
+        'In Abbots Langley, sliding gate installations work well on the generally level terrain typical of the village and the newer residential streets. Ground-track systems are economical where the boundary configuration supports them; cantilever systems suit properties with aesthetic preferences for concealed mechanisms or where track installation would require significant wall modification.',
       ],
       'electric-swing-gates': [
         'Swing gates are the dominant format across Abbots Langley. The inter-war detached housing that defines much of the village supports traditional swing configurations, and the post-war Leavesden developments accommodate swing systems equally well with contemporary material treatments.',
@@ -850,16 +850,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The mature tree cover across much of Abbots Langley creates genuine advantages for timber gate installations — they sit naturally against the greenery and age with the landscape. FSC certification should be standard on any specification, and reliable fabricators will volunteer provenance documentation without being asked.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Abbots Langley span from practical galvanised specifications on the post-war estates through to substantial hand-forged wrought iron on the older properties around the village core. The right specification depends substantially on the individual property context.',
+        'Metalwork specification in Abbots Langley produces installations that span from practical galvanised specifications on the post-war estates through to substantial hand-forged wrought iron on the older properties around the village core. The right specification depends substantially on the individual property context.',
         'At any Abbots Langley specification level, hot-dip galvanising beneath polyester powder coat is the finish that delivers 20-30 year service life. Paint-only specifications and cold-bent mild steel dressed as wrought iron both compromise on the quality that the local market expects at this price point.',
       ],
       'automated-gate-systems': [
-        'Gate automation demand in Abbots Langley is driven by the commuter profile toward Watford and central London. The installed base includes substantial numbers of systems from the 1990s and 2000s, creating steady demand for retrofit upgrade and modernisation work.',
+        'In Abbots Langley, gate automation driven by the commuter profile toward Watford and central London. The installed base includes substantial numbers of systems from the 1990s and 2000s, creating steady demand for retrofit upgrade and modernisation work.',
         'The practical automation considerations in Abbots Langley include mains power routing through established gardens, access control software currency on older installations, and drainage engineering in underground motor chambers. The local specialist market handles these competently.',
       ],
       'gate-repair-and-maintenance': [
-        'The Abbots Langley gate stock is substantial and ageing. Many systems installed across the village and Leavesden in the 1990s and 2000s remain fully repairable with current parts, and the economic case for careful diagnostic-led repair rather than wholesale replacement is strong.',
-        'The typical Abbots Langley failure patterns include control board corrosion from clay-substrate water ingress, photocell alignment drift, and access control obsolescence on older systems. Each is repairable with proper diagnosis at a fraction of replacement cost.',
+        'Repair work in Abbots Langley draws on a gate stock that is substantial and ageing. Many systems installed across the village and Leavesden in the 1990s and 2000s remain fully repairable with current parts, and the economic case for careful diagnostic-led repair rather than wholesale replacement is strong.',
+        'Repeat-call diagnostics in Abbots Langley include control board corrosion from clay-substrate water ingress, photocell alignment drift, and access control obsolescence on older systems. Each is repairable with proper diagnosis at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -873,7 +873,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Croxley Green sits on the Metropolitan Line between Rickmansworth and Watford, with a residential profile shaped by the commuter connection and the village\'s distinctive character around the Green. The gate market combines traditional village-core specifications with more contemporary approaches on the post-war residential streets.',
-        'Sliding gate installations in Croxley Green are generally straightforward from a planning perspective. Three Rivers District Council treatment is pragmatic outside the specific Green conservation area. Cantilever systems suit properties where aesthetic considerations matter; ground-track systems work well on the level residential streets where boundary configuration supports them.',
+        'Croxley Green\'s sliding gate installations are generally straightforward from a planning perspective. Three Rivers District Council treatment is pragmatic outside the specific Green conservation area. Cantilever systems suit properties where aesthetic considerations matter; ground-track systems work well on the level residential streets where boundary configuration supports them.',
       ],
       'electric-swing-gates': [
         'Swing gates are the traditional format in Croxley Green, suiting the inter-war and post-war housing that defines much of the village. Underground motor specification is common at the upper end of the market, particularly on properties adjacent to the Green or in the larger residential streets.',
@@ -884,16 +884,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Three Rivers District Council planning treatment of timber gates in Croxley Green is generally accommodating. The conservation area around the Green favours timber over metal in most contexts, and planning conditions typically focus on design sympathy to neighbouring properties rather than on material choice itself.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Croxley Green span from practical galvanised specifications on the post-war properties through to hand-forged wrought iron on the older houses around the Green. The specification depends on individual property context, with the mixed village character accommodating a broad range.',
+        'Across Croxley Green, metalwork installations span from practical galvanised specifications on the post-war properties through to hand-forged wrought iron on the older houses around the Green. The specification depends on individual property context, with the mixed village character accommodating a broad range.',
         'At the upper end of the Croxley Green market, genuine forge-worked wrought iron distinguishes substantial installations from generic cold-bent mild steel alternatives. The specification difference matters both aesthetically and in long-term durability.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Croxley Green is driven by the commuter market and general security consciousness in the village. The installed base spans decades, with retrofit work a substantial share of the local specialist market.',
+        'Retrofit and new-build automation in Croxley Green driven by the commuter market and general security consciousness in the village. The installed base spans decades, with retrofit work a substantial share of the local specialist market.',
         'The specific considerations include access control integration expectations shaped by the commuter profile, and the visual sensitivities in the Green conservation area that favour underground motor specifications over visible surface equipment.',
       ],
       'gate-repair-and-maintenance': [
         'The Croxley Green gate stock includes substantial installations across decades. The local specialist market includes technicians capable of honest diagnostic work on older systems, with most 1990s and 2000s installations remaining fully repairable with current parts.',
-        'The typical Croxley Green failure patterns include control board corrosion from under-drained clay installations, photocell drift from mature tree root movement, and access control obsolescence as original manufacturer software support is retired. All are repairable with proper diagnosis.',
+        'Repeat-call diagnostics in Croxley Green include control board corrosion from under-drained clay installations, photocell drift from mature tree root movement, and access control obsolescence as original manufacturer software support is retired. All are repairable with proper diagnosis.',
       ],
     },
     cityIntro: [
@@ -907,10 +907,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Elstree is a small village of substantial character, with the Elstree Aerodrome and the surrounding residential streets defining most of the local context. The gate market here skews toward higher specifications — property values and the Hertsmere commuter profile both drive investment in premium installations with substantial access control integration.',
-        'Sliding gate installations in Elstree face generally pragmatic Hertsmere Borough Council planning treatment, with specific consideration required in the conservation zones around the High Street. Cantilever systems with concealed mechanisms typically suit the village character better than visible ground-track configurations.',
+        'The sliding gate market in Elstree produces installations that face generally pragmatic Hertsmere Borough Council planning treatment, with specific consideration required in the conservation zones around the High Street. Cantilever systems with concealed mechanisms typically suit the village character better than visible ground-track configurations.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the dominant format across Elstree, suiting the substantial detached housing that defines much of the village. Underground motor specification is effectively standard at the Elstree market level — property values justify the premium, and the historic character expectations favour concealed mechanisms over visible surface equipment.',
+        'The dominant Elstree format is the swing gate, suiting the substantial detached housing that defines much of the village. Underground motor specification is effectively standard at the Elstree market level — property values justify the premium, and the historic character expectations favour concealed mechanisms over visible surface equipment.',
         'The specific Elstree considerations include access control expectations shaped by the village\'s profile and the security considerations that apply to properties with visible premium vehicles. Video intercom with cloud recording, vehicle recognition cameras, and comprehensive app integration are common baseline specifications.',
       ],
       'wooden-driveway-gates': [
@@ -918,16 +918,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Hertsmere Borough Council planning treatment of timber applications is generally accommodating, with article 4 direction restrictions in specific streets requiring local knowledge before committing to specification. Pre-application engagement for substantial installations is genuinely useful.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Elstree trend toward the premium end of the market. Hand-forged wrought iron in substantial ornamental designs, matching side railings, integrated lighting in brick piers, and coordinating pedestrian gates are common specifications at the village market level.',
+        'Metalwork specification in Elstree produces installations that trend toward the premium end of the market. Hand-forged wrought iron in substantial ornamental designs, matching side railings, integrated lighting in brick piers, and coordinating pedestrian gates are common specifications at the village market level.',
         'Genuine forge work distinguishes substantial Elstree installations from generic cold-bent mild steel. At the specification levels typical here, the difference in character and long-term durability justifies the cost premium substantially.',
       ],
       'automated-gate-systems': [
-        'Gate automation demand in Elstree is strong, driven by property values and security consciousness across the village. The installed base includes premium specifications from the 1990s and 2000s, many now seeking modernisation rather than replacement.',
+        'In Elstree, gate automation strong, driven by property values and security consciousness across the village. The installed base includes premium specifications from the 1990s and 2000s, many now seeking modernisation rather than replacement.',
         'The specific Elstree automation considerations include visual sympathy requirements in the village streetscape, article 4 restrictions in specific streets, and access control software currency on older premium systems. Local specialist knowledge matters for correct specification.',
       ],
       'gate-repair-and-maintenance': [
         'Gate repair work in Elstree tends toward substantial interventions on substantial installations. The economic case for careful diagnostic-led repair rather than wholesale replacement is consistently strong, with many original premium installations fully repairable with current parts.',
-        'The specific Elstree failure patterns include control board corrosion in under-drained installations, photocell drift from mature tree root movement in established gardens, and access control obsolescence on older premium systems. All are repairable or modernisable at a fraction of replacement cost.',
+        'Specific Elstree failure signatures include control board corrosion in under-drained installations, photocell drift from mature tree root movement in established gardens, and access control obsolescence on older premium systems. All are repairable or modernisable at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -941,7 +941,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Shenley is a small village in the Hertsmere borough combining the historic core around the Shenley High Street with substantial residential development on the surrounding streets. The gate market reflects the village character — substantial specifications on premium properties, practical mid-range installations across the broader residential stock.',
-        'Sliding gate installations in Shenley generally progress through Hertsmere Borough Council planning without significant friction outside the specific conservation zones. Cantilever systems suit properties with aesthetic preferences for concealed mechanisms; ground-track systems work well on the level terrain typical of the village.',
+        'Shenley\'s sliding gate installations generally progress through Hertsmere Borough Council planning without significant friction outside the specific conservation zones. Cantilever systems suit properties with aesthetic preferences for concealed mechanisms; ground-track systems work well on the level terrain typical of the village.',
       ],
       'electric-swing-gates': [
         'Swing gates are common across Shenley, suiting both the period properties in the village core and the substantial detached housing on the surrounding residential streets. Underground motor specification is typical at the upper end of the market; ram-arm systems serve the mid-range well.',
@@ -956,12 +956,12 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'At any Shenley specification level, hot-dip galvanising beneath polyester powder coat is the finish that delivers genuine 20-30 year service life. The cost premium over paint-only specifications is modest and the durability difference is substantial.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Shenley is generally straightforward from a technical standpoint. The clay substrate is well-understood by local specialists, mains power availability at typical gate positions is reliable, and cable routing through village plot configurations is manageable.',
+        'Shenley automation work generally straightforward from a technical standpoint. The clay substrate is well-understood by local specialists, mains power availability at typical gate positions is reliable, and cable routing through village plot configurations is manageable.',
         'The specific Shenley considerations include the visual treatment of surface equipment in the village streetscape and the article 4 restrictions that apply in specific Hertsmere streets. Local specialist knowledge addresses both considerations appropriately.',
       ],
       'gate-repair-and-maintenance': [
         'The Shenley gate stock includes substantial installations across decades. The local specialist market includes technicians capable of honest diagnostic work, with most older systems remaining fully serviceable with proper maintenance.',
-        'The typical Shenley failure patterns include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and access control obsolescence on older systems. All are repairable with proper diagnosis rather than defaulting to replacement.',
+        'Repeat-call diagnostics in Shenley include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and access control obsolescence on older systems. All are repairable with proper diagnosis rather than defaulting to replacement.',
       ],
     },
     cityIntro: [
@@ -975,7 +975,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Brookmans Park is a small affluent village in the Welwyn Hatfield borough, with property values and commuter profile — driven by the fast Kings Cross rail connection — both shaping a gate market skewed toward premium specifications. The village character favours substantial installations with careful attention to streetscape sympathy.',
-        'Sliding gate installations in Brookmans Park typically specify cantilever systems with concealed mechanisms over visible ground-track configurations. Welwyn Hatfield Borough Council planning treatment is generally pragmatic outside the specific conservation considerations in the village core, though the general streetscape character rewards restrained specifications.',
+        'Cantilever and tracked sliders in Brookmans Park typically specify cantilever systems with concealed mechanisms over visible ground-track configurations. Welwyn Hatfield Borough Council planning treatment is generally pragmatic outside the specific conservation considerations in the village core, though the general streetscape character rewards restrained specifications.',
       ],
       'electric-swing-gates': [
         'Swing gates are the dominant format across Brookmans Park, suiting the substantial detached housing that defines most of the village. Underground motor specification is effectively standard at the Brookmans Park market level — property values justify the premium, and the village streetscape character favours concealed mechanisms.',
@@ -986,16 +986,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Welwyn Hatfield Borough Council planning treatment of timber applications in Brookmans Park is generally accommodating. The specific consideration is the article 4 direction coverage in parts of the village that removes permitted development rights — checking article 4 status before committing to specification prevents unexpected planning requirements.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Brookmans Park trend toward the premium end of the market. Hand-forged wrought iron in substantial ornamental designs, matching side railings, integrated pier lighting, and coordinating pedestrian gates are routine specifications at the village market level.',
+        'Brookmans Park metal gate projects trend toward the premium end of the market. Hand-forged wrought iron in substantial ornamental designs, matching side railings, integrated pier lighting, and coordinating pedestrian gates are routine specifications at the village market level.',
         'At the upper end of the Brookmans Park market, genuine forge work is the appropriate specification. The cold-bent mild steel dressed as wrought iron common elsewhere lacks the character and durability appropriate to the village streetscape at this price point.',
       ],
       'automated-gate-systems': [
-        'Gate automation demand in Brookmans Park is strong, driven by property values and the commuter profile. The installed base includes premium specifications from the 1990s and 2000s, many now seeking modernisation rather than wholesale replacement.',
+        'In Brookmans Park, gate automation strong, driven by property values and the commuter profile. The installed base includes premium specifications from the 1990s and 2000s, many now seeking modernisation rather than wholesale replacement.',
         'The Brookmans Park automation considerations include the visual treatment expectations in the village streetscape, the article 4 restrictions that apply in specific streets, and access control currency on older premium systems. Local specialist knowledge is genuinely valuable.',
       ],
       'gate-repair-and-maintenance': [
         'Gate repair work in Brookmans Park tends toward substantial interventions on substantial installations. The housing stock skews toward properties where original installations were premium, and diagnostic-led repair preserves significant investment rather than defaulting to wholesale replacement.',
-        'The typical Brookmans Park failure patterns include control board corrosion in under-drained installations, photocell drift from mature tree root movement, and access control obsolescence on older premium systems. All are repairable or modernisable at a fraction of replacement cost.',
+        'Brookmans Park-area fault patterns include control board corrosion in under-drained installations, photocell drift from mature tree root movement, and access control obsolescence on older premium systems. All are repairable or modernisable at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -1009,7 +1009,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Cuffley sits in the south of the Welwyn Hatfield borough, adjacent to the Greater London boundary and on the direct Kings Cross rail line. The village combines a historic core with substantial post-war residential development, and the commuter profile drives a gate market with strong demand for premium access control.',
-        'Sliding gate installations in Cuffley progress through Welwyn Hatfield Borough Council planning generally without significant friction outside the specific conservation considerations in the village core. The generally level terrain across most of the village supports both cantilever and ground-track specifications, with the choice driven by aesthetic preference more than technical necessity.',
+        'Cantilever and tracked sliders in Cuffley progress through Welwyn Hatfield Borough Council planning generally without significant friction outside the specific conservation considerations in the village core. The generally level terrain across most of the village supports both cantilever and ground-track specifications, with the choice driven by aesthetic preference more than technical necessity.',
       ],
       'electric-swing-gates': [
         'Swing gates are the dominant format across Cuffley, suiting the inter-war and post-war detached housing that defines most of the village. Underground motor specification is common at the upper end of the market; ram-arm systems serve the mid-range and retrofit applications well.',
@@ -1020,7 +1020,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Welwyn Hatfield Borough Council planning treatment of timber applications in Cuffley is generally accommodating. Article 4 direction considerations apply in specific streets and should be checked before committing to specification.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Cuffley span from practical galvanised-and-powder-coated specifications through to substantial hand-forged wrought iron on the larger properties. The mixed character of the village accommodates a broad specification range.',
+        'Wrought iron and powder-coated steel projects in Cuffley span from practical galvanised-and-powder-coated specifications through to substantial hand-forged wrought iron on the larger properties. The mixed character of the village accommodates a broad specification range.',
         'At any Cuffley specification level, hot-dip galvanising beneath polyester powder coat is the finish standard that delivers 20-30 year service life. Paint-only specifications fail predictably in the local climate and are a false economy at the village market level.',
       ],
       'automated-gate-systems': [
@@ -1028,8 +1028,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The practical Cuffley automation considerations include mains power routing through established gardens, access control software currency on older installations, and drainage engineering in underground motor chambers. The local specialist market handles these competently.',
       ],
       'gate-repair-and-maintenance': [
-        'The Cuffley gate stock is substantial and includes many ageing installations that remain fully repairable with current parts. The economic case for careful diagnostic-led repair rather than wholesale replacement is consistently strong.',
-        'The typical Cuffley failure patterns include control board corrosion, photocell drift from seasonal ground movement, and access control obsolescence on older systems. Each is repairable with proper diagnosis at a fraction of replacement cost.',
+        'Gate stock across Cuffley is substantial and includes many ageing installations that remain fully repairable with current parts. The economic case for careful diagnostic-led repair rather than wholesale replacement is consistently strong.',
+        'Repeat-call diagnostics in Cuffley include control board corrosion, photocell drift from seasonal ground movement, and access control obsolescence on older systems. Each is repairable with proper diagnosis at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -1043,10 +1043,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Knebworth is a village in North Hertfordshire with a distinctive character shaped substantially by the Knebworth House estate and the surrounding Knebworth Park. The village combines the estate-adjacent residential streets with the substantial post-war housing across the modern village centre, and planning treatment varies meaningfully between these zones.',
-        'Sliding gate installations in Knebworth face North Hertfordshire District Council planning treatment that is generally pragmatic outside specific heritage-adjacent contexts. The estate proximity creates additional visual sensitivity considerations for properties on the approach roads and those visible from estate vantage points.',
+        'Cantilever and tracked sliders in Knebworth face North Hertfordshire District Council planning treatment that is generally pragmatic outside specific heritage-adjacent contexts. The estate proximity creates additional visual sensitivity considerations for properties on the approach roads and those visible from estate vantage points.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the dominant format across Knebworth, particularly on the older residential streets and the estate-adjacent properties where traditional entrance patterns define the streetscape. Underground motor specification is common at the upper end of the market.',
+        'Swing configurations dominate the Knebworth market, particularly on the older residential streets and the estate-adjacent properties where traditional entrance patterns define the streetscape. Underground motor specification is common at the upper end of the market.',
         'The Knebworth House estate context shapes material specifications for properties visible from the estate or its approach roads. Restrained finishes, traditional design vocabulary, and sympathetic material choices progress through planning more reliably than contemporary specifications in these specific locations.',
       ],
       'wooden-driveway-gates': [
@@ -1054,7 +1054,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'North Hertfordshire District Council planning treatment of timber applications in Knebworth is generally accommodating, with the estate-adjacent considerations favouring traditional specifications over contemporary approaches. Pre-application engagement for substantial installations in heritage-sensitive contexts is worth considering.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Knebworth span from practical specifications on the newer residential streets through to substantial hand-forged wrought iron on the estate-adjacent and premium properties. The specification expectations vary meaningfully by location.',
+        'In Knebworth, metal gate installations span from practical specifications on the newer residential streets through to substantial hand-forged wrought iron on the estate-adjacent and premium properties. The specification expectations vary meaningfully by location.',
         'At the upper end of the Knebworth market, particularly on properties with estate visibility or approach road frontage, genuine forge-worked wrought iron in traditional designs sits correctly against the heritage context. Cold-bent mild steel alternatives lack the character that suits these specific locations.',
       ],
       'automated-gate-systems': [
@@ -1062,8 +1062,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Outside the heritage-sensitive zones, Knebworth automation installations are generally straightforward. The clay substrate is well-understood locally, mains power availability is reliable, and cable routing is manageable through typical village plots.',
       ],
       'gate-repair-and-maintenance': [
-        'The Knebworth gate stock includes substantial installations across the estate-adjacent streets and more practical systems across the modern village centre. The local specialist market handles both contexts competently, with diagnostic-led repair the appropriate approach at most specification levels.',
-        'The typical Knebworth failure patterns include control board corrosion in under-drained installations, photocell alignment drift, and access control obsolescence on older systems. All are repairable with proper diagnostic work at a fraction of replacement cost.',
+        'Repair work in Knebworth draws on a gate stock that includes substantial installations across the estate-adjacent streets and more practical systems across the modern village centre. The local specialist market handles both contexts competently, with diagnostic-led repair the appropriate approach at most specification levels.',
+        'Repeat-call diagnostics in Knebworth include control board corrosion in under-drained installations, photocell alignment drift, and access control obsolescence on older systems. All are repairable with proper diagnostic work at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -1077,10 +1077,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Welwyn village — distinct from the adjacent Welwyn Garden City — retains a genuinely historic character built around the old Great North Road, with coaching-era buildings along Church Street and Mill Lane defining the conservation area core. The gate market here reflects the village character, with installations in the historic streets requiring substantially more planning sensitivity than those in the surrounding modern residential areas.',
-        'Sliding gate installations in the Welwyn conservation area generally favour cantilever systems with concealed mechanisms over visible ground-track configurations. Welwyn Hatfield Borough Council planning treatment within the conservation zone is notably more restrictive than in the adjacent Garden City, and the historic streetscape rewards restrained specifications.',
+        'Slider configurations work best on the Welwyn conservation area generally favour cantilever systems with concealed mechanisms over visible ground-track configurations. Welwyn Hatfield Borough Council planning treatment within the conservation zone is notably more restrictive than in the adjacent Garden City, and the historic streetscape rewards restrained specifications.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit the Welwyn village character particularly well, echoing the coaching-inn entrance patterns that defined the original settlement along the Great North Road. The Georgian and Victorian properties across Church Street and Mill Lane support traditional swing configurations with restrained material treatments and careful design sympathy to the historic context.',
+        'In Welwyn, swing gates suit the village character particularly well, echoing the coaching-inn entrance patterns that defined the original settlement along the Great North Road. The Georgian and Victorian properties across Church Street and Mill Lane support traditional swing configurations with restrained material treatments and careful design sympathy to the historic context.',
         'Underground motor specification is typical at the upper end of the Welwyn village market, particularly where the period character makes visible surface equipment inappropriate. Welwyn Hatfield planning officers generally favour concealed mechanisms in conservation-area applications.',
       ],
       'wooden-driveway-gates': [
@@ -1088,16 +1088,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak is well-used in Welwyn, particularly on properties where the silvered natural weathering aligns with the historic streetscape character. Iroko provides a reliable mid-range alternative with comparable durability and a more stable colour retention for owners preferring consistent appearance.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Welwyn work best when specified with genuine sympathy for the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the Georgian and coaching-era frontages of the conservation area; bright contemporary specifications routinely attract planning objections.',
+        'Welwyn metal gate specifications work best when specified with genuine sympathy for the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the Georgian and coaching-era frontages of the conservation area; bright contemporary specifications routinely attract planning objections.',
         'The specification at upper end of the Welwyn village market benefits from genuine forge work rather than cold-bent mild steel substitutes. The difference in character and long-term durability is substantial, and the cost premium is modest relative to the property values the installations serve.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Welwyn village is shaped by the conservation-area context more than by technical considerations. Visible surface equipment requires particular sensitivity in the historic streetscape, and underground motor specifications with concealed control boxes are effectively standard for installations in the conservation zone.',
+        'In Welwyn, gate automation village is shaped by the conservation-area context more than by technical considerations. Visible surface equipment requires particular sensitivity in the historic streetscape, and underground motor specifications with concealed control boxes are effectively standard for installations in the conservation zone.',
         'Outside the conservation area, Welwyn automation installations are generally straightforward. The clay substrate is well-understood locally, mains power availability is reliable, and the post-war residential streets accommodate standard specifications without significant constraints.',
       ],
       'gate-repair-and-maintenance': [
         'The Welwyn village gate stock includes substantial installations on period properties, many now decades old and fully repairable with current parts. The local specialist market includes technicians familiar with older specifier systems and capable of honest diagnostic work.',
-        'The typical Welwyn failure patterns include control board corrosion in under-drained clay-substrate installations, photocell drift from seasonal ground movement, and access control obsolescence on older systems. All are repairable with proper diagnosis at a fraction of replacement cost.',
+        'Gate faults reported across Welwyn include control board corrosion in under-drained clay-substrate installations, photocell drift from seasonal ground movement, and access control obsolescence on older systems. All are repairable with proper diagnosis at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -1111,10 +1111,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Stanstead Abbotts combines a genuinely historic core along the River Lea with substantial residential development across the surrounding streets. The conservation area around the High Street and the listed properties near St Andrews Church shape planning substantially, while the post-war residential areas face generally pragmatic East Hertfordshire District Council treatment.',
-        'Sliding gate installations in the Stanstead Abbotts historic core typically require cantilever systems with concealed mechanisms. The river-adjacent locations demand specific foundation drainage engineering — the Lea proximity creates elevated water table conditions that compromise standard foundation designs if not addressed from the start.',
+        'Such sliding installations concentrate on the Stanstead Abbotts historic core typically require cantilever systems with concealed mechanisms. The river-adjacent locations demand specific foundation drainage engineering — the Lea proximity creates elevated water table conditions that compromise standard foundation designs if not addressed from the start.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit the Stanstead Abbotts historic streetscape well, particularly on the period properties along the High Street and the streets radiating from the Parish Church. Underground motor specification is common at the upper end of the village market; ram-arm systems serve the mid-range applications across the post-war residential areas.',
+        'Across Stanstead Abbotts, swing configurations suit the historic streetscape well, particularly on the period properties along the High Street and the streets radiating from the Parish Church. Underground motor specification is common at the upper end of the village market; ram-arm systems serve the mid-range applications across the post-war residential areas.',
         'Listed building consent is a specific Stanstead Abbotts consideration for properties in or adjacent to the historic core. Gate installations on curtilage structures to listed buildings typically require listed building consent in addition to conservation area consent, and the processing time is longer but the permissions, once granted, are substantial.',
       ],
       'wooden-driveway-gates': [
@@ -1122,16 +1122,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The specific Stanstead Abbotts consideration is river-adjacent foundation engineering. Properties close to the Lea require foundation designs that account for seasonal water levels, and proper drainage at the original installation prevents post-rot that appears within a decade on under-specified gate foundations.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Stanstead Abbotts work best when specified in sympathy with the river-side historic streetscape. Hand-forged wrought iron in traditional designs reads correctly against the period properties; bright contemporary specifications attract planning concerns routinely.',
+        'Ironwork projects across Stanstead Abbotts work best when specified in sympathy with the river-side historic streetscape. Hand-forged wrought iron in traditional designs reads correctly against the period properties; bright contemporary specifications attract planning concerns routinely.',
         'The listed building consent consideration applies to a significant share of Stanstead Abbotts properties. Any metal gate work on a curtilage structure to a listed building requires listed building consent in addition to conservation area consent where both apply — local specialist knowledge of the approval process saves substantial time.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Stanstead Abbotts is shaped by the dense heritage designations across the historic core and by the river-adjacent installation conditions that affect foundation and drainage work substantially. The combination requires specialist local knowledge.',
+        'The gate automation market in Stanstead Abbotts shaped by the dense heritage designations across the historic core and by the river-adjacent installation conditions that affect foundation and drainage work substantially. The combination requires specialist local knowledge.',
         'Pre-application engagement with East Herts planning is genuinely valuable for substantial Stanstead Abbotts projects, particularly where listed building consent is involved. The modest pre-app investment saves months of potential rework and eliminates risk of specifying something that cannot receive consent.',
       ],
       'gate-repair-and-maintenance': [
-        'The Stanstead Abbotts gate stock includes installations in conditions that accelerate specific failure patterns. River-adjacent installations experience elevated humidity, occasional flood exposure, and water table fluctuations that stress both mechanical and electrical components.',
-        'The typical Stanstead Abbotts failure patterns include water damage from flooding or high water tables, control board corrosion from sustained humidity, photocell alignment drift from seasonal ground movement, and hinge degradation accelerated by the humid local microclimate. All are addressable with proper diagnostic work.',
+        'The local gate stock in Stanstead Abbotts includes installations in conditions that accelerate specific failure patterns. River-adjacent installations experience elevated humidity, occasional flood exposure, and water table fluctuations that stress both mechanical and electrical components.',
+        'The common Stanstead Abbotts failure signatures include water damage from flooding or high water tables, control board corrosion from sustained humidity, photocell alignment drift from seasonal ground movement, and hinge degradation accelerated by the humid local microclimate. All are addressable with proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1145,7 +1145,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Buntingford is a historic market town in the north of the East Hertfordshire district, with a substantial High Street conservation area defining the town\'s character and a dense concentration of listed buildings across the central streets. The gate market here is shaped substantially by the heritage designations, with conservation area controls and listed building consent requirements applying to a significant share of properties.',
-        'Sliding gate installations in the Buntingford historic core face East Hertfordshire District Council conservation scrutiny that consistently favours cantilever systems with concealed mechanisms. Outside the conservation zones and on the newer residential developments around the town edges, planning treatment is substantially more pragmatic.',
+        'These sliding systems typically serve the Buntingford historic core face East Hertfordshire District Council conservation scrutiny that consistently favours cantilever systems with concealed mechanisms. Outside the conservation zones and on the newer residential developments around the town edges, planning treatment is substantially more pragmatic.',
       ],
       'electric-swing-gates': [
         'Swing gates are the traditional format that suits Buntingford\'s historic streetscape character. The Georgian and Victorian properties along the High Street and the streets radiating from the market place support classical swing configurations with restrained material treatments.',
@@ -1156,16 +1156,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak and iroko are both well-used in Buntingford. Oak suits properties where the silvered natural weathering aligns with the historic streetscape character; iroko provides reliable durability with more stable colour retention for owners preferring consistent appearance.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Buntingford work best when specified in sympathy with the market town streetscape. Hand-forged wrought iron in traditional designs sits correctly against the Georgian and Victorian frontages; bright contemporary specifications attract planning concerns routinely in the conservation area.',
+        'Buntingford\'s metal gates work best when specified in sympathy with the market town streetscape. Hand-forged wrought iron in traditional designs sits correctly against the Georgian and Victorian frontages; bright contemporary specifications attract planning concerns routinely in the conservation area.',
         'At the upper end of the Buntingford market, genuine forge-worked wrought iron is the appropriate specification. The cold-bent mild steel dressed as wrought iron available from generic fabricators lacks the character that suits the historic streetscape over decades.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Buntingford is shaped by the heritage designations across the historic core more than by any technical factor. Visible surface equipment requires particular sensitivity in conservation contexts, and underground motor specifications with concealed control boxes are effectively standard for installations in the central streets.',
+        'The gate automation market in Buntingford shaped by the heritage designations across the historic core more than by any technical factor. Visible surface equipment requires particular sensitivity in conservation contexts, and underground motor specifications with concealed control boxes are effectively standard for installations in the central streets.',
         'Pre-application engagement with East Herts is genuinely useful for substantial Buntingford projects, particularly where listed building consent is involved. Processing times are longer than in non-designated locations but the permissions, once granted, are comprehensive.',
       ],
       'gate-repair-and-maintenance': [
-        'The Buntingford gate stock includes installations spanning decades on period properties, many now fully repairable with current parts rather than requiring wholesale replacement. The local specialist network includes technicians capable of honest diagnostic work on older specifier systems.',
-        'The typical Buntingford failure patterns include control board corrosion from clay-substrate water ingress, photocell drift from seasonal ground movement, and access control obsolescence as original manufacturer software support is retired. All are repairable with proper diagnosis.',
+        'Gate stock across Buntingford includes installations spanning decades on period properties, many now fully repairable with current parts rather than requiring wholesale replacement. The local specialist network includes technicians capable of honest diagnostic work on older specifier systems.',
+        'In Buntingford, the recurring repair scenarios include control board corrosion from clay-substrate water ingress, photocell drift from seasonal ground movement, and access control obsolescence as original manufacturer software support is retired. All are repairable with proper diagnosis.',
       ],
     },
     cityIntro: [
@@ -1179,7 +1179,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Redbourn sits in the western part of the St Albans district, with a substantial village green at its heart and historic streetscape character along the High Street and Church End. The gate market combines conservation-area constraints in the village core with more pragmatic planning treatment across the post-war residential streets on the edges.',
-        'Sliding gate installations in Redbourn generally work well outside the specific conservation zones. Standard ground-track and cantilever configurations both progress through St Albans District Council planning without significant friction in the modern residential areas; installations facing the village green or in the historic streetscape require more careful specification.',
+        'Redbourn\'s sliding gate installations generally work well outside the specific conservation zones. Standard ground-track and cantilever configurations both progress through St Albans District Council planning without significant friction in the modern residential areas; installations facing the village green or in the historic streetscape require more careful specification.',
       ],
       'electric-swing-gates': [
         'Swing gates are common across Redbourn, suiting both the period properties around the village green and the inter-war and post-war housing on the surrounding residential streets. The mixed village character accommodates a broad range of specifications, with appropriate choices depending substantially on individual property context.',
@@ -1194,12 +1194,12 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'At any Redbourn specification level, hot-dip galvanising beneath polyester powder coat is the finish standard that delivers 20-30 year service life. The difference compared to paint-only specifications is substantial over the long term and the cost premium is modest.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Redbourn is generally straightforward from a technical standpoint. The clay substrate is well-understood by local specialists, mains power availability at typical gate positions is reliable, and cable routing through village and post-war residential plot configurations is manageable.',
+        'In Redbourn, gate automation generally straightforward from a technical standpoint. The clay substrate is well-understood by local specialists, mains power availability at typical gate positions is reliable, and cable routing through village and post-war residential plot configurations is manageable.',
         'The specific Redbourn consideration is the visual treatment of surface equipment in the conservation zones around the village green. Outside those zones, standard automation specifications proceed without significant constraints.',
       ],
       'gate-repair-and-maintenance': [
-        'The Redbourn gate stock includes substantial installations across decades. The local specialist market includes technicians capable of honest diagnostic work on older systems, with most 1990s and 2000s installations remaining fully repairable with current parts.',
-        'The typical Redbourn failure patterns include control board corrosion from clay-substrate water ingress, photocell drift from seasonal ground movement, and safety edge degradation from UV exposure. All are repairable with proper diagnostic work at a fraction of replacement cost.',
+        'Redbourn\'s electric gate stock includes substantial installations across decades. The local specialist market includes technicians capable of honest diagnostic work on older systems, with most 1990s and 2000s installations remaining fully repairable with current parts.',
+        'Repeat-call diagnostics in Redbourn include control board corrosion from clay-substrate water ingress, photocell drift from seasonal ground movement, and safety edge degradation from UV exposure. All are repairable with proper diagnostic work at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -1213,10 +1213,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Wheathampstead combines a genuinely historic core along the River Lea with substantial residential development across the village. The conservation area around the Church of St Helen and the listed properties across the historic streets shape planning substantially, while the surrounding residential streets face generally pragmatic St Albans District Council treatment.',
-        'Sliding gate installations in the Wheathampstead conservation area generally favour cantilever systems with concealed mechanisms. The river-adjacent parts of the village create specific foundation considerations — proper drainage engineering from the start prevents issues that develop on under-specified installations.',
+        'Where sliders make sense, these are the Wheathampstead conservation area generally favour cantilever systems with concealed mechanisms. The river-adjacent parts of the village create specific foundation considerations — proper drainage engineering from the start prevents issues that develop on under-specified installations.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit the Wheathampstead village character well. The Georgian and Victorian properties across the historic streets support traditional configurations with restrained material treatments; the surrounding residential areas accommodate swing systems equally well with contemporary approaches.',
+        'Across Wheathampstead, swing configurations suit the village character well. The Georgian and Victorian properties across the historic streets support traditional configurations with restrained material treatments; the surrounding residential areas accommodate swing systems equally well with contemporary approaches.',
         'Listed building consent is a specific Wheathampstead consideration for properties in or adjacent to the historic core. Gate installations on curtilage structures to listed buildings typically require listed building consent in addition to conservation area consent, and local specialist knowledge of the process saves substantial time.',
       ],
       'wooden-driveway-gates': [
@@ -1224,16 +1224,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak and iroko are both well-used in Wheathampstead. Oak suits properties where the silvered natural weathering aligns with the historic character; iroko provides reliable durability with more stable colour retention across the seasons.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Wheathampstead work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the conservation area properties; contemporary bright specifications attract planning concerns routinely.',
+        'Ironwork projects across Wheathampstead work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the conservation area properties; contemporary bright specifications attract planning concerns routinely.',
         'The listed building consent consideration applies to a significant share of Wheathampstead properties in the historic core. Metal gate work on curtilage structures requires the additional consent process, which experienced local specialists handle competently.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Wheathampstead is shaped by the conservation designations in the historic core and by the river-adjacent installation conditions in parts of the village. The combination demands specialist local knowledge — a generic installer may propose specifications appropriate elsewhere but inappropriate for the specific Wheathampstead context.',
+        'Retrofit and new-build automation in Wheathampstead shaped by the conservation designations in the historic core and by the river-adjacent installation conditions in parts of the village. The combination demands specialist local knowledge — a generic installer may propose specifications appropriate elsewhere but inappropriate for the specific Wheathampstead context.',
         'Pre-application engagement with St Albans planning is genuinely valuable for substantial Wheathampstead projects, particularly where listed building consent is involved. The modest pre-app cost is consistently worthwhile.',
       ],
       'gate-repair-and-maintenance': [
-        'The Wheathampstead gate stock includes installations in conditions that accelerate specific failure patterns, particularly for properties close to the Lea. River-adjacent installations experience elevated humidity and water table effects; conservation-area installations are often constrained by consent considerations.',
-        'The typical Wheathampstead failure patterns include water damage from elevated water tables, control board corrosion from sustained humidity, photocell drift from seasonal ground movement, and hinge degradation from the humid local microclimate. All are addressable with proper diagnostic work.',
+        'Gate stock across Wheathampstead includes installations in conditions that accelerate specific failure patterns, particularly for properties close to the Lea. River-adjacent installations experience elevated humidity and water table effects; conservation-area installations are often constrained by consent considerations.',
+        'Repeat-call diagnostics in Wheathampstead include water damage from elevated water tables, control board corrosion from sustained humidity, photocell drift from seasonal ground movement, and hinge degradation from the humid local microclimate. All are addressable with proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1247,7 +1247,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'London Colney sits at the southern edge of the St Albans district within the Hertsmere borough boundaries, with a residential character shaped by post-war development and the village\'s position on the A1081 corridor. The gate market here is generally pragmatic, with Hertsmere Borough Council planning treatment straightforward outside the specific conservation considerations in the village core.',
-        'Sliding gate installations in London Colney work well on the generally level terrain across most of the village. Ground-track systems are economical where boundary configurations support them; cantilever systems suit properties with aesthetic preferences for concealed mechanisms or where substantial track installation would require significant boundary modification.',
+        'The sliding gate installations across London Colney work well on the generally level terrain across most of the village. Ground-track systems are economical where boundary configurations support them; cantilever systems suit properties with aesthetic preferences for concealed mechanisms or where substantial track installation would require significant boundary modification.',
       ],
       'electric-swing-gates': [
         'Swing gates work well across London Colney, suiting both the older properties in the village core and the post-war residential housing across the surrounding streets. Underground motor specification is typical at the upper end of the market; ram-arm systems serve the mid-range applications.',
@@ -1258,16 +1258,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Iroko is the practical mid-range specification; European oak serves the premium end of the market. Hertsmere planning treatment of timber applications is generally accommodating, with conservation-area considerations focused primarily on design sympathy to neighbouring properties.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in London Colney span from practical galvanised-and-powder-coated specifications through to hand-forged wrought iron on the larger properties. The mixed village character accommodates a broad specification range.',
+        'Across London Colney, metalwork installations span from practical galvanised-and-powder-coated specifications through to hand-forged wrought iron on the larger properties. The mixed village character accommodates a broad specification range.',
         'At any London Colney specification level, hot-dip galvanising beneath polyester powder coat is the finish that delivers genuine 20-30 year service life. Paint-only specifications and cold-bent mild steel alternatives both compromise on quality that the local market expects.',
       ],
       'automated-gate-systems': [
-        'Gate automation demand in London Colney is driven by the general commuter market and residential security considerations. The installed base spans decades, with substantial retrofit demand on systems originally specified in the 1990s and 2000s.',
+        'Gate automation across London Colney driven by the general commuter market and residential security considerations. The installed base spans decades, with substantial retrofit demand on systems originally specified in the 1990s and 2000s.',
         'The practical London Colney considerations include mains power routing through established gardens, access control software currency on older installations, and article 4 planning considerations in specific streets. Local specialist knowledge matters for correct specification.',
       ],
       'gate-repair-and-maintenance': [
-        'The London Colney gate stock includes substantial installations across decades. The local specialist market includes technicians capable of honest diagnostic work on older systems, with most 1990s and 2000s installations remaining fully repairable with current parts.',
-        'The typical London Colney failure patterns include control board corrosion from clay-substrate water ingress, photocell drift from seasonal ground movement, and access control obsolescence on older systems. All are repairable with proper diagnostic work at a fraction of replacement cost.',
+        'Repair work in London Colney draws on a gate stock that includes substantial installations across decades. The local specialist market includes technicians capable of honest diagnostic work on older systems, with most 1990s and 2000s installations remaining fully repairable with current parts.',
+        'Gate faults reported across London Colney include control board corrosion from clay-substrate water ingress, photocell drift from seasonal ground movement, and access control obsolescence on older systems. All are repairable with proper diagnostic work at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -1281,7 +1281,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Codicote is a village in the North Hertfordshire district with a genuinely historic core along the High Street and substantial residential development across the surrounding streets. The conservation area shapes planning substantially in the village core, while the post-war residential areas face generally pragmatic North Hertfordshire District Council treatment.',
-        'Sliding gate installations in Codicote generally work well outside the specific High Street conservation zone. Standard ground-track and cantilever configurations both progress through planning without significant friction in the modern residential areas; installations visible from the historic core require more careful specification and sometimes pre-application engagement.',
+        'Across Codicote, sliding gate work generally work well outside the specific High Street conservation zone. Standard ground-track and cantilever configurations both progress through planning without significant friction in the modern residential areas; installations visible from the historic core require more careful specification and sometimes pre-application engagement.',
       ],
       'electric-swing-gates': [
         'Swing gates are the traditional format that suits the Codicote village character. The period properties across the High Street and the streets radiating from the village centre support classical swing configurations with restrained material treatments; the surrounding residential areas accommodate swing systems equally well with contemporary approaches.',
@@ -1292,7 +1292,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak and iroko are both well-used in Codicote. Oak suits properties where the silvered natural weathering aligns with the historic character; iroko provides reliable durability with a more stable colour for owners preferring consistent appearance over the seasons.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Codicote work best when specified in sympathy with the village streetscape. Hand-forged wrought iron in traditional designs sits correctly against the period properties of the conservation area; contemporary bright specifications attract planning concerns.',
+        'Codicote\'s metal gate installations work best when specified in sympathy with the village streetscape. Hand-forged wrought iron in traditional designs sits correctly against the period properties of the conservation area; contemporary bright specifications attract planning concerns.',
         'At any Codicote specification level, the finish quality matters substantially for long-term performance. Hot-dip galvanising beneath polyester powder coat is the specification standard that delivers 20-30 year service life in the local conditions.',
       ],
       'automated-gate-systems': [
@@ -1300,8 +1300,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Within the conservation area, visible surface equipment requires particular sensitivity. Underground motor specifications with concealed control boxes are effectively standard for installations in the central streets, avoiding the visual impact that surface equipment would create against the historic streetscape.',
       ],
       'gate-repair-and-maintenance': [
-        'The Codicote gate stock includes installations spanning decades. The local specialist network includes technicians familiar with older specifier systems and capable of honest diagnostic work rather than replacement-first sales.',
-        'The typical Codicote failure patterns include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and safety edge degradation from UV exposure. All are repairable with proper diagnostic work at a fraction of replacement cost.',
+        'Gate stock across Codicote includes installations spanning decades. The local specialist network includes technicians familiar with older specifier systems and capable of honest diagnostic work rather than replacement-first sales.',
+        'The common Codicote failure signatures include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and safety edge degradation from UV exposure. All are repairable with proper diagnostic work at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -1315,10 +1315,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Datchworth is a rural village in the East Hertfordshire district, with the character shaped substantially by the Green Belt setting and the mature rural landscape surrounding the village. The gate market here favours restrained specifications that sit correctly against the open countryside context rather than assertive contemporary profiles.',
-        'Sliding gate installations in Datchworth face generally pragmatic East Hertfordshire District Council planning treatment outside specific conservation considerations. Cantilever systems with concealed mechanisms suit the rural setting better than visible ground-track configurations, which can sit uncomfortably against the village streetscape character.',
+        'Sliding systems specified in Datchworth face generally pragmatic East Hertfordshire District Council planning treatment outside specific conservation considerations. Cantilever systems with concealed mechanisms suit the rural setting better than visible ground-track configurations, which can sit uncomfortably against the village streetscape character.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the dominant format across Datchworth, suiting both the period properties that define much of the village and the inter-war and post-war housing across the surrounding streets. Underground motor specification is common at the upper end of the market.',
+        'Swing configurations dominate the Datchworth market, suiting both the period properties that define much of the village and the inter-war and post-war housing across the surrounding streets. Underground motor specification is common at the upper end of the market.',
         'The Green Belt setting shapes material specifications in Datchworth. Darker, aged finishes — bronze powder coat, anthracite, natural timber — sit more naturally against the rural backdrop than bright galvanised or white-painted specifications that can read incongruous against open countryside.',
       ],
       'wooden-driveway-gates': [
@@ -1326,7 +1326,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'FSC certification should be standard on any Datchworth specification given the rural setting and the expectations of local buyers with genuine environmental awareness. Reliable fabricators will volunteer provenance documentation without being asked.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Datchworth work best with restrained specifications. Hand-forged wrought iron in aged or dark-oxidised finishes reads correctly against the rural streetscape; bright contemporary specifications sit incongruously against the village character.',
+        'Datchworth metal gate projects work best with restrained specifications. Hand-forged wrought iron in aged or dark-oxidised finishes reads correctly against the rural streetscape; bright contemporary specifications sit incongruously against the village character.',
         'The rural setting and Green Belt context favour traditional material choices over assertive contemporary approaches. East Herts planning treatment is generally accommodating of appropriate specifications; inappropriate contemporary specifications can attract conditions even where technically compliant with permitted development rules.',
       ],
       'automated-gate-systems': [
@@ -1334,8 +1334,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Underground motor specification with concealed control boxes typically suits the Datchworth context better than visible surface equipment. The visual impact of ram-arm motors or surface-mounted access control is more apparent in the rural setting than in dense urban streetscapes.',
       ],
       'gate-repair-and-maintenance': [
-        'The Datchworth gate stock includes substantial installations across decades. Many older systems remain fully repairable with current parts, and the local specialist market handles diagnostic-led work competently.',
-        'The typical Datchworth failure patterns include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and standard component degradation consistent with the installation age profile. All are repairable with proper diagnostic work.',
+        'Across Datchworth, the gate stock includes substantial installations across decades. Many older systems remain fully repairable with current parts, and the local specialist market handles diagnostic-led work competently.',
+        'Datchworth-area fault patterns include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and standard component degradation consistent with the installation age profile. All are repairable with proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1349,7 +1349,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Bovingdon is a rural village in the Dacorum borough sitting on the edge of the Chilterns AONB, with substantial residential development across the village and along the B4505 corridor. The AONB-adjacent character shapes gate specifications substantially — restrained material choices and sympathetic finishes progress through Dacorum Borough Council planning more reliably than bright contemporary approaches.',
-        'Sliding gate installations in Bovingdon generally favour cantilever systems with concealed mechanisms, particularly on properties facing open AONB-adjacent views. The clay-with-flints subsoil typical of the area demands proper foundation drainage engineering, which separates reliable local specialists from generic contractors.',
+        'Bovingdon sliding gate projects generally favour cantilever systems with concealed mechanisms, particularly on properties facing open AONB-adjacent views. The clay-with-flints subsoil typical of the area demands proper foundation drainage engineering, which separates reliable local specialists from generic contractors.',
       ],
       'electric-swing-gates': [
         'Swing gates are the dominant format across Bovingdon, suiting both the period properties in the village core and the inter-war and post-war housing across the surrounding residential streets. Underground motor specification is common at the upper end of the market; ram-arm systems serve the mid-range well.',
@@ -1360,16 +1360,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Dacorum Borough Council planning treatment of timber applications in Bovingdon is generally accommodating. FSC certification should be standard given the AONB-adjacent setting and the local buyer expectations, and reliable fabricators will volunteer provenance documentation.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Bovingdon work best with restrained specifications that sit correctly against the rural streetscape. Hand-forged wrought iron in aged or dark-oxidised finishes reads appropriately; bright contemporary galvanised or white-painted specifications routinely look wrong and sometimes attract planning concerns.',
+        'Across Bovingdon, metalwork installations work best with restrained specifications that sit correctly against the rural streetscape. Hand-forged wrought iron in aged or dark-oxidised finishes reads appropriately; bright contemporary galvanised or white-painted specifications routinely look wrong and sometimes attract planning concerns.',
         'At any Bovingdon specification level, hot-dip galvanising beneath polyester powder coat is the finish standard that delivers genuine 20-30 year service life in the local climate conditions.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Bovingdon benefits from the rural-edge context consideration. Visible surface equipment — ram arms, above-ground motors, surface-mounted keypads — draws attention in the village streetscape more than it would in denser urban contexts, and underground motor specifications with concealed control boxes are the typical premium approach.',
+        'Bovingdon\'s gate automation benefits from the rural-edge context consideration. Visible surface equipment — ram arms, above-ground motors, surface-mounted keypads — draws attention in the village streetscape more than it would in denser urban contexts, and underground motor specifications with concealed control boxes are the typical premium approach.',
         'The practical Bovingdon considerations include mains power availability on some rural-edge properties, cable routing through established gardens, and the drainage engineering that underpins reliable underground motor installations in the local substrate.',
       ],
       'gate-repair-and-maintenance': [
-        'The Bovingdon gate stock includes substantial installations across decades. The local specialist market handles diagnostic-led work competently, with most older systems remaining fully repairable with current parts rather than requiring wholesale replacement.',
-        'The typical Bovingdon failure patterns include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and safety edge degradation from UV exposure. All are repairable with proper diagnostic work at a fraction of replacement cost.',
+        'The local gate stock in Bovingdon includes substantial installations across decades. The local specialist market handles diagnostic-led work competently, with most older systems remaining fully repairable with current parts rather than requiring wholesale replacement.',
+        'Gate faults reported across Bovingdon include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and safety edge degradation from UV exposure. All are repairable with proper diagnostic work at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -1383,10 +1383,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Flamstead is a small rural village in the Dacorum borough with a genuinely historic core around the St Leonard\'s Church and the village green. The conservation area shapes planning substantially, and the surrounding open countryside context rewards restrained material specifications.',
-        'Sliding gate installations in the Flamstead conservation area generally favour cantilever systems with concealed mechanisms. Outside the conservation zone on the newer residential streets, Dacorum Borough Council treatment is more pragmatic but the village streetscape character still rewards sympathetic specifications.',
+        'Sliding jobs in Flamstead concentrated in the conservation area generally favour cantilever systems with concealed mechanisms. Outside the conservation zone on the newer residential streets, Dacorum Borough Council treatment is more pragmatic but the village streetscape character still rewards sympathetic specifications.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit the Flamstead village character particularly well. The Georgian and Victorian properties around the village green and St Leonard\'s support classical swing configurations with restrained material treatments; the surrounding residential streets accommodate swing systems equally well.',
+        'The swing gate format suits the Flamstead village character particularly well. The Georgian and Victorian properties around the village green and St Leonard\'s support classical swing configurations with restrained material treatments; the surrounding residential streets accommodate swing systems equally well.',
         'Underground motor specification is typical at the upper end of the Flamstead market, particularly where the conservation area streetscape makes visible surface equipment inappropriate. The rural context favours concealed mechanisms.',
       ],
       'wooden-driveway-gates': [
@@ -1394,16 +1394,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak silvered naturally is particularly appropriate to the Flamstead rural character; iroko provides a reliable mid-range alternative with comparable durability. FSC certification should be standard given the village context.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Flamstead work best when specified in sympathy with the village streetscape. Hand-forged wrought iron in traditional restrained designs sits correctly against the historic properties and the rural backdrop; contemporary bright specifications look incongruous.',
+        'Wrought iron and powder-coated steel projects in Flamstead work best when specified in sympathy with the village streetscape. Hand-forged wrought iron in traditional restrained designs sits correctly against the historic properties and the rural backdrop; contemporary bright specifications look incongruous.',
         'At the upper end of the Flamstead market, genuine forge-worked wrought iron is the appropriate specification. Cold-bent mild steel alternatives lack the character that suits the conservation area streetscape.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Flamstead is shaped primarily by the village context and conservation considerations rather than technical factors. Underground motor specifications with concealed control boxes are the standard for installations in the conservation zone or visible from the village green.',
+        'Motor installations in Flamstead shaped primarily by the village context and conservation considerations rather than technical factors. Underground motor specifications with concealed control boxes are the standard for installations in the conservation zone or visible from the village green.',
         'Outside the conservation area, Flamstead automation installations are generally straightforward. The local substrate is well-understood, cable routing through typical village plots is manageable, and mains power availability is generally reliable.',
       ],
       'gate-repair-and-maintenance': [
-        'The Flamstead gate stock includes installations spanning decades, many on period properties where careful diagnostic-led repair is consistently preferable to wholesale replacement. The local specialist market handles this work competently.',
-        'The typical Flamstead failure patterns include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and standard component degradation consistent with the installation age profile. All are repairable with proper diagnostic work.',
+        'Repair work in Flamstead draws on a gate stock that includes installations spanning decades, many on period properties where careful diagnostic-led repair is consistently preferable to wholesale replacement. The local specialist market handles this work competently.',
+        'Flamstead-area fault patterns include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and standard component degradation consistent with the installation age profile. All are repairable with proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1417,7 +1417,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Aldbury sits firmly within the Chilterns AONB in the western edge of the Dacorum borough, with one of the most picturesque village cores in Hertfordshire centred on the pond and the stocks on the village green. The AONB designation and the conservation area controls combine to create one of the most restrictive gate planning environments in the county.',
-        'Sliding gate installations in Aldbury face AONB scrutiny as demanding as anywhere in Hertfordshire. Cantilever systems with concealed counterweights and restrained material finishes are effectively mandatory; visible ground-track installations and bright contemporary specifications routinely attract planning objections.',
+        'Owners fitting sliders in Aldbury find that installations face AONB scrutiny as demanding as anywhere in Hertfordshire. Cantilever systems with concealed counterweights and restrained material finishes are effectively mandatory; visible ground-track installations and bright contemporary specifications routinely attract planning objections.',
       ],
       'electric-swing-gates': [
         'Swing gates echo the historic entrance pattern of the Chilterns villages and attract fewer planning concerns in Aldbury than any sliding configuration. Underground motor specification is effectively mandatory at the Aldbury market level — visible ram-arm motors are routinely flagged as inappropriate in the AONB conservation context.',
@@ -1428,7 +1428,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak silvered naturally to grey, or iroko with a clear oil finish, sits correctly against the Aldbury landscape. FSC certification is essential given the AONB context. Accoya is increasingly specified for its 50-year durability guarantee on exposed properties.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Aldbury work only when specified with genuine landscape awareness. Hand-forged wrought iron in aged-bronze or dark-oxidised finishes reads correctly against the flint, brick, and hedgerow boundaries typical of the village; bright finishes generate planning objections and look wrong regardless of approval.',
+        'For metal gate projects in Aldbury, designs work only when specified with genuine landscape awareness. Hand-forged wrought iron in aged-bronze or dark-oxidised finishes reads correctly against the flint, brick, and hedgerow boundaries typical of the village; bright finishes generate planning objections and look wrong regardless of approval.',
         'Dacorum Borough Council planning treatment of metal gates in Aldbury is among the most restrictive in the county. Pre-application engagement is consistently worthwhile before committing to fabrication — the modest pre-app cost saves substantial rework.',
       ],
       'automated-gate-systems': [
@@ -1436,8 +1436,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The practical consequence is that Aldbury automation work benefits substantially from specialist local knowledge. Installers familiar with the Dacorum AONB planning context specify correctly from the start; generic automation contractors often propose specifications inappropriate for the village setting.',
       ],
       'gate-repair-and-maintenance': [
-        'The Aldbury gate stock skews toward high-quality installations on substantial properties in the AONB village context. Repair work is typically substantial intervention on substantial systems rather than generic motor replacement, and diagnostic-led repair preserves significant investment.',
-        'The specific Aldbury failure patterns include control board water damage in installations where original drainage was marginal, photocell drift from seasonal ground movement in the chalk substrate, and access control obsolescence on older premium systems. All are repairable with proper diagnostic work.',
+        'Across Aldbury, the gate stock skews toward high-quality installations on substantial properties in the AONB village context. Repair work is typically substantial intervention on substantial systems rather than generic motor replacement, and diagnostic-led repair preserves significant investment.',
+        'Aldbury-specific failure modes include control board water damage in installations where original drainage was marginal, photocell drift from seasonal ground movement in the chalk substrate, and access control obsolescence on older premium systems. All are repairable with proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1451,7 +1451,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Wigginton is a small village in the Chilterns AONB at the western edge of the Dacorum borough, sitting above Tring on the chalk ridge. The AONB designation covers the entire village, and Dacorum Borough Council planning officers apply the Chilterns management plan criteria rigorously to all gate installations.',
-        'Sliding gate installations in Wigginton face AONB scrutiny as demanding as elsewhere in the western Chilterns. Cantilever systems with concealed mechanisms and restrained material finishes are effectively mandatory; bright contemporary specifications routinely attract planning objections regardless of technical compliance.',
+        'The sliding gate market in Wigginton produces installations that face AONB scrutiny as demanding as elsewhere in the western Chilterns. Cantilever systems with concealed mechanisms and restrained material finishes are effectively mandatory; bright contemporary specifications routinely attract planning objections regardless of technical compliance.',
       ],
       'electric-swing-gates': [
         'Swing gates echo the historic Chilterns village entrance pattern and attract fewer planning concerns in Wigginton than sliding configurations. Underground motor specification is effectively mandatory at the Wigginton market level given the AONB context.',
@@ -1462,7 +1462,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak silvered naturally is particularly appropriate to the Wigginton context; iroko provides a reliable alternative with comparable durability. FSC certification is essential given the AONB setting, and Accoya is increasingly specified for the 50-year durability guarantee.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Wigginton work only when specified with genuine landscape awareness. Aged or dark-oxidised finishes in traditional forge work read correctly against the chalk ridge village character; bright contemporary specifications sit incongruously.',
+        'Wigginton metal gate specifications work only when specified with genuine landscape awareness. Aged or dark-oxidised finishes in traditional forge work read correctly against the chalk ridge village character; bright contemporary specifications sit incongruously.',
         'Dacorum Borough Council planning treatment of metal gates in Wigginton is as restrictive as anywhere in the county. Pre-application engagement before committing to fabrication saves substantial rework and is consistently worthwhile for any substantial metal gate specification.',
       ],
       'automated-gate-systems': [
@@ -1471,7 +1471,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'The Wigginton gate stock includes installations in conditions that accelerate specific failure patterns — wind exposure on ridgeline properties stresses structural components, and the AONB context means replacement is usually more complex than repair.',
-        'The typical Wigginton failure patterns include wind-load damage on exposed installations, photocell drift from seasonal ground movement, and standard component degradation. Diagnostic-led repair is consistently preferable to wholesale replacement, particularly given the AONB planning context that applies to new installations.',
+        'Repeat-call diagnostics in Wigginton include wind-load damage on exposed installations, photocell drift from seasonal ground movement, and standard component degradation. Diagnostic-led repair is consistently preferable to wholesale replacement, particularly given the AONB planning context that applies to new installations.',
       ],
     },
     cityIntro: [
@@ -1485,7 +1485,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Much Hadham is a genuinely historic village in the East Hertfordshire district, with a substantial conservation area along the High Street and a dense concentration of listed buildings including the Bishop\'s Palace. The gate market here is shaped substantially by the heritage designations, with conservation area controls and listed building consent requirements applying to a significant share of properties.',
-        'Sliding gate installations in the Much Hadham conservation area face East Hertfordshire District Council scrutiny that consistently favours cantilever systems with concealed mechanisms. Outside the conservation zones, planning treatment is substantially more pragmatic but the rural village character still rewards sympathetic specifications.',
+        'Where sliders make sense, these are the Much Hadham conservation area face East Hertfordshire District Council scrutiny that consistently favours cantilever systems with concealed mechanisms. Outside the conservation zones, planning treatment is substantially more pragmatic but the rural village character still rewards sympathetic specifications.',
       ],
       'electric-swing-gates': [
         'Swing gates are the traditional format that suits the Much Hadham streetscape character. The Tudor, Georgian, and Victorian properties along the High Street support classical swing configurations with restrained material treatments and careful design sympathy to the historic context.',
@@ -1496,16 +1496,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak is particularly appropriate to the Much Hadham context, aligning with the timber character visible throughout the historic core. Iroko provides a reliable mid-range alternative. Both work well against the heritage streetscape.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Much Hadham work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the period properties of the conservation area; bright contemporary specifications attract planning concerns routinely.',
+        'For metal gate projects in Much Hadham, designs work best when specified in sympathy with the historic streetscape. Hand-forged wrought iron in traditional designs sits correctly against the period properties of the conservation area; bright contemporary specifications attract planning concerns routinely.',
         'The listed building consent consideration applies strongly to metal gate work in Much Hadham. Properties carrying listed status face additional consent requirements that extend processing time but generate substantial permissions once approved.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Much Hadham is shaped more by heritage considerations than by technical factors. Visible surface equipment requires particular sensitivity in conservation and listed building contexts, and underground motor specifications with concealed control boxes are effectively standard for installations in the historic core.',
+        'Gate automation across Much Hadham shaped more by heritage considerations than by technical factors. Visible surface equipment requires particular sensitivity in conservation and listed building contexts, and underground motor specifications with concealed control boxes are effectively standard for installations in the historic core.',
         'Pre-application engagement with East Herts is genuinely valuable for substantial Much Hadham projects, particularly where listed building consent is involved. The modest pre-app cost is consistently worthwhile given the heritage density.',
       ],
       'gate-repair-and-maintenance': [
         'The Much Hadham gate stock includes substantial installations on period properties, many worth maintaining rather than replacing given the heritage context and the consent complications that apply to new installations in the conservation area.',
-        'The typical Much Hadham failure patterns include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and access control obsolescence on older systems. All are repairable with proper diagnostic work at a fraction of replacement cost.',
+        'Much Hadham repair records show fault patterns that include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and access control obsolescence on older systems. All are repairable with proper diagnostic work at a fraction of replacement cost.',
       ],
     },
     cityIntro: [
@@ -1522,7 +1522,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Sliding gate installations in the Great Amwell conservation area generally favour cantilever systems with concealed mechanisms. The river-adjacent foundation considerations require proper drainage engineering — standard specifications fail predictably where water table levels have not been addressed in the original design.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit the Great Amwell village character particularly well. The period properties around the historic core and the substantial detached housing on the surrounding streets support traditional swing configurations with restrained material treatments.',
+        'For Great Amwell owners, swing gates suit the village character particularly well. The period properties around the historic core and the substantial detached housing on the surrounding streets support traditional swing configurations with restrained material treatments.',
         'Listed building consent considerations apply to some Great Amwell properties in the historic core. Gate installations on curtilage structures to listed buildings require the additional consent process, which local specialist experience handles competently.',
       ],
       'wooden-driveway-gates': [
@@ -1530,16 +1530,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The specific Great Amwell consideration for timber gates is foundation design. Properties close to the Lea require drainage engineering from the start to prevent post-rot that appears within a decade on under-specified installations.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Great Amwell work best when specified in sympathy with the historic river-side streetscape. Hand-forged wrought iron in traditional designs reads correctly against the period properties; bright contemporary specifications attract planning concerns.',
+        'Owners fitting metal gates in Great Amwell find installations work best when specified in sympathy with the historic river-side streetscape. Hand-forged wrought iron in traditional designs reads correctly against the period properties; bright contemporary specifications attract planning concerns.',
         'The listed building consent consideration applies to some Great Amwell properties. Any metal gate work on curtilage structures to listed buildings requires the additional consent process.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Great Amwell is shaped by the heritage designations in the historic core and by the river-adjacent installation conditions. The combination demands specialist local knowledge for installations close to the Lea.',
+        'Automated gate projects in Great Amwell shaped by the heritage designations in the historic core and by the river-adjacent installation conditions. The combination demands specialist local knowledge for installations close to the Lea.',
         'Pre-application engagement with East Herts is valuable for substantial Great Amwell projects, particularly where listed building consent is involved. Processing times are longer than in non-designated locations but the permissions, once granted, are substantial.',
       ],
       'gate-repair-and-maintenance': [
         'The Great Amwell gate stock includes installations in conditions that accelerate specific failure patterns — river-adjacent locations experience elevated humidity and occasional flood exposure that stresses both mechanical and electrical components.',
-        'The typical Great Amwell failure patterns include water damage from elevated water tables, control board corrosion from sustained humidity, photocell drift from seasonal ground movement, and hinge degradation accelerated by the humid microclimate. All are addressable with proper diagnostic work.',
+        'Great Amwell repair records show fault patterns that include water damage from elevated water tables, control board corrosion from sustained humidity, photocell drift from seasonal ground movement, and hinge degradation accelerated by the humid microclimate. All are addressable with proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1553,10 +1553,10 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Bengeo is a residential district on the northern edge of Hertford, characterised by substantial Victorian terraces, Edwardian villas, and inter-war detached housing across the streets radiating from Port Vale and the Bengeo Street area. The district sits within the wider East Hertfordshire planning context, with conservation area controls applying in parts and generally pragmatic treatment elsewhere.',
-        'Sliding gate installations in Bengeo are generally straightforward from a planning perspective outside the specific conservation zones. The level terrain across most of the district supports both cantilever and ground-track specifications, with the choice driven by aesthetic preference rather than technical necessity.',
+        'Owners fitting sliders in Bengeo find that installations are generally straightforward from a planning perspective outside the specific conservation zones. The level terrain across most of the district supports both cantilever and ground-track specifications, with the choice driven by aesthetic preference rather than technical necessity.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the dominant format across Bengeo, suiting the Victorian and Edwardian housing character that defines much of the district. Underground motor specification is typical at the upper end of the market; ram-arm systems serve the mid-range and retrofit applications well.',
+        'For most Bengeo plots, swing gates are the dominant format, suiting the Victorian and Edwardian housing character that defines much of the district. Underground motor specification is typical at the upper end of the market; ram-arm systems serve the mid-range and retrofit applications well.',
         'The commuter connection to Hertford town and onward to central London shapes Bengeo\'s residential profile, and access control expectations reflect this — video intercom, vehicle recognition, and smartphone integration are common baseline rather than premium specifications.',
       ],
       'wooden-driveway-gates': [
@@ -1564,16 +1564,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'East Herts planning treatment of timber applications in Bengeo is generally accommodating. Within the specific conservation area zones, timber is often the preferred material from the planning perspective provided the design sympathises with the streetscape character.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Bengeo span from practical galvanised specifications on the newer properties through to hand-forged wrought iron on the substantial Victorian villas. The specification depends on individual property context.',
+        'Bengeo\'s metal gate installations span from practical galvanised specifications on the newer properties through to hand-forged wrought iron on the substantial Victorian villas. The specification depends on individual property context.',
         'At any Bengeo specification level, hot-dip galvanising beneath polyester powder coat is the finish standard that delivers genuine 20-30 year service life. The cost premium over paint-only specifications is modest and the durability difference is substantial.',
       ],
       'automated-gate-systems': [
-        'Gate automation demand in Bengeo is driven by the commuter profile and general residential security considerations. The installed base spans decades, with retrofit work a substantial share of the local specialist market.',
+        'Retrofit and new-build automation in Bengeo driven by the commuter profile and general residential security considerations. The installed base spans decades, with retrofit work a substantial share of the local specialist market.',
         'The practical Bengeo considerations include mains power routing through established gardens, access control software currency on older installations, and drainage engineering in underground motor chambers on clay substrates.',
       ],
       'gate-repair-and-maintenance': [
         'The Bengeo gate stock is substantial and ageing. Many automated systems installed across the district in the 1990s and 2000s remain fully repairable with current parts, and the economic case for careful diagnostic-led repair rather than wholesale replacement is consistently strong.',
-        'The typical Bengeo failure patterns include control board corrosion from clay-substrate water ingress, photocell drift from seasonal ground movement, and access control obsolescence on older systems. All are repairable with proper diagnosis.',
+        'Bengeo repair records show fault patterns that include control board corrosion from clay-substrate water ingress, photocell drift from seasonal ground movement, and access control obsolescence on older systems. All are repairable with proper diagnosis.',
       ],
     },
     cityIntro: [
@@ -1587,7 +1587,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     intros: {
       'electric-sliding-gates': [
         'Puckeridge is a village in the East Hertfordshire district combining a historic core along the High Street with substantial residential development across the surrounding streets. The conservation area shapes planning substantially in the village core, while the post-war residential areas face generally pragmatic East Hertfordshire District Council treatment.',
-        'Sliding gate installations in Puckeridge generally work well outside the specific conservation zones. Standard ground-track and cantilever configurations both progress through planning without significant friction in the modern residential areas; installations visible from the historic core require more careful specification.',
+        'Across Puckeridge, sliding gate work generally work well outside the specific conservation zones. Standard ground-track and cantilever configurations both progress through planning without significant friction in the modern residential areas; installations visible from the historic core require more careful specification.',
       ],
       'electric-swing-gates': [
         'Swing gates are common across Puckeridge, suiting both the period properties along the historic High Street and the inter-war and post-war housing across the surrounding streets. Underground motor specification is typical at the upper end of the market.',
@@ -1598,16 +1598,16 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'European oak and iroko are both well-used in Puckeridge. The choice typically depends on whether the silvered natural weathering is the aesthetic objective or whether a more stable consistent colour is preferred.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Puckeridge work best when specified in sympathy with the village streetscape. Hand-forged wrought iron in traditional designs sits correctly against the period properties; contemporary bright specifications can attract planning concerns within the conservation area.',
+        'Across Puckeridge, metalwork installations work best when specified in sympathy with the village streetscape. Hand-forged wrought iron in traditional designs sits correctly against the period properties; contemporary bright specifications can attract planning concerns within the conservation area.',
         'At any Puckeridge specification level, the finish quality matters substantially for long-term performance in the local climate conditions. Hot-dip galvanising beneath polyester powder coat delivers 20-30 year service life.',
       ],
       'automated-gate-systems': [
-        'Gate automation in Puckeridge is generally straightforward from a technical standpoint outside the conservation area. The local substrate is well-understood, mains power availability is reliable, and cable routing through typical village plots is manageable.',
+        'Puckeridge\'s gate automation generally straightforward from a technical standpoint outside the conservation area. The local substrate is well-understood, mains power availability is reliable, and cable routing through typical village plots is manageable.',
         'Within the conservation area, visible surface equipment requires particular sensitivity, and underground motor specifications with concealed control boxes are effectively standard for installations in the central streets.',
       ],
       'gate-repair-and-maintenance': [
-        'The Puckeridge gate stock includes installations spanning decades. The local specialist network includes technicians familiar with older specifier systems and capable of honest diagnostic work rather than replacement-first sales.',
-        'The typical Puckeridge failure patterns include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and standard component degradation. All are repairable with proper diagnostic work.',
+        'Gate inventory across Puckeridge includes installations spanning decades. The local specialist network includes technicians familiar with older specifier systems and capable of honest diagnostic work rather than replacement-first sales.',
+        'The common Puckeridge failure signatures include control board corrosion in under-drained installations, photocell drift from seasonal ground movement, and standard component degradation. All are repairable with proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1623,7 +1623,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The clay-flint substrate common across Digswell creates specific foundation considerations that separate honest installers from cheaper operators. Proper cantilever footings require substantial concrete masses, and the seasonal ground movement on clay means any compromise on foundation depth produces gates that bind within three winters. For properties outside the conservation boundary toward the Welwyn Garden City edge, specification constraints relax considerably.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the default configuration for the Arts and Crafts and Edwardian houses that define central Digswell, particularly along Harmer Green Lane and the plots facing Digswell Park. Welwyn Hatfield Borough Council planning officers generally accept swing gates more readily than sliders in the conservation area, as they align with the historic entrance patterns of the village streetscape. Underground motors are essentially standard at this specification level.',
+        'Swing gates serve as Digswell\'s default configuration for the Arts and Crafts and Edwardian houses that define central Digswell, particularly along Harmer Green Lane and the plots facing Digswell Park. Welwyn Hatfield Borough Council planning officers generally accept swing gates more readily than sliders in the conservation area, as they align with the historic entrance patterns of the village streetscape. Underground motors are essentially standard at this specification level.',
         'The swing clearance survey matters more in Digswell than in more urban locations. Mature oaks, limes, and horse chestnuts across the village have substantial root zones extending well beyond their canopy lines, and swing arcs must accommodate these without damage to either trees or gate mechanism. Any Digswell swing gate quote worth considering includes a physical survey of the actual swing path rather than just the opening dimensions.',
       ],
       'wooden-driveway-gates': [
@@ -1631,7 +1631,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Design vocabulary in Digswell tends toward restraint rather than ornament. Simple framed-and-panelled or vertical-boarded designs in honest timber align with the Edwardian and Arts and Crafts stock across the village. Bespoke fabrication with 6-10 week lead times is the rule at this price point, and Welwyn Hatfield Borough Council planning officers routinely approve timber applications that would face additional conditions if specified in metal.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Digswell divide cleanly. The grand Edwardian properties along Harmer Green Lane and toward the Digswell Park edge can carry genuine hand-forged wrought iron, and a handful of local fabricators deliver real forge work rather than cold-bent mild steel dressed as ironwork. For contemporary properties toward the Welwyn Garden City edge, aluminium and powder-coated steel in clean modern profiles are more appropriate.',
+        'Digswell\'s metal gate installations divide cleanly. The grand Edwardian properties along Harmer Green Lane and toward the Digswell Park edge can carry genuine hand-forged wrought iron, and a handful of local fabricators deliver real forge work rather than cold-bent mild steel dressed as ironwork. For contemporary properties toward the Welwyn Garden City edge, aluminium and powder-coated steel in clean modern profiles are more appropriate.',
         'Any Digswell metal gate specification should include hot-dip galvanising before polyester powder coating as standard. The local microclimate, with moisture retention from the Mimram valley and the clay substrate, punishes paint-only finishes predictably. Twenty-year finish guarantees are achievable with correct specification and worth demanding explicitly in writing before any deposit is paid.',
       ],
       'automated-gate-systems': [
@@ -1639,7 +1639,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Cable runs present the common Digswell retrofit challenge. Plot sizes typical of the village mean mains distances from consumer unit to gate position often exceed 25 metres, and the established garden landscaping makes disruptive trenching unacceptable. Directional boring or careful routing through existing service corridors adds cost but preserves the garden investment that owners have usually spent decades establishing.',
       ],
       'gate-repair-and-maintenance': [
-        'The Digswell gate stock skews toward quality. FAAC, BFT, and CAME installations from the 1990s and early 2000s remain common across the village and most are fully repairable with current parts. Getting a genuine second opinion before accepting any wholesale replacement quote is the single most valuable action most Digswell owners can take, as the majority of apparent motor failures trace to control board faults or photocell misalignment.',
+        'Much of the Digswell gate stock skews toward quality. FAAC, BFT, and CAME installations from the 1990s and early 2000s remain common across the village and most are fully repairable with current parts. Getting a genuine second opinion before accepting any wholesale replacement quote is the single most valuable action most Digswell owners can take, as the majority of apparent motor failures trace to control board faults or photocell misalignment.',
         'Digswell-specific failure patterns follow the local substrate and microclimate. Photocell drift from seasonal clay movement, control board corrosion from water ingress after drainage failures, and tree-root displacement of underground motor chambers all appear repeatedly in local repair records. These are repairable conditions given honest diagnosis rather than upselling to full system replacement.',
       ],
     },
@@ -1653,7 +1653,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Welwyn Hatfield Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Essendon are relatively uncommon given the rural character and generally wide driveways across most plots. Where sliders are specified, they typically serve the newer properties along the Hatfield Road edge rather than the historic core around School Lane and the church. Welwyn Hatfield Borough Council planning officers treat sliding systems within the Essendon Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic streetscape.',
+        'Cantilever and tracked sliders in Essendon are relatively uncommon given the rural character and generally wide driveways across most plots. Where sliders are specified, they typically serve the newer properties along the Hatfield Road edge rather than the historic core around School Lane and the church. Welwyn Hatfield Borough Council planning officers treat sliding systems within the Essendon Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic streetscape.',
         'Foundation work on Essendon\'s clay subsoil requires proper specification. The village sits on London Clay that shrinks and swells significantly with seasonal moisture, and cantilever sliding systems demand substantial concrete footings with correct drainage. Short-cut foundations produce gates that bind and drift within a handful of winters, and the remedial cost usually exceeds the original saving by a significant margin.',
       ],
       'electric-swing-gates': [
@@ -1665,7 +1665,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Welwyn Hatfield Borough Council planning officers typically approve timber gate applications in Essendon with fewer conditions than metal equivalents. For plots within the curtilage of listed buildings, listed building consent may be required in addition to any planning permission, and the documentation standards are higher. Proper installers price these planning costs transparently rather than absorbing them into hidden charges later.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Essendon require careful handling. Within the conservation area, hand-forged wrought iron in traditional ornamental profiles is broadly accepted where it reflects historic boundary treatments along the core streets. Modern aluminium or contemporary steel designs face more scrutiny and often additional planning conditions.',
+        'In Essendon, metal gates require careful handling. Within the conservation area, hand-forged wrought iron in traditional ornamental profiles is broadly accepted where it reflects historic boundary treatments along the core streets. Modern aluminium or contemporary steel designs face more scrutiny and often additional planning conditions.',
         'Specification standards matter particularly on Essendon\'s exposed rural plots. Hot-dip galvanising before polyester powder coating is the baseline specification worth accepting, and anything cheaper will show rust breakthrough within a decade. Real wrought iron from genuine forge-working fabricators rather than cold-bent mild steel dressed as ironwork is the distinction that separates installations that age gracefully from those that look tired within fifteen years.',
       ],
       'automated-gate-systems': [
@@ -1673,7 +1673,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Cable routing through the established Essendon gardens is the common install challenge. Plot sizes and the landscaping quality across the village mean disruptive trenching is usually unacceptable, and directional boring or careful routing through existing service corridors adds to the installation budget. Proper installers price this work transparently at quotation stage.',
       ],
       'gate-repair-and-maintenance': [
-        'The Essendon gate stock includes a substantial base of 1990s and 2000s automation systems, most of which remain repairable with current spare parts. FAAC, BFT, and CAME units installed fifteen to twenty years ago are routinely restored to full function for a fraction of the replacement cost, and a technician who diagnoses honestly will identify the actual failure rather than quoting wholesale replacement.',
+        'Much of the Essendon gate stock includes a substantial base of 1990s and 2000s automation systems, most of which remain repairable with current spare parts. FAAC, BFT, and CAME units installed fifteen to twenty years ago are routinely restored to full function for a fraction of the replacement cost, and a technician who diagnoses honestly will identify the actual failure rather than quoting wholesale replacement.',
         'Local failure patterns in Essendon follow the clay substrate and microclimate conditions. Seasonal ground movement displaces photocells and occasionally underground motor chambers, control boards suffer corrosion where drainage was under-specified, and tree root intrusion into cable runs appears periodically. These are repairable conditions given proper diagnostic work.',
       ],
     },
@@ -1687,11 +1687,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'North Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Kimpton are more common on the newer properties toward the Kimpton Bottom edge and on plots along the Whitwell Road approach, where driveway lengths favour cantilever solutions over swing configurations with restricted clearances. North Hertfordshire District Council planning officers assess sliding systems within the Kimpton Conservation Area carefully, particularly where visible ground tracks would sit against the historic flint-and-brick vernacular of the High Street core.',
+        'Across Kimpton, sliding gate work are more common on the newer properties toward the Kimpton Bottom edge and on plots along the Whitwell Road approach, where driveway lengths favour cantilever solutions over swing configurations with restricted clearances. North Hertfordshire District Council planning officers assess sliding systems within the Kimpton Conservation Area carefully, particularly where visible ground tracks would sit against the historic flint-and-brick vernacular of the High Street core.',
         'Foundation detail matters substantially on Kimpton\'s mixed chalk-and-clay subsoil. The transition zones between chalk upland and clay valley create genuine ground-movement challenges that demand proper cantilever footings with correct drainage. Short-cut foundations routinely produce gates that drift and bind within three winters, and the rectification cost usually exceeds any original saving by a substantial margin.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit Kimpton\'s housing stock naturally, particularly the historic cottages and period properties clustered along the High Street and into the lanes toward Peter\'s Green and Blackmore End. Underground motors are essentially standard at any specification level worth taking seriously, with visible ram-arm motors generally reserved for retrofits where excavation is physically impractical.',
+        'The swing gate format suits Kimpton\'s housing stock naturally, particularly the historic cottages and period properties clustered along the High Street and into the lanes toward Peter\'s Green and Blackmore End. Underground motors are essentially standard at any specification level worth taking seriously, with visible ram-arm motors generally reserved for retrofits where excavation is physically impractical.',
         'The swing clearance survey is important in Kimpton\'s rural setting. Mature hedgerows, established garden trees, and the irregular boundary patterns of older plots mean swing arcs need physical verification. North Hertfordshire District Council planning officers assess swing gate applications in the conservation area with reference to the historic entrance patterns of the village streetscape, and sympathetic designs pass substantially more easily than generic catalogue selections.',
       ],
       'wooden-driveway-gates': [
@@ -1699,7 +1699,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'North Hertfordshire District Council planning officers typically approve timber gate applications in Kimpton with fewer conditions than metal specifications, particularly within the conservation boundary. Bespoke fabrication with 6-10 week lead times is the rule at this price point, and the silvering of oak to a soft grey over the first few seasons integrates well with the weathered brick and flint of established boundary treatments.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Kimpton work in specific contexts. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments, particularly on the grander Victorian and Edwardian properties in the village. Contemporary aluminium and powder-coated steel designs face more scrutiny and are generally more appropriate on plots outside the conservation boundary.',
+        'Metalwork across Kimpton works in specific contexts. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments, particularly on the grander Victorian and Edwardian properties in the village. Contemporary aluminium and powder-coated steel designs face more scrutiny and are generally more appropriate on plots outside the conservation boundary.',
         'Specification quality separates honest installations from cheaper alternatives. Hot-dip galvanising followed by polyester powder coating is the baseline specification that delivers a 20-30 year finish in Kimpton\'s climate, and anything less produces rust breakthrough within a decade. Real forge work rather than cold-bent mild steel dressed as wrought iron is the key distinction worth paying for on any period property installation.',
       ],
       'automated-gate-systems': [
@@ -1721,7 +1721,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'North Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Whitwell are relatively uncommon given the historic tight-grain layout of the village core along High Street and Horn Hill. Where sliders are specified, they typically serve the newer properties on the Lilley Bottom Road edge and plots toward the Hitchin approach with longer driveways. North Hertfordshire District Council planning officers treat sliding systems within the Whitwell Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic flint cottage streetscape.',
+        'Whitwell\'s sliding gate installations are relatively uncommon given the historic tight-grain layout of the village core along High Street and Horn Hill. Where sliders are specified, they typically serve the newer properties on the Lilley Bottom Road edge and plots toward the Hitchin approach with longer driveways. North Hertfordshire District Council planning officers treat sliding systems within the Whitwell Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic flint cottage streetscape.',
         'Foundation considerations in Whitwell reflect the chalk substrate typical of the Mimram valley. Chalk offers generally better bearing capacity than the clay soils of the southern Herts villages, but proper excavation depth remains non-negotiable for cantilever specifications. Short-cut foundations fail predictably, and the chalk-to-clay transition zones at the valley edges introduce ground-movement patterns that demand proper engineering attention.',
       ],
       'electric-swing-gates': [
@@ -1733,7 +1733,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Design vocabulary in Whitwell tends toward restrained boarded or framed-and-panelled forms rather than ornamental work. This aligns with both the Mimram valley cottage vernacular and the general rural sensibility of the village. Bespoke fabrication with 6-10 week lead times is the rule at this price point, and honest installers specify this openly rather than pushing mass-produced alternatives that sit poorly in the streetscape.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Whitwell require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is broadly accepted where it reflects historic boundary treatments, particularly on the handful of grander properties in the village. Contemporary aluminium and powder-coated steel are more appropriate outside the conservation boundary and face additional scrutiny within it.',
+        'Whitwell metal gate projects require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is broadly accepted where it reflects historic boundary treatments, particularly on the handful of grander properties in the village. Contemporary aluminium and powder-coated steel are more appropriate outside the conservation boundary and face additional scrutiny within it.',
         'Specification quality separates lasting installations from cheap alternatives. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance in Whitwell\'s exposed Mimram valley microclimate, and paint-only finishes fail predictably within a decade. Real forge work rather than cold-bent mild steel dressed as wrought iron is the distinction worth paying for on any period property installation.',
       ],
       'automated-gate-systems': [
@@ -1755,11 +1755,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'East Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Watton-at-Stone typically serve the newer properties along Great Innings, the Perrywood Lane area, and plots toward the Stevenage edge where driveway dimensions favour cantilever solutions over swing configurations. East Hertfordshire District Council planning officers assess sliding systems within the Watton-at-Stone Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic High Street streetscape.',
+        'Across Watton-at-Stone, sliding gate work typically serve the newer properties along Great Innings, the Perrywood Lane area, and plots toward the Stevenage edge where driveway dimensions favour cantilever solutions over swing configurations. East Hertfordshire District Council planning officers assess sliding systems within the Watton-at-Stone Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic High Street streetscape.',
         'Foundation work on Watton-at-Stone\'s mixed clay-gravel substrate typical of the Beane valley requires proper specification. Cantilever sliders demand substantial concrete footings with correct drainage, and short-cut foundations produce gates that drift and bind within a few winters. Proper ground investigation at survey stage, rather than after installation, separates honest contractors from cheaper operators.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the default configuration for Watton-at-Stone\'s historic core along High Street and Station Road, and for the substantial Victorian and Edwardian properties across the village. Underground motors are essentially standard at any serious specification level, with visible ram-arm systems generally confined to retrofits where excavation is physically impractical. East Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area.',
+        'For most Watton-at-Stone driveways, a swing gate is the default configuration for Watton-at-Stone\'s historic core along High Street and Station Road, and for the substantial Victorian and Edwardian properties across the village. Underground motors are essentially standard at any serious specification level, with visible ram-arm systems generally confined to retrofits where excavation is physically impractical. East Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area.',
         'Swing clearance surveys matter on Watton-at-Stone\'s mature plots. Established trees, particularly in the gardens backing onto the Beane valley, have substantial root zones and canopies that constrain swing arcs. Any installer quote for a Watton-at-Stone swing gate that does not include a physical swing path survey rather than just an opening measurement is not a serious quote.',
       ],
       'wooden-driveway-gates': [
@@ -1789,11 +1789,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'East Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Standon are typically specified on the newer properties along Kents Lane, the Puckeridge Road approach, and plots toward the Much Hadham edge where driveway dimensions favour cantilever solutions. East Hertfordshire District Council planning officers assess sliding systems within the Standon Conservation Area with substantial caution, particularly where visible ground tracks would sit against the notably wide historic High Street that defines the village character.',
+        'The sliding gate market in Standon produces installations that are typically specified on the newer properties along Kents Lane, the Puckeridge Road approach, and plots toward the Much Hadham edge where driveway dimensions favour cantilever solutions. East Hertfordshire District Council planning officers assess sliding systems within the Standon Conservation Area with substantial caution, particularly where visible ground tracks would sit against the notably wide historic High Street that defines the village character.',
         'The Rib valley substrate around Standon is predominantly clay with alluvial sections near the river itself, and foundation specifications for cantilever systems require proper engineering attention. Short-cut foundations produce gates that drift and bind within a few winters on clay ground, and the rectification cost usually exceeds any original saving substantially.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the dominant configuration in Standon, suiting both the historic coaching-route character of the wide High Street and the substantial period properties throughout the village. Underground motors are essentially standard at any serious specification level, and East Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with historic entrance patterns.',
+        'Swing configurations dominate the Standon market configuration in Standon, suiting both the historic coaching-route character of the wide High Street and the substantial period properties throughout the village. Underground motors are essentially standard at any serious specification level, and East Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with historic entrance patterns.',
         'Swing clearance surveys are particularly important in Standon\'s historic core. The coaching-era plot patterns produced frontages with specific geometric constraints, and swing arcs need physical verification rather than paper calculation. Any installer quote for a Standon swing gate that relies solely on the opening dimension rather than an on-site swing path survey is not a serious quote.',
       ],
       'wooden-driveway-gates': [
@@ -1810,7 +1810,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Standon\'s coaching-era character means many of its electric gates sit on historic pier stock that predates modern motor load capacities by a century or more. The common diagnostic question on a Standon repair is not which spare part to order but whether the original motor retrofit was ever properly engineered for the pier in the first place. Resolving this frequently means retrospective pier reinforcement rather than repeated repairs to a motor slowly destroying its own mounting.',
-        'Standon failure patterns track the Rib valley microclimate and clay substrate. Photocell drift from seasonal ground movement, control board corrosion where original drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
+        'Failure signatures on Standon gates track the Rib valley microclimate and clay substrate. Photocell drift from seasonal ground movement, control board corrosion where original drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1823,11 +1823,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'North Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Ickleford are typically specified along Arlesey Road, Turnpike Lane, and the Bedford Road approach where plot geometry favours cantilever solutions over swing configurations. North Hertfordshire District Council planning officers assess sliding systems within the Ickleford Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic streetscape of the village core.',
+        'Owners fitting sliders in Ickleford find that installations are typically specified along Arlesey Road, Turnpike Lane, and the Bedford Road approach where plot geometry favours cantilever solutions over swing configurations. North Hertfordshire District Council planning officers assess sliding systems within the Ickleford Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic streetscape of the village core.',
         'The chalk-and-gravel substrate typical of the Icknield Way ridge gives generally good bearing conditions for cantilever footings, but proper excavation depth remains non-negotiable. The chalk springs that characterise the Ickleford area create localised water table variations that need proper site investigation at survey stage rather than after installation. Short-cut foundations fail predictably regardless of the apparently good surface conditions.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the dominant configuration across Ickleford\'s historic core and suit the village housing stock naturally. Underground motors are standard at any serious specification level, and North Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area. Listed building consent may layer onto planning permission for plots within the curtilage of designated buildings in the village.',
+        'Swing gate installations dominate Ickleford configuration across Ickleford\'s historic core and suit the village housing stock naturally. Underground motors are standard at any serious specification level, and North Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area. Listed building consent may layer onto planning permission for plots within the curtilage of designated buildings in the village.',
         'Swing clearance surveys are important on Ickleford\'s plot patterns. The village layout produced frontages with specific geometric constraints, and swing arcs need physical verification rather than paper calculation. Any installer quote for an Ickleford swing gate that relies solely on opening dimensions rather than an on-site swing path survey should be questioned carefully before acceptance.',
       ],
       'wooden-driveway-gates': [
@@ -1835,7 +1835,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The silvering of oak to a soft grey over the first few seasons integrates naturally with the weathered brick of established Ickleford boundaries. Bespoke fabrication with 6-10 week lead times is the rule at this price point, and honest installers specify this openly rather than pushing mass-produced alternatives that sit poorly in the village streetscape.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Ickleford require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties in the village. Contemporary aluminium and powder-coated steel face additional scrutiny and are generally more appropriate outside the conservation boundary.',
+        'Ickleford\'s metal gates require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties in the village. Contemporary aluminium and powder-coated steel face additional scrutiny and are generally more appropriate outside the conservation boundary.',
         'Specification standards matter particularly in Ickleford\'s exposed ridge microclimate. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance, and paint-only finishes fail predictably within a decade. Real forge work rather than cold-bent mild steel dressed as wrought iron is the distinction worth paying for on period property installations.',
       ],
       'automated-gate-systems': [
@@ -1844,7 +1844,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Ickleford repair work splits between the older ridge-farm gates on chalk plots and the later estate installations toward Bedford Road and the Hitchin edge. Older mechanical gates often pre-date modern parts stocking, and honest repair increasingly means custom bushing and pivot fabrication rather than off-the-shelf swaps. For the later FAAC, BFT, and CAME installations, full parts availability keeps repair costs to a fraction of replacement quotes.',
-        'Ickleford failure patterns track the ridge microclimate and the chalk-springs water table variation in parts of the parish. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified near spring lines, and hinge bearing wear from heavy cycling all appear in local records. All are repairable given proper diagnostic work.',
+        'The fault profile across Ickleford tracks the ridge microclimate and the chalk-springs water table variation in parts of the parish. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified near spring lines, and hinge bearing wear from heavy cycling all appear in local records. All are repairable given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1857,11 +1857,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Central Bedfordshire Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Stotfold are commonly specified across the newer estate developments that dominate much of the town, where driveway dimensions and plot geometry favour cantilever solutions over swing configurations. Central Bedfordshire Council planning officers assess sliding systems across most of the town with relatively pragmatic constraints outside the historic core around the Mill and the High Street, where conservation considerations tighten the specification options considerably.',
+        'Owners fitting sliders in Stotfold find that installations are commonly specified across the newer estate developments that dominate much of the town, where driveway dimensions and plot geometry favour cantilever solutions over swing configurations. Central Bedfordshire Council planning officers assess sliding systems across most of the town with relatively pragmatic constraints outside the historic core around the Mill and the High Street, where conservation considerations tighten the specification options considerably.',
         'Foundation detail on Stotfold\'s clay substrate requires proper specification. The Ivel valley clay shrinks and swells significantly with seasonal moisture, and cantilever sliding systems demand substantial concrete footings with correct drainage. Short-cut foundations produce gates that drift and bind within a handful of winters, and rectification costs routinely exceed any original saving on cheaper foundation work.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit both Stotfold\'s historic core around the Mill and the substantial estate developments across the rest of the town. Underground motors are standard at any serious specification level, with visible ram-arm systems generally reserved for retrofits where excavation is physically impractical. Central Bedfordshire Council planning officers accept swing gates readily across most of the town and apply tighter conservation considerations only near the Mill and historic core.',
+        'Across Stotfold, swing configurations suit both the historic core around the Mill and the substantial estate developments across the rest of the town. Underground motors are standard at any serious specification level, with visible ram-arm systems generally reserved for retrofits where excavation is physically impractical. Central Bedfordshire Council planning officers accept swing gates readily across most of the town and apply tighter conservation considerations only near the Mill and historic core.',
         'Swing clearance surveys matter across Stotfold\'s mixed plot stock. The newer estate properties typically have predictable rectangular plots, but the older core around the High Street and Mill Lane has more irregular boundary patterns that constrain swing arcs. Any installer quote should include a physical swing path survey rather than just an opening measurement.',
       ],
       'wooden-driveway-gates': [
@@ -1869,7 +1869,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Central Bedfordshire Council planning officers typically approve timber gate applications with fewer conditions than metal equivalents near the Mill and conservation areas. Outside these sensitive zones, specification flexibility is considerably greater. Bespoke fabrication with 6-10 week lead times is the rule at the upper specification levels, and honest installers specify this openly rather than pushing mass-produced alternatives.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Stotfold split between hand-forged wrought iron appropriate for the handful of grander historic properties and contemporary aluminium or powder-coated steel suitable for the dominant estate developments. Real forge work rather than cold-bent mild steel dressed as ironwork is the key distinction on period-appropriate installations.',
+        'Ironwork projects across Stotfold split between hand-forged wrought iron appropriate for the handful of grander historic properties and contemporary aluminium or powder-coated steel suitable for the dominant estate developments. Real forge work rather than cold-bent mild steel dressed as ironwork is the key distinction on period-appropriate installations.',
         'Specification quality is non-negotiable on exposed Ivel valley plots. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance, and paint-only finishes fail predictably within a decade. Honest installers specify galvanising explicitly in writing rather than quoting paint-only finishes that produce rust breakthrough within the first decade of service.',
       ],
       'automated-gate-systems': [
@@ -1877,8 +1877,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Cable routing challenges vary across Stotfold by property type. Estate developments typically have manageable mains distances and straightforward routing, while the historic core properties around the Mill and High Street often demand directional boring or careful routing through existing service corridors to preserve established landscaping. Pricing transparency at quotation stage matters particularly on these complex jobs.',
       ],
       'gate-repair-and-maintenance': [
-        'The Stotfold gate stock reflects the town\'s mixed development history, with 1990s and 2000s estate installations sitting alongside older systems in the historic core. Most remain repairable with current spare parts. FAAC, BFT, and CAME units from that period are routinely restored to full function, and a technician who diagnoses honestly identifies the actual failure rather than quoting wholesale replacement.',
-        'Stotfold failure patterns track the Ivel valley microclimate and the clay substrate across much of the town. Photocell drift from seasonal ground movement, control board corrosion from water ingress where drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable given proper diagnostic attention.',
+        'Stotfold\'s electric gate stock reflects the town\'s mixed development history, with 1990s and 2000s estate installations sitting alongside older systems in the historic core. Most remain repairable with current spare parts. FAAC, BFT, and CAME units from that period are routinely restored to full function, and a technician who diagnoses honestly identifies the actual failure rather than quoting wholesale replacement.',
+        'Fault patterns across Stotfold track the Ivel valley microclimate and the clay substrate across much of the town. Photocell drift from seasonal ground movement, control board corrosion from water ingress where drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable given proper diagnostic attention.',
       ],
     },
     cityIntro: [
@@ -1890,7 +1890,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Dacorum Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Markyate typically serve the newer properties on the Luton Road side of the village and plots along Pickford Hill where driveway dimensions favour cantilever solutions over swing configurations. Dacorum Borough Council planning officers assess sliding systems within the Markyate Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic High Street streetscape that follows the line of the old Watling Street Roman road.',
+        'Markyate sliding gate projects typically serve the newer properties on the Luton Road side of the village and plots along Pickford Hill where driveway dimensions favour cantilever solutions over swing configurations. Dacorum Borough Council planning officers assess sliding systems within the Markyate Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic High Street streetscape that follows the line of the old Watling Street Roman road.',
         'The chalk-based Chilterns substrate around Markyate gives generally good bearing conditions for cantilever footings, but proper excavation depth remains non-negotiable. Properties near the village core sit on chalk with thin topsoil, while plots toward the Kensworth and Flamstead edges meet transitions into clay-capped ground that shift ground-movement patterns considerably. Proper site investigation at survey stage avoids foundation failures that only reveal themselves after two or three winters.',
       ],
       'electric-swing-gates': [
@@ -1902,7 +1902,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The silvering of oak to a soft grey over the first few seasons integrates naturally with the weathered brick and flint of established Markyate boundaries. Bespoke fabrication with 6-10 week lead times is the rule at this price point, and honest installers specify this openly rather than pushing mass-produced alternatives that sit poorly in the historic streetscape.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Markyate require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties along the High Street and around the Markyate Cell approach. Contemporary aluminium and powder-coated steel face additional scrutiny within the conservation boundary and are generally more appropriate on plots outside it.',
+        'Markyate metal gate specifications require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties along the High Street and around the Markyate Cell approach. Contemporary aluminium and powder-coated steel face additional scrutiny within the conservation boundary and are generally more appropriate on plots outside it.',
         'Specification standards matter particularly on Markyate\'s exposed Chilterns-edge microclimate. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance, and paint-only finishes fail predictably within a decade under the combination of upland wind exposure and moisture. Real forge work rather than cold-bent mild steel dressed as wrought iron is the distinction worth paying for on period property installations.',
       ],
       'automated-gate-systems': [
@@ -1911,7 +1911,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Markyate\'s gate stock reflects the village\'s ribbon development along the old Watling Street. Many older installations along the historic High Street have passed through several owners across their service life, and accumulated DIY interventions account for a meaningful share of current repair calls. The diagnostic first step on any older Markyate gate is often reverse-engineering what has been previously modified rather than assessing the original installation as specified.',
-        'Markyate failure patterns track the Chilterns-edge microclimate and the chalk-to-clay transitions across parts of the parish. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
+        'The fault profile across Markyate tracks the Chilterns-edge microclimate and the chalk-to-clay transitions across parts of the parish. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1924,11 +1924,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Dacorum Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Chipperfield are relatively uncommon given the historic tight-grain layout around The Common and the cottage stock that dominates the village core. Where sliders are specified, they typically serve the larger properties on the Tower Hill and Scatterdells Lane approaches where driveway dimensions accommodate cantilever solutions. Dacorum Borough Council planning officers treat sliding systems within the Chipperfield Conservation Area with substantial caution, particularly where visible ground tracks would read against the characteristic village green streetscape.',
+        'Chipperfield sliding gate projects are relatively uncommon given the historic tight-grain layout around The Common and the cottage stock that dominates the village core. Where sliders are specified, they typically serve the larger properties on the Tower Hill and Scatterdells Lane approaches where driveway dimensions accommodate cantilever solutions. Dacorum Borough Council planning officers treat sliding systems within the Chipperfield Conservation Area with substantial caution, particularly where visible ground tracks would read against the characteristic village green streetscape.',
         'The mixed clay-flint substrate across Chipperfield and the Gade valley proximity create genuine foundation considerations. Cantilever systems demand substantial concrete footings with correct drainage, and the seasonal ground movement on clay-dominated plots punishes short-cut foundations predictably. Proper ground investigation at survey stage separates honest installers from operators chasing lowest price.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the default configuration across Chipperfield and suit the village housing stock naturally. The listed and historic cottages surrounding The Common, and the substantial period properties along Tower Hill and The Street, almost always take swing configurations with underground motors. Dacorum Borough Council planning officers accept swing gates more readily than alternatives within the conservation area, as they echo the historic entrance patterns of this distinctive village-green layout.',
+        'Chipperfield\'s default gate configuration is the swing gate, which is configuration across Chipperfield and suit the village housing stock naturally. The listed and historic cottages surrounding The Common, and the substantial period properties along Tower Hill and The Street, almost always take swing configurations with underground motors. Dacorum Borough Council planning officers accept swing gates more readily than alternatives within the conservation area, as they echo the historic entrance patterns of this distinctive village-green layout.',
         'Swing clearance and tree protection are unusually important in Chipperfield given the mature tree cover on The Common and across the village. Root systems extend substantially beyond canopy lines, and swing arcs must accommodate these without damage. Any Chipperfield swing gate quote worth considering includes a physical swing path survey rather than a paper-only calculation from opening dimensions.',
       ],
       'wooden-driveway-gates': [
@@ -1936,7 +1936,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Dacorum Borough Council planning officers typically approve timber gate applications in Chipperfield with fewer conditions than metal equivalents within the conservation area. For plots within the curtilage of listed buildings, listed building consent may be required alongside planning permission, and documentation standards are higher. Proper installers price these planning costs transparently at quotation stage rather than absorbing them into hidden charges.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Chipperfield require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is broadly accepted where it reflects historic boundary treatments on the grander properties around The Common and Tower Hill. Contemporary aluminium and powder-coated steel face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
+        'In Chipperfield, metal gate installations require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is broadly accepted where it reflects historic boundary treatments on the grander properties around The Common and Tower Hill. Contemporary aluminium and powder-coated steel face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
         'Specification quality is non-negotiable on Chipperfield\'s exposed Gade valley microclimate. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance, and paint-only finishes fail predictably within a decade under the combination of wind exposure and moisture retention in the valley. Real forge work rather than cold-bent mild steel dressed as wrought iron is worth paying for explicitly on period property installations.',
       ],
       'automated-gate-systems': [
@@ -1945,7 +1945,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Chipperfield\'s Common-centred layout gives the village an unusually high proportion of gates oriented to frame views across the green rather than purely securing driveways. This view-frame function affects which repairs are acceptable, decorative ironwork visible from the Common cannot be patched with generic welded sections without noticeable visual degradation, and proper repair on these gates means fabricator-level restoration rather than quick mechanical fixes.',
-        'Chipperfield failure patterns track the Gade valley microclimate and the clay-dominated substrate across much of the village. Photocell drift from seasonal ground movement, control board corrosion from water ingress where drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable given proper diagnostic attention.',
+        'Gate fault records in Chipperfield track the Gade valley microclimate and the clay-dominated substrate across much of the village. Photocell drift from seasonal ground movement, control board corrosion from water ingress where drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable given proper diagnostic attention.',
       ],
     },
     cityIntro: [
@@ -1958,11 +1958,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Hertsmere Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Aldenham are relatively common across the substantial estate properties along Church Lane, the Berry Lane approach, and the plots toward Patchetts Green where driveway dimensions and plot widths favour cantilever solutions. Hertsmere Borough Council planning officers assess sliding systems within the Aldenham Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic rural streetscape that defines the village character.',
+        'The sliding gate market in Aldenham produces installations that are relatively common across the substantial estate properties along Church Lane, the Berry Lane approach, and the plots toward Patchetts Green where driveway dimensions and plot widths favour cantilever solutions. Hertsmere Borough Council planning officers assess sliding systems within the Aldenham Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic rural streetscape that defines the village character.',
         'The clay-dominated substrate across Aldenham requires careful foundation specification. London Clay shrinks and swells significantly with seasonal moisture, and cantilever sliding systems demand substantial concrete footings with correct drainage. Short-cut foundations on Aldenham plots routinely produce gates that drift and bind within a few winters, and the rectification cost usually exceeds any original saving by a significant margin.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the dominant configuration on Aldenham\'s estate properties and suit the housing stock naturally, particularly the substantial inter-war and later detached properties that characterise much of the parish. Underground motors are essentially standard at the specification levels common in Aldenham, with visible ram-arm systems generally reserved for retrofits where excavation is physically impractical.',
+        'Swing gates dominate on Aldenham\'s estate properties and suit the housing stock naturally, particularly the substantial inter-war and later detached properties that characterise much of the parish. Underground motors are essentially standard at the specification levels common in Aldenham, with visible ram-arm systems generally reserved for retrofits where excavation is physically impractical.',
         'Swing clearance surveys matter particularly on Aldenham\'s mature plots. Established trees across the village, some dating from the original estate planting, have substantial root zones and canopies that constrain swing arcs. Any installer quote for an Aldenham swing gate that does not include a physical swing path survey rather than just an opening measurement is not a serious quote.',
       ],
       'wooden-driveway-gates': [
@@ -1970,7 +1970,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'For plots within the curtilage of listed buildings across the village core, listed building consent may be required alongside planning permission, and documentation standards are higher. Proper installers price these planning costs transparently at quotation rather than absorbing them later. Bespoke fabrication with 6-10 week lead times is the rule at the Aldenham specification level.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Aldenham split between two markets. Hand-forged wrought iron in traditional ornamental profiles suits the grander Victorian and Edwardian estate properties, particularly along Church Lane and around the conservation core. Contemporary aluminium and powder-coated steel work well on the newer detached properties across the rest of the village.',
+        'Wrought iron and powder-coated steel projects in Aldenham split between two markets. Hand-forged wrought iron in traditional ornamental profiles suits the grander Victorian and Edwardian estate properties, particularly along Church Lane and around the conservation core. Contemporary aluminium and powder-coated steel work well on the newer detached properties across the rest of the village.',
         'Specification quality separates lasting installations from cheaper alternatives. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance in the local microclimate, and paint-only finishes fail predictably within a decade. Real forge work rather than cold-bent mild steel dressed as wrought iron is the key distinction on period estate installations and worth specifying explicitly in writing.',
       ],
       'automated-gate-systems': [
@@ -1978,8 +1978,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Cable routing is the common Aldenham install challenge given the substantial plot sizes typical of the village. Mains distances from consumer unit to gate position routinely exceed 30 metres, and the established landscaping across Aldenham makes disruptive trenching unacceptable. Directional boring or careful routing through existing service corridors adds cost but preserves garden investment.',
       ],
       'gate-repair-and-maintenance': [
-        'The Aldenham gate stock skews toward quality. FAAC, BFT, and CAME installations from the 1990s and 2000s remain common across the village and most are fully repairable with current parts. A technician who diagnoses honestly identifies the actual failure rather than upselling to wholesale replacement, and Aldenham owners particularly benefit from second opinions before accepting motor replacement quotes.',
-        'Aldenham failure patterns track the clay substrate and rural microclimate. Photocell drift from seasonal ground movement, control board corrosion from water ingress where drainage was under-specified, and tree-root displacement of underground motor chambers all appear repeatedly in local repair records. All are repairable conditions given proper diagnostic work.',
+        'Across Aldenham, the gate stock skews toward quality. FAAC, BFT, and CAME installations from the 1990s and 2000s remain common across the village and most are fully repairable with current parts. A technician who diagnoses honestly identifies the actual failure rather than upselling to wholesale replacement, and Aldenham owners particularly benefit from second opinions before accepting motor replacement quotes.',
+        'Gate fault records in Aldenham track the clay substrate and rural microclimate. Photocell drift from seasonal ground movement, control board corrosion from water ingress where drainage was under-specified, and tree-root displacement of underground motor chambers all appear repeatedly in local repair records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -1992,11 +1992,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'East Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Braughing are relatively uncommon given the historic tight-grain layout along The Street and the ford across the Rib that defines the village centre. Where sliders are specified, they typically serve newer properties on the Green End approach and plots toward the Puckeridge edge where driveway dimensions accommodate cantilever solutions. East Hertfordshire District Council planning officers treat sliding systems within the Braughing Conservation Area with substantial caution, particularly where visible ground tracks would read against the characteristic historic streetscape.',
+        'Sliding systems specified in Braughing are relatively uncommon given the historic tight-grain layout along The Street and the ford across the Rib that defines the village centre. Where sliders are specified, they typically serve newer properties on the Green End approach and plots toward the Puckeridge edge where driveway dimensions accommodate cantilever solutions. East Hertfordshire District Council planning officers treat sliding systems within the Braughing Conservation Area with substantial caution, particularly where visible ground tracks would read against the characteristic historic streetscape.',
         'Foundation work near the Rib valley requires proper specification. The alluvial substrate near the ford and across lower-lying plots introduces water-table considerations that need proper site investigation, and the clay-dominated ground beyond the immediate valley demands substantial concrete footings for cantilever systems. Short-cut foundations fail predictably under Braughing\'s combination of seasonal ground movement and valley moisture.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the dominant configuration in Braughing and suit the village housing stock naturally. The listed and historic cottages along The Street and across the village almost always take swing configurations with underground motors rather than visible ram-arm systems. East Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with the historic entrance patterns of this picturesque Rib valley village.',
+        'Swing configurations dominate the Braughing market configuration in Braughing and suit the village housing stock naturally. The listed and historic cottages along The Street and across the village almost always take swing configurations with underground motors rather than visible ram-arm systems. East Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with the historic entrance patterns of this picturesque Rib valley village.',
         'Swing clearance surveys are particularly important in Braughing\'s historic core. The old plot patterns produced restricted frontage widths and irregular boundary geometries, and swing arcs need physical verification rather than paper calculation. Any installer quote for a Braughing swing gate that relies solely on opening dimensions rather than an on-site swing path survey should be questioned before acceptance.',
       ],
       'wooden-driveway-gates': [
@@ -2013,7 +2013,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Braughing repair patterns show a distinct water-ingress signature on motors sited near the Rib or its flood margin. The telltale is a control board that trips without obvious cause in the first warm wet week of autumn: condensation forms inside the motor housing and shorts low-voltage logic without triggering the mains RCD. Correct diagnosis requires thermal imaging or cold-start telemetry rather than guesswork, and the corrected fit usually resolves the issue for a decade plus.',
-        'Braughing failure patterns track the Rib valley microclimate and the mixed substrate across the parish. Photocell drift from seasonal ground movement on alluvial plots near the ford, control board corrosion where drainage was under-specified, and hinge bearing wear from heavy cycling all appear in local records. All are repairable conditions given proper diagnostic work.',
+        'Failure signatures on Braughing gates track the Rib valley microclimate and the mixed substrate across the parish. Photocell drift from seasonal ground movement on alluvial plots near the ford, control board corrosion where drainage was under-specified, and hinge bearing wear from heavy cycling all appear in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -2026,7 +2026,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'North Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Ashwell are relatively uncommon given the historic tight-grain layout along High Street and Back Street. Where sliders are specified, they typically serve newer properties on the Slip End and Station Road approaches where driveway dimensions accommodate cantilever solutions. North Hertfordshire District Council planning officers treat sliding systems within the Ashwell Conservation Area with substantial caution given the village\'s exceptional listed building concentration and the planning sensitivity this creates.',
+        'Ashwell\'s sliding gate installations are relatively uncommon given the historic tight-grain layout along High Street and Back Street. Where sliders are specified, they typically serve newer properties on the Slip End and Station Road approaches where driveway dimensions accommodate cantilever solutions. North Hertfordshire District Council planning officers treat sliding systems within the Ashwell Conservation Area with substantial caution given the village\'s exceptional listed building concentration and the planning sensitivity this creates.',
         'Foundation considerations in Ashwell reflect the chalk substrate and the spring-line geology at the source of the River Rhee. The chalk gives generally good bearing conditions for cantilever footings, but the spring activity near the village centre creates localised water-table variations that need proper site investigation. Short-cut foundations fail regardless of apparently good surface conditions on the wrong plot.',
       ],
       'electric-swing-gates': [
@@ -2038,7 +2038,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Listed building consent considerations are unusually frequent in Ashwell given the concentration of designated buildings. For plots within the curtilage of listed buildings, consent may be required alongside planning permission, and documentation standards are substantially higher. Proper installers price these planning costs transparently at quotation rather than absorbing them into hidden charges later.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Ashwell require particularly careful handling given the village\'s exceptional heritage character. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments on specific grander properties, but the general material expectation across the village favours timber. Contemporary aluminium and modern steel designs face substantial scrutiny within the conservation boundary.',
+        'Ashwell\'s metal gates require particularly careful handling given the village\'s exceptional heritage character. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments on specific grander properties, but the general material expectation across the village favours timber. Contemporary aluminium and modern steel designs face substantial scrutiny within the conservation boundary.',
         'Specification quality matters on Ashwell\'s exposed position on the Hertfordshire-Cambridgeshire border. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance, and paint-only finishes fail predictably within a decade. Real forge work rather than cold-bent mild steel dressed as wrought iron is worth paying for explicitly on any period property installation in the village.',
       ],
       'automated-gate-systems': [
@@ -2046,8 +2046,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Cable routing challenges are unusually significant in Ashwell. Plot sizes, the depth of established gardens, and the frequent archaeological sensitivity around the village core mean disruptive trenching is usually unacceptable. Directional boring or careful routing through existing service corridors is often the only appropriate solution, and this adds cost that honest installers price transparently at quotation stage.',
       ],
       'gate-repair-and-maintenance': [
-        'The Ashwell gate stock includes a meaningful base of 1990s and 2000s electric gate installations, most still repairable with current spare parts. FAAC, BFT, and CAME units from that period are routinely restored to full function, and a technician who diagnoses honestly identifies the actual failure rather than quoting wholesale replacement. Second opinions before accepting replacement quotes save most owners substantial sums.',
-        'Ashwell failure patterns track the chalk-spring geology around the village core and the broader microclimate. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified near spring lines, and hinge bearing wear from heavy cycling all appear in local records. All are repairable conditions given proper diagnostic work.',
+        'Across Ashwell, the gate stock includes a meaningful base of 1990s and 2000s electric gate installations, most still repairable with current spare parts. FAAC, BFT, and CAME units from that period are routinely restored to full function, and a technician who diagnoses honestly identifies the actual failure rather than quoting wholesale replacement. Second opinions before accepting replacement quotes save most owners substantial sums.',
+        'In Ashwell, failure patterns track the chalk-spring geology around the village core and the broader microclimate. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified near spring lines, and hinge bearing wear from heavy cycling all appear in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -2060,11 +2060,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'North Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Pirton are more common on the newer properties along the High Street approach from Hitchin and on plots toward the Shillington edge where driveway dimensions favour cantilever solutions over swing configurations. North Hertfordshire District Council planning officers assess sliding systems within the Pirton Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic streetscape around the Great Green and Little Green.',
+        'Owners fitting sliders in Pirton find that installations are more common on the newer properties along the High Street approach from Hitchin and on plots toward the Shillington edge where driveway dimensions favour cantilever solutions over swing configurations. North Hertfordshire District Council planning officers assess sliding systems within the Pirton Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic streetscape around the Great Green and Little Green.',
         'Foundation detail on Pirton\'s mixed chalk-clay substrate, typical of the Chilterns-edge ridge, requires proper specification. The transition zones between chalk upland and clay valley create genuine ground-movement challenges that demand proper cantilever footings with correct drainage. Short-cut foundations produce gates that drift and bind within three winters, and the rectification cost usually exceeds any original saving substantially.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit Pirton\'s housing stock naturally, particularly the historic cottages and period properties clustered around the Great Green, Little Green, and the approaches to the Norman motte and bailey site. Underground motors are essentially standard at any specification level worth taking seriously, with visible ram-arm systems generally reserved for retrofits where excavation is physically impractical.',
+        'In Pirton, swing gates suit the housing stock naturally, particularly the historic cottages and period properties clustered around the Great Green, Little Green, and the approaches to the Norman motte and bailey site. Underground motors are essentially standard at any specification level worth taking seriously, with visible ram-arm systems generally reserved for retrofits where excavation is physically impractical.',
         'The swing clearance survey is important in Pirton\'s rural setting. Mature hedgerows, established garden trees, and the irregular boundary patterns of older plots mean swing arcs need physical verification. North Hertfordshire District Council planning officers assess swing gate applications in the conservation area with reference to the historic entrance patterns around the village greens, and sympathetic designs pass substantially more easily than generic catalogue selections.',
       ],
       'wooden-driveway-gates': [
@@ -2072,7 +2072,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'North Hertfordshire District Council planning officers typically approve timber gate applications in Pirton with fewer conditions than metal specifications, particularly within the conservation boundary. Bespoke fabrication with 6-10 week lead times is the rule at this price point, and the silvering of oak to a soft grey over the first few seasons integrates well with the weathered brick of established village boundary treatments.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Pirton work in specific contexts. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments, particularly on the grander properties around the greens. Contemporary aluminium and powder-coated steel designs face more scrutiny and are generally more appropriate on plots outside the conservation boundary.',
+        'Metalwork across Pirton works in specific contexts. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments, particularly on the grander properties around the greens. Contemporary aluminium and powder-coated steel designs face more scrutiny and are generally more appropriate on plots outside the conservation boundary.',
         'Specification quality separates honest installations from cheaper alternatives. Hot-dip galvanising followed by polyester powder coating is the baseline specification that delivers a 20-30 year finish in Pirton\'s Chilterns-edge climate, and anything less produces rust breakthrough within a decade. Real forge work rather than cold-bent mild steel dressed as wrought iron is the key distinction worth paying for on any period property installation.',
       ],
       'automated-gate-systems': [
@@ -2094,7 +2094,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'East Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Walkern are typically specified on the newer properties along the Stevenage Road approach and plots toward the Benington edge where driveway dimensions favour cantilever solutions over swing configurations. East Hertfordshire District Council planning officers assess sliding systems within the Walkern Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic High Street streetscape that defines the village character.',
+        'Walkern sliding gate projects are typically specified on the newer properties along the Stevenage Road approach and plots toward the Benington edge where driveway dimensions favour cantilever solutions over swing configurations. East Hertfordshire District Council planning officers assess sliding systems within the Walkern Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic High Street streetscape that defines the village character.',
         'Foundation work on Walkern\'s mixed clay substrate typical of the Beane valley tributary requires proper specification. Cantilever sliders demand substantial concrete footings with correct drainage, and short-cut foundations produce gates that drift and bind within a few winters. Proper ground investigation at survey stage, rather than after installation, separates honest contractors from cheaper operators.',
       ],
       'electric-swing-gates': [
@@ -2106,7 +2106,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'For plots within the curtilage of listed buildings along the High Street, listed building consent may be required in addition to planning permission, and documentation standards are higher. Proper installers price these planning costs transparently at quotation stage rather than absorbing them into hidden charges. Bespoke fabrication with 6-10 week lead times is the rule at this price point.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Walkern work in specific contexts. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments on the grander properties along the High Street and around Walkern Hall. Contemporary aluminium and powder-coated steel are more appropriate outside the conservation boundary and face additional scrutiny within it.',
+        'For metal gate projects in Walkern, designs work in specific contexts. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments on the grander properties along the High Street and around Walkern Hall. Contemporary aluminium and powder-coated steel are more appropriate outside the conservation boundary and face additional scrutiny within it.',
         'Specification quality is non-negotiable on exposed Walkern plots. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance in the local microclimate, and cheaper paint-only finishes fail within a decade. Real forge work rather than cold-bent mild steel dressed as wrought iron is the key distinction on period property installations and worth paying for explicitly.',
       ],
       'automated-gate-systems': [
@@ -2115,7 +2115,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Walkern repair jobs frequently involve gates whose original installer has long since retired or dissolved, which complicates commissioning-record access and warranty claims. A technician who keeps a private database of common Herts installer specifications from the 1995-2010 period can often reverse-engineer what was fitted without the paperwork, which saves time and avoids the default assumption that undocumented means unrepairable.',
-        'Walkern failure patterns track the Beane valley tributary microclimate. Photocell drift from seasonal ground movement on the mixed clay substrate, control board corrosion from water ingress, and hinge bearing wear from heavy cycling appear repeatedly in local repair records. All are repairable given proper diagnostic work.',
+        'Across Walkern, repair patterns track the Beane valley tributary microclimate. Photocell drift from seasonal ground movement on the mixed clay substrate, control board corrosion from water ingress, and hinge bearing wear from heavy cycling appear repeatedly in local repair records. All are repairable given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -2128,7 +2128,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'East Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Benington are relatively uncommon given the historic tight-grain layout along Town Lane and the substantial period property stock around the village green and Benington Lordship approach. Where sliders are specified, they typically serve newer properties on the approaches from Aston and Walkern where driveway dimensions accommodate cantilever solutions. East Hertfordshire District Council planning officers treat sliding systems within the Benington Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic village character.',
+        'The sliding gate market in Benington produces installations that are relatively uncommon given the historic tight-grain layout along Town Lane and the substantial period property stock around the village green and Benington Lordship approach. Where sliders are specified, they typically serve newer properties on the approaches from Aston and Walkern where driveway dimensions accommodate cantilever solutions. East Hertfordshire District Council planning officers treat sliding systems within the Benington Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic village character.',
         'Foundation detail on Benington\'s clay-dominated substrate requires proper specification. Cantilever sliding systems demand substantial concrete footings with correct drainage, and short-cut foundations produce gates that drift and bind within a few winters on clay ground. The rectification cost usually exceeds any original saving substantially, and honest contractors identify these requirements at survey rather than after installation.',
       ],
       'electric-swing-gates': [
@@ -2140,7 +2140,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The Benington Lordship approach lane is the most design-sensitive stretch in the village, and timber specifications there typically have to echo the existing estate boundary vernacular rather than introduce new design language. Fabricators with genuine Benington experience propose designs that reference the Lordship\'s own garden gates rather than working from a generic pattern book, and this consultative approach meaningfully reduces planning friction.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Benington require careful handling within the conservation area given the village\'s strong heritage character. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments, particularly on the grander properties approaching Benington Lordship. Contemporary aluminium and powder-coated steel designs face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
+        'Benington metal gate specifications require careful handling within the conservation area given the village\'s strong heritage character. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments, particularly on the grander properties approaching Benington Lordship. Contemporary aluminium and powder-coated steel designs face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
         'Benington metalwork routinely has to live in visual conversation with the Lordship\'s own ironwork, and this sets a quality bar that generic specification quickly fails to meet. Fire-welded joints, pattern-matched finials, and finish colours that sit correctly against the estate\'s established pallette are the distinguishing features of Benington-appropriate metal gates, and the fabricators who deliver this are a short list rather than a catalogue choice.',
       ],
       'automated-gate-systems': [
@@ -2161,7 +2161,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Dacorum Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Gaddesden are relatively uncommon given the historic character of the Great Gaddesden core and the tight plot patterns along the Gade valley lanes. Where sliders are specified, they typically serve newer properties on the Water End and Jockey End approaches where driveway dimensions accommodate cantilever solutions. Dacorum Borough Council planning officers treat sliding systems within the Great Gaddesden Conservation Area with substantial caution, particularly where visible ground tracks would sit against the flint-and-brick vernacular that defines the historic village streetscape.',
+        'Sliding systems specified in Gaddesden are relatively uncommon given the historic character of the Great Gaddesden core and the tight plot patterns along the Gade valley lanes. Where sliders are specified, they typically serve newer properties on the Water End and Jockey End approaches where driveway dimensions accommodate cantilever solutions. Dacorum Borough Council planning officers treat sliding systems within the Great Gaddesden Conservation Area with substantial caution, particularly where visible ground tracks would sit against the flint-and-brick vernacular that defines the historic village streetscape.',
         'Foundation considerations around Gaddesden reflect the Chilterns chalk substrate with thin topsoil across much of the parish and localised clay-cap transitions on higher ground. The chalk generally gives good bearing for cantilever footings, but proper excavation depth remains non-negotiable, and the valley-floor plots near the Gade itself introduce water-table considerations that need proper site investigation rather than assumption.',
       ],
       'electric-swing-gates': [
@@ -2173,7 +2173,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The silvering of oak to a soft grey over the first few seasons integrates naturally with the weathered flint and brick boundaries typical of the village. Bespoke fabrication with 6-10 week lead times is the rule at this price point, and honest installers specify this openly rather than pushing mass-produced alternatives that sit poorly in the AONB-edge streetscape.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Gaddesden require careful handling within the conservation area and the broader Chilterns AONB context. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties, particularly around Golden Parsonage and the historic estate approaches. Contemporary aluminium and powder-coated steel face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
+        'In Gaddesden, metal gates require careful handling within the conservation area and the broader Chilterns AONB context. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties, particularly around Golden Parsonage and the historic estate approaches. Contemporary aluminium and powder-coated steel face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
         'Specification standards matter particularly in Gaddesden\'s exposed Chilterns microclimate. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance, and paint-only finishes fail predictably within a decade under the combination of upland exposure and valley moisture. Real forge work rather than cold-bent mild steel dressed as wrought iron is the distinction worth paying for on period property installations.',
       ],
       'automated-gate-systems': [
@@ -2182,7 +2182,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Gaddesden\'s AONB-edge setting produces a recurring repair pattern around tree interference. Mature trees on the conservation boundary and across the Golden Parsonage estate margin have canopy growth that now intrudes into photocell beam paths originally commissioned against different sightlines. The typical symptom is intermittent non-response rather than outright failure, and the correct fix is photocell relocation or beam pathway clearance rather than motor swaps.',
-        'Gaddesden failure patterns track the Chilterns microclimate and the chalk-to-clay transitions across parts of the parish. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified near valley-floor plots, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable given proper diagnostic attention.',
+        'The fault profile across Gaddesden tracks the Chilterns microclimate and the chalk-to-clay transitions across parts of the parish. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified near valley-floor plots, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable given proper diagnostic attention.',
       ],
     },
     cityIntro: [
@@ -2195,11 +2195,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Hertsmere Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in South Mimms typically serve the newer properties along Blackhorse Lane, the Blanche Lane approach, and plots toward the motorway junction edge where driveway dimensions favour cantilever solutions over swing configurations. Hertsmere Borough Council planning officers assess sliding systems within the South Mimms Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic streetscape around St Giles church and the village core.',
+        'In South Mimms, sliding gate installations typically serve the newer properties along Blackhorse Lane, the Blanche Lane approach, and plots toward the motorway junction edge where driveway dimensions favour cantilever solutions over swing configurations. Hertsmere Borough Council planning officers assess sliding systems within the South Mimms Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic streetscape around St Giles church and the village core.',
         'Foundation work on South Mimms\' clay-dominated substrate requires proper specification. The London Clay typical of the parish shrinks and swells significantly with seasonal moisture, and cantilever sliding systems demand substantial concrete footings with correct drainage. Short-cut foundations produce gates that drift and bind within a few winters, and the rectification cost routinely exceeds any original saving by a significant margin.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the default configuration in South Mimms and suit the village housing stock naturally. The historic cottages around St Giles church, and the substantial period properties along the core lanes, almost always take swing configurations with underground motors rather than visible ram-arm systems. Hertsmere Borough Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with the historic entrance patterns of this Green Belt village.',
+        'South Mimms\'s default gate configuration is the swing gate, which is configuration in South Mimms and suit the village housing stock naturally. The historic cottages around St Giles church, and the substantial period properties along the core lanes, almost always take swing configurations with underground motors rather than visible ram-arm systems. Hertsmere Borough Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with the historic entrance patterns of this Green Belt village.',
         'Swing clearance surveys matter on South Mimms\' mature plots. Established trees across the village and the irregular boundary patterns of older properties mean swing arcs need physical verification rather than paper calculation. Any installer quote for a South Mimms swing gate that does not include a physical swing path survey is not a serious quote.',
       ],
       'wooden-driveway-gates': [
@@ -2216,7 +2216,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'South Mimms\' position at the M25 junction introduces a repair consideration rarely seen in deeper-rural villages: accumulated traffic vibration from the motorway and A1 approach fatigues mechanical components notably faster than comparable gates a few miles away. Typical South Mimms repair records show hinge bearing and drive-gear wear arriving perhaps five years earlier than the industry average, and replacement with heavier-duty components pays back quickly.',
-        'South Mimms failure patterns track the local microclimate and the London Clay substrate across the parish. Photocell drift from seasonal ground movement, control board corrosion where original drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
+        'South Mimms gate failures track the local microclimate and the London Clay substrate across the parish. Photocell drift from seasonal ground movement, control board corrosion where original drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -2229,7 +2229,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Hertsmere Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Ridge are relatively common on the substantial rural properties along Ridge Hill, Crossoaks Lane, and the lanes approaching from South Mimms, where plot widths and driveway dimensions favour cantilever solutions over swing configurations. Hertsmere Borough Council planning officers assess sliding systems within the Ridge Conservation Area with substantial caution, particularly where visible ground tracks would sit against the rural streetscape that defines the village character.',
+        'Cantilever and tracked sliders in Ridge are relatively common on the substantial rural properties along Ridge Hill, Crossoaks Lane, and the lanes approaching from South Mimms, where plot widths and driveway dimensions favour cantilever solutions over swing configurations. Hertsmere Borough Council planning officers assess sliding systems within the Ridge Conservation Area with substantial caution, particularly where visible ground tracks would sit against the rural streetscape that defines the village character.',
         'The clay-dominated substrate typical of the Ridge area requires careful foundation specification. London Clay shrinks and swells significantly with seasonal moisture, and cantilever sliding systems demand substantial concrete footings with correct drainage. Short-cut foundations on Ridge plots routinely produce gates that drift and bind within a few winters, and the rectification cost usually exceeds any original saving by a significant margin.',
       ],
       'electric-swing-gates': [
@@ -2241,7 +2241,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Ridge plots often include mature woodland margins and TPO-protected avenue planting, which constrains both gate design and installation approach. Timber gates in colours that complement rather than contrast with the mature planting tend to pass planning cleanest, and fabricators with actual Ridge experience will propose designs that acknowledge the woodland-edge setting rather than treating the plot as a generic rural driveway.',
       ],
       'metal-driveway-gates': [
-        'Metal gate installations in Ridge split between two markets. Hand-forged wrought iron in traditional ornamental profiles suits the grander period properties around the conservation core. Contemporary aluminium and powder-coated steel work well on the newer detached properties across the rest of the parish where the design context allows.',
+        'Ridge\'s metal gate installations split between two markets. Hand-forged wrought iron in traditional ornamental profiles suits the grander period properties around the conservation core. Contemporary aluminium and powder-coated steel work well on the newer detached properties across the rest of the parish where the design context allows.',
         'Ridge plots specified with metal gates benefit from finish specifications that explicitly account for the parish\'s unusual mature-tree setting. Overhanging canopy produces drip-line salt concentration on coated surfaces during heavy rain events, and duplex coatings rated for marine-equivalent exposure genuinely outperform standard twin-coat galvanise-and-powder finishes in these conditions. The cost difference is modest; the durability gap across two decades is not.',
       ],
       'automated-gate-systems': [
@@ -2249,7 +2249,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Cable routing is the common Ridge install challenge given the substantial plot sizes typical of the parish. Mains distances from consumer unit to gate position routinely exceed 30 metres, and the established landscaping makes disruptive trenching unacceptable. Directional boring or careful routing through existing service corridors adds cost but preserves garden investment.',
       ],
       'gate-repair-and-maintenance': [
-        'The Ridge gate stock skews toward quality. FAAC, BFT, and CAME installations from the 1990s and 2000s remain common across the parish and most are fully repairable with current parts. A technician who diagnoses honestly identifies the actual failure rather than upselling to wholesale replacement, and Ridge owners particularly benefit from second opinions before accepting motor replacement quotes.',
+        'Repair work in Ridge draws on a gate stock that skews toward quality. FAAC, BFT, and CAME installations from the 1990s and 2000s remain common across the parish and most are fully repairable with current parts. A technician who diagnoses honestly identifies the actual failure rather than upselling to wholesale replacement, and Ridge owners particularly benefit from second opinions before accepting motor replacement quotes.',
         'Ridge repair records show concentrated tree-root activity as the single most common underground failure mode, given the parish\'s unusually mature hedgerow and specimen-tree stock. Chambers that were installed before the trees reached full spread now need either root-barrier retrofit or complete chamber relocation, and honest contractors scope which of these is proportionate rather than defaulting to the more expensive option.',
       ],
     },
@@ -2263,7 +2263,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Welwyn Hatfield Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Lemsford are relatively uncommon given the historic tight-grain layout along Lemsford Village and around Lemsford Mill. Where sliders are specified, they typically serve newer properties on the Cromer Hyde Lane approach and plots toward the Brocket Hall edge where driveway dimensions accommodate cantilever solutions. Welwyn Hatfield Borough Council planning officers treat sliding systems within the Lemsford Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic Mill streetscape that defines the village character.',
+        'The sliding gate market in Lemsford produces installations that are relatively uncommon given the historic tight-grain layout along Lemsford Village and around Lemsford Mill. Where sliders are specified, they typically serve newer properties on the Cromer Hyde Lane approach and plots toward the Brocket Hall edge where driveway dimensions accommodate cantilever solutions. Welwyn Hatfield Borough Council planning officers treat sliding systems within the Lemsford Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic Mill streetscape that defines the village character.',
         'Foundation work near the Lea valley at Lemsford requires proper specification. The alluvial substrate near the river and Mill introduces water-table considerations that need proper site investigation, and the clay-dominated ground beyond the immediate valley demands substantial concrete footings for cantilever systems. Short-cut foundations fail predictably under Lemsford\'s combination of seasonal ground movement and valley moisture.',
       ],
       'electric-swing-gates': [
@@ -2275,7 +2275,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'For plots within the curtilage of the listed Mill and other designated buildings in the village, listed building consent may be required alongside planning permission, and documentation standards are higher. Proper installers price these planning costs transparently at quotation rather than absorbing them later. The silvering of oak to a soft grey over the first few seasons integrates naturally with the weathered brick and weatherboard typical of the Mill and its surroundings.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Lemsford require particularly careful handling within the conservation area given the Mill-adjacent character and the substantial listed building concentration. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments, but contemporary aluminium and powder-coated steel designs face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
+        'Across Lemsford, metal installations require particularly careful handling within the conservation area given the Mill-adjacent character and the substantial listed building concentration. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments, but contemporary aluminium and powder-coated steel designs face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
         'Specification quality is non-negotiable on Lemsford\'s Lea valley microclimate. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance, and paint-only finishes fail predictably within a decade given the moisture retention around the Mill and river. Real forge work rather than cold-bent mild steel dressed as wrought iron is worth paying for explicitly on any period property installation in the village.',
       ],
       'automated-gate-systems': [
@@ -2284,7 +2284,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Lemsford repair records track the Mill and Lea catchment directly. A meaningful share of the village gate stock sits on plots influenced by historic outflows from the river and mill race, and underground motor installations specified without drainage pumps and raised control enclosures degrade over two or three winters rather than failing dramatically. Diagnostic records from the original installer are substantially valuable on any Lemsford repair assessment.',
-        'Lemsford failure patterns track the Lea valley microclimate and the Mill-adjacent moisture context. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified near the river, and hinge bearing wear from heavy cycling all appear in local records. All are repairable conditions given proper diagnostic work.',
+        'Fault patterns across Lemsford track the Lea valley microclimate and the Mill-adjacent moisture context. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified near the river, and hinge bearing wear from heavy cycling all appear in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -2297,11 +2297,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'East Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Hunsdon are typically specified on the newer properties along Widford Road, the Drury Lane approach, and plots toward the Stanstead Abbotts edge where driveway dimensions favour cantilever solutions over swing configurations. East Hertfordshire District Council planning officers assess sliding systems within the Hunsdon Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic High Street streetscape and the approaches to Hunsdon House.',
+        'Cantilever and tracked sliders in Hunsdon are typically specified on the newer properties along Widford Road, the Drury Lane approach, and plots toward the Stanstead Abbotts edge where driveway dimensions favour cantilever solutions over swing configurations. East Hertfordshire District Council planning officers assess sliding systems within the Hunsdon Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic High Street streetscape and the approaches to Hunsdon House.',
         'Foundation work around Hunsdon reflects the clay-dominated substrate typical of the Stort valley area. Cantilever sliders demand substantial concrete footings with correct drainage, and short-cut foundations produce gates that drift and bind within a few winters. Proper ground investigation at survey stage, rather than after installation, separates honest contractors from cheaper operators.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the default configuration for Hunsdon\'s historic core and suit the substantial period property stock naturally, particularly around St Dunstan\'s church and the Tudor-era Hunsdon House. Underground motors are essentially standard at any serious specification level, and East Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with historic entrance patterns.',
+        'The default configuration across Hunsdon is a swing gate, which is configuration for Hunsdon\'s historic core and suit the substantial period property stock naturally, particularly around St Dunstan\'s church and the Tudor-era Hunsdon House. Underground motors are essentially standard at any serious specification level, and East Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with historic entrance patterns.',
         'Swing clearance surveys matter on Hunsdon\'s mature plots. Established trees across the village and the approaches to Hunsdon House have substantial root zones and canopies that constrain swing arcs. Any installer quote for a Hunsdon swing gate that does not include a physical swing path survey rather than just an opening measurement is not a serious quote.',
       ],
       'wooden-driveway-gates': [
@@ -2309,7 +2309,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'For plots within the curtilage of listed buildings around the church and the approaches to Hunsdon House, listed building consent may be required alongside planning permission, and documentation standards are higher. Proper installers price these planning costs transparently at quotation stage rather than absorbing them into hidden charges. Bespoke fabrication with 6-10 week lead times is the rule at this price point.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Hunsdon work in specific contexts. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments on the grander properties, particularly on the approaches to Hunsdon House. Contemporary aluminium and powder-coated steel are more appropriate outside the conservation boundary and face additional scrutiny within it.',
+        'Across Hunsdon, metal gate installations work in specific contexts. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments on the grander properties, particularly on the approaches to Hunsdon House. Contemporary aluminium and powder-coated steel are more appropriate outside the conservation boundary and face additional scrutiny within it.',
         'Hunsdon\'s listed building context raises the bar on metalwork specification beyond simple durability considerations. Conservation officers routinely request traditional fire-welded joints rather than modern MIG welds on visible ironwork in the listed-building curtilage, and a handful of East Herts fabricators genuinely offer this capability. The resulting premium is meaningful but the specification is rarely substitutable once requested.',
       ],
       'automated-gate-systems': [
@@ -2318,7 +2318,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Hunsdon repair records skew toward the higher-spec gate stock typical of a village with substantial heritage property. Specifier-grade motor brands from the 1990s and 2000s, Nice, BFT, FAAC in their premium ranges, are fully repairable with current parts, but older economy-range units occasionally reach true end-of-life where quality replacement genuinely is the better value decision. Experienced technicians are honest about which category a given gate falls into.',
-        'Hunsdon failure patterns track the local microclimate and the clay substrate across the parish. Photocell drift from seasonal ground movement, control board corrosion from water ingress where drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local repair records. All are repairable given proper diagnostic work.',
+        'Gate fault records in Hunsdon track the local microclimate and the clay substrate across the parish. Photocell drift from seasonal ground movement, control board corrosion from water ingress where drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local repair records. All are repairable given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -2331,11 +2331,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'North Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in St Ippolyts are typically specified on the newer properties along the Maydencroft Lane approach and plots toward the Gosmore edge where driveway dimensions favour cantilever solutions over swing configurations. North Hertfordshire District Council planning officers assess sliding systems within the St Ippolyts Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic streetscape around the distinctive church that gives the village its name.',
+        'Across St Ippolyts, sliding systems are typically specified on the newer properties along the Maydencroft Lane approach and plots toward the Gosmore edge where driveway dimensions favour cantilever solutions over swing configurations. North Hertfordshire District Council planning officers assess sliding systems within the St Ippolyts Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic streetscape around the distinctive church that gives the village its name.',
         'Foundation detail on St Ippolyts\' mixed chalk-clay substrate at the Chilterns-edge ridge requires proper specification. The transition zones between chalk upland and clay valley create genuine ground-movement challenges that demand proper cantilever footings with correct drainage. Short-cut foundations produce gates that drift and bind within three winters, and the rectification cost usually exceeds any original saving substantially.',
       ],
       'electric-swing-gates': [
-        'Swing gates suit St Ippolyts\' housing stock naturally, particularly the historic cottages and period properties clustered around the church and along the historic village lanes. Underground motors are essentially standard at any specification level worth taking seriously, with visible ram-arm systems generally reserved for retrofits where excavation is physically impractical.',
+        'St Ippolyts\'s housing stock suits the swing gate format, which St Ippolyts\' housing stock naturally, particularly the historic cottages and period properties clustered around the church and along the historic village lanes. Underground motors are essentially standard at any specification level worth taking seriously, with visible ram-arm systems generally reserved for retrofits where excavation is physically impractical.',
         'The swing clearance survey is important in St Ippolyts\' rural setting. Mature hedgerows, established garden trees, and the irregular boundary patterns of older plots mean swing arcs need physical verification. North Hertfordshire District Council planning officers assess swing gate applications in the conservation area with reference to historic entrance patterns, and sympathetic designs pass substantially more easily than generic catalogue selections.',
       ],
       'wooden-driveway-gates': [
@@ -2343,7 +2343,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'The St Ippolyts timber vocabulary reflects the ridge-village tradition of boundary work in close-boarded oak or larch rather than framed-and-panelled joinery. Proper local fabricators understand this distinction and specify accordingly rather than defaulting to the Victorian-villa framed-panel format that fits poorly on chalk-ridge plots. Lead times of 8-12 weeks are realistic for genuinely site-appropriate work.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in St Ippolyts work in specific contexts. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments, particularly on the grander properties around the church. Contemporary aluminium and powder-coated steel designs face more scrutiny and are generally more appropriate on plots outside the conservation boundary.',
+        'St Ippolyts metal gate specifications work in specific contexts. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments, particularly on the grander properties around the church. Contemporary aluminium and powder-coated steel designs face more scrutiny and are generally more appropriate on plots outside the conservation boundary.',
         'St Ippolyts metal specification has to contend with the ridge-top exposure class that drives corrosion rates notably higher than valley-floor sites. Duplex coatings, zinc-rich primer under polyester powder over hot-dip galvanising, are justified on ridge plots where standard twin-coat specifications under-perform, and genuine forge-working fabricators rather than catalogue suppliers are the only route to ornamental work that ages properly in this microclimate.',
       ],
       'automated-gate-systems': [
@@ -2365,11 +2365,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'North Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Weston are typically specified on the newer properties along the Hay Lane approach, the Maiden Street area, and plots toward the Baldock edge where driveway dimensions favour cantilever solutions over swing configurations. North Hertfordshire District Council planning officers assess sliding systems within the Weston Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic village-green streetscape that defines the core character.',
+        'Owners fitting sliders in Weston find that installations are typically specified on the newer properties along the Hay Lane approach, the Maiden Street area, and plots toward the Baldock edge where driveway dimensions favour cantilever solutions over swing configurations. North Hertfordshire District Council planning officers assess sliding systems within the Weston Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic village-green streetscape that defines the core character.',
         'Foundation detail on Weston\'s mixed chalk-clay substrate, typical of the ridge position between the Chilterns and the East Anglian plain, requires proper specification. The transition zones between chalk and clay create genuine ground-movement challenges that demand proper cantilever footings with correct drainage. Short-cut foundations fail predictably regardless of surface appearance, and honest installers identify these requirements at survey rather than after installation.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the default configuration for Weston\'s historic core and suit the village housing stock naturally. The historic cottages and period properties around the village green and along the core lanes almost always take swing configurations with underground motors rather than visible ram-arm systems. North Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area.',
+        'For most Weston driveways, a swing gate is the default configuration for Weston\'s historic core and suit the village housing stock naturally. The historic cottages and period properties around the village green and along the core lanes almost always take swing configurations with underground motors rather than visible ram-arm systems. North Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area.',
         'Swing clearance surveys are particularly important in Weston\'s historic core. The village-green plot patterns produced frontages with specific geometric constraints, and swing arcs need physical verification rather than paper calculation. Any installer quote for a Weston swing gate that relies solely on the opening dimension rather than an on-site swing path survey is not a serious quote.',
       ],
       'wooden-driveway-gates': [
@@ -2377,7 +2377,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Weston Hall and the approach lanes include several plots where the hall\'s parkland boundary dictates what is possible. Traditional close-boarded oak in a pale weathered finish is almost always the easiest route through both planning and listed building consent where applicable, elaborate panel-and-pier designs with decorative cresting tend to attract conditions. The simplest specification is frequently also the fastest approval route.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Weston require careful handling within the conservation area given the village\'s strong heritage character. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties around the green and Weston Hall. Contemporary aluminium and powder-coated steel designs face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
+        'Across Weston, metal installations require careful handling within the conservation area given the village\'s strong heritage character. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties around the green and Weston Hall. Contemporary aluminium and powder-coated steel designs face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
         'Specification quality matters substantially on exposed Weston plots given the ridge-top position. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance, and paint-only finishes fail predictably within a decade under the exposure conditions. Real forge work rather than cold-bent mild steel dressed as wrought iron is worth paying for explicitly on period property installations in the village.',
       ],
       'automated-gate-systems': [
@@ -2386,7 +2386,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Weston\'s ridge-top position exposes its gate stock to wind loads that lower-lying village installations do not see, and this shapes the repair profile distinctly. Motors specified for gentle residential use show premature wear under sustained gusting, and the replacement spec for a Weston gate should account for wind exposure class rather than default figures. Upgrading motor torque and adding wind braking on the hinge side are common Weston retrofit patterns.',
-        'Weston failure patterns track the ridge-top microclimate and the mixed chalk-clay substrate across the parish. Photocell drift from seasonal ground movement, control board corrosion where original drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
+        'Gate fault records in Weston track the ridge-top microclimate and the mixed chalk-clay substrate across the parish. Photocell drift from seasonal ground movement, control board corrosion where original drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -2399,7 +2399,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'East Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Ardeley are relatively uncommon given the distinctive set-piece village-green layout and the tight-grain cottage stock that defines the core. Where sliders are specified, they typically serve newer properties on the approaches from Cromer and Walkern where driveway dimensions accommodate cantilever solutions. East Hertfordshire District Council planning officers treat sliding systems within the Ardeley Conservation Area with substantial caution, particularly where visible ground tracks would read against the thatch-and-brick vernacular that characterises the village green streetscape.',
+        'Ardeley\'s sliding gate installations are relatively uncommon given the distinctive set-piece village-green layout and the tight-grain cottage stock that defines the core. Where sliders are specified, they typically serve newer properties on the approaches from Cromer and Walkern where driveway dimensions accommodate cantilever solutions. East Hertfordshire District Council planning officers treat sliding systems within the Ardeley Conservation Area with substantial caution, particularly where visible ground tracks would read against the thatch-and-brick vernacular that characterises the village green streetscape.',
         'Ardeley\'s clay substrate combines with the village\'s rural setting to produce specific foundation demands on any cantilever system. The combination of seasonal ground movement and the often-unmapped land drains serving the historic agricultural field pattern means a standard foundation detail can fail in ways urban-installed systems do not. Ground investigation with trial pits rather than desk-based assumption is justified on any Ardeley sliding gate project.',
       ],
       'electric-swing-gates': [
@@ -2411,7 +2411,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'For plots within the curtilage of listed buildings around the green, listed building consent may be required alongside planning permission, and documentation standards are higher. Proper installers price these planning costs transparently at quotation rather than absorbing them later. The silvering of oak to a soft grey over the first few seasons integrates naturally with the weathered timber and brick boundaries typical of the village.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Ardeley require particularly careful handling given the village\'s exceptional set-piece character and the thatched cottage setting. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments on specific grander properties, but the general material expectation across the village favours timber. Contemporary aluminium and modern steel designs face substantial scrutiny within the conservation boundary.',
+        'In Ardeley, metal gates require particularly careful handling given the village\'s exceptional set-piece character and the thatched cottage setting. Hand-forged wrought iron in traditional ornamental profiles is accepted within the conservation area where it reflects historic boundary treatments on specific grander properties, but the general material expectation across the village favours timber. Contemporary aluminium and modern steel designs face substantial scrutiny within the conservation boundary.',
         'Specification quality matters on Ardeley\'s exposed rural position. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance in the local microclimate, and paint-only finishes fail predictably within a decade. Real forge work rather than cold-bent mild steel dressed as wrought iron is worth paying for explicitly on any period property installation in the village.',
       ],
       'automated-gate-systems': [
@@ -2432,7 +2432,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Welwyn Hatfield Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Stanborough are relatively common across the substantial properties along Stanborough Road, the Lemsford Lane edge, and plots backing onto Stanborough Park and the lakes where driveway dimensions favour cantilever solutions. Welwyn Hatfield Borough Council planning officers assess sliding systems carefully on plots adjacent to the Stanborough Park conservation and recreation area, particularly where visible ground tracks would read against the park-edge character.',
+        'In Stanborough, sliding gate installations are relatively common across the substantial properties along Stanborough Road, the Lemsford Lane edge, and plots backing onto Stanborough Park and the lakes where driveway dimensions favour cantilever solutions. Welwyn Hatfield Borough Council planning officers assess sliding systems carefully on plots adjacent to the Stanborough Park conservation and recreation area, particularly where visible ground tracks would read against the park-edge character.',
         'Foundation work on Stanborough\'s clay-dominated substrate typical of the Lea valley flood plain requires proper specification. The alluvial and clay conditions near the lakes introduce water-table considerations that need proper site investigation, and cantilever sliding systems demand substantial concrete footings with correct drainage. Short-cut foundations produce gates that drift and bind within a few winters in these conditions, and the rectification cost routinely exceeds any original saving substantially.',
       ],
       'electric-swing-gates': [
@@ -2453,7 +2453,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'The Stanborough residential gate stock mostly dates from the late-1990s and 2000s park-adjacent buildout, with specifier-grade motor brands standard from the start. Spares are easy to source. The characteristic Stanborough repair call is not motor failure but perished cable sheathing where original installers buried unarmoured cable in damp park-edge ground, and recabling with SWA in conduit resolves the recurring symptom permanently rather than creating repeat service visits.',
-        'Stanborough failure patterns track the Lea valley microclimate and the clay-alluvial substrate near the lakes. Photocell drift from seasonal ground movement, control board corrosion from water ingress where drainage was under-specified on park-adjacent plots, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
+        'The fault profile across Stanborough tracks the Lea valley microclimate and the clay-alluvial substrate near the lakes. Photocell drift from seasonal ground movement, control board corrosion from water ingress where drainage was under-specified on park-adjacent plots, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -2466,7 +2466,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'Welwyn Hatfield Borough Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Woolmer Green typically serve the newer properties along the London Road ribbon and plots on the Park Lane and Mardley Hill approaches where driveway dimensions favour cantilever solutions over swing configurations. Welwyn Hatfield Borough Council planning officers assess sliding systems within the Woolmer Green Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic Great North Road streetscape that defines the village core.',
+        'The sliding gate market in Woolmer Green produces installations that typically serve the newer properties along the London Road ribbon and plots on the Park Lane and Mardley Hill approaches where driveway dimensions favour cantilever solutions over swing configurations. Welwyn Hatfield Borough Council planning officers assess sliding systems within the Woolmer Green Conservation Area with substantial caution, particularly where visible ground tracks would sit against the historic Great North Road streetscape that defines the village core.',
         'Foundation work on Woolmer Green\'s clay-dominated substrate typical of the Mimram catchment requires proper specification. Cantilever sliding systems demand substantial concrete footings with correct drainage, and short-cut foundations produce gates that drift and bind within a few winters on the seasonal-movement clay ground. Proper ground investigation at survey stage separates honest contractors from cheaper operators.',
       ],
       'electric-swing-gates': [
@@ -2478,7 +2478,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'For plots within the curtilage of listed buildings along the historic ribbon, listed building consent may be required alongside planning permission, and documentation standards are higher. Proper installers price these planning costs transparently at quotation rather than absorbing them later. The silvering of oak to a soft grey over the first few seasons integrates naturally with the weathered brick of established Woolmer Green boundaries.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Woolmer Green require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties along the old Great North Road. Contemporary aluminium and powder-coated steel face additional scrutiny within the conservation boundary and are generally more appropriate on plots outside it.',
+        'Woolmer Green metal gate specifications require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties along the old Great North Road. Contemporary aluminium and powder-coated steel face additional scrutiny within the conservation boundary and are generally more appropriate on plots outside it.',
         'Specification standards matter in Woolmer Green\'s exposed position on the old Great North Road ridge. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance, and paint-only finishes fail predictably within a decade given the wind exposure. Real forge work rather than cold-bent mild steel dressed as wrought iron is the distinction worth paying for on period property installations.',
       ],
       'automated-gate-systems': [
@@ -2487,7 +2487,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'The Woolmer Green gate stock concentrates along the old Great North Road ribbon and its immediate back-plots. Ribbon-village installations introduce a distinctive repair pattern around cable runs that cross under the old road alignment, where original installers trenched under driveways rather than going around, subsidence and traffic loading have fatigued cable joints repeatedly. Permanent resolution means rerouting through back-plot corridors rather than endlessly repairing the same buried failure point.',
-        'Woolmer Green failure patterns track the ridge microclimate and the clay substrate across the parish. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
+        'Gate fault records in Woolmer Green track the ridge microclimate and the clay substrate across the parish. Photocell drift from seasonal ground movement, control board corrosion where drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -2500,11 +2500,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'East Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Little Hadham are typically specified on the newer properties along the A120 approach and plots toward the Much Hadham edge where driveway dimensions favour cantilever solutions over swing configurations. East Hertfordshire District Council planning officers assess sliding systems within the Little Hadham Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic Ash valley streetscape that defines the village character.',
+        'Sliding systems specified in Little Hadham are typically specified on the newer properties along the A120 approach and plots toward the Much Hadham edge where driveway dimensions favour cantilever solutions over swing configurations. East Hertfordshire District Council planning officers assess sliding systems within the Little Hadham Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic Ash valley streetscape that defines the village character.',
         'Foundation work near the Ash valley requires proper specification. The mixed clay and alluvial substrate across the parish introduces water-table considerations on valley-floor plots and ground-movement challenges on the clay ridges, and cantilever sliding systems demand substantial concrete footings with correct drainage. Short-cut foundations fail predictably on both substrate types.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the default configuration in Little Hadham and suit the village housing stock naturally. The listed and historic cottages along The Ford, Church End, and the core lanes almost always take swing configurations with underground motors rather than visible ram-arm systems. East Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with the historic entrance patterns of this Ash valley village.',
+        'The default configuration across Little Hadham is a swing gate, which is configuration in Little Hadham and suit the village housing stock naturally. The listed and historic cottages along The Ford, Church End, and the core lanes almost always take swing configurations with underground motors rather than visible ram-arm systems. East Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with the historic entrance patterns of this Ash valley village.',
         'Little Hadham\'s mix of roadside cottages and set-back farmhouses produces wildly variable swing-path conditions from plot to plot. Cottages fronting The Ford routinely have less than 70 degrees of available arc despite apparently generous openings, while back-plot farmhouses off the valley lanes often accept full 110-degree sweeps without conflict. A proper on-site survey before the quote is the only way to know which category a given plot falls into.',
       ],
       'wooden-driveway-gates': [
@@ -2512,7 +2512,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'For plots within the curtilage of listed buildings across Little Hadham and Church End, listed building consent may be required alongside planning permission, and documentation standards are higher. Proper installers price these planning costs transparently at quotation rather than absorbing them later. The silvering of oak to a soft grey over the first few seasons integrates naturally with the weathered brick and timber-frame typical of the village.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Little Hadham require careful handling within the conservation area given the Ash valley character and the substantial listed building stock. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments, but contemporary aluminium and powder-coated steel designs face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
+        'Little Hadham\'s metal gates require careful handling within the conservation area given the Ash valley character and the substantial listed building stock. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments, but contemporary aluminium and powder-coated steel designs face additional scrutiny and are generally more appropriate on plots outside the conservation boundary.',
         'Specification quality is non-negotiable on Little Hadham\'s valley microclimate. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance, and paint-only finishes fail predictably within a decade given the moisture retention in the valley. Real forge work rather than cold-bent mild steel dressed as wrought iron is worth paying for explicitly on any period property installation in the village.',
       ],
       'automated-gate-systems': [
@@ -2520,8 +2520,8 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Little Hadham installs on The Ford and Church End plots face a specific constraint rarely present elsewhere: the Ash valley\'s high winter water table means buried cable routes need genuine attention to waterproofing specification rather than the casual approach that works on drier sites. SWA cable in sealed duct with drainage fall to a dry compartment is the Little Hadham baseline, not an upgrade.',
       ],
       'gate-repair-and-maintenance': [
-        'The Little Hadham gate stock includes a substantial base of 1990s and 2000s electric gate installations, most still repairable with current spare parts. FAAC, BFT, and CAME units from that period are routinely restored to full function, and a technician who diagnoses honestly identifies the actual failure rather than upselling to wholesale replacement.',
-        'Little Hadham failure patterns track the Ash valley microclimate and the mixed substrate across the parish. Photocell drift from seasonal ground movement on valley-floor clay, control board corrosion where drainage was under-specified, and hinge bearing wear from heavy cycling all appear in local records. All are repairable conditions given proper diagnostic work.',
+        'Little Hadham gate owners draw on a stock that includes a substantial base of 1990s and 2000s electric gate installations, most still repairable with current spare parts. FAAC, BFT, and CAME units from that period are routinely restored to full function, and a technician who diagnoses honestly identifies the actual failure rather than upselling to wholesale replacement.',
+        'In Little Hadham, failure patterns track the Ash valley microclimate and the mixed substrate across the parish. Photocell drift from seasonal ground movement on valley-floor clay, control board corrosion where drainage was under-specified, and hinge bearing wear from heavy cycling all appear in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
@@ -2534,11 +2534,11 @@ export const CITY_INTROS: Record<string, CityIntro> = {
     council: 'North Hertfordshire District Council',
     intros: {
       'electric-sliding-gates': [
-        'Sliding gate installations in Graveley are typically specified on the newer properties along the High Street fringes and plots toward the Great Ashby and Stevenage edges where driveway dimensions favour cantilever solutions over swing configurations. North Hertfordshire District Council planning officers assess sliding systems within the Graveley Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic village streetscape that defines the core character.',
+        'The sliding gate market in Graveley produces installations that are typically specified on the newer properties along the High Street fringes and plots toward the Great Ashby and Stevenage edges where driveway dimensions favour cantilever solutions over swing configurations. North Hertfordshire District Council planning officers assess sliding systems within the Graveley Conservation Area with substantial caution, particularly where visible ground tracks would read against the historic village streetscape that defines the core character.',
         'Foundation detail on Graveley\'s clay-dominated substrate requires proper specification. The clay conditions typical of the parish shrink and swell significantly with seasonal moisture, and cantilever sliding systems demand substantial concrete footings with correct drainage. Short-cut foundations produce gates that drift and bind within a few winters, and the rectification cost usually exceeds any original saving substantially.',
       ],
       'electric-swing-gates': [
-        'Swing gates are the default configuration for Graveley\'s historic core and suit the village housing stock naturally. The historic cottages and period properties along High Street and the core lanes almost always take swing configurations with underground motors rather than visible ram-arm systems. North Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with historic entrance patterns.',
+        'Across Graveley, the default format is a swing gate, which is configuration for Graveley\'s historic core and suit the village housing stock naturally. The historic cottages and period properties along High Street and the core lanes almost always take swing configurations with underground motors rather than visible ram-arm systems. North Hertfordshire District Council planning officers accept swing gates more readily than alternatives within the conservation area, as they align with historic entrance patterns.',
         'Swing clearance surveys matter on Graveley\'s older plot patterns. The historic village frontages produced irregular geometries and restricted opening angles on many period properties. Any installer quote for a Graveley swing gate that relies solely on the opening dimension rather than an on-site swing path survey is worth questioning carefully before acceptance.',
       ],
       'wooden-driveway-gates': [
@@ -2546,7 +2546,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'For plots within the curtilage of listed buildings in the village core, listed building consent may be required alongside planning permission, and documentation standards are higher. Proper installers price these planning costs transparently at quotation rather than absorbing them later. The silvering of oak to a soft grey over the first few seasons integrates naturally with the weathered brick boundaries typical of the village.',
       ],
       'metal-driveway-gates': [
-        'Metal gates in Graveley require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties in the village. Contemporary aluminium and powder-coated steel designs face additional scrutiny within the conservation boundary and are generally more appropriate on plots outside it.',
+        'In Graveley, metal gates require careful handling within the conservation area. Hand-forged wrought iron in traditional ornamental profiles is accepted where it reflects historic boundary treatments on the grander properties in the village. Contemporary aluminium and powder-coated steel designs face additional scrutiny within the conservation boundary and are generally more appropriate on plots outside it.',
         'Specification quality matters substantially on exposed Graveley plots. Hot-dip galvanising before polyester powder coating delivers 20-30 year finish performance in the local microclimate, and paint-only finishes fail predictably within a decade. Real forge work rather than cold-bent mild steel dressed as wrought iron is worth paying for explicitly on period property installations in the village.',
       ],
       'automated-gate-systems': [
@@ -2555,7 +2555,7 @@ export const CITY_INTROS: Record<string, CityIntro> = {
       ],
       'gate-repair-and-maintenance': [
         'Graveley\'s proximity to Stevenage means many gate owners here receive quotes from Stevenage-based installers who do not know the village-specific planning context. The common Graveley scenario is a gate that has cycled fewer than two thousand times being quoted for wholesale replacement because the quoting installer does not stock parts for the specific motor generation. A second opinion from a Herts-specific technician almost always identifies a fractional-cost repair.',
-        'Graveley failure patterns track the local microclimate and the clay substrate across the parish. Photocell drift from seasonal ground movement, control board corrosion where original drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
+        'Repair records from Graveley track the local microclimate and the clay substrate across the parish. Photocell drift from seasonal ground movement, control board corrosion where original drainage was under-specified, and hinge bearing wear from heavy cycling appear repeatedly in local records. All are repairable conditions given proper diagnostic work.',
       ],
     },
     cityIntro: [
