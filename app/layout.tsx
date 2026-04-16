@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  alternates: { canonical: siteConfig.url },
   robots: { index: true, follow: true },
   verification: {
     google: '5rO-YvY2XOMFV5_MpLuZpJyBDdMv5Vc0iKUKBL1qNQA',
@@ -23,21 +22,6 @@ export const metadata: Metadata = {
       { url: '/favicon.ico' },
     ],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
-  },
-  openGraph: {
-    type: 'website',
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    locale: 'en_GB',
-    images: [{ url: '/icon-512x512.png', width: 512, height: 512, alt: siteConfig.name }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: ['/icon-512x512.png'],
   },
 };
 
