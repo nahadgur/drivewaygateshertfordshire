@@ -170,6 +170,10 @@ export default function ServiceLocationClient({ params }: { params: { serviceSlu
     ? cityIntroParagraphs
     : content.intro(cityName);
 
+  // Prefer city-specific FAQs; fall back to the generic service FAQs
+  const cityFaqs = cityIntroData?.faqs?.[service.slug as ServiceSlug];
+  const pageFaqs = cityFaqs && cityFaqs.length > 0 ? cityFaqs : service.faqs;
+
   const steps = content.steps(cityName);
   const whyPoints = content.whyPoints(cityName);
 
@@ -205,9 +209,23 @@ export default function ServiceLocationClient({ params }: { params: { serviceSlu
     },
   };
 
+  const faqPageSchema = pageFaqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${siteConfig.url}/services/${service.slug}/${params.locationSlug}/#faqs`,
+    mainEntity: pageFaqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  } : null;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      {faqPageSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
+      )}
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
@@ -281,9 +299,9 @@ export default function ServiceLocationClient({ params }: { params: { serviceSlu
                 </div>
               </section>
 
-              {service.faqs.length > 0 && (
+              {pageFaqs.length > 0 && (
                 <div className="mb-12">
-                  <FAQ faqs={service.faqs} title={`${service.title} in ${cityName}: Common Questions`} />
+                  <FAQ faqs={pageFaqs} title={`${service.title} in ${cityName}: Common Questions`} />
                 </div>
               )}
 

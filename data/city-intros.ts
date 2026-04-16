@@ -1,5 +1,5 @@
 // data/city-intros.ts
-// Per-city introductory content used on service x location and city pages.
+// Per-city introductory content + per-service FAQs for service x location pages.
 // Cities not yet present here render fallback content; pages for those cities still build.
 
 export type ServiceSlug =
@@ -10,9 +10,15 @@ export type ServiceSlug =
   | 'automated-gate-systems'
   | 'gate-repair-and-maintenance';
 
+export interface CityFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface CityIntro {
   council: string;
   intros: Partial<Record<ServiceSlug, string[]>>;
+  faqs: Partial<Record<ServiceSlug, CityFAQ[]>>;
   cityIntro: string[];
 }
 
@@ -50,6 +56,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Historic cityscapes mean that St Albans properties often feature older, bespoke gate systems requiring specialized care. When heavy ironwork or thick timber leaves begin to drag on the uneven period driveways, immediate intervention is necessary to prevent the automation motors from burning out. Local repair technicians excel at realigning these heavy structures, utilizing heavy-duty welding or hinge adjustments to restore perfect balance and ensuring the boundary operates flawlessly without damaging the underlying historical architecture.',
         'Routine maintenance is absolutely critical for the highly sought-after underground motor systems prevalent in this affluent city. Because many of these hidden motors are set into clay-heavy soil, the foundation boxes are prone to filling with silt and debris. Annual servicing by vetted professionals involves lifting the gate from its shoe, thoroughly clearing the subterranean drainage soakaways, and re-greasing the drive linkages to prevent water ingress from destroying the expensive electronic control boards during the wet winter months.',
         'Emergency callouts are a lifeline for commuting professionals who find themselves locked in or out of their properties. If a motherboard fails due to a power surge or a safety photocell is knocked out of alignment, the gates will default to a locked, safe state. Dedicated St Albans gate engineers provide rapid response times, arriving with fully stocked vehicles to replace blown fuses, realign infrared beams, and manually override the systems to get busy families back on the road instantly.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do sliding models work well for period homes in the city center?',
+          answer: 'Victorian terraces often lack the depth for swinging arcs, making sliders ideal. Moving horizontally along the boundary wall preserves precious driveway space for parking.',
+        },
+        {
+          question: 'What happens if leaves from Verulamium Park get in the track?',
+          answer: 'Built-in sweepers on the leading edge push debris away as the frame moves. We also recommend a quick monthly brushing of the floor rail to maintain perfectly smooth operation.',
+        },
+        {
+          question: 'Can the motor handle the weight of solid metal privacy gates?',
+          answer: 'High torque engines easily glide heavy steel configurations across wide entrances. We specify industrial strength internal gears to ensure your St Albans property remains secure without motor strain.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do swing gates suit the narrow Victorian driveways in the city center?',
+          answer: 'Space constraints often dictate an outward opening mechanism if your property boundary allows it. However, if your St Albans driveway borders a public footpath, we must use an inward swing to comply with local highways regulations.',
+        },
+        {
+          question: 'Will the motors struggle against heavy winds near Verulamium Park?',
+          answer: 'Wind loading is a crucial factor for swinging panels, especially solid wooden ones that act like sails. We specify highly rated hydraulic rams to ensure your entrance operates flawlessly during strong St Albans gales without snapping hinges.',
+        },
+        {
+          question: 'Can you install underground motors if my driveway has heavy clay soil?',
+          answer: 'Proper drainage is absolutely essential when burying motor boxes in the typical Hertfordshire clay found around here. We install robust soakaways beneath your electric swing gate foundations to prevent waterlogging and protect the sensitive underground mechanisms.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Are wooden gates suitable for period homes near the Abbey?',
+          answer: 'Premium timber complements the historic architecture found throughout the St Albans conservation areas perfectly. We design classic wooden driveway gates that enhance the traditional appeal of your heritage property.',
+        },
+        {
+          question: 'Do I need planning permission for a tall wooden boundary?',
+          answer: 'Natural aesthetics often appease local council planners more readily than modern industrial metal designs. However, checking with the St Albans planning office is still highly recommended for front boundaries exceeding one meter.',
+        },
+        {
+          question: 'What kind of wood is best for heavy daily use?',
+          answer: 'Sturdy oak provides unparalleled durability for busy family homes near the city center. This dense material withstands constant opening cycles while aging beautifully in the Hertfordshire weather.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do metal gates suit the period properties near the city center?',
+          answer: 'Wrought iron designs perfectly complement the Victorian and Edwardian architecture found throughout central St Albans. We install beautifully crafted metal boundaries that enhance your heritage property without looking overly modern.',
+        },
+        {
+          question: 'Will metal gates rust quickly in this area?',
+          answer: 'Zinc galvanization is a mandatory step for all our metal installations to completely prevent rust formation. We follow this with a baked powder coat, ensuring your St Albans entrance remains flawless for decades.',
+        },
+        {
+          question: 'Are there quiet metal gates for closely packed terrace streets?',
+          answer: 'Heavy-duty hinges equipped with sealed bearings ensure your metal boundary swings open with barely a whisper. You can operate your entrance late at night without waking any of your St Albans neighbors.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do I need planning permission for an automated setup on a period property here?',
+          answer: 'Absolutely necessary to check with the local council if you live in the St Albans conservation area. Upgrading to an automated gate system on older properties near Verulamium Park often requires strict compliance with heritage aesthetics. Our installers ensure your design meets these local guidelines while providing modern security.',
+        },
+        {
+          question: 'Can you install underground motors if my driveway has heavy clay soil?',
+          answer: 'Digging deep into the typical Hertfordshire clay found around here requires proper drainage solutions. We install robust soakaways alongside your underground motors to prevent waterlogging during heavy rain. This ensures your gate operates smoothly all year without flooding the mechanism.',
+        },
+        {
+          question: 'What happens if there is a power cut and I need to drive to the station?',
+          answer: 'Battery backups are included with all our installations to keep things moving during power outages. If you are rushing to catch a train to St Pancras, you can easily switch to manual override using a secure release key. This guarantees you will never be locked out of your own driveway.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Do you offer emergency repair services for automated gates in the city center?',
+          answer: 'Immediate callouts are available for all properties within the central St Albans area. Our technicians carry extensive spare parts to get your broken automation functioning swiftly.',
+        },
+        {
+          question: 'My electric gate is stuck half open near Verulamium Park; what should I do?',
+          answer: 'First disconnect the power supply to prevent the motor from overheating or burning out. Our local engineers can then manually release and diagnose the mechanical failure at your St Albans home.',
+        },
+        {
+          question: 'How often should I get my driveway gates serviced?',
+          answer: 'Bi-annual checkups are highly recommended to ensure the heavy hinges and safety sensors remain perfectly calibrated. This preventative maintenance keeps your St Albans entrance operating safely year-round.',
+        },
       ],
     },
     cityIntro: [
@@ -92,6 +184,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Sensor realignment fixes one of the most common causes of gate failure in leafy suburbs. Mature hedges and shifting soil can gradually push infrared safety photocells out of sync. When the invisible beam is broken, the gate\'s safety protocol prevents it from moving. Expert technicians in Harpenden quickly recalibrate these delicate sensors, trim back interfering foliage, and adjust the obstacle detection settings on the main control board to restore safe, reliable access instantly.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Are sliding mechanisms noisy for quiet residential streets?',
+          answer: 'Advanced nylon rollers create a practically silent movement across the ground track. You can confidently operate your entrance late at night without disturbing neighbors in leafy Harpenden.',
+        },
+        {
+          question: 'How do we integrate a pedestrian access point?',
+          answer: 'Partial opening settings can be programmed directly into your primary key fob. Pressing a specific button retracts the barrier just enough for a person to slip through.',
+        },
+        {
+          question: 'Does the system lock automatically when fully closed?',
+          answer: 'Integrated deadbolts engage the moment the panels reach their final resting position. This mechanical lock provides robust physical defense against anyone attempting to force the entrance open.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Are articulated arm motors a good choice for wide brick pillars?',
+          answer: 'Brickwork geometry often necessitates jointed arms that can reach around large masonry columns effortlessly. This clever mechanical design prevents the need to cut into your beautiful Harpenden brickwork, preserving the traditional aesthetic of your entrance.',
+        },
+        {
+          question: 'How often do the hinges need lubricating given the local weather?',
+          answer: 'Annual servicing is highly recommended to keep the heavy pivot points moving smoothly despite the damp UK climate. Our technicians will grease the hinges and calibrate the electric swing gate motors to ensure your Harpenden boundary remains perfectly balanced.',
+        },
+        {
+          question: 'Can the intercom connect directly to my smartphone while I am in London?',
+          answer: 'Mobile connectivity allows you to manage access from anywhere using an intuitive app on your phone. Whether you are commuting or just popping down to the high street, you can see and speak to delivery drivers at your Harpenden home.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can you match the wooden gates to my existing Harpenden fences?',
+          answer: 'Custom joinery allows us to seamlessly replicate the exact style and height of your current boundary lines. Your new wooden driveway gates will look like an original part of your leafy Harpenden estate.',
+        },
+        {
+          question: 'Do wooden gates warp in the damp weather near the Common?',
+          answer: 'Classic styling is backed up by advanced weatherproofing techniques to completely eliminate warping risks. We ensure the timber is properly acclimatized and sealed before installation on your Harpenden property.',
+        },
+        {
+          question: 'Are solid wooden gates good for privacy?',
+          answer: 'Impregnated wood constructed without gaps provides an exceptional visual barrier against passing street traffic. You can enjoy your Harpenden garden in complete privacy without compromising on natural visual appeal.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can you match a new metal gate to my existing Harpenden railings?',
+          answer: 'Custom fabrication allows our blacksmiths to exactly replicate the height, finials, and spacing of your current boundary. Your new metal driveway gates will look like an original part of your Harpenden estate.',
+        },
+        {
+          question: 'Do metal sliding gates work well here?',
+          answer: 'Lateral sliding mechanisms are incredibly popular for maximizing the parking area on premium Harpenden properties. A rigid steel frame glides smoothly behind your boundary wall, offering top tier security without sacrificing driveway depth.',
+        },
+        {
+          question: 'Are solid metal gates good for privacy?',
+          answer: 'Opaque aluminum panels provide an exceptional visual barrier against passing street traffic while maintaining a sleek aesthetic. You can enjoy your Harpenden garden in complete privacy with these zero maintenance installations.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Are sliding or swing gates better for wide driveways in this area?',
+          answer: 'Wide entrances common on the grand detached homes around The Avenues often suit sliding models beautifully. An automated gate system sliding neatly behind existing boundary walls maximizes your parking space. It also provides a sleek, high security barrier that complements the affluent character of Harpenden.',
+        },
+        {
+          question: 'How often do these mechanisms need servicing given the local weather?',
+          answer: 'Routine maintenance is highly recommended annually to combat the effects of damp weather and autumn leaves. Since many properties border Rothamsted Park or mature woodlands, debris can easily clog the tracks or photocells. A yearly check keeps everything functioning perfectly and extends the lifespan of your motors.',
+        },
+        {
+          question: 'Can the intercom connect directly to my smartphone while I am in London?',
+          answer: 'Smart connectivity allows you to manage access from anywhere using an app on your phone. Whether you are commuting or just popping down to the high street, you can see and speak to delivery drivers at your Harpenden home. You can even open the entrance remotely to let packages be left securely.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The safety sensors on my gate keep stopping it from closing; can you fix this?',
+          answer: 'Faulty photocells frequently cause erratic behavior, especially if they are dirty or misaligned. We can quickly replace or recalibrate these crucial safety devices on your Harpenden property.',
+        },
+        {
+          question: 'My wooden gates near the Common are sagging; do they need replacing or just repairing?',
+          answer: 'Dropped timber can often be saved by installing diagonal bracing or upgrading the primary hinges. We will always attempt to repair your beautiful Harpenden wooden gates before suggesting a costly replacement.',
+        },
+        {
+          question: 'Do you fix broken underground motors?',
+          answer: 'Submerged operators are our specialty, and we carry replacement foundation boxes and drainage components. We can expertly rebuild the underground mechanisms keeping your Harpenden driveway secure.',
+        },
+      ],
+    },
     cityIntro: [
       'Harpenden sits in the premium commuter belt of West Hertfordshire - substantial detached housing, large garden plots, heavy mature tree cover, and a property value profile running well into seven figures on the ridgeline streets. Gate installations here reflect those realities: higher average specifications, longer cable runs, more careful landscape considerations, and a planning context focused on the Harpenden conservation area around the Common and High Street.',
       'Our Harpenden installer network combines specialists with substantive track records in the town - including the Topstreet Way, West Common, and Luton Road areas - and an understanding of the planning nuances that apply within and adjacent to the village centre. Site surveys are free and written quotes typically arrive within 5 working days of enquiry.',
@@ -130,6 +308,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Chiltern valleys present harsh topographical challenges that accelerate wear and tear on heavy driveway gates. Driveways in Berkhamsted frequently slope steeply, putting immense strain on hinges and automation motors. When these systems begin to struggle or drop out of plumb, specialized repair engineers step in. They deploy rising hinge replacements, reinforce weakened mounting brackets, and upgrade overworked electromechanical arms to ensure the gates can safely clear the rising tarmac without destroying the drive hardware.',
         'Hydraulic fluid leaks are a common mechanical issue during freezing winter temperatures in the valley. If a surface-mounted ram begins to lose pressure, the heavy gate will fail to lock securely, leaving the property vulnerable to high winds and intruders. Local repair teams carry replacement seals, fresh aviation-grade hydraulic oil, and replacement valves to rebuild these commercial-grade motors on-site, restoring the immense pushing torque required to secure Berkhamsted\'s sprawling rural properties.',
         'Sagging timber is a frequent structural fault caused by the damp microclimate near the canal. As wooden gates absorb moisture, they become incredibly heavy, causing the joints to separate and the gate to drag on the floor. Expert carpenters and gate technicians work together to re-brace the heavy hardwood leaves, install heavy-duty jockey wheels for additional support, and adjust the geometric hang of the gate, saving the homeowner from having to purchase an entirely new boundary.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can a sliding gate handle the steep hills near the castle?',
+          answer: 'Sloped tracking is extremely dangerous, so we utilize cantilever systems for uneven ground. The entire structure hovers above the Berkhamsted incline, completely eliminating the need for a floor rail.',
+        },
+        {
+          question: 'Do you offer wooden sliders that look like traditional double gates?',
+          answer: 'Faux splits can be designed into a single horizontal panel to mimic dual swings. You get the aesthetic of classic timber doors with the spatial efficiency of a modern slider.',
+        },
+        {
+          question: 'How quickly can the entrance open for my morning commute?',
+          answer: 'Geared drives provide rapid transit speeds to minimize your waiting time on the street. You will be able to pull out onto the main road swiftly and safely every single day.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'My driveway slopes steeply up from the road; can it still be automated?',
+          answer: 'Rising hinges are utilized to physically lift the bottom edge of the frame upwards as it swings inward. This brilliant engineering solution prevents the base of your electric swing gate from scraping against the steep Berkhamsted inclines common near Shootersway.',
+        },
+        {
+          question: 'Will a modern aluminum design look out of place near the canal?',
+          answer: 'Heritage finishes can actually blend brilliantly with the historic brickwork found near the Grand Union Canal. We offer bespoke powder coating so lightweight modern aluminum perfectly matches the traditional Berkhamsted surroundings.',
+        },
+        {
+          question: 'Are there quiet motor options so I do not disturb my close neighbors?',
+          answer: 'Silent hydraulics ensure our premium motors operate with a whisper quiet action during every cycle. This is particularly important for the tightly packed Victorian terraces closer to the Berkhamsted town center to avoid late night noise nuisance.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Will wooden gates suit a modern house near the canal?',
+          answer: 'Beautiful grain patterns can be incorporated into sleek, contemporary horizontal slatted designs very easily. These modern wooden driveway gates contrast brilliantly against the water features near Berkhamsted.',
+        },
+        {
+          question: 'How heavy are solid wooden gates compared to metal?',
+          answer: 'Dense hardwoods are exceptionally heavy and require substantial support pillars to function correctly. We always survey your Berkhamsted brickwork to ensure it can handle the impressive weight of solid timber.',
+        },
+        {
+          question: 'Do you offer automated options for wooden gates?',
+          answer: 'Softwood alternatives and heavy oak alike can be fully automated using discreet hydraulic arms. We blend the traditional Berkhamsted look with modern convenience flawlessly.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Will metal gates look too industrial near the canal?',
+          answer: 'Heritage styling using ornate scrollwork ensures your boundary looks elegant rather than imposing or industrial. These classic metal driveway gates contrast brilliantly against the water features near Berkhamsted.',
+        },
+        {
+          question: 'How heavy are solid metal gates compared to wood?',
+          answer: 'Thick steel is exceptionally heavy and requires robust, deeply concreted support pillars to function correctly. We always survey your Berkhamsted brickwork to ensure it can handle the impressive weight of solid metal panels.',
+        },
+        {
+          question: 'Do you offer automated options for metal gates?',
+          answer: 'Lightweight aluminum and heavy steel alike can be fully automated using discreet hydraulic or subterranean motors. We blend the traditional Berkhamsted look with modern convenience flawlessly.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'My driveway slopes steeply up from the road; can it still be automated?',
+          answer: 'Steep inclines are very common for properties rising up towards Shootersway from the valley floor. We overcome this by fitting specialized articulated arm motors or configuring the doors to swing outward if space permits. Your automated gate system will be perfectly balanced to handle the gradient safely.',
+        },
+        {
+          question: 'Will a modern aluminum design look out of place near the canal?',
+          answer: 'Contemporary finishes can actually contrast brilliantly with the historic brickwork found near the Grand Union Canal. We offer bespoke powder coating in heritage colors so modern aluminum blends seamlessly with Berkhamsted surroundings. This gives you the benefit of a lightweight, rust free installation without ruining the local charm.',
+        },
+        {
+          question: 'Are there quiet motor options so I do not disturb my close neighbors?',
+          answer: 'Brushless technology ensures our 24V motors operate with a whisper quiet action. This is particularly important for the tightly packed Victorian terraces closer to the town center. You can come and go late at night without causing any noise nuisance.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The hydraulic ram on my swing gate is leaking oil; is it dangerous?',
+          answer: 'Leaking fluid indicates a blown seal, which will eventually cause the gate to fail completely. Our Berkhamsted repair team can safely replace the seals and refill the hydraulic pressure on-site.',
+        },
+        {
+          question: 'Can you repair historic iron gates near the canal without ruining them?',
+          answer: 'Careful restoration techniques ensure we fix vintage metalwork while preserving its original character. We regularly perform sympathetic repairs for heritage properties throughout the Berkhamsted conservation areas.',
+        },
+        {
+          question: 'My gate remote only works when I am standing right next to the pillar.',
+          answer: 'Weak range usually points to a failing receiver antenna or severe local radio interference. We can upgrade your Berkhamsted receiver module to restore long-distance operation instantly.',
+        },
       ],
     },
     cityIntro: [
@@ -172,6 +436,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Agricultural hinge repair is a specialized service highly requested by the sprawling farms on the village outskirts. Massive five-bar gates often drop under their own immense weight over the years. Rather than replacing the massive timber structures, vetted technicians use specialized lifting equipment to re-hang the leaves. They install heavy-duty, adjustable wraparound hinges that allow for future micro-adjustments, ensuring the wide agricultural entrances operate flawlessly without dragging in the mud.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Are there discrete designs that blend with the rural Chilterns landscape?',
+          answer: 'Low profile tracks and hidden motors ensure the technology remains completely unobtrusive. We can clad the frame in natural hardwoods that age beautifully against the Tring countryside backdrop.',
+        },
+        {
+          question: 'What safety features prevent the gate hitting a parked car?',
+          answer: 'Advanced radar sensors detect any vehicle parked too closely to the movement path. The motor instantly halts, preventing costly scratches to your car or damage to the mechanism.',
+        },
+        {
+          question: 'Do sliding gates require more maintenance than swinging ones?',
+          answer: 'Rail clearing is the only extra chore required to keep things running perfectly. Sweeping away accumulated gravel or snow ensures the wheels never jam during daily operations.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do you install heavy wooden systems that fit with a more rural aesthetic?',
+          answer: 'Solid oak pairs provide a stunning, traditional look perfect for homes bordering Tring Park. These heavy timber entrances are fully compatible with discrete underground automation, offering robust security while maintaining the rustic feel of the Chiltern Hills.',
+        },
+        {
+          question: 'Does the chalky ground affect the installation of underground motor boxes?',
+          answer: 'Chalk foundations actually drain quite well, making subterranean installation relatively straightforward compared to heavy clay. Our groundwork team will excavate solid trenches to ensure your electric swing gate motors remain dry and perfectly level over time.',
+        },
+        {
+          question: 'Can agricultural vehicles pass through easily if I live on the outskirts?',
+          answer: 'Farm clearance requires a significantly wider span, which we achieve using heavy duty hinges and reinforced posts. If your Tring property backs onto working farmland, we ensure the opening is broad enough for large tractors and trailers.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Are wooden five-bar gates a good option for rural homes here?',
+          answer: 'Heavy hinges support these iconic agricultural designs perfectly for properties bordering the Tring countryside. They offer a wonderfully rustic entrance while securing your rural driveway effectively.',
+        },
+        {
+          question: 'What maintenance is required for wooden gates exposed to the Chiltern Hills weather?',
+          answer: 'Treated pine and other timbers simply require an annual coating of protective microporous oil. This quick maintenance routine shields your Tring wooden driveway gates from harsh winter frosts and summer UV rays.',
+        },
+        {
+          question: 'Can you carve our house name into the wooden gates?',
+          answer: 'Cedar planks and oak panels provide the perfect canvas for personalized, deeply routed lettering. This adds a fantastic bespoke touch to your Tring property entrance.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Are metal farm gates a good option for rural homes here?',
+          answer: 'Tubular steel designs offer immense strength for properties bordering the Tring countryside while remaining visually unobtrusive. They provide a secure agricultural entrance while allowing the beautiful rural views to remain visible.',
+        },
+        {
+          question: 'What maintenance is required for metal gates exposed to the Chiltern Hills weather?',
+          answer: 'Powder coated steel simply requires an occasional wash with soapy water to keep it looking brand new. This incredibly low maintenance routine shields your Tring metal driveway gates from harsh winter frosts effortlessly.',
+        },
+        {
+          question: 'Can you incorporate our house name into the metalwork?',
+          answer: 'Laser-cut steel plates provide the perfect canvas for personalized, precision cut lettering or house numbers. This adds a fantastic bespoke touch to your Tring property entrance.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do you install wooden systems that fit with a more rural aesthetic?',
+          answer: 'Hardwood options like Iroko or Oak provide a stunning, traditional look perfect for homes bordering Tring Park. These heavy timber pairs are fully compatible with discrete underground automation. They offer robust security while maintaining the rustic feel of the Chiltern Hills.',
+        },
+        {
+          question: 'Does the chalky ground affect the installation of ground tracks?',
+          answer: 'Chalk foundations actually drain quite well, making track laying relatively straightforward compared to heavy clay. Our groundwork team will excavate a solid concrete trench to ensure the rails remain perfectly level over time. This prevents your automated gate system from derailing or sticking during operation.',
+        },
+        {
+          question: 'Can agricultural vehicles pass through easily if I live on the outskirts?',
+          answer: 'Agricultural clearance requires a wider span, which we achieve using heavy duty telescopic sliding designs. If your Tring property backs onto working farmland, we ensure the opening is broad enough for tractors and trailers. The robust motors we specify will easily handle the extra weight of these oversized frames.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The wind caught my solid wooden gate and snapped the hinge; can it be welded?',
+          answer: 'Fractured brackets must be completely replaced, as welding fatigued metal rarely holds against heavy timber. We will install uprated, heavy-duty hinges to protect your Tring entrance from future gale damage.',
+        },
+        {
+          question: 'Do you service agricultural gate motors for farms on the outskirts?',
+          answer: 'Farm machinery requires specialized commercial operators that we maintain and repair daily. We understand the urgency of keeping rural Tring boundaries secure for livestock and equipment.',
+        },
+        {
+          question: 'The intercom keypad is frozen and won\'t accept my code.',
+          answer: 'Internal condensation sometimes shorts out the membrane keypad during freezing countryside nights. We can fit a heated, weather-sealed replacement console for your Tring property.',
+        },
+      ],
+    },
     cityIntro: [
       'Tring sits at the western extremity of Hertfordshire, firmly within the Chilterns AONB, and the landscape context shapes every gate installation decision. Dacorum Borough Council planning officers apply the Chilterns management plan rigorously in Tring, and material specifications that generate no comment elsewhere in the county routinely face conditions or refusal here.',
       'Our Tring installer network is limited deliberately to specialists with documented AONB experience and genuine understanding of the Dacorum pre-application process. The constrained planning environment means a well-chosen installer saves months of rework, and our criteria for referral reflect that - minimum six verifiable Tring installations, full familiarity with Chilterns material conventions, and working knowledge of the conservation-area controls in the High Street and Akeman Street zones.',
@@ -210,6 +560,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Modern suburban living demands flawless access control, making immediate gate repairs a high priority for Hemel Hempstead residents. Whether a delivery truck accidentally reverses into a swinging gate or a sliding track becomes warped, structural damage completely compromises the security of the family home. Local metalworkers and automation engineers collaborate to straighten bent frames, replace crushed guide rollers, and restore the entrance to its original, highly secure state with minimal downtime.',
         'Track clearing and leveling are essential maintenance tasks for the town\'s numerous sliding gate installations. Over time, heavy vehicles crossing the driveway can depress the concrete foundation, causing the steel floor track to buckle. When a sliding gate hits these uneven spots, it frequently derails or triggers the motor\'s obstacle detection, causing it to freeze. Expert repair teams re-level the tracks, install fresh heavy-duty carriage wheels, and recalibrate the motor limits to ensure perfectly smooth lateral movement.',
         'Intercom faults are incredibly frustrating for commuting families who rely on secure visitor screening. Due to moisture ingress or insect infestations inside the call panels, audio feeds can become full of static or fail entirely. Hemel Hempstead technicians excel at diagnosing these low-voltage communication issues. They replace corroded circuit boards, seal the exterior housings with marine-grade silicone, and upgrade outdated hardwired systems to modern, wireless GSM intercoms to restore crystal-clear access control.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can we secure a wide commercial driveway on an industrial estate?',
+          answer: 'Massive spans are easily accommodated by heavy duty commercial sliding frameworks. These robust installations are designed for high traffic volumes common around Hemel Hempstead business parks.',
+        },
+        {
+          question: 'How does the intercom work if our house is set far back?',
+          answer: 'Wireless transmitters beam high definition audio and video straight to your indoor monitor. You can easily communicate with visitors and grant them access without laying expensive underground cables.',
+        },
+        {
+          question: 'Are these systems vulnerable to power surges?',
+          answer: 'Surge protectors are hardwired into every control board we fit across the region. This safeguards the sensitive electronic components against unexpected electrical spikes or local lightning strikes.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'What is the best access control method for a busy household?',
+          answer: 'Numerical keypads combined with individual remote fobs usually offer the most efficient setup for busy families. With people commuting via the A41 or heading into Hemel Hempstead center, assigning personal codes makes managing access incredibly simple.',
+        },
+        {
+          question: 'Are there safety sensors to stop the mechanism from closing on my car?',
+          answer: 'Optical beams are installed as a standard safety feature across all our residential swinging projects. If a vehicle breaks the invisible line, the electric swing gate stops immediately and reverses, giving you total peace of mind on tighter driveways.',
+        },
+        {
+          question: 'Can you retrofit automation onto my existing wrought iron setup?',
+          answer: 'Upgrading motors is entirely possible provided your current hinges and support posts are structurally sound. We frequently automate manual wrought iron setups around the Boxmoor area with discreet surface mounted actuators for a cost effective security boost.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Are wooden gates secure enough for a house near the town center?',
+          answer: 'Handcrafted panels paired with heavy duty deadlocks provide formidable physical security against intruders. Your Hemel Hempstead home will benefit from a robust wooden driveway gate that deters opportunistic trespassing.',
+        },
+        {
+          question: 'Do you install wooden sliding gates?',
+          answer: 'Rustic charm can absolutely be applied to a space-saving horizontal sliding track system. We frequently install wooden sliding barriers for tighter driveways around the busy Hemel Hempstead residential areas.',
+        },
+        {
+          question: 'Can the timber be painted to match my front door?',
+          answer: 'Varnished finishes are popular, but we also offer premium factory painting in any specified color. Your new wooden driveway gates can perfectly match your Hemel Hempstead window frames or exterior decor.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Are metal gates secure enough for a house near the town center?',
+          answer: 'Rigid steel panels paired with heavy duty magnetic locks provide formidable physical security against intruders. Your Hemel Hempstead home will benefit from a robust metal driveway gate that actively deters opportunistic trespassing.',
+        },
+        {
+          question: 'Do you install metal sliding gates?',
+          answer: 'Space-saving sliding tracks are the ideal solution for tighter driveways around the busy Hemel Hempstead residential areas. We frequently install motorized metal barriers that retract neatly behind your existing walls.',
+        },
+        {
+          question: 'Can the metal be painted to match my front door?',
+          answer: 'Hundreds of colors are available through our premium powder coating process, ensuring a perfect aesthetic match. Your new metal driveway gates can perfectly complement your Hemel Hempstead window frames or exterior decor.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'What is the best access control method for a busy household?',
+          answer: 'Keypad entry combined with individual remote fobs is usually the most efficient setup for busy families. With people commuting via the A41 or heading into Hemel Hempstead center, assigning personal codes makes managing access simple. We can also integrate ANPR cameras to read your number plate for completely hands free entry.',
+        },
+        {
+          question: 'Are there safety sensors to stop the mechanism from closing on my car?',
+          answer: 'Infrared beams are installed as a standard safety feature across all our residential projects. If a vehicle, child, or pet breaks the invisible line, the automated gate system stops immediately and reverses. This gives you total peace of mind when maneuvering on tighter driveways common in older parts of town.',
+        },
+        {
+          question: 'Can you retrofit automation onto my existing wrought iron setup?',
+          answer: 'Retrofitting motors is entirely possible provided your current hinges and posts are structurally sound. We frequently upgrade manual wrought iron setups around the Boxmoor area with discreet ram style actuators. It is a cost effective way to secure your property without replacing the entire boundary.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The sliding gate track is buckling; do you repair groundworks?',
+          answer: 'Distorted rails require complete excavation and the pouring of a new, perfectly level concrete foundation. Our Hemel Hempstead groundwork team handles this entire track replacement process seamlessly.',
+        },
+        {
+          question: 'My electric gate closes but immediately opens again on its own.',
+          answer: 'Limit switches tell the motor when to stop, and yours are likely out of alignment. We can easily recalibrate the end-of-travel limits to keep your Hemel Hempstead entrance locked securely.',
+        },
+        {
+          question: 'Are you available for commercial gate repairs on the industrial estate?',
+          answer: 'Business callouts are treated with maximum priority to secure exposed depots and warehouses. We fix heavy-duty commercial barriers across Hemel Hempstead to minimize your operational downtime.',
+        },
       ],
     },
     cityIntro: [
@@ -252,6 +688,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Corrosion treatment extends the life of traditional ironwork boundaries situated near the damp River Gade environment. Rust not only destroys the aesthetic of the gate but structurally weakens the critical hinge points. Maintenance crews utilize heavy-duty wire brushing and specialized rust-converting primers to treat these decaying areas. They touch up the powder coating and heavily grease the moving joints, ensuring the heavy ironwork remains structurally sound and visually immaculate for years to come.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'We live near the M25; will vibrations affect the gate track?',
+          answer: 'Deep concrete foundations isolate the running rail from external ground tremors entirely. Your Kings Langley entrance will remain perfectly aligned and stable despite the heavy passing traffic.',
+        },
+        {
+          question: 'Can I use my mobile phone to let the postman in?',
+          answer: 'Cloud applications give you remote control from anywhere with a signal. You can slide the barrier open slightly from your office desk to accept a secure package delivery.',
+        },
+        {
+          question: 'Do you offer galvanized steel options to prevent rust?',
+          answer: 'Hot dipped galvanizing completely seals the raw steel against corrosive winter weather. We then apply a tough powder coat finish for double protection against the damp British climate.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Will the proximity to the M25 affect the wireless intercom signal?',
+          answer: 'Cellular frequencies used by our premium intercoms are highly robust and specifically chosen to avoid local interference. Even with heavy traffic rolling past on the nearby motorway, your audio and video feeds will remain crystal clear for your Kings Langley home.',
+        },
+        {
+          question: 'Is solar power a viable option for automating a swinging entrance here?',
+          answer: 'Sun charging can power low voltage setups, especially for properties situated on bright, south facing slopes. However, during the gloomy winter months, a mains connection provides much more consistent performance for an electric swing gate.',
+        },
+        {
+          question: 'How secure are these against forced entry attempts?',
+          answer: 'Magnetic holding locks provide an immense force that makes forced entry practically impossible when the barrier is closed. When combined with rigid steel construction, criminals are strongly deterred from targeting your Kings Langley property or vehicles.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'How do wooden gates handle the pollution near the M25?',
+          answer: 'Painted hardwood provides a very tough outer shell that resists airborne grime effectively. A simple wipe down with soapy water keeps your Kings Langley wooden driveway gates looking immaculate.',
+        },
+        {
+          question: 'Can we automate our existing wooden gates?',
+          answer: 'Robust jointers and structural supports must be assessed before retrofitting any automation motors. If your Kings Langley timber is sound, we can easily add electric rams to your current setup.',
+        },
+        {
+          question: 'Will the wood expand during the wet winter months?',
+          answer: 'Swelling prevention is managed by leaving precise expansion gaps within the hanging frame during installation. This ensures your Kings Langley wooden driveway gates never stick or bind during heavy rain.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'How do metal gates handle the pollution near the M25?',
+          answer: 'Baked enamel finishes provide a very tough outer shell that resists airborne grime and exhaust fumes effectively. A simple wipe down keeps your Kings Langley metal driveway gates looking immaculate despite the nearby motorway.',
+        },
+        {
+          question: 'Can we automate our existing metal gates?',
+          answer: 'Structural integrity must be assessed before retrofitting any automation motors to older ironwork. If your Kings Langley metalwork is sound, we can easily add electric rams or underground motors to your current setup.',
+        },
+        {
+          question: 'Will the metal expand during the hot summer months?',
+          answer: 'Thermal expansion is minimal in high quality steel and is easily accommodated by our adjustable hinge systems. This ensures your Kings Langley metal driveway gates never stick or bind during summer heatwaves.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Will the proximity to the M25 affect the wireless intercom signal?',
+          answer: 'Radio frequencies used by our intercoms are highly robust and specifically chosen to avoid local interference. Even with heavy traffic rolling past on the nearby motorway, your audio and video feeds will remain crystal clear. We use hardwired data cables for the main connection to guarantee reliability for your Kings Langley home.',
+        },
+        {
+          question: 'Is solar power a viable option for automating an entrance here?',
+          answer: 'Solar panels can power low voltage setups, especially for properties situated on sunny, south facing slopes. However, during the gloomy winter months, a mains connection provides much more consistent performance for an automated gate system. We generally advise trenching a dedicated power supply for ultimate peace of mind.',
+        },
+        {
+          question: 'How secure are these against forced entry attempts?',
+          answer: 'Magnetic locks provide an immense holding force that makes forced entry practically impossible. When combined with rigid steel construction, criminals are strongly deterred from targeting your property. This added layer of security is highly valued by residents wanting to protect their vehicles.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'A delivery truck backed into my metal gate; can the dent be pulled out?',
+          answer: 'Crushed steel tubing usually needs to be cut out and completely re-welded for structural safety. We can expertly rebuild the damaged section of your Kings Langley metal gates on-site.',
+        },
+        {
+          question: 'My underground gate motors were flooded during heavy rain; are they ruined?',
+          answer: 'Flooded electronics must be stripped, dried, and tested, but the physical motors often survive. We will clear the blocked soakaways at your Kings Langley home to prevent this happening again.',
+        },
+        {
+          question: 'Do you offer preventative maintenance contracts?',
+          answer: 'Scheduled care agreements provide peace of mind by covering annual servicing and priority breakdown response. This is the most cost-effective way to manage your Kings Langley automated entrance.',
+        },
+      ],
+    },
     cityIntro: [
       'Kings Langley combines a significant historic core around the High Street with substantial residential development across the village and along the A4251 corridor. The town sits within the Chilterns AONB buffer zone, and Dacorum Borough Council planning officers apply heightened material sensitivity to gate installations visible from public vantage points.',
       'Our Kings Langley installer network focuses on specialists with documented experience across the village, including the High Street conservation area and the AONB buffer considerations that influence material specifications. Every referred installer has substantive Dacorum planning experience.',
@@ -290,6 +812,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Plateau farms and expansive rural plots feature exceptionally wide entrances that put immense daily strain on gate hardware. In Bovingdon, sagging gate leaves and burnt-out motors are common issues due to the sheer size and weight of these agricultural barriers. Expert repair technicians specialize in heavy-duty interventions, deploying specialized winches to lift dropped gates, replacing stripped rack-and-pinion gears, and installing high-capacity industrial hinges capable of supporting the massive loads.',
         'Heavy impact damage from tractors, horseboxes, or delivery vans frequently bends the structural crossbeams of these rural gates. Instead of throwing away the expensive bespoke ironwork or timber, local engineers provide comprehensive on-site structural repairs. They utilize mobile welding units to cut out the crushed sections and splice in fresh, reinforced steel. This specialized agricultural repair service ensures the massive boundaries are restored to full strength quickly and cost-effectively.',
         'Commercial motor servicing is essential for these high-usage country estates. Standard residential maintenance is insufficient for the heavy hydraulic actuators utilized in Bovingdon. Professional servicing includes draining and replacing the aviation-grade hydraulic fluid, testing the pressure relief valves, and adjusting the slow-down limits to ensure the massive gates do not slam shut. This rigorous mechanical upkeep prevents sudden, catastrophic motor failure during the harsh winter months.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can a sliding gate fit on a driveway with limited width?',
+          answer: 'Telescopic variants use overlapping panels that stack tightly together when retracted. This clever engineering requires drastically less run-back space than a standard single-piece Bovingdon slider.',
+        },
+        {
+          question: 'What happens if snow freezes inside the floor track?',
+          answer: 'Heated cables can be embedded beneath the rail during the installation process. These gently warm the metal during freezing conditions to melt ice and keep the wheels turning.',
+        },
+        {
+          question: 'Are there child safety mechanisms built into the motor?',
+          answer: 'Intelligent obstacle detection constantly monitors the force required to move the frame. If a child touches the moving structure, the system registers the resistance and stops immediately.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can I integrate a pedestrian side entrance with the main vehicle barrier?',
+          answer: 'Matching walkways alongside the main driveway setup are easily achieved for seamless visual integration. This is perfect for walking down to Bovingdon Green without having to cycle the heavy main electric swing gate motors just to leave on foot.',
+        },
+        {
+          question: 'Do the hydraulic motors struggle in freezing winter temperatures?',
+          answer: 'Anti-freeze fluids inside high quality hydraulic motors ensure they operate smoothly even during harsh European winters. Your Bovingdon automated entrance will continue to swing open reliably despite sharp frosts, though we recommend keeping the hinges free from ice.',
+        },
+        {
+          question: 'What kind of warranty comes with a new installation?',
+          answer: 'Comprehensive cover typically lasts for two years on all moving parts and main control boards. We pride ourselves on fast local callouts if anything goes wrong at your Bovingdon address to keep your investment running flawlessly.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do you source your timber sustainably for rural installations?',
+          answer: 'Sourced locally or from certified sustainable forests, our timber is always ethically harvested. You can upgrade your Bovingdon boundary with a clear environmental conscience.',
+        },
+        {
+          question: 'What is the best treatment for gates facing the open fields?',
+          answer: 'Deep penetration wood preservers block fungal decay and repel water instantly. This is the ultimate defense for wooden driveway gates exposed to the harsh elements across Bovingdon green spaces.',
+        },
+        {
+          question: 'Are wooden gates noisier than metal ones when closing?',
+          answer: 'Sawn logs and solid timber actually absorb sound vibrations much better than hollow metal tubes. Your heavy wooden gates will close with a reassuring, quiet thud rather than a metallic clang.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do you offer lightweight metal options for rural installations?',
+          answer: 'Aerospace aluminum provides the robust look of heavy steel but weighs significantly less, reducing motor strain. You can upgrade your Bovingdon boundary with an imposing metal gate that operates effortlessly.',
+        },
+        {
+          question: 'What is the best rust protection for gates facing open fields?',
+          answer: 'Hot-dipped galvanizing submerges the raw steel in molten zinc, offering the ultimate defense against corrosion. This is the definitive treatment for metal driveway gates exposed to the harsh elements across Bovingdon green spaces.',
+        },
+        {
+          question: 'Are metal gates noisier than wooden ones when closing?',
+          answer: 'Rubber dampeners are strategically placed on the receiving pillars to absorb the impact of closing panels. Your heavy metal gates will shut with a reassuring click rather than a loud, echoing clang.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can I integrate a pedestrian side entrance with the main vehicle barrier?',
+          answer: 'Seamless integration of a matching pedestrian doorway alongside the main driveway setup is easily achieved. This is perfect for walking the dog down to Bovingdon Green without having to cycle the heavy main motors. Both access points can be controlled from the same master fob or indoor handset.',
+        },
+        {
+          question: 'Do the motors struggle in freezing winter temperatures?',
+          answer: 'Cold weather rarely affects high quality hydraulic motors designed for harsh European climates. The internal fluids have anti freeze properties, ensuring your automated gate system operates smoothly even during sharp frosts. We also recommend basic winter maintenance to keep hinges lubricated and free from ice buildup.',
+        },
+        {
+          question: 'What kind of warranty comes with a new installation?',
+          answer: 'Comprehensive coverage typically lasts for two years on all moving parts and control boards. We pride ourselves on fast local callouts if anything goes wrong at your Bovingdon address. Extended service plans are also available to keep your investment running flawlessly for decades.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The wooden gates are scraping along the driveway when they open.',
+          answer: 'Ground friction indicates the timber has swelled or the hinges have slowly dropped over time. We can shave the bottom edge or adjust the geometry to restore smooth operation in Bovingdon.',
+        },
+        {
+          question: 'The control box is making a loud buzzing noise but the gate won\'t move.',
+          answer: 'Stuck relays or failed capacitors are the most common culprits behind a humming control board. Our technicians carry universal replacement parts to fix this specific electrical fault in Bovingdon instantly.',
+        },
+        {
+          question: 'Can you replace missing finials on an old wrought iron gate?',
+          answer: 'Matching spearheads can be sourced or custom-forged to restore the visual symmetry of your entrance. We expertly weld these replacement finials onto your vintage Bovingdon ironwork.',
+        },
       ],
     },
     cityIntro: [
@@ -332,6 +940,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Underground drainage maintenance is the single most important preventative service for these premium properties. During the autumn, Redbourn\'s beautiful mature trees drop immense amounts of leaves that quickly block the soakaways beneath sub-surface gate motors. Annual servicing teams proactively clear out this organic debris, flush the drainage pipes, and inspect the motor seals, ensuring the expensive underground electronics survive the wet British winter without flooding.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do sliding gates complement historic village architecture?',
+          answer: 'Ornamental ironwork can be seamlessly integrated into a horizontally moving frame. You can retain the charming Redbourn aesthetic while enjoying the convenience of a space saving slider.',
+        },
+        {
+          question: 'How do we power the gate if it is far from our fuse box?',
+          answer: 'Subterranean trenching allows us to safely route an armored supply cable to the boundary. We handle all the digging and reinstatement to provide reliable mains electricity to your entrance.',
+        },
+        {
+          question: 'Can the gate automatically close once we have driven through?',
+          answer: 'Customizable timers are programmed to shut the entrance after a set delay. This guarantees your property is secured without you having to remember to press the fob again.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do you offer designs that match the historic aesthetic of the village?',
+          answer: 'Artisan blacksmithing is at the heart of our bespoke ironwork and traditional timber ranges. We regularly install styles that perfectly complement the old coaching inns and listed buildings surrounding Redbourn Common without compromising on modern convenience.',
+        },
+        {
+          question: 'Is it possible to hide the swinging motors completely out of sight?',
+          answer: 'Underground automation involves housing the motor units inside galvanized boxes buried flush with your driveway surface. This leaves only the pivot arm visible, maintaining incredibly clean lines for your property frontage, which is highly preferred by design conscious homeowners.',
+        },
+        {
+          question: 'How do delivery drivers gain access when I am not at home?',
+          answer: 'Timed passcodes can be issued to regular couriers, allowing them entry only during specific daylight hours. Alternatively, a smart video doorbell lets you remotely open the electric swing gate slightly to accept parcels securely on your Redbourn driveway.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do wooden gates look appropriate for listed buildings in the village?',
+          answer: 'Expert craftsmen in our workshop specialize in replicating historical joinery techniques for conservation areas. We can design wooden driveway gates that perfectly satisfy Redbourn heritage planning officers.',
+        },
+        {
+          question: 'How long does a well-maintained wooden gate last?',
+          answer: 'Heritage carpentry utilizing premium oak can easily survive for multiple decades with basic annual care. It is a brilliant long-term investment for securing your beautiful Redbourn property.',
+        },
+        {
+          question: 'Can wooden gates sag over time?',
+          answer: 'Structural integrity is maintained by utilizing diagonal bracing across the back of the gate panels. This traditional engineering method completely prevents your Redbourn wooden driveway gates from dropping.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do metal gates look appropriate for listed buildings in the village?',
+          answer: 'Master blacksmiths in our workshop specialize in replicating historical ironwork techniques for conservation areas. We can design metal driveway gates that perfectly satisfy Redbourn heritage planning officers while securing your home.',
+        },
+        {
+          question: 'How long does a well-maintained metal gate last?',
+          answer: 'Galvanized steel utilizing premium coatings can easily survive for multiple decades with zero rust. It is a brilliant, install-and-forget long term investment for securing your beautiful Redbourn property.',
+        },
+        {
+          question: 'Can metal gates sag over time?',
+          answer: 'Welded joints ensure absolute structural rigidity that will never warp or drop like cheap bolted alternatives. This professional engineering method completely prevents your Redbourn metal driveway gates from sagging.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do you offer designs that match the historic aesthetic of the village?',
+          answer: 'Traditional craftsmanship is at the heart of our bespoke ironwork and timber ranges. We regularly install styles that perfectly complement the old coaching inns and listed buildings surrounding Redbourn Common. You get the convenience of an automated gate system without compromising the charming village character.',
+        },
+        {
+          question: 'Is it possible to hide the motors completely out of sight?',
+          answer: 'Subterranean installation involves housing the motor units inside galvanized boxes buried flush with your driveway surface. This leaves only the pivot arm visible, maintaining incredibly clean lines for your property frontage. It is the preferred choice for design conscious homeowners who want invisible automation.',
+        },
+        {
+          question: 'How do delivery drivers gain access when I am not at home?',
+          answer: 'Timed access codes can be issued to regular couriers, allowing them entry only during specific daylight hours. Alternatively, a smart video doorbell lets you remotely open the barrier slightly to accept parcels securely. This stops packages from being left out in the open on your Redbourn driveway.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Do you repair gates on listed properties without causing damage to old brickwork?',
+          answer: 'Delicate extractions are employed when removing rusted hinges from heritage masonry to avoid cracking the bricks. We take extreme care when maintaining historic boundaries throughout the Redbourn conservation area.',
+        },
+        {
+          question: 'The gate motor runs, but the gate doesn\'t move; is the gearbox broken?',
+          answer: 'Sheared drive pins or stripped internal nylon gears will cause the motor to spin freely. We can rebuild the broken gearbox to get your Redbourn automated gates moving properly again.',
+        },
+        {
+          question: 'How quickly can you replace a snapped underground motor arm?',
+          answer: 'Replacement arms are kept fully stocked in our vans for immediate swap-outs during emergency visits. We will restore the structural link between the motor and your Redbourn gate swiftly.',
+        },
+      ],
+    },
     cityIntro: [
       'Redbourn sits in the western part of the St Albans district, with a substantial village green at its heart and historic streetscape character along the High Street and Church End. The planning context from St Albans City & District Council combines conservation-area controls in the village core with generally pragmatic treatment across the post-war residential streets.',
       'Our Redbourn installer network includes specialists with substantive track records across the village, both in the conservation area and the surrounding residential streets. Every referred installer has documented St Albans planning experience.',
@@ -370,6 +1064,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Riverside properties face a constant battle against moisture, making routine gate maintenance absolutely vital. In Wheathampstead, the damp valley air rapidly accelerates the rusting of untreated hinges and causes timber leaves to swell and jam against one another. Professional maintenance crews regularly adjust the geometric hang of these swollen gates and apply liberal amounts of water-displacing marine grease to all moving steel components to ensure frictionless, silent operation.',
         'Damp ingress into intercoms and keypad housings is a major frustration for local residents. When condensation shorts out the access control panel, homeowners are left locked out of their own driveways. Wheathampstead technicians excel at resolving these low-voltage issues. They replace the damaged micro-switches, upgrade the housing to an IP67-rated weatherproof standard, and install fresh rubber gaskets to ensure the communication hardware remains completely impenetrable to the damp river valley climate.',
         'Safety edge replacement guarantees that automated gates remain legally compliant and perfectly safe for family use. The pressure-sensitive rubber bumpers on the edges of moving gates degrade over time due to UV exposure and freezing temperatures. Local engineers test these critical safety features using calibrated force-testers. If a bumper fails to trigger the motor to stop, they install fresh, highly responsive safety edges, ensuring the heavy automated barrier never accidentally crushes a vehicle or pedestrian.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Is it safe to install electric gates near the river where flooding occurs?',
+          answer: 'Elevated motors keep the critical electronics well above potential high water marks. A cantilever slider is the perfect choice for Wheathampstead homes prone to seasonal river swelling.',
+        },
+        {
+          question: 'How noisy are steel sliding gates when operating?',
+          answer: 'Rubber dampeners placed between the rack and pinion drastically reduce operational clatter. Your new entrance will glide open with minimal acoustic disturbance to you or your neighbors.',
+        },
+        {
+          question: 'Can I integrate my existing security cameras with the new gate?',
+          answer: 'Open architecture control boards allow seamless integration with most modern CCTV setups. You can monitor the entrance live and trigger the opening sequence from a single unified dashboard.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'We live near the river; are your surface mounted motors waterproof?',
+          answer: 'Sealed IP67 enclosures house all the sensitive electronics, boasting a high rating against moisture and dust ingress. If your Wheathampstead property sits down near the River Lea, dampness will not short out the control board or the external ram operators.',
+        },
+        {
+          question: 'Can the swinging speed be adjusted to close faster?',
+          answer: 'Variable parameters within the main control unit allow us to tweak the opening and closing velocities precisely. Fast acting hydraulic arms can significantly reduce the time you spend waiting on the road while keeping the electric swing gate perfectly safe.',
+        },
+        {
+          question: 'Are bi-folding models suitable if a traditional swing arc is too large?',
+          answer: 'Folding frames are the ultimate space saving solution when a traditional swing would hit your parked car. The leaves articulate in the middle, folding neatly back against the pillars in a fraction of the space, making them highly effective for compact plots.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Are wooden gates a bad idea if we live close to the River Lea?',
+          answer: 'Gate posts and bottom rails are highly susceptible to moisture, so we elevate them slightly above the ground. This prevents your Wheathampstead wooden driveway gates from soaking up standing water during wet seasons.',
+        },
+        {
+          question: 'What kind of locking mechanisms work best on timber?',
+          answer: 'Moisture barriers aside, we install premium marine-grade stainless steel locks that will never rust. These heavy-duty deadbolts keep your Wheathampstead property completely secure.',
+        },
+        {
+          question: 'Can you automate a split-level wooden gate on a sloping drive?',
+          answer: 'Seasonal expansion and complex geometries are easily handled by our bespoke rising hinge systems. We can automate wooden driveway gates even on the most awkward Wheathampstead slopes.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Are metal gates a bad idea if we live close to the River Lea?',
+          answer: 'Marine specification powder coating is highly resistant to moisture, making metal an excellent choice for riverside properties. Your Wheathampstead metal driveway gates will completely ignore the damp conditions and stand strong.',
+        },
+        {
+          question: 'What kind of locking mechanisms work best on metal?',
+          answer: 'Electromechanical drop-bolts shoot a solid steel pin deeply into the ground whenever the entrance closes. These heavy-duty deadlocks keep your Wheathampstead property completely secure against forced entry.',
+        },
+        {
+          question: 'Can you automate a split-level metal gate on a sloping drive?',
+          answer: 'Ascending geometry is easily handled by our bespoke rising hinge systems designed for sloped entrances. We can automate metal driveway gates even on the most awkward Wheathampstead inclines.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'We live near the river; are your control panels waterproof?',
+          answer: 'Sealed enclosures house all the sensitive electronics, boasting a high IP rating against moisture and dust. If your Wheathampstead property sits down near the River Lea, dampness will not short out the control board. Even driving rain and winter storms will not penetrate the protective casings.',
+        },
+        {
+          question: 'Can the opening speed be adjusted to close faster?',
+          answer: 'Adjustable parameters within the main control unit allow us to tweak the opening and closing velocities. Fast acting hydraulic arms can significantly reduce the time you spend waiting on the road. We carefully calibrate the force limits so the automated gate system remains perfectly safe while operating quickly.',
+        },
+        {
+          question: 'Are bi-folding models suitable for very short driveways?',
+          answer: 'Folding mechanisms are the ultimate space saving solution when a traditional swing arc would hit your parked car. The leaves articulate in the middle, folding neatly back against the pillars in a fraction of the space. This is highly effective for compact plots near the village center.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Moisture from the river keeps corroding my gate intercom; can you provide a waterproof one?',
+          answer: 'Hermetic sealing is required for electronics installed near the River Lea to prevent constant short circuits. We can fit a marine-grade entry panel that easily survives the damp Wheathampstead atmosphere.',
+        },
+        {
+          question: 'My sliding gate is incredibly noisy and rumbles the whole house.',
+          answer: 'Worn bearings inside the support wheels cause severe vibration that travels through the ground track. Replacing these damaged rollers will make your Wheathampstead sliding gate glide silently once more.',
+        },
+        {
+          question: 'Can you weld a cracked aluminum gate frame?',
+          answer: 'Specialized TIG welding is required to bond cracked aluminum without melting the surrounding metal. We possess the advanced equipment necessary to repair lightweight aluminum gates in Wheathampstead safely.',
+        },
       ],
     },
     cityIntro: [
@@ -412,6 +1192,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Rapid response diagnostics save homeowners from unnecessary, expensive replacements. Often, a gate that refuses to move is suffering from a simple, easily fixed fault - such as a spider web blocking an infrared photocell or a slug shorting out the control board. Expert local technicians systematically check the safety loops and low-voltage inputs first, swiftly resolving these minor issues and saving the client from the massive cost of a full system overhaul.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can we automate a very heavy wooden sliding gate?',
+          answer: 'Uprated gearboxes are specifically designed to handle the immense weight of solid timber. We match the motor specifications perfectly to ensure your Markyate boundary moves smoothly and reliably.',
+        },
+        {
+          question: 'How do visitors without fobs exit the property?',
+          answer: 'Driveway sensors buried beneath your tarmac detect departing vehicles automatically. The barrier slides open as guests approach from the inside, allowing a completely hands free departure.',
+        },
+        {
+          question: 'What finishes are best for resisting the harsh winter weather?',
+          answer: 'Textured epoxy coatings provide a rugged, weather resistant shell over the metalwork. This highly durable finish will not chip or fade easily in the exposed rural environment.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'I live right on the busy High Street; how do I avoid holding up traffic?',
+          answer: 'Long distance transmitters allow you to trigger the opening sequence well before you pull off the main road. By the time you turn off the busy A5 and into Markyate, the electric swing gate is already clear, preventing any dangerous tailbacks.',
+        },
+        {
+          question: 'What material is best for high winds in exposed rural spots?',
+          answer: 'Slatted timber or tubular steel designs allow strong gusts to pass straight through the swinging structure. Solid panels act like a massive sail, putting immense strain on the hinges and motors during heavy storms in exposed locations.',
+        },
+        {
+          question: 'Can I integrate driveway lighting with the remote control?',
+          answer: 'Coordinated illumination can be wired into the primary control board for a welcoming arrival. Pressing your fob will simultaneously activate the motors and trigger your driveway pillar lights, making navigating dark rural Markyate lanes much safer.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Will the traffic noise from the A5 be blocked by solid wooden gates?',
+          answer: 'Crafted locally from exceptionally thick timber, our solid panels act as a brilliant acoustic shield. Your Markyate home will benefit from a noticeable reduction in highway noise pollution.',
+        },
+        {
+          question: 'Do you use kiln-dried wood for your gates?',
+          answer: 'Kiln dried timber boasts a vastly reduced moisture content, making it incredibly stable and resistant to warping. We exclusively use this high-grade material for all our Markyate wooden driveway gate installations.',
+        },
+        {
+          question: 'Can we have a wooden pedestrian gate that matches the main driveway?',
+          answer: 'Authentic look and perfect symmetry are achieved by building both gates from the exact same timber batch. Your Markyate property will feature a flawlessly coordinated boundary line.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Will the traffic noise from the A5 be blocked by solid metal gates?',
+          answer: 'Dense aluminum panels act as a brilliant acoustic shield, deflecting road noise away from your property. Your Markyate home will benefit from a noticeable reduction in highway noise pollution with solid metal gates.',
+        },
+        {
+          question: 'Do you use hollow or solid steel for your gates?',
+          answer: 'Thick-walled tubular steel is our standard, offering an incredible strength-to-weight ratio for residential automation. We exclusively use this high-grade material for all our Markyate metal driveway gate installations.',
+        },
+        {
+          question: 'Can we have a metal pedestrian gate that matches the main driveway?',
+          answer: 'Flawless symmetry is achieved by fabricating both gates simultaneously using the exact same design templates. Your Markyate property will feature a perfectly coordinated boundary line that looks incredibly smart.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'I live right on the busy High Street; how do I avoid holding up traffic while waiting to get in?',
+          answer: 'Long range transmitters allow you to trigger the opening sequence well before you pull off the main road. By the time you turn off the busy A5 and into Markyate, the entrance is already clear. This prevents you from blocking the pavement or causing a tailback.',
+        },
+        {
+          question: 'What material is best for high winds in exposed rural spots?',
+          answer: 'Open slatted timber or tubular steel designs allow strong gusts to pass straight through the structure. Solid panels act like a sail, putting immense strain on the hinges and motors during heavy storms. Choosing a permeable design ensures your automated gate system stays perfectly aligned no matter the weather.',
+        },
+        {
+          question: 'Can I integrate driveway lighting with the remote control?',
+          answer: 'Synchronized illumination can be wired into the primary control board for a welcoming arrival. Pressing your fob will simultaneously activate the motors and trigger your driveway pillar lights. It makes navigating dark rural Markyate lanes much safer during the winter months.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The flashing warning light on my gate pillar is smashed; is it a legal requirement to fix it?',
+          answer: 'Visual warnings are a critical safety component mandated by current automated machinery regulations. We must replace the broken beacon to ensure your Markyate entrance complies with all safety laws.',
+        },
+        {
+          question: 'Does your repair service cover intercom wiring faults?',
+          answer: 'Cable tracing equipment allows us to pinpoint breaks in underground data lines accurately. We can repair or bypass the damaged wires to restore clear communication to your Markyate home.',
+        },
+        {
+          question: 'The hinges on my heavy oak gates are screaming; what grease should I use?',
+          answer: 'Lithium-based lubricants are ideal because they do not attract grit or wash away in the rain. However, if the squeal is severe, we should inspect your Markyate hinges for dangerous metal wear first.',
+        },
+      ],
+    },
     cityIntro: [
       'Markyate is a village in the Dacorum district, sitting on the historic line of Watling Street at the Hertfordshire-Bedfordshire border and characterised by its High Street conservation area, Chilterns-edge setting, and the proximity of the Chiltern AONB. Gate installations here sit within a planning context where Dacorum Borough Council assesses material, height, and streetscape impact carefully within the conservation boundary, and where the AONB setting creates broader expectations of material sympathy.',
       'Our Markyate installer network includes specialists with documented village track records and genuine Dacorum planning experience. Every referred installer has completed at least six verifiable Markyate or immediately adjacent projects before receiving any enquiry from us, and understands the design sensibilities that successful conservation area applications require in the Chilterns-edge villages.',
@@ -450,6 +1316,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Ancient flint walls and deeply historic surroundings make repairing boundaries in Flamstead a delicate structural operation. If a heavy gate drops or an automation arm begins to tear out of the ancient masonry, catastrophic damage to the historic wall is imminent. Local engineers stabilize these failing boundaries by fabricating custom, elongated steel mounting plates that distribute the immense pulling force of the gate over a much wider area, protecting the fragile flint stonework.',
         'Pillar subsidence is a common geographical issue in this hilly conservation area. As the ground shifts over time, the gate posts move out of plumb, causing the heavy leaves to bind together in the center. Flamstead gate technicians utilize heavy-duty winches to realign the structures. They frequently replace rigid hinges with fully adjustable, multi-directional variants, allowing the homeowner to easily re-level the gates themselves if the historic pillars continue to settle in the future.',
         'Lubrication schedules are the secret to extending the life of gate automation on these rural village outskirts. Exposed to dust, pollen, and harsh weather, the telescopic arms of linear actuators can quickly become scored and damaged. Bi-annual servicing teams thoroughly clean the extended rams, removing abrasive dirt before applying specialized silicone lubricants. This meticulous care prevents the motor seals from tearing and ensures the automation remains whisper-quiet.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Are sliding gates better than swinging ones for exposed windy locations?',
+          answer: 'Lateral support prevents the massive leverage forces that wind applies to swinging hinges. Sliders are inherently more stable during heavy Flamstead gales because their weight is evenly distributed along a track.',
+        },
+        {
+          question: 'Do you provide battery backups for power cuts?',
+          answer: 'Uninterruptible power supplies keep the main logic board active during a blackout. You will still get several complete opening and closing cycles to enter or exit safely.',
+        },
+        {
+          question: 'Can a sliding gate be installed on a curved boundary wall?',
+          answer: 'Articulated tracking allows specially segmented panels to follow the exact contour of a curve. This bespoke engineering solution maximizes your driveway space while hugging the shape of your perimeter.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Are there width restrictions for installations on very narrow country lanes?',
+          answer: 'Spatial calculations are critical when working along the tight, winding roads characteristic of this area. If the turning circle is too restricted for an outward swing, we can engineer an inward opening mechanism to ensure you can maneuver safely.',
+        },
+        {
+          question: 'Do you offer maintenance contracts to keep the hinges running?',
+          answer: 'Preventative servicing prevents small mechanical issues from developing into expensive motor failures over time. Our technicians will clean the photocells, grease the pivot points, and test the safety edges annually to keep your electric swing gate in top condition.',
+        },
+        {
+          question: 'Will the system automatically open from the inside when I want to leave?',
+          answer: 'Induction loops buried under the tarmac can detect the metal mass of your car as you approach from inside. The barrier opens completely hands free, allowing for a swift and effortless exit, which is incredibly convenient for busy weekday mornings.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Are open-slatted wooden gates better for windy locations on the hill?',
+          answer: 'Matching fences and slatted gates allow fierce Flamstead gales to pass straight through the structure safely. This dramatically reduces the wind load on the hinges compared to solid wooden driveway gates.',
+        },
+        {
+          question: 'What is Accoya wood, and is it worth the extra cost?',
+          answer: 'Accoya wood undergoes a specialized acetylation process that makes it virtually rot-proof for fifty years. It is an exceptional, zero-maintenance choice for properties exposed to the Flamstead countryside weather.',
+        },
+        {
+          question: 'Can farmers easily access fields through your wooden gates?',
+          answer: 'Iroko gates and large oak frames can be built to expansive agricultural widths without compromising strength. We ensure your Flamstead rural entrance accommodates the largest tractors easily.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Are open-slatted metal gates better for windy locations on the hill?',
+          answer: 'Permeable designs allow fierce Flamstead gales to pass straight through the metal structure safely. This dramatically reduces the aerodynamic wind load on the hinges compared to solid metal driveway gates.',
+        },
+        {
+          question: 'What is powder coating, and is it worth the extra cost?',
+          answer: 'Baked polymer resin creates a rock hard shell over the steel that is vastly superior to wet paint. It is an exceptional, zero-maintenance choice for properties exposed to the Flamstead countryside weather.',
+        },
+        {
+          question: 'Can farmers easily access fields through your metal gates?',
+          answer: 'Extended spans can be built to expansive agricultural widths without compromising the structural strength of the steel. We ensure your Flamstead rural entrance accommodates the largest tractors easily.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Are there width restrictions for installations on very narrow country lanes?',
+          answer: 'Spatial planning is critical when working along the tight, winding roads characteristic of this area. We can install sliding variants that retract behind the hedge line, maximizing your turning circle. This ensures you can easily maneuver your vehicle out of your Flamstead property safely.',
+        },
+        {
+          question: 'Do you offer maintenance contracts to keep everything running?',
+          answer: 'Scheduled servicing prevents small mechanical issues from developing into expensive motor failures over time. Our technicians will clean the photocells, grease the hinges, and test the safety edges annually. Keeping your automated gate system in top condition is essential for reliable daily operation.',
+        },
+        {
+          question: 'Will the system automatically open from the inside when I want to leave?',
+          answer: 'Ground loops buried under the tarmac can detect the metal mass of your car as you approach from inside. The barrier opens completely hands free, allowing for a swift and effortless exit. This is incredibly convenient for a fast getaway on busy weekday mornings.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'High winds blew my gates backward and bent the motor arms; can they be straightened?',
+          answer: 'Bent actuators are structurally compromised and will snap entirely if put under tension again. We must install brand new, heavy-duty arms to secure your Flamstead property against future storms.',
+        },
+        {
+          question: 'My gate sometimes opens by itself in the middle of the night.',
+          answer: 'Phantom triggers usually stem from water ingress inside the main control board or a faulty induction loop. We will thoroughly diagnose the electrical systems at your Flamstead home to eliminate the issue.',
+        },
+        {
+          question: 'Do you fix broken lock barrels on manual wrought iron gates?',
+          answer: 'Cylinder replacement is a quick and highly cost-effective service we offer for manual boundary doors. We can supply you with a fresh set of keys for your Flamstead courtyard instantly.',
+        },
       ],
     },
     cityIntro: [
@@ -492,6 +1444,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Gate realignment is an ongoing necessity for large timber barriers exposed to the elements. As the heavy hardwood absorbs moisture during the winter, it swells and sags, dragging heavily across the driveway. Local carpenters and maintenance experts structurally re-brace the massive leaves using discreet steel tension bands. They adjust the geometry of the load-bearing hinges to lift the gate clear of the ground, preventing the expensive automation motors from burning out from excessive friction.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'What is the maximum width for a single sliding gate?',
+          answer: 'Industrial models can comfortably span gaps exceeding ten meters in a single continuous run. These immense structures are perfect for securing wide agricultural entrances common on Gaddesden estates.',
+        },
+        {
+          question: 'How do we stop the track filling with mud from tractors?',
+          answer: 'Raised guide rails prevent soil and debris from clogging the primary movement channel. We also recommend cantilevers for farm environments to bypass ground level contamination issues entirely.',
+        },
+        {
+          question: 'Can the gate system notify me when someone enters?',
+          answer: 'Push notifications are sent instantly to your smartphone whenever the boundary is breached. You can always see exactly when contractors or family members arrive at your rural property.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can an automated setup manage the heavy wooden gates common on country estates?',
+          answer: 'Heavy duty rams are explicitly engineered to push massive timber installations effortlessly. Properties near the Ashridge Estate often feature large, solid oak boundaries that require serious torque to swing smoothly, which our premium motors handle easily.',
+        },
+        {
+          question: 'Is there a manual release if the hydraulic system fails completely?',
+          answer: 'Physical override keys are provided with every single installation for guaranteed emergency access. Simply insert the key into the motor housing and turn it to disengage the mechanical drive so you can push the electric swing gate open by hand.',
+        },
+        {
+          question: 'How do you handle cabling across a very long rural driveway?',
+          answer: 'Armored cables are securely trenched deeply underground from your main house out to the entrance pillars. This protects the power and data lines from being damaged by rodents, weather, or gardening tools across expansive Gaddesden estates.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do wooden gates suit the grand estates around here?',
+          answer: 'Oiled surfaces on majestic, towering oak gates look incredibly prestigious against large country manors. We frequently supply premium wooden driveway gates to secure the sprawling Gaddesden estates.',
+        },
+        {
+          question: 'How do you prevent the gate posts from rotting in the ground?',
+          answer: 'Thick frames are supported by wooden posts that have been pressure-treated and set in domed concrete. This ensures water runs away from the base, drastically extending the life of your Gaddesden installation.',
+        },
+        {
+          question: 'Are traditional mortise and tenon joints used in your gates?',
+          answer: 'Traditional mortise and tenon joinery glued and pegged guarantees absolute structural rigidity. This classic carpentry technique is standard on every wooden driveway gate we build for Gaddesden homes.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do metal gates suit the grand estates around here?',
+          answer: 'Imposing ironwork featuring gold painted finials looks incredibly prestigious against large country manors. We frequently supply premium metal driveway gates to secure the sprawling Gaddesden estates in style.',
+        },
+        {
+          question: 'How do you prevent the metal posts from rusting in the ground?',
+          answer: 'Concrete encasement protects the subterranean section of the galvanized steel posts from damp soil entirely. This ensures water cannot attack the base, drastically extending the life of your Gaddesden installation.',
+        },
+        {
+          question: 'Are traditional riveting techniques used in your gates?',
+          answer: 'Authentic rivets can be utilized purely for aesthetic detail while modern welding provides the actual structural strength. This classic carpentry technique is available on every bespoke metal driveway gate we build for Gaddesden homes.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can an automated setup manage the heavy wooden gates common on country estates?',
+          answer: 'Heavy duty hydraulic rams are explicitly engineered to move massive timber installations effortlessly. Properties near the Ashridge Estate often feature large, solid oak boundaries that require serious torque to operate smoothly. We match the motor specification precisely to the weight and wind resistance of your chosen design.',
+        },
+        {
+          question: 'Is there a manual release if the system fails completely?',
+          answer: 'Override keys are provided with every single installation for emergency access. Simply insert the key into the motor housing and turn it to disengage the mechanical drive. You can then push the automated gate system open by hand until a Gaddesden engineer arrives to assist.',
+        },
+        {
+          question: 'How do you handle cabling across a very long rural driveway?',
+          answer: 'Armored cabling is securely trenched deeply underground from your main house out to the entrance pillars. This protects the power and data lines from being damaged by rodents, weather, or gardening tools. We carefully manage the voltage drop over long distances to ensure consistent performance.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The massive gates on our estate are moving very sluggishly.',
+          answer: 'Sluggish hydraulics often point to a failing pump or low oil levels within the motor casing. We can bleed the system and restore optimal pressure to your heavy Gaddesden estate gates.',
+        },
+        {
+          question: 'Can you repair damage caused by a tractor hitting the gate post?',
+          answer: 'Severely impacted pillars must be structurally reinforced or completely rebuilt to support the gate safely. We handle both the masonry repairs and the steelwork realignment for rural Gaddesden properties.',
+        },
+        {
+          question: 'The solar panel battery for my gate is totally dead.',
+          answer: 'Depleted cells cannot hold a charge and must be swapped out for high-capacity replacements. We can upgrade your solar storage to handle the dark winter months in the Gaddesden countryside.',
+        },
+      ],
+    },
     cityIntro: [
       'Gaddesden covers the Great Gaddesden parish in the Dacorum district, sitting in the upper Gade valley on the Chilterns-edge with Golden Parsonage and substantial listed building stock anchoring its historic core. The Great Gaddesden Conservation Area protects this layout, and the Chiltern AONB context adds a further layer of material and streetscape expectation. Gate installations here sit within a planning context where Dacorum Borough Council assesses material, height, and streetscape impact carefully on both conservation and AONB grounds.',
       'Our Gaddesden installer network includes specialists with documented parish track records and genuine Dacorum planning experience within both the conservation area and the wider AONB setting. Every referred installer has completed at least six verifiable Gaddesden or immediately adjacent projects before receiving any enquiry from us, and understands the material sensibilities that successful Chilterns applications require.',
@@ -530,6 +1568,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Chocolate box aesthetics mean that repair work in Aldbury must be executed completely invisibly. When a discreet underground motor fails or a historic oak gate begins to split, local specialists perform surgical interventions. They carefully excavate the damaged foundation boxes without disturbing the surrounding heritage block-paving, replace the faulty drive arm, and seamlessly reinstate the driveway, ensuring the quintessential beauty of the village conservation area remains totally unblemished.',
         'Subterranean faults account for the majority of automation breakdowns in this heavily wooded area. Tree roots frequently crush the underground conduit carrying the motor\'s power cables, leading to short circuits. Expert diagnostic teams use specialized cable-tracing equipment to pinpoint the exact location of the break. They carefully splice in fresh, steel-wire armored (SWA) cabling, ensuring the hidden power supply is permanently protected against future root growth and rodent damage.',
         'Oak restoration breathes new life into weathering historic gates. While European oak ages beautifully, severe rot can set into the joints if left completely untreated for decades. Aldbury maintenance experts carefully strip back the decaying wood, treating the joints with high-strength wood hardeners and injecting epoxy resins to restore structural rigidity. This specialized conservation repair saves the homeowner the immense cost of commissioning a brand-new bespoke heritage gate.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Will a modern sliding gate ruin the look of my traditional cottage?',
+          answer: 'Bespoke cladding options allow us to face the steel frame with beautiful natural oak. You get the structural integrity of metal but the visual warmth of classic Aldbury timber.',
+        },
+        {
+          question: 'Do the motors require constant lubrication?',
+          answer: 'Sealed bearings inside the roller assemblies are maintenance free for their entire lifespan. The internal gearing is also permanently bathed in oil, requiring zero manual greasing from you.',
+        },
+        {
+          question: 'Can I use a keypad to give temporary access to a cleaner?',
+          answer: 'Programmable codes let you create unique PINs for specific individuals visiting your home. You can easily delete the code from the master console if the cleaner stops working for you.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Will a modern entry system ruin the historic charm of my cottage?',
+          answer: 'Subsurface mechanics are the perfect compromise for maintaining the chocolate box appeal of this village. We can automate traditional five bar farm styles or classic ironwork using entirely underground operators so nobody passing through Aldbury notices the automation.',
+        },
+        {
+          question: 'Can visitors use an intercom to buzz me while I am in the garden?',
+          answer: 'Portable handsets have excellent range, allowing you to carry them right to the bottom of the garden. You can easily answer a call from the perimeter and let your guests in with the push of a button for ultimate convenience.',
+        },
+        {
+          question: 'Do your swinging systems comply with current UK safety regulations?',
+          answer: 'Rigorous force testing is a non-negotiable part of our service to ensure strict compliance with all health and safety directives. Every electric swing gate is calibrated to ensure it cannot crush or trap a person, and we provide full CE marking certification.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Will wooden gates complement my historic Aldbury cottage?',
+          answer: 'Hardwearing materials like natural oak are the definitive choice for maintaining chocolate-box village aesthetics. Your new wooden driveway gates will look wonderfully authentic and charming.',
+        },
+        {
+          question: 'Can we have bespoke carvings on the gate panels?',
+          answer: 'Bespoke carving services allow you to add family crests or house names directly into the wood. This creates a stunningly unique focal point for your Aldbury entrance.',
+        },
+        {
+          question: 'How do we keep the wood looking a rich brown color?',
+          answer: 'Quality craftsmanship is protected by applying UV-resistant stains that stop the sun from bleaching the timber. A quick top-up coat every year keeps your Aldbury wooden driveway gates looking vibrant.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Will metal gates complement my historic Aldbury cottage?',
+          answer: 'Delicate wrought iron is the definitive choice for maintaining chocolate-box village aesthetics without overwhelming the property. Your new metal driveway gates will look wonderfully authentic and perfectly proportioned.',
+        },
+        {
+          question: 'Can we have bespoke scrollwork on the gate panels?',
+          answer: 'Custom bending services allow you to add intricate patterns or specific historic motifs directly into the metalwork. This creates a stunningly unique focal point for your Aldbury entrance.',
+        },
+        {
+          question: 'How do we keep the metal looking a rich black color?',
+          answer: 'UV resistant finishes stop the sun from fading the powder coat, ensuring the deep color lasts for years. A quick wipe down is all you need to keep your Aldbury metal driveway gates looking vibrant.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Will a modern entry system ruin the historic charm of my cottage?',
+          answer: 'Hidden mechanics are the perfect compromise for maintaining the chocolate box appeal of this village. We can automate traditional five bar farm styles or classic ironwork using completely underground operators. Nobody passing through Aldbury will even notice the automation is there until it smoothly opens.',
+        },
+        {
+          question: 'Can visitors use an intercom to buzz me while I am in the garden?',
+          answer: 'Wireless handsets have excellent range, allowing you to carry them right to the bottom of the garden. You can easily answer a call from the perimeter and let your guests in with the push of a button. It is a highly convenient feature for enjoying the outdoors without missing a delivery.',
+        },
+        {
+          question: 'Do your systems comply with current UK safety regulations?',
+          answer: 'Strict compliance with all current health and safety directives is a non-negotiable part of our service. Every automated gate system undergoes rigorous force testing to ensure it cannot crush or trap a person. We provide a full CE marking certificate upon handing over the completed project.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The wooden gates on my cottage are rotting at the base; can the bottom rail be replaced?',
+          answer: 'Splicing new hardwood into the base is a traditional carpentry repair that saves the rest of the gate. We seamlessly blend the fresh timber into your historic Aldbury gates to preserve their charm.',
+        },
+        {
+          question: 'Do you stock spare parts for older CAME or BFT gate motors?',
+          answer: 'Legacy components are widely stocked in our warehouse to support older automation systems efficiently. We rarely have to condemn an older motor in Aldbury just because of a minor faulty part.',
+        },
+        {
+          question: 'The gate crushes the gravel when it opens, making a terrible mess.',
+          answer: 'Incorrect clearances can be fixed by adjusting the hinge geometry to lift the gate slightly. This stops the base from bulldozing the loose stones on your Aldbury driveway.',
+        },
       ],
     },
     cityIntro: [
@@ -572,6 +1696,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Winter frost heavily impacts sliding gate operations. Ice builds up on the floor tracks, causing the gate to derail or the motor\'s obstacle detection to trigger falsely, leaving the homeowner trapped. Preventative servicing before the winter hits is vital. Technicians install specialized track-clearing brushes on the leading edge of the gate and increase the motor\'s torque settings slightly to help it push through light snow, ensuring highly reliable access during the harshest weather.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Is it possible to install a sliding gate on a very exposed hill?',
+          answer: 'Wind loading calculations dictate the exact specification of the framework and motor. We utilize reinforced uprights to ensure your Wigginton gate will not buckle during severe winter storms.',
+        },
+        {
+          question: 'How do we ensure our pets cannot escape under the gate?',
+          answer: 'Minimal clearance tolerances are achieved by laying a perfectly level concrete foundation beam. The sliding panel sits millimeters above the ground, preventing small dogs from squeezing underneath.',
+        },
+        {
+          question: 'Can the gate automatically turn on the driveway lights?',
+          answer: 'Smart relays connect the automation board directly to your exterior lighting circuit. The moment your entrance starts opening, your driveway will be brightly illuminated for a safe arrival.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Does living high up on an exposed hill require stronger swinging motors?',
+          answer: 'Gale resistance is absolutely critical, as wind puts immense strain on closed panel designs during stormy weather up on the ridge. We calculate the exact wind loading for your Wigginton property before recommending the appropriate heavy duty hydraulic operators.',
+        },
+        {
+          question: 'Can the gate close automatically behind me once I drive through?',
+          answer: 'Timed closures can be easily programmed into the logic board to secure your property immediately. Once the safety photocells confirm your vehicle has passed safely, the sequence triggers the motors to shut the electric swing gate behind you.',
+        },
+        {
+          question: 'What finishes are available for a bespoke metal design?',
+          answer: 'Baked enamel powder coating provides a highly durable, scratch resistant finish that outlasts traditional wet paint by decades. We offer hundreds of colors, allowing you to match your new Wigginton boundary perfectly to your windows or doors.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Is the wind on the ridge too strong for solid wooden gates?',
+          answer: 'Preserving character is important, but heavy Wigginton winds can destroy solid panels acting like sails. We strongly recommend semi-open wooden driveway gates to allow the gales to pass through safely.',
+        },
+        {
+          question: 'How long will a softwood gate last compared to hardwood?',
+          answer: 'Long lifespans of twenty years or more are easily achievable with hardwoods, whereas softwoods require much more maintenance. Upgrading to oak or Iroko is a smart investment for your Wigginton home.',
+        },
+        {
+          question: 'Do the gates come fully treated before installation?',
+          answer: 'Proper sealing is completed in our controlled workshop environment before the gates ever reach your property. Your Wigginton wooden driveway gates are fully weatherproofed and ready for the elements from day one.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Is the wind on the ridge too strong for solid metal gates?',
+          answer: 'Extreme gales can severely damage solid panels acting like sails, putting immense strain on the motors. We strongly recommend semi-open metal driveway gates to allow the Wigginton winds to pass through safely.',
+        },
+        {
+          question: 'How long will an aluminum gate last compared to steel?',
+          answer: 'Aluminum\'s immunity to rust means it can essentially last forever with zero structural degradation. Upgrading to aerospace aluminum is a very smart, maintenance-free investment for your Wigginton home.',
+        },
+        {
+          question: 'Do the gates come fully painted before installation?',
+          answer: 'Factory curing is completed in our controlled workshop environment before the gates ever reach your property. Your Wigginton metal driveway gates are fully weatherproofed and ready for the elements from day one.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Does living high up on an exposed hill require stronger motors?',
+          answer: 'Wind resistance puts an immense strain on closed panel designs during stormy weather up on the ridge. We calculate the exact wind loading for your Wigginton property before recommending the appropriate mechanical operators. Installing upgraded hydraulic arms ensures the barrier will not get stuck halfway through its cycle during a gale.',
+        },
+        {
+          question: 'Can the gate close automatically behind me once I drive through?',
+          answer: 'Auto close timers can be easily programmed into the logic board to secure your property immediately. Once the safety photocells confirm your vehicle has passed safely, the sequence triggers the motors to shut. You will never have to worry about whether you remembered to lock up again.',
+        },
+        {
+          question: 'What finishes are available for a bespoke metal design?',
+          answer: 'Powder coating provides a highly durable, scratch resistant finish that outlasts traditional wet paint by decades. We offer hundreds of colors, allowing you to match your new automated gate system perfectly to your windows or doors. It also protects the raw steel underneath from rusting in the damp winter air.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The motor keeps cutting out halfway through the opening cycle.',
+          answer: 'Thermal overloads trip when the motor strains too hard against heavy wind or tight hinges. We will identify and remove the physical resistance causing your Wigginton gates to overheat.',
+        },
+        {
+          question: 'My keypad accepts the code but the gate doesn\'t react.',
+          answer: 'Broken relays inside the keypad unit are likely failing to send the open command to the master board. We can quickly test the signal path and replace the faulty Wigginton entry console.',
+        },
+        {
+          question: 'Can you re-align a gate post that has leaned over in the wind?',
+          answer: 'Tilted columns must be excavated and reset into a much larger block of reinforced concrete. This guarantees your Wigginton boundary will never succumb to the severe ridge winds again.',
+        },
+      ],
+    },
     cityIntro: [
       'Wigginton is a small village in the Chilterns AONB at the western edge of the Dacorum borough, sitting above Tring on the chalk ridge. The AONB designation covers the entire village, and Dacorum Borough Council planning officers apply the Chilterns management plan criteria rigorously to all gate installations.',
       'Our Wigginton installer network focuses on specialists with documented AONB experience and understanding of the ridgeline installation conditions. Every referred installer has substantive Dacorum planning experience.',
@@ -610,6 +1820,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Dense woodland boundaries drop incredible amounts of organic debris onto the driveways of Chipperfield\'s luxury estates. This leaf litter is the absolute nemesis of sliding gate tracks and underground motors. Emergency repair callouts frequently involve clearing jammed floor tracks or pumping out foundation boxes that have been clogged by rotting pine needles. Routine maintenance is heavily advised here to proactively clear this debris before it can cause thousands of pounds of mechanical damage.',
         'Leaf litter also plays havoc with the infrared safety photocells. When wet leaves stick to the sensor lenses, the control board assumes a vehicle is in the way and refuses to close the massive security gates. Chipperfield residents rely on rapid-response technicians to diagnose these faults. The engineers clean the lenses, apply specialized rain-repellent coatings, and install protective hoods over the sensors to prevent future foliage from interrupting the vital safety beams.',
         'Photocell blockage aside, slug and insect infestations inside the main control panel are a leading cause of motherboard failure in these secluded, wooded plots. The warmth of the electrical components attracts wildlife, causing short circuits that fry the logic boards. Repair specialists execute a complete motherboard replacement, but more importantly, they thoroughly seal the cable entry points with silicone and place desiccant packets inside the housing to completely bug-proof the sensitive new electronics.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Does tree sap and debris from the common affect sliding tracks?',
+          answer: 'Regular sweeping is strongly advised for properties located near dense Chipperfield woodland. A clean floor rail prevents leaves from becoming compacted and jamming the nylon wheels over time.',
+        },
+        {
+          question: 'Can we install a matching side gate for walking the dog?',
+          answer: 'Complementary pedestrian doors are designed to match the main barrier perfectly. We integrate a synchronized electronic lock so you can open both with the exact same fob.',
+        },
+        {
+          question: 'What happens if the motor breaks down completely?',
+          answer: 'Emergency decoupling allows you to disengage the drive gear using a secure key. You can safely push the heavy slider open by hand until our local repair team arrives.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'My driveway is heavily surrounded by trees; will falling branches damage the motors?',
+          answer: 'Robust casings protect the internal mechanics of our surface mounted rams from light debris and falling twigs. However, if your property borders Chipperfield Common, we recommend underground motors to completely shield the electronics from falling branches.',
+        },
+        {
+          question: 'Are keypad entry codes easy to change if I give one to a contractor?',
+          answer: 'Digital consoles allow you to easily delete or update access PINs directly from the master board. If builders have finished renovating your home, you can revoke their code in seconds for total security regarding your electric swing gate.',
+        },
+        {
+          question: 'Do you provide a full design and groundwork service?',
+          answer: 'Turnkey installations mean we handle everything from the initial design sketches right through to pouring the concrete footings. You will not need to hire separate builders or electricians to prepare the site for your new Chipperfield entrance.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can wooden gates be damaged by woodpeckers near the common?',
+          answer: 'Woodpecker damage is incredibly rare on dense hardwoods like oak, which are too tough for the birds to penetrate easily. Choosing a premium hardwood for your Chipperfield wooden driveway gates offers natural protection against local wildlife.',
+        },
+        {
+          question: 'Do wooden gates get slippery or moldy under heavy tree cover?',
+          answer: 'Fungal resistance is naturally high in cedar and Iroko, making them perfect for damp, shaded locations. Occasional cleaning removes any surface moss that builds up on your Chipperfield boundary.',
+        },
+        {
+          question: 'Are wooden gates heavy to open manually?',
+          answer: 'Reliable timber can be heavy, but we utilize specialized bearing hinges that make manual operation surprisingly effortless. You can easily push your Chipperfield wooden driveway gates open with just one hand.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can metal gates be damaged by falling branches near the common?',
+          answer: 'Impact resistance is naturally extremely high in thick steel, easily shrugging off light woodland debris. Choosing a premium steel frame for your Chipperfield metal driveway gates offers superb protection against local wildlife and weather.',
+        },
+        {
+          question: 'Do metal gates get slippery or moldy under heavy tree cover?',
+          answer: 'Algae buildup is easily wiped away from smooth powder coated surfaces, unlike porous timber alternatives. Occasional cleaning removes any surface moss that settles on your Chipperfield boundary.',
+        },
+        {
+          question: 'Are solid metal gates heavy to open manually?',
+          answer: 'Perfectly balanced hinges utilizing specialized bearings make manual operation surprisingly effortless despite the weight. You can easily push your Chipperfield metal driveway gates open with just one hand during a power cut.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'My driveway is heavily surrounded by trees; will falling leaves cause problems?',
+          answer: 'Debris management is important when your property backs onto areas like Chipperfield Common. Wet leaves can block the infrared safety sensors or get compacted into the tracks of sliding mechanisms. A quick sweep once a week is usually enough to keep your entrance operating without any frustrating hiccups.',
+        },
+        {
+          question: 'Are keypad entry codes easy to change if I give one to a contractor?',
+          answer: 'Digital keypads allow you to easily delete or update access PINs directly from the master console. If builders have finished renovating your home, you can revoke their code in seconds for total security. This makes managing temporary access for tradesmen incredibly straightforward and safe.',
+        },
+        {
+          question: 'Do you provide a full design and groundwork service?',
+          answer: 'Turnkey solutions mean we handle everything from the initial design sketches right through to pouring the concrete footings. You will not need to hire separate builders or electricians to prepare the site for us. Our in house team manages the entire automated gate system installation seamlessly from start to finish.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Tree sap has glued the sliding gate track solid; do you offer professional cleaning?',
+          answer: 'Heavy degreasers and pressure washing are used to completely clear compacted sap and woodland debris. We will restore the smooth rolling action of your Chipperfield sliding gate track effortlessly.',
+        },
+        {
+          question: 'The safety edge rubber has perished and is hanging off; is this dangerous?',
+          answer: 'Degraded profiles mean the safety sensors cannot detect crushing impacts, making the gate illegal to operate. We will fit brand new, highly responsive safety edges to protect your Chipperfield driveway.',
+        },
+        {
+          question: 'My underground gate motor is making a terrible grinding sound.',
+          answer: 'Smashed bearings or rusted internal gears usually produce this violent metallic noise. We must extract the motor box from your Chipperfield driveway immediately for a full bench rebuild.',
+        },
       ],
     },
     cityIntro: [
@@ -652,6 +1948,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Worn bearings create terrible grinding noises that ruin the tranquil atmosphere of Radlett\'s exclusive avenues. Over time, the massive weight of custom ironwork grinds down the internal steel components of hinges and sliding tracks. Vetted technicians utilize heavy lifting gear to safely remove the gates, replacing shattered bearings and applying high-viscosity marine grease to the load-bearing joints. This completely eliminates the noise and restores whisper-quiet operation to the luxury property.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do large brick pillars need reinforcing for heavy sliding gates on Watling Street?',
+          answer: 'Masonry evaluation is critical before attaching heavy guide rollers to older brickwork. Older pillars along Watling Street often require internal steel supports to handle horizontal wind loads. This ensures your electric sliding gates remain upright without cracking the historic brick.',
+        },
+        {
+          question: 'Are there discreet automation options for the expansive mansions here?',
+          answer: 'Subsurface installations hide the primary motor unit below the driveway level inside a steel casing. This preserves the grand aesthetic of your Radlett entrance while delivering smooth sliding action.',
+        },
+        {
+          question: 'What happens if leaves from nearby woodlands block the sliding track?',
+          answer: 'Autumn leaves can occasionally build up and trigger the sensitive obstacle detection sensors. A quick brush along the floor rail restores perfect operation for your Radlett property immediately.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do large brick pillars need reinforcing for heavy driveway gates on Watling Street?',
+          answer: 'Massive piers must be structurally assessed before mounting heavy steel frames. Older brickwork along Watling Street often requires internal reinforcement to prevent the swinging action from cracking the masonry over time.',
+        },
+        {
+          question: 'Are there discreet automation options for the expansive mansions here?',
+          answer: 'Concealed mechanics are the preferred choice for preserving the pristine aesthetics of premium estates. We bury the electric swing gate motors completely out of sight within galvanized foundation boxes below the driveway surface.',
+        },
+        {
+          question: 'What happens if leaves from nearby woodlands block the safety sensors?',
+          answer: 'Leaf blockages can occasionally interrupt the infrared safety beams during autumn. Simply brushing away debris from the lenses will instantly restore full functionality to your electric swing gate system in Radlett.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do large wooden gates need steel reinforcement for properties on Watling Street?',
+          answer: 'Dense lumber often requires internal steel bracing to prevent sagging over time. We engineer these discreet supports inside the wood to ensure your Radlett boundary remains perfectly straight and secure.',
+        },
+        {
+          question: 'Can we match the timber to our existing heritage fencing?',
+          answer: 'Exact replication is guaranteed by our custom joinery team for any period property. Your new wooden driveway gates will blend flawlessly with the opulent estates common around this area.',
+        },
+        {
+          question: 'What happens if leaves block the automated track for a wooden sliding gate?',
+          answer: 'Routine sweeping easily prevents autumn debris from jamming the floor rail. Keeping the track clear ensures your heavy wooden panels glide smoothly across your Radlett entrance.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do large brick pillars need reinforcing for heavy metal gates on Watling Street?',
+          answer: 'Brickwork strength is vital before hanging substantial steel frames. Older masonry along Watling Street might need internal steel posts to handle the sheer weight of new metal driveway gates.',
+        },
+        {
+          question: 'Are there discreet automation options for the expansive mansions here?',
+          answer: 'Hidden drives are highly popular for the large, prestigious properties synonymous with Radlett. The mechanism is completely concealed below the tarmac, preserving the grand metalwork aesthetic of your entrance.',
+        },
+        {
+          question: 'What happens if falling branches dent the gates?',
+          answer: 'Heavy gauge steel resists minor impacts remarkably well during stormy weather. If severe damage occurs, our welders can usually cut and replace the bent section of your Radlett boundary seamlessly.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do large brick pillars need reinforcing for heavy driveway gates on Watling Street?',
+          answer: 'Masonry strength must be assessed carefully before hanging heavy steel or hardwood frames. Older brickwork along Watling Street often requires internal steel sleeves to handle the immense torque generated by the motors. This prevents the pillars from cracking or leaning under the weight of your new automated gate system.',
+        },
+        {
+          question: 'Are there discreet automation options for the expansive mansions here?',
+          answer: 'In-ground operators are highly popular for the large, prestigious properties synonymous with Radlett. The mechanism is completely hidden below the driveway surface in a galvanized foundation box. This preserves the grand aesthetic of your entrance while delivering robust, reliable security.',
+        },
+        {
+          question: 'What happens if leaves from nearby woodlands block the safety sensors?',
+          answer: 'Optical sensors will prevent the barrier from closing if obstructed by fallen foliage or debris. Simply wiping the infrared lenses clean restores full functionality immediately. We position these photocells strategically to minimize interference from the mature trees common across this leafy suburb.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Do you repair gates on Watling Street?',
+          answer: 'Watling thoroughfare sees heavy traffic that wears down mechanisms faster than quiet residential roads. Our engineers frequently service gate motors along this busy Radlett route to ensure reliable daily operation.',
+        },
+        {
+          question: 'My mansion\'s underground motor is flooded; can you fix it?',
+          answer: 'Flooded basements often ruin submerged automation if proper drainage is neglected during the winter. We pump out the foundation boxes and rebuild the waterlogged motors for your Radlett property.',
+        },
+        {
+          question: 'The intercom at the bottom of my long drive is completely dead.',
+          answer: 'Severed cables are a common issue on sprawling plots, often caused by rodents or landscaping work. We trace the fault underground and repair the broken lines, restoring communication to your Radlett home.',
+        },
+      ],
+    },
     cityIntro: [
       'Radlett represents the upper end of the South Hertfordshire commuter-belt market - substantial detached housing on generous plots, strong neighbourhood character, and a property value profile that shapes gate installations toward the premium end of every service category. Hertsmere Borough Council planning treatment includes article 4 directions in parts of the town that require particular local knowledge.',
       'Our Radlett installer network focuses specifically on specialists with substantial track records in the town - the Watling Street corridor, the Loom Lane residential belt, and the Aldenham Road premium addresses. Every referred installer has experience with the Hertsmere planning context and the specification expectations of the Radlett market, including the article 4 restrictions that apply in specific streets.',
@@ -690,6 +2072,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Leafy suburbs like Bushey Heath experience unique environmental wear on their automated driveway gates. Falling branches and heavy autumn debris frequently dent physical gate panels or smash the fragile plastic housings of safety photocells. Rapid-response engineers carry an extensive inventory of universal replacement parts, allowing them to instantly swap out shattered infrared sensors and repair physical structural damage, guaranteeing the family boundary remains fully secure and legally compliant.',
         'Articulated joints on older pillar installations require specialized lubrication to prevent them from seizing up during freezing weather. In Bushey\'s older period properties, these elbow-style motors wrap around thick masonry. Preventative maintenance schedules ensure these complex mechanical arms are stripped, cleaned, and packed with temperature-resistant grease. This stops the gate from shuddering violently during its operational cycle, preventing the internal gears from stripping under the unnecessary friction.',
         'Intercom static is a highly frustrating issue that plagues many local properties after heavy rainstorms. When moisture penetrates the exterior call panel, the audio feed degrades or the keypad buttons short-circuit. Bushey repair specialists excel at diagnosing these low-voltage communication faults. They replace corroded micro-switches, upgrade the internal wiring, and re-seal the exterior housing with waterproof silicone to restore crystal-clear visitor screening for the homeowner.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Is it hard to automate a sliding gate on a sloping drive near Bushey Heath?',
+          answer: 'Inclined driveways prevent the use of standard floor tracks because the motor would burn out. We deploy cantilever systems that suspend the gate entirely above the uneven Bushey Heath terrain.',
+        },
+        {
+          question: 'Can we integrate a video intercom to screen callers before letting them in?',
+          answer: 'Camera feeds transmit high quality visuals directly to your smartphone or a dedicated indoor screen. You can thoroughly vet unexpected visitors in Bushey before sliding the entrance open.',
+        },
+        {
+          question: 'Are sliding systems quieter for properties close together in the village?',
+          answer: 'Nylon tracks combined with rubber-coated wheels practically eliminate all rolling noise. Your electric sliding gates will glide open silently, preventing any disturbance to your nearby neighbors.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Is it hard to automate an entrance on a sloping drive near Bushey Heath?',
+          answer: 'Steep drives require bespoke rising hinges that angle the gate upward as it opens inwards. This prevents the bottom edge from dragging against the inclined tarmac common around Bushey Heath.',
+        },
+        {
+          question: 'Can we integrate a video intercom to screen callers before letting them in?',
+          answer: 'Visual screening provides an excellent layer of security before you activate the electric swing gate. High definition cameras send live footage directly to an indoor monitor so you can confidently vet visitors in Bushey.',
+        },
+        {
+          question: 'Are articulated motors quieter for properties close together in the village?',
+          answer: 'Smooth operation is a key benefit of premium jointed arm actuators. These 24V electric swing gate motors run with incredibly low noise levels, ensuring you never disturb your closely packed Bushey neighbors.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Is it hard to automate wooden gates on a sloping drive near Bushey Heath?',
+          answer: 'Raised pivots solve this exact problem by angling the leaves upward as they open. This ensures your heavy timber clears the steep inclines common around Bushey Heath without scraping the ground.',
+        },
+        {
+          question: 'Can we get wooden gates with a video intercom?',
+          answer: 'Flush embedding allows us to install sleek camera panels directly into the timber frame. You can easily vet unexpected visitors in Bushey before opening your beautiful wooden entrance.',
+        },
+        {
+          question: 'Are solid wooden gates quieter than metal ones?',
+          answer: 'Organic fibers absorb sound waves much better than hollow metal tubes ever could. Your new wooden driveway gates will close with a reassuringly quiet thud, keeping your Bushey neighbors happy.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Is it hard to automate a metal entrance on a sloping drive near Bushey Heath?',
+          answer: 'Custom pivoting angles the heavy ironwork upward as it opens inwards. This prevents the bottom edge from dragging against the steep inclines common around Bushey Heath.',
+        },
+        {
+          question: 'Can we integrate a video intercom to screen callers before letting them in?',
+          answer: 'Screened vetting provides fantastic peace of mind before you activate the motors. High definition cameras feed directly to an indoor monitor, so you can easily verify visitors in Bushey.',
+        },
+        {
+          question: 'Are sliding metal gates quieter for properties close together in the village?',
+          answer: 'Polyurethane wheels significantly reduce the rumble associated with traditional sliding mechanisms. This whisper-quiet operation ensures your metal driveway gates will not disturb your neighbors when operating late at night.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Is it hard to automate an entrance on a sloping drive near Bushey Heath?',
+          answer: 'Gradients require special geometry, often utilizing bespoke hinges to lift the frame as it opens inward. Our engineers calculate the exact angles needed to clear steep inclines common around Bushey Heath. An outward swinging automated gate system is another excellent solution if space permits near the boundary line.',
+        },
+        {
+          question: 'Can we integrate a video intercom to screen callers before letting them in?',
+          answer: 'Visual verification gives you complete control over who enters your property from the safety of your home. High definition cameras feed directly to an indoor monitor or your smartphone. You can easily vet unexpected visitors in Bushey without having to walk down to the perimeter.',
+        },
+        {
+          question: 'Are sliding systems quieter for properties close together in the village?',
+          answer: 'Nylon tracking rollers significantly reduce the rumble associated with traditional metal sliding mechanisms. This whisper-quiet operation is ideal for the denser residential streets closer to the High Street. You will not disturb your neighbors when coming or going late at night.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The steep driveway near Bushey Heath makes my gate scrape; can you fix it?',
+          answer: 'Elevating pivots require precise calibration to lift heavy frames over steep gradients without straining the motor. We can adjust the geometry to stop your entrance from dragging on the Bushey Heath tarmac.',
+        },
+        {
+          question: 'My electric gate makes a loud clunking noise when it stops.',
+          answer: 'Worn limit switches fail to tell the motor exactly when to slow down smoothly at the end of its cycle. Replacing these vital components ensures your Bushey entrance closes softly and safely without violent impacts.',
+        },
+        {
+          question: 'Can you repair an old intercom that no longer rings my phone?',
+          answer: 'Obsolete dialers frequently drop network connections as mobile providers phase out older analog signals. We upgrade these legacy units with modern cellular modules to keep your Bushey communication flawless.',
+        },
       ],
     },
     cityIntro: [
@@ -732,6 +2200,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Access keypads take a beating from heavy daily use and exposure to the elements. For Potters Bar homeowners relying on PIN codes for cleaners or dog walkers, a broken keypad causes massive logistical headaches. Repair crews swiftly replace worn, unresponsive rubber buttons with ultra-durable, vandal-resistant stainless steel keypads. They reprogram the master codes and ensure the new access control module interfaces perfectly with the existing automation motherboard.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'How do you secure properties effectively near the M25 junction?',
+          answer: 'Motorway access points often experience higher volumes of opportunistic traffic needing turnaround spots. A robust electric sliding gate creates an imposing physical barrier that deters unwanted vehicles instantly.',
+        },
+        {
+          question: 'Does the local clay soil cause issues with sliding tracks?',
+          answer: 'Clay foundations shift significantly during wet weather, which can warp poorly installed floor rails. We dig deep concrete footings to guarantee your Potters Bar track remains perfectly straight forever.',
+        },
+        {
+          question: 'Can I use my smartphone to open the barrier for deliveries?',
+          answer: 'App connectivity allows you to trigger the sliding mechanism from anywhere via cellular data. You can easily grant temporary entry to couriers arriving at your Potters Bar address.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'How do you secure properties effectively near the M25 junction?',
+          answer: 'Commuter hubs experience higher volumes of opportunistic traffic needing turning space. A sturdy electric swing gate equipped with magnetic locking provides an unyielding physical barrier protecting your Potters Bar home.',
+        },
+        {
+          question: 'Does the local clay soil cause issues with underground motor boxes?',
+          answer: 'Deep foundations with dedicated soakaways are essential to combat the heavy water retention of local clay. This prevents your subterranean electric swing gate motors from flooding during the notoriously wet Potters Bar winters.',
+        },
+        {
+          question: 'Can I use my smartphone to open the barrier for deliveries?',
+          answer: 'Phone connectivity modules allow you to operate the swinging mechanism via a secure cellular app. You can grant temporary access to couriers arriving at your Potters Bar address even when you are working in London.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'How do you secure wooden properties effectively near the M25 junction?',
+          answer: 'Formidable deadlocks made from high grade steel provide an unyielding physical barrier. This combination of dense timber and robust locking deters opportunistic crime around the busy Potters Bar commuter hub.',
+        },
+        {
+          question: 'Does the local clay soil cause issues with wooden gate posts?',
+          answer: 'Deep footing protects the base of the timber from the heavy, water retaining clay. This prevents your Potters Bar wooden driveway gates from rotting prematurely during wet winters.',
+        },
+        {
+          question: 'Can I use my smartphone to open the wooden gate for deliveries?',
+          answer: 'Mobile receivers can easily be wired into any automated timber setup. You can grant temporary access to couriers arriving at your Potters Bar address directly from your phone.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'How do you secure properties effectively near the M25 junction?',
+          answer: 'Defiant barricades forged from solid steel create an imposing physical barrier against opportunistic traffic. A robust metal driveway gate actively deters unwanted vehicles from turning around on your Potters Bar property.',
+        },
+        {
+          question: 'Does the local clay soil cause issues with underground motor boxes?',
+          answer: 'Extensive trenching is completely necessary to prevent flooding in standard foundation boxes. We dig deep soakaways to handle the heavy Hertfordshire clay and keep your motors perfectly dry.',
+        },
+        {
+          question: 'Can I use my smartphone to open the barrier for deliveries?',
+          answer: 'Smartphone triggering allows you to operate the electric lock from anywhere in the world. If a courier arrives at your Potters Bar address, you can grant them temporary access instantly.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'How do you secure properties effectively near the M25 junction?',
+          answer: 'Perimeter defense is a top priority for homes located near major transport links where opportunistic crime can occur. We install rigid aluminum frames coupled with high security magnetic locks to deter forced entry. This creates an imposing physical barrier protecting your Potters Bar home.',
+        },
+        {
+          question: 'Does the local clay soil cause issues with underground motor boxes?',
+          answer: 'Saturated ground can definitely flood standard foundation boxes if proper drainage is not established during installation. We always dig extensive soakaways beneath the motor housings to handle the heavy Hertfordshire clay. This ensures your automated gate system remains dry and functional throughout the wet winter months.',
+        },
+        {
+          question: 'Can I use my smartphone to open the barrier for deliveries?',
+          answer: 'Cellular modules allow you to trigger the opening sequence from anywhere in the world using an app. If a courier arrives at your Potters Bar address while you are out, you can grant them temporary access instantly. The barrier can then be closed securely once the parcel is dropped off.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'A delivery van from the M25 smashed my gate safety photocells.',
+          answer: 'Smashed lenses render the safety circuit broken, meaning the system will refuse to close entirely. We carry universal optical sensors to replace the broken units at your Potters Bar address instantly.',
+        },
+        {
+          question: 'My sliding gate motor is smoking and smells like burning plastic.',
+          answer: 'Burnt stators inside the main drive unit indicate a catastrophic electrical failure requiring a full replacement. We will install a fresh, heavy-duty motor to get your Potters Bar sliding gate moving again safely.',
+        },
+        {
+          question: 'The keypad numbers have worn away and buttons are sticking.',
+          answer: 'Degraded membranes inside the console eventually fail after years of daily button presses in harsh weather. Swapping the faceplate and internal board provides a brand new, highly responsive keypad for your Potters Bar entrance.',
+        },
+      ],
+    },
     cityIntro: [
       'Potters Bar sits at the southern edge of Hertfordshire on the Greater London boundary, with the town\'s character shaped substantially by its commuter profile and the Underground Northern Line connection via High Barnet. The housing stock combines substantial inter-war detached properties across Old Potters Bar with post-war development through the central neighbourhoods and recent estate expansion on the edges.',
       'Our Potters Bar installer network includes specialists with documented track records across the town\'s varied residential context. Every referred installer has Hertsmere Borough Council planning experience and understands the article 4 restrictions that apply in specific streets, along with the practical considerations that distinguish Potters Bar installations from more rural Hertfordshire locations.',
@@ -770,6 +2324,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Modern developments in Borehamwood rely heavily on sliding gates to maximize parking space, making track maintenance the most critical repair service. If a sliding gate jumps its track, it becomes a multi-ton hazard. Emergency repair teams use specialized winches to safely hoist the derailed gate back into position. They then meticulously inspect the lower guide wheels, replacing any crushed or flattened rollers to ensure the massive steel structure moves laterally without freezing.',
         'Buckled rails must be leveled perfectly to restore smooth operation. As vehicles constantly drive over the entrance, the concrete foundation can sink, bending the steel floor track. When the gate hits these dips, the motor\'s obstacle detection triggers falsely, leaving the gate stuck halfway open. Expert Borehamwood technicians cut out the warped track sections, re-level the foundation with rapid-setting industrial epoxy, and weld in fresh steel to guarantee flawless lateral movement.',
         'Safety rubber edges need replacing after intense sun exposure or heavy frost damage degrades the pressure-sensitive material. Because these modern estates have high pedestrian traffic, ensuring the gate stops instantly upon contact is legally mandated. Local engineers test the crush-force of the automated system using specialized diagnostic tools. If the safety edges fail, they are immediately stripped and replaced, keeping the entrance totally safe for local children and family pets.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'What are the fastest opening options for busy families commuting into London?',
+          answer: 'Fast cycling motors are explicitly designed to minimize waiting times on busy urban streets. These high-speed drives slide the barrier clear rapidly, which is highly beneficial during the Borehamwood morning rush hour.',
+        },
+        {
+          question: 'Can you automate modern, privacy-style boarded sliding gates?',
+          answer: 'Wind catching solid panels require substantial motor torque to operate safely during heavy storms. We specify heavy-duty sliding operators to easily manage the aerodynamic drag against these closed styles.',
+        },
+        {
+          question: 'Is it possible to have a separate pedestrian sliding gate?',
+          answer: 'Walkway integration is easily achieved by fitting a smaller, matching gate beside the main driveway. You can control this secondary electric sliding gate with the same master access fob.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'What are the fastest opening options for busy families commuting into London?',
+          answer: 'Rapid cycles are achievable using specialized high speed hydraulic rams that swing the barrier open swiftly. This minimizes waiting times on the street, which is crucial during the bustling Borehamwood morning rush hour.',
+        },
+        {
+          question: 'Can you automate modern, privacy-style boarded gates?',
+          answer: 'Gale deflection is a significant challenge for solid wooden panels that catch the wind like sails. We overcome this by fitting heavy duty electric swing gate motors that easily handle the extreme aerodynamic resistance.',
+        },
+        {
+          question: 'Is it possible to have an automated pedestrian gate next to the main driveway?',
+          answer: 'Footpath access can be beautifully integrated by installing a matching side door with its own synchronized automation. You can unlock this secondary electric swing gate in Borehamwood using your primary vehicle fob.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'What are the fastest opening options for heavy wooden gates?',
+          answer: 'Enhanced hydraulics are specifically designed to swing massive timber panels swiftly. This minimizes waiting times on the street during the bustling Borehamwood morning rush hour.',
+        },
+        {
+          question: 'Can you automate modern, horizontal slatted wooden gates?',
+          answer: 'Windflow permeability makes slatted designs much easier to automate than completely solid panels. Your privacy is maintained without putting immense strain on the motors during Borehamwood storms.',
+        },
+        {
+          question: 'Is it possible to have an automated wooden pedestrian gate next to the main driveway?',
+          answer: 'Aesthetic continuity is easily achieved by building a matching side door from the exact same timber batch. You can unlock this secondary wooden gate in Borehamwood using your primary vehicle fob.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'What are the fastest opening options for busy families commuting into London?',
+          answer: 'Ultra-fast hydraulics are explicitly designed to minimize waiting times on the street. These swift motors cycle much quicker than standard drives, getting you onto your Borehamwood driveway without delay.',
+        },
+        {
+          question: 'Can you automate modern, privacy-style boarded metal gates?',
+          answer: 'Aerodynamic drag requires substantial motor torque to operate completely solid designs safely. We specify heavy-duty operators to easily manage the wind load against your privacy metal driveway gates.',
+        },
+        {
+          question: 'Is it possible to have a matching pedestrian gate next to the main driveway?',
+          answer: 'Companion gateways can easily be fabricated from the exact same steel stock. You can even use the same fob to unlock the smaller pedestrian entrance locally in Borehamwood.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'What are the fastest opening options for busy families commuting into London?',
+          answer: 'Rapid action hydraulic arms are explicitly designed to minimize waiting times on the street. These motors cycle much faster than standard electromechanical drives, getting you onto your driveway swiftly. This is highly beneficial during the morning rush hour in bustling Borehamwood.',
+        },
+        {
+          question: 'Can you automate modern, privacy-style boarded gates?',
+          answer: 'Solid infill designs look fantastic but catch a lot of wind, requiring substantial motor torque to operate safely. We specify heavy duty operators to easily manage the wind loading against these closed boarded styles. Your privacy is maintained without compromising the reliability of the automated gate system.',
+        },
+        {
+          question: 'Is it possible to have an automated pedestrian gate next to the main driveway?',
+          answer: 'Separate walkways can easily be fitted with complementary automation and synchronized access control. You can use the same fob or keypad to unlock the smaller pedestrian entrance for quick access on foot. This keeps the main vehicle barrier closed when heading out locally in Borehamwood.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Do you offer rapid repairs for families commuting into London?',
+          answer: 'Morning rushes are exactly why we prioritize early breakdown callouts across the local area. Our rapid response team will unlock your jammed Borehamwood gates so you can get to work on time.',
+        },
+        {
+          question: 'My solid wooden gate was caught by the wind and the hinges snapped.',
+          answer: 'Shattered ironmongery on solid panels is incredibly common during severe storms due to immense aerodynamic drag. We will weld heavily reinforced brackets to secure your Borehamwood timber boundaries permanently.',
+        },
+        {
+          question: 'The gate remote only works if I touch it against the antenna.',
+          answer: 'Signal degradation often points to a corroded coaxial cable connecting the aerial to the main control board. We replace this wiring to restore the impressive operating range for your Borehamwood remote fobs.',
+        },
       ],
     },
     cityIntro: [
@@ -812,6 +2452,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'ANPR cameras sometimes lose network connection, locking out authorized vehicles and causing massive frustration for the homeowner. When these sophisticated smart-home integrations fail, standard mechanical repairs are useless. Tech-savvy local gate engineers reboot the IP bridges, update the camera firmware, and realign the infrared lenses to restore the frictionless, automatic entry experience expected by the owners of these sprawling, elite mansions.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do you install bespoke ironwork that suits the older estates in this area?',
+          answer: 'Ornate metalwork can be beautifully crafted into a single, seamless sliding panel. We replicate historical Elstree designs perfectly so the modern technology does not ruin the vintage aesthetic.',
+        },
+        {
+          question: 'How reliable are safety edges for protecting pets and children?',
+          answer: 'Rubber bumpers contain sensitive pressure switches that detect any physical contact instantly. The electric sliding gate will halt and reverse the moment it touches anything in your Elstree garden.',
+        },
+        {
+          question: 'What maintenance is required to keep the sliding track running smoothly?',
+          answer: 'Routine clearance of the floor rail is the most important task for any homeowner. We also recommend annual servicing to check the motor gears and clean the internal optical sensors.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do you install bespoke ironwork that suits the older estates in this area?',
+          answer: 'Elaborate designs featuring ornate scrollwork can be custom forged to match the architectural heritage of Elstree perfectly. These majestic structures are then seamlessly paired with discreet, modern electric swing gate technology.',
+        },
+        {
+          question: 'How reliable are safety edges for protecting pets and children?',
+          answer: 'Soft obstacles trigger the pressure sensitive rubber strips installed along the swinging edges instantly. The electric swing gate will immediately halt and reverse direction, offering exceptional protection for families enjoying large Elstree gardens.',
+        },
+        {
+          question: 'What maintenance is required to keep the system running smoothly?',
+          answer: 'Regular upkeep involves greasing the main pivot hinges and clearing debris from the safety photocells. We offer comprehensive service packages to handle this routine maintenance for your Elstree property every single year.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do you install bespoke carved wood that suits the older estates in this area?',
+          answer: 'Master woodworkers can replicate historical Elstree designs perfectly so the modern automation does not ruin the vintage aesthetic. Your new wooden driveway gates will look like they have belonged there for a century.',
+        },
+        {
+          question: 'How reliable are safety edges on heavy wooden gates?',
+          answer: 'Padded sensors stop the heavy timber instantly if it touches anything in its path. This offers exceptional protection for families enjoying large Elstree gardens while the gates operate.',
+        },
+        {
+          question: 'What maintenance is required to keep the wood looking fresh?',
+          answer: 'Scheduled oiling is the most important task for any homeowner with a natural timber boundary. We recommend an annual coat of microporous stain to protect your beautiful Elstree entrance.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do you install bespoke ironwork that suits the older estates in this area?',
+          answer: 'Masterful blacksmithing perfectly matches the architectural heritage of Elstree without looking overly modern. We can replicate existing historical ironwork to ensure the new metal driveway gates look entirely authentic.',
+        },
+        {
+          question: 'How reliable are safety edges for protecting pets and children?',
+          answer: 'Tactile bumpers provide instantaneous obstacle detection along all moving edges. If the heavy steel touches anything during its cycle, it immediately stops and reverses direction to prevent injury.',
+        },
+        {
+          question: 'What maintenance is required to keep the system running smoothly?',
+          answer: 'Routine lubrication of the hinges and clearing debris from tracks keeps everything flawless. Regular professional servicing ensures your Elstree property remains secure year after year without unexpected breakdowns.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do you install bespoke ironwork that suits the older estates in this area?',
+          answer: 'Custom fabrication allows us to design ornate metalwork that perfectly matches the architectural heritage of Elstree. We can even replicate existing historical details to ensure the new installation looks entirely authentic. These beautiful designs are then seamlessly paired with discreet, modern automation technology.',
+        },
+        {
+          question: 'How reliable are safety edges for protecting pets and children?',
+          answer: 'Pressure sensitive rubber strips are installed along all moving edges to provide instantaneous obstacle detection. If the automated gate system touches anything during its cycle, it immediately stops and reverses direction. This offers exceptional protection for families and animals enjoying the large gardens typical of this village.',
+        },
+        {
+          question: 'What maintenance is required to keep the system running smoothly?',
+          answer: 'Preventative care involves lubricating hinges, clearing debris from tracks, and testing the safety mechanisms annually. We offer comprehensive service packages to handle this routine upkeep for you. Regular professional servicing ensures your Elstree property remains secure year after year without unexpected breakdowns.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Can you repair the heavy wrought iron gates on my historic estate?',
+          answer: 'Heritage ironwork demands careful attention to preserve its architectural value during mechanical repairs. We specialize in fixing historic Elstree entrances without damaging the majestic original aesthetics.',
+        },
+        {
+          question: 'The safety edges on my gate have perished and fallen off.',
+          answer: 'Rotted rubber strips mean the internal microswitches can no longer detect crushing impacts safely. We must install fresh, fully compliant safety edges to keep your Elstree driveway legal and secure.',
+        },
+        {
+          question: 'My gate opens automatically but refuses to close afterward.',
+          answer: 'Jammed contactors inside the logic board or blocked photocells are the primary culprits for this fault. We will run full diagnostics at your Elstree property to identify and resolve the holding command.',
+        },
+      ],
+    },
     cityIntro: [
       'Elstree is a small village of substantial character in South Hertfordshire, with property values and commuter profile driving a gate market skewed toward higher specifications and substantial access control integration. The planning context from Hertsmere Borough Council requires local knowledge of the specific article 4 restrictions that apply in some streets.',
       'Our Elstree installer network focuses on specialists with documented track records across the village and understanding of both the premium specification expectations and the article 4 planning context. Every referred installer has substantive Hertsmere experience.',
@@ -850,6 +2576,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Parkland surroundings introduce organic matter directly into the moving parts of automated gates, jamming gears and causing sudden breakdowns. In Shenley, sticky sap, autumn leaves, and woodland dirt quickly coat surface-mounted motors. Routine maintenance teams meticulously strip down the drive units, utilizing high-pressure solvents to remove the abrasive organic grime before it destroys the internal nylon gearing, ensuring the gate continues to operate smoothly in the leafy environment.',
         'Root intrusion from protected trees can sever underground power cables, instantly killing the automation system. Because Shenley features strict conservation rules, digging up the driveway to find the break is a delicate process. Expert diagnostic teams use advanced cable-tracing equipment to pinpoint the exact location of the severed wire. They carefully splice in fresh steel-wire armored (SWA) cabling, routing it safely around the aggressive root networks to permanently restore power.',
         'Remote fobs often un-sync from the main receiver following local power cuts or electrical storms. Shenley residents frequently find themselves locked out when their clickers stop working entirely. Instead of replacing the entire radio system, local technicians simply clear the receiver\'s memory and reprogram the rolling-code remotes. They also test the backup battery systems, ensuring the gates can still be operated manually during future rural power outages.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can an automated setup handle the wide entrances common on former hospital grounds here?',
+          answer: 'Sprawling estates require industrial-grade sliding frameworks to span their exceptionally wide driveways. These massive electric sliding gates provide total security without sagging under their own immense weight.',
+        },
+        {
+          question: 'Will a power outage leave us trapped inside our property?',
+          answer: 'Auxiliary power units engage automatically the moment the Shenley mains electricity drops out. You will still get several full operating cycles to exit your property safely during a blackout.',
+        },
+        {
+          question: 'Are timber gates treated to withstand the damp countryside air?',
+          answer: 'Weatherproof stains are applied deep into the hardwood grain to protect against fungal decay. This ensures your wooden electric sliding gates look pristine for years in the damp Hertfordshire countryside.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can an automated setup handle the wide entrances common on former hospital grounds here?',
+          answer: 'Former hospital estates boast exceptionally wide driveways requiring commercial grade swinging motors. These robust electric swing gates provide total perimeter security without sagging under the immense weight of the oversized frames.',
+        },
+        {
+          question: 'Will a power outage leave us trapped inside our property?',
+          answer: 'Emergency accumulators take over seamlessly the moment the Shenley mains electricity supply fails. You will retain full functional control of your electric swing gate for several cycles until the power grid is restored.',
+        },
+        {
+          question: 'Are timber gates treated to withstand the damp countryside air?',
+          answer: 'Preservative coats are deeply penetrated into the hardwood grain to protect against rot and fungal decay. This ensures your wooden electric swing gates remain structurally sound in the damp Shenley countryside air.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can wooden gates handle the wide entrances common on former hospital grounds here?',
+          answer: 'Colossal oak structures require commercial grade swinging motors to manage their immense weight safely. These sprawling estates benefit from robust wooden driveway gates that provide total perimeter security without sagging.',
+        },
+        {
+          question: 'Will a power outage leave us trapped behind our wooden gates?',
+          answer: 'Internal batteries engage automatically the moment the Shenley mains electricity drops out. You will still get several full operating cycles to exit your property safely during a blackout.',
+        },
+        {
+          question: 'Are timber gates treated to withstand the damp countryside air?',
+          answer: 'Vacuum infused preservatives protect the hardwood grain against rot and fungal decay permanently. This ensures your wooden driveway gates remain structurally sound in the damp Shenley countryside air.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can an automated setup handle the wide entrances common on former hospital grounds here?',
+          answer: 'Warehouse-grade rails are utilized to reliably move the exceptionally wide spans found on these expansive plots. Metal driveway gates of this scale require serious power and precise engineering to function correctly.',
+        },
+        {
+          question: 'Will a power outage leave us trapped inside our property?',
+          answer: 'Auxiliary cells kick in seamlessly the moment the mains electricity drops out. You will still get several full operating cycles to exit your Shenley home safely during a blackout.',
+        },
+        {
+          question: 'Are steel gates treated to withstand the damp countryside air?',
+          answer: 'Liquified zinc completely seals the raw metal against rust and fungal decay before painting. This ensures your entrance looks pristine for many years despite the damp Shenley weather.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can an automated setup handle the wide entrances common on former hospital grounds here?',
+          answer: 'Commercial grade motors are utilized to reliably move the exceptionally wide and heavy spans often found on these expansive plots. We frequently install robust sliding designs that can secure these broad driveways efficiently. An automated gate system of this scale requires serious power and precise engineering to function flawlessly.',
+        },
+        {
+          question: 'Will a power outage leave us trapped inside our property?',
+          answer: 'Emergency backup batteries kick in seamlessly the moment the mains electricity drops out. You will still get several full operating cycles to exit your Shenley home safely during a blackout. Manual release keys provide an absolute fail safe should the outage last for an extended period.',
+        },
+        {
+          question: 'Are timber gates treated to withstand the damp countryside air?',
+          answer: 'Deep penetrating wood preservatives and micro-porous stains are applied to protect against rot and fungal decay. Hardwoods like Iroko are naturally resistant to the damp conditions often experienced in rural Hertfordshire. Proper initial treatment keeps your wooden entrance looking pristine for many years.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The huge commercial gates at our former hospital site are moving very slowly.',
+          answer: 'Lethargic fluid circulation usually means the motor is low on hydraulic oil or the internal pump is failing. We bleed the system and restore optimal pressure to handle the massive Shenley estate boundaries.',
+        },
+        {
+          question: 'During a power cut, my backup battery failed to open the gate.',
+          answer: 'Depleted accumulators lose their ability to hold a charge after three to four years of standby use. We can easily swap out the dead cells to ensure your Shenley home remains accessible during blackouts.',
+        },
+        {
+          question: 'A tractor clipped our gate pillar and knocked it out of alignment.',
+          answer: 'Leaning columns must be fully excavated and reset with fresh concrete to support the heavy frame safely. Our groundworks team handles this intense structural repair for rural Shenley properties perfectly.',
+        },
       ],
     },
     cityIntro: [
@@ -892,6 +2704,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Magnetic wands buried under the tarmac can shift over time, failing to trigger the automatic exit function. When residents drive up to leave and the gates remain stubbornly closed, the sub-surface exit loop is usually at fault. Technicians recalibrate the sensitivity of the loop detector on the main control board. If the underground wire is broken, they expertly cut a discreet new channel into the driveway, laying a fresh exit loop to restore hands-free departures.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'What type of entry system works best for shared driveways?',
+          answer: 'Shared entrances benefit greatly from multi-button intercoms linked to individual houses. Each resident can independently control the main electric sliding gate from their own private handset.',
+        },
+        {
+          question: 'Do you offer lightweight aluminum sliding gates?',
+          answer: 'Aircraft aluminum provides the imposing look of steel but weighs significantly less. This reduces the mechanical strain on the sliding motor and extends the lifespan of your London Colney installation.',
+        },
+        {
+          question: 'How do we secure our property against tailgating vehicles?',
+          answer: 'Tailgate prevention logic shuts the sliding panel immediately after your vehicle clears the threshold. This rapid response stops unauthorized cars from slipping into your London Colney driveway behind you.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'What type of entry system works best for shared driveways?',
+          answer: 'Shared access points benefit immensely from multi-button intercoms assigning dedicated call points to individual houses. Each resident can independently control the main electric swing gate from their own private London Colney residence.',
+        },
+        {
+          question: 'Do you offer lightweight aluminum gates to avoid stressing old brick pillars?',
+          answer: 'Light metals like aerospace grade aluminum mimic the imposing look of heavy steel but weigh a fraction of the amount. This significantly reduces the mechanical strain on older masonry columns bordering the London Colney high street.',
+        },
+        {
+          question: 'How do we secure our property against tailgating vehicles?',
+          answer: 'Quick shutting logic can be programmed to close the barrier immediately after your car clears the safety beams. This rapid response prevents unauthorized vehicles from slipping into your London Colney driveway behind you.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'What type of entry system works best for shared driveways with wooden gates?',
+          answer: 'Multi-tenant keypads ensure visitors can easily ring the specific house they are trying to reach. Each property gets its own dedicated indoor handset to control the shared wooden driveway gates independently.',
+        },
+        {
+          question: 'Do you offer lightweight timber to avoid stressing old brick pillars?',
+          answer: 'Renewable cedar provides the imposing look of thick wood but weighs significantly less than oak. This drastically reduces the mechanical strain on older masonry columns bordering the London Colney high street.',
+        },
+        {
+          question: 'How do we secure our property against tailgating vehicles?',
+          answer: 'Prompt locking logic can be programmed to shut the heavy timber immediately after your car clears the threshold. This rapid response prevents unauthorized vehicles from slipping into your London Colney driveway behind you.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'What type of entry system works best for shared driveways?',
+          answer: 'Individual buzzers on a multi-call intercom ensure visitors can easily ring the specific house. Each property gets its own indoor handset to control the shared metal driveway gates independently.',
+        },
+        {
+          question: 'Do you offer lightweight aluminum gates to avoid stressing old brick pillars?',
+          answer: 'Aircraft-grade alloys mimic the look of heavy steel but weigh a fraction of the amount. This significantly reduces the strain on older masonry columns bordering the London Colney high street.',
+        },
+        {
+          question: 'How do we secure our property against tailgating vehicles?',
+          answer: 'Snapping shut immediately after your car clears the photocells prevents tailgating effectively. This rapid response stops unauthorized vehicles from slipping into your London Colney driveway behind you.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'What type of entry system works best for shared driveways?',
+          answer: 'Multi button intercoms ensure visitors can easily ring the specific house they are trying to reach. Each property gets its own dedicated indoor handset to control the shared automated gate system independently. This setup is perfect for the newly developed cul-de-sacs and divided plots around London Colney.',
+        },
+        {
+          question: 'Do you offer lightweight aluminum gates to avoid stressing old brick pillars?',
+          answer: 'Aerospace grade aluminum mimics the look of heavy steel but weighs a fraction of the amount. This significantly reduces the strain on older masonry columns bordering the High Street. It is a fantastic rust-proof alternative that requires much less powerful motors to automate.',
+        },
+        {
+          question: 'How do we secure our property against tailgating vehicles?',
+          answer: 'Fast closing logic can be programmed to shut the barrier immediately after your car clears the safety photocells. This rapid response prevents unauthorized vehicles from slipping in behind you as you enter your London Colney driveway. We also install induction loops to ensure the system only triggers for genuine residential traffic.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The shared gates for our apartment block are stuck open.',
+          answer: 'Shared facilities endure massive daily cycle counts that wear out limit switches rapidly. We stock commercial-grade replacement parts to get your communal London Colney driveway secured swiftly.',
+        },
+        {
+          question: 'Our aluminum gates are dented; can they be fixed?',
+          answer: 'Crushed alloys require specialized welding techniques to repair without melting the surrounding lightweight frame. We possess the advanced equipment necessary to fix damaged aluminum boundaries in London Colney safely.',
+        },
+        {
+          question: 'The intercom screen in my hallway has gone completely blank.',
+          answer: 'Dead monitors usually suffer from blown internal fuses or a failed power supply unit in the wall. We can repair the indoor handset to restore video feeds from your London Colney boundary instantly.',
+        },
+      ],
+    },
     cityIntro: [
       'London Colney sits at the southern edge of the St Albans district within the Hertsmere borough boundaries, with a residential character shaped by post-war development and the village\'s position on the A1081 corridor. The planning context from Hertsmere Borough Council is generally pragmatic outside specific conservation zones, with article 4 directions applying in some streets.',
       'Our London Colney installer network includes specialists with track records across the village. Every referred installer has documented Hertsmere planning experience and understands the article 4 restrictions that apply in specific streets.',
@@ -930,6 +2828,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Arterial traffic vibration constantly shakes the mounting brackets on property boundaries near the major M25 junctions. Over time, the masonry bolts securing the heavy gate motors slowly pull out of the brickwork. Preventative maintenance in South Mimms involves tightening all structural hardware and injecting high-strength chemical anchor resin into the pillar cavities. This locks the brackets permanently in place, preventing the motors from tearing loose under heavy daily operation.',
         'Hydraulic seals burst under heavy strain, leaking aviation-grade oil across the driveway and leaving the gate completely powerless. This is a common failure for overworked commercial rams serving busy commuting households. Local repair teams execute full hydraulic rebuilds on-site. They replace the blown O-rings, bleed the air from the closed-loop system, and refill the oil chambers, immediately restoring the massive pushing force required to secure the property.',
         'Cellular modules drop 4G signals occasionally, causing GSM intercoms to stop dialing the homeowner\'s phone. When a visitor presses the call button and nothing happens, South Mimms technicians step in to resolve the network fault. They replace outdated 2G/3G SIM cards, upgrade the external cellular antennas to boost signal strength, and reprogram the dial-out numbers to ensure the homeowner regains absolute control over their driveway access from their mobile device.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Given the proximity to the A1(M), how do we minimize road noise?',
+          answer: 'Acoustic shielding properties can be achieved by utilizing thick, gapless timber sliding panels. This dense physical boundary significantly dampens the tire roar from the adjacent South Mimms motorway.',
+        },
+        {
+          question: 'Can farmers access fields behind my property if I install automation?',
+          answer: 'Agricultural widths are easily accommodated using telescopic sliding mechanisms that fold compactly. This ensures massive tractors can pass entirely through your South Mimms property without snagging the gate.',
+        },
+        {
+          question: 'Are the remote controls secure against cloning by thieves?',
+          answer: 'Encrypted signals change their digital signature every single time you press the fob. This rolling code technology makes it completely impossible for criminals to intercept and copy the transmission.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Given the proximity to the A1(M), how do we minimize road noise through the gates?',
+          answer: 'Sound deflection is enhanced by choosing thick, gapless timber panels for your entrance. While not entirely soundproof, a dense electric swing gate significantly reduces tire roar bleeding in from the adjacent South Mimms motorway.',
+        },
+        {
+          question: 'Can farmers access fields behind my property if I install automation?',
+          answer: 'Tractor clearance requires a very broad opening which is easily achieved with heavy duty posts and extended leaves. We can program special access codes for agricultural workers needing to pass through your South Mimms property safely.',
+        },
+        {
+          question: 'Are the remote controls secure against cloning by thieves?',
+          answer: 'Radio encryption ensures the transmission signal changes its digital signature every single time you press the fob. This rolling code technology makes it completely impossible for criminals to intercept and copy your electric swing gate key.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Given the proximity to the A1(M), how do we minimize road noise through wooden gates?',
+          answer: 'Chunky boarding significantly deflects tire roar from the nearby motorway away from your house. Your dense wooden driveway gates will help create a quieter, more peaceful courtyard environment in South Mimms.',
+        },
+        {
+          question: 'Can farmers access fields behind my property if I install wooden gates?',
+          answer: 'Generous spans are easily achieved using heavy duty wooden posts and extended swinging leaves. We can ensure agricultural workers have plenty of room to pass through your South Mimms property safely.',
+        },
+        {
+          question: 'Are the remote controls for wooden gates secure against cloning?',
+          answer: 'Dynamic encryption ensures the radio signal changes every single time you press the button. This sophisticated technology makes it completely impossible for criminals to intercept and copy the transmission.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Given the proximity to the A1(M), how do we minimize road noise through the gates?',
+          answer: 'Continuous plating can be incorporated by choosing thick aluminum panels with no gaps. While not entirely soundproof, a dense physical boundary significantly deflects tire roar from the adjacent South Mimms motorway.',
+        },
+        {
+          question: 'Can farmers access fields behind my property if I install automation?',
+          answer: 'Retracting overlaps fold back compactly to easily accommodate extra wide agricultural spans. We can program special access codes for farm workers needing to pass through your South Mimms property.',
+        },
+        {
+          question: 'Are the remote controls secure against cloning by thieves?',
+          answer: 'Scrambled frequencies ensure the radio signal changes every single time you press the button. This sophisticated encryption makes it completely impossible for criminals to intercept and copy the transmission.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Given the proximity to the A1(M), how do we minimize road noise through the gates?',
+          answer: 'Acoustic barrier properties can be incorporated by choosing thick, solid timber panels with no gaps. While not entirely soundproof, a dense physical boundary significantly deflects tire roar from the nearby motorway. Your automated gate system will help create a quieter, more peaceful courtyard environment.',
+        },
+        {
+          question: 'Can farmers access fields behind my property if I install automation?',
+          answer: 'Extra wide spans are easily achieved using heavy duty telescopic sliding mechanisms that fold back compactly. We can program special access codes for agricultural workers needing to pass through your South Mimms property. The tracks are laid flush to handle the immense weight of tractors without buckling.',
+        },
+        {
+          question: 'Are the remote controls secure against cloning by thieves?',
+          answer: 'Rolling code technology ensures the radio signal changes every single time you press the button. This sophisticated encryption makes it completely impossible for criminals to intercept and copy the transmission. Your entrance remains completely secure against modern electronic relay attacks.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Road grime from the A1(M) has jammed the sliding gate track.',
+          answer: 'Compacted dirt and exhaust soot eventually bind the nylon support wheels, causing tremendous motor strain. We power wash the floor rail and install fresh rollers to get your South Mimms gate gliding smoothly.',
+        },
+        {
+          question: 'The electric lock clunks loudly but won\'t release the gate.',
+          answer: 'Seized mechanisms within the latch require deep cleaning and high-performance lubrication to release freely. Our technicians will service the mechanical lock to ensure your South Mimms entrance opens effortlessly.',
+        },
+        {
+          question: 'Can you upgrade my old radio fobs to something more secure?',
+          answer: 'Encrypted broadcasts provide maximum security by changing the frequency every single time you press the button. We can retrofit a highly secure, modern receiver to your existing South Mimms automation setup.',
+        },
       ],
     },
     cityIntro: [
@@ -972,6 +2956,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Farm machinery impacts require emergency mobile welding to fix snapped hinges or crushed gate leaves. It is incredibly common for tractors or horseboxes to accidentally clip a gate while navigating the wide rural entrances of Ridge. Local metalworkers cut away the mangled steel, welding fresh crossbeams into the structure to restore its integrity without forcing the estate owner to purchase a completely new, highly expensive bespoke boundary.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Is solar power reliable for a rural property with no mains connection?',
+          answer: 'Sun power can charge the deep cycle batteries required to run low voltage sliding motors. We install oversized panels to ensure your Ridge property remains accessible even during gloomy winter months.',
+        },
+        {
+          question: 'What is the most durable finish for exposed, windy locations?',
+          answer: 'Kiln fired powder coating provides unparalleled resistance against the harsh elements in exposed hilltop spots. It keeps your electric sliding gates looking immaculate despite the severe weather sweeping across Ridge.',
+        },
+        {
+          question: 'How can the postman deliver letters if the gates are closed all day?',
+          answer: 'Built-in letterboxes can be seamlessly integrated directly into the sliding metalwork or timber panels. The postman can securely drop your mail without needing any access codes for your boundary.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Is solar power reliable for a rural property with no mains connection at the gate?',
+          answer: 'Sunlight charging can trickle feed deep cycle batteries to operate low voltage swinging motors effectively. We specify oversized photovoltaic panels to ensure your Ridge property remains accessible even during gloomy winter weather.',
+        },
+        {
+          question: 'What is the most durable finish for exposed, windy locations?',
+          answer: 'Marine paints and kiln fired powder coatings provide unparalleled resistance against the harsh elements in exposed hilltop spots. Your electric swing gates will remain immaculate despite the severe weather sweeping across Ridge.',
+        },
+        {
+          question: 'How can the postman deliver letters if the gates are closed all day?',
+          answer: 'Postman delivery is accommodated by integrating secure letterboxes directly into the swinging metalwork or timber panels. Mail can be securely dropped without needing any access codes for your electric swing gate system.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Is solar power reliable for rural wooden gates with no mains connection?',
+          answer: 'Colossal panels offer a brilliant off grid solution for remote entrances far from the main house. We specify deep cycle batteries to ensure the wooden driveway gates operate perfectly even through dark winter weeks.',
+        },
+        {
+          question: 'What is the most durable wood finish for exposed, windy locations?',
+          answer: 'Yacht-grade varnish provides unparalleled resistance against the elements in highly exposed hilltop spots. It keeps your timber looking immaculate despite the harsh weather sweeping across the Ridge countryside.',
+        },
+        {
+          question: 'How can the postman deliver letters if the solid wooden gates are closed all day?',
+          answer: 'Cut-out letter-slots can be seamlessly built directly into the thick timber panels. The postman can securely drop your mail without needing any access codes for your Ridge boundary.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Is solar power reliable for a rural property with no mains connection at the gate?',
+          answer: 'Sun harvesting offers a brilliant off-grid solution for remote entrances far from the main house. We specify oversized batteries to ensure the metal driveway gates operate perfectly even through dark winter weeks.',
+        },
+        {
+          question: 'What is the most durable finish for exposed, windy locations?',
+          answer: 'Oven-baked finishes provide unparalleled resistance against the elements in highly exposed hilltop spots. This protective layer will not chip or fade like wet paint, keeping your metalwork immaculate despite the harsh Ridge weather.',
+        },
+        {
+          question: 'How can the postman deliver letters if the gates are closed all day?',
+          answer: 'Integrated mail-slots can be seamlessly welded directly into the steel panels. The postman can securely drop your mail without needing any access codes for your Ridge boundary.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Is solar power reliable for a rural property with no mains connection at the gate?',
+          answer: 'Photovoltaic panels offer a brilliant off-grid solution for remote entrances far from the main house. We specify oversized deep cycle batteries to ensure the automated gate system operates perfectly even through dark winter weeks. This avoids the massive expense of trenching armored cables across long Ridge paddocks.',
+        },
+        {
+          question: 'What is the most durable finish for exposed, windy locations?',
+          answer: 'Marine grade powder coating provides unparalleled resistance against the elements in highly exposed hilltop spots. This baked-on finish will not chip, flake, or fade like traditional wet paint. It keeps your metalwork looking immaculate despite the harsh weather sweeping across the Hertfordshire countryside.',
+        },
+        {
+          question: 'How can the postman deliver letters if the gates are closed all day?',
+          answer: 'Integrated letterboxes can be seamlessly built directly into the metalwork or timber panels. The postman can securely drop your mail through the slot without needing any access codes. Your letters are kept safe inside the Ridge property boundary while the barrier remains firmly shut.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The solar panels for my rural gate are covered in moss and stopped working.',
+          answer: 'Obscured photovoltaics cannot harvest sunlight, leading to completely drained deep cycle batteries. We clean the arrays and test the charging circuit to restore off-grid power to your Ridge property.',
+        },
+        {
+          question: 'High winds snapped the manual release key inside the motor.',
+          answer: 'Broken extractors jammed inside the lock barrel prevent you from engaging the emergency override. We will drill out the ruined cylinder and fit a brand new release lock for your Ridge automated gates.',
+        },
+        {
+          question: 'The heavy timber gates have dropped and drag on the gravel.',
+          answer: 'Dropped hinges indicate the immense weight of the wood is pulling the fixings out of the pillar. We will install heavy-duty, wrap-around brackets to lift and support your Ridge wooden gates permanently.',
+        },
+      ],
+    },
     cityIntro: [
       'Ridge is a village in the Hertsmere district, characterised by its rural character preserved despite proximity to the M25 and Potters Bar, substantial rural properties along Ridge Hill and the surrounding lanes, the Ridge Conservation Area, and the Green Belt context that shapes planning across the parish. Gate installations here sit within a planning context where Hertsmere Borough Council assesses material, height, and streetscape impact carefully within the conservation boundary, and where Green Belt considerations and the rural character create broader expectations of specification quality.',
       'Our Ridge installer network includes specialists with documented village track records and genuine Hertsmere planning experience. Every referred installer has completed at least six verifiable Ridge or immediately adjacent projects before receiving any enquiry, and understands the design sensibilities that successful applications require on the rural properties characteristic of the parish.',
@@ -1010,6 +3080,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Aristocratic prestige dictates that gate repairs must leave absolutely no visual scars on the historic properties. When ancient brick pillars shift or custom ironwork sags in Aldenham, heavy-handed repairs are unacceptable. Specialized conservation technicians use discreet steel tension bands and hidden structural anchors to brace failing boundaries. This expert intervention ensures the gate operates smoothly again without ruining the unblemished, historic streetscape of the highly conserved village.',
         'Heritage hinges must be carefully forged to match existing historic ironwork if they snap under the immense weight of the gates. Standard galvanised replacements look jarringly out of place on these luxury estates. Master blacksmiths in the local repair network heat and shape bespoke replacement hinges, matching the exact profile and patina of the 19th-century originals. This ensures the mechanical repair is completely invisible to the naked eye.',
         'Biometric scanners fail if the optical lenses get scratched by abrasive dirt or vandalism, demanding delicate replacements. High-net-worth homeowners relying on fingerprint access are instantly locked out when these high-tech components degrade. Aldenham gate specialists replace the fragile optical sensors, upgrade the firmware, and re-enroll the authorized users, quickly restoring the elite, keyless entry experience expected at these sprawling luxury mansions.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'We live near the reservoir; does the damp air affect the sliding motors?',
+          answer: 'Morning fogs rolling off Aldenham Reservoir will not compromise our hermetically sealed motor housings. The internal electronics are completely protected from the highly humid local microclimate.',
+        },
+        {
+          question: 'Can an automated sliding gate add value to a premium property here?',
+          answer: 'Estate value is drastically enhanced by a professionally installed, high-end electric sliding gate. Buyers in affluent areas like Aldenham highly prize the robust security and modern convenience it provides.',
+        },
+        {
+          question: 'Does a sliding gate need a perfectly flat driveway to operate?',
+          answer: 'Horizontal leveling is absolutely critical for the floor track to function safely without motor strain. If your Aldenham driveway slopes across the opening, we must pour a perfectly flat concrete beam first.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'We live near the reservoir; does the damp air affect the intercom systems?',
+          answer: 'Damp resistance is built into all our external call points through hermetically sealed weatherproof housings. Even the heavy morning fogs rolling off Aldenham Reservoir will not compromise the audio quality of your electric swing gate.',
+        },
+        {
+          question: 'Can an automated gate add value to a premium property here?',
+          answer: 'Estate valuation is drastically enhanced by a professionally installed, high end entrance barrier. Buyers in affluent areas like Aldenham highly prize the privacy and robust security a premium electric swing gate provides.',
+        },
+        {
+          question: 'Do swing gates need a perfectly flat driveway to operate?',
+          answer: 'Uneven ground is easily accommodated using specially engineered rising hinges that lift the frame. This prevents the base of the electric swing gate from scraping against the subtle gradients often found on older Aldenham driveways.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'We live near the reservoir; does the damp air warp wooden gates?',
+          answer: 'Perfect acclimatization guarantees the timber has the correct moisture content before it is even installed. Even the heavy morning fogs rolling off Aldenham Reservoir will not twist or warp your new entrance.',
+        },
+        {
+          question: 'Can wooden gates add value to a premium property here?',
+          answer: 'Property valuations are drastically enhanced by a professionally crafted, high end hardwood barrier. Buyers in affluent areas like Aldenham highly prize the privacy and aesthetic beauty that wooden driveway gates provide.',
+        },
+        {
+          question: 'Do wooden gates need a perfectly flat driveway to open?',
+          answer: 'Tapered base-rails can be custom cut to match the subtle gradients often found on older rural driveways. This clever carpentry solution prevents the base from scraping against tarmac or gravel in Aldenham.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'We live near the reservoir; does the damp air affect the intercom systems?',
+          answer: 'Fog-proof enclosures protect the delicate electronics from moisture ingress perfectly. Even the heavy morning fogs rolling off Aldenham Reservoir will not compromise the audio or video quality.',
+        },
+        {
+          question: 'Can an automated gate add value to a premium property here?',
+          answer: 'Estate desirability is drastically enhanced by a professionally installed, high-end entrance barrier. Buyers in affluent areas like Aldenham highly prize the privacy and security that metal driveway gates provide.',
+        },
+        {
+          question: 'Do swing gates need a perfectly flat driveway to operate?',
+          answer: 'Elevating joints are utilized to raise the bottom edge of the frame as it swings inward. This clever mechanical solution prevents the base from scraping against the subtle gradients often found on older rural driveways.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'We live near the reservoir; does the damp air affect the intercom systems?',
+          answer: 'Weatherproof housings protect the delicate electronics within the external call points from moisture ingress. Even the heavy morning fogs rolling off Aldenham Reservoir will not compromise the audio or video quality. We guarantee crystal clear communication regardless of the ambient humidity.',
+        },
+        {
+          question: 'Can an automated gate add value to a premium property here?',
+          answer: 'Curb appeal is drastically enhanced by a professionally installed, high-end entrance barrier. Buyers in affluent areas like Aldenham highly prize the privacy and security an automated gate system provides. It is widely considered a smart investment that increases the overall desirability of your estate.',
+        },
+        {
+          question: 'Do swing gates need a perfectly flat driveway to operate?',
+          answer: 'Rising hinges are utilized to lift the bottom edge of the frame as it swings inward over uneven ground. This clever mechanical solution prevents the base from scraping against tarmac or gravel. We can easily accommodate the subtle gradients often found on older rural driveways.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Morning fog from the reservoir keeps triggering the safety sensors.',
+          answer: 'Dense mist scatters the infrared beams, tricking the control board into thinking an obstacle is present. We can fit anti-glare hoods over the lenses to stop the Aldenham weather from interfering with operation.',
+        },
+        {
+          question: 'Do you service premium underground motors on affluent estates?',
+          answer: 'Underground drive-units are standard on high-end properties but require fastidious drainage maintenance to prevent flooding. We pump out the foundation boxes and regrease the linkage arms for your prestigious Aldenham entrance.',
+        },
+        {
+          question: 'My gate motor hums but refuses to push the heavy iron panels.',
+          answer: 'Failed capacitors lack the electrical punch needed to kickstart the heavy copper windings inside the motor. Swapping this inexpensive electronic component usually restores full power to your Aldenham electric gates immediately.',
+        },
       ],
     },
     cityIntro: [
@@ -1052,6 +3208,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Vandalism repairs are occasionally needed on street-facing intercom panels in busier neighborhoods. Smashed keypads or snapped audio microphones destroy the homeowner\'s ability to screen visitors safely. Vetted installers swap out the broken plastic components for ruggedized, marine-grade stainless steel access panels. These vandal-resistant upgrades ensure the communication hardware survives the harsh suburban environment while maintaining a clean, professional aesthetic for the family home.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Space is tight on my urban driveway; what are my options?',
+          answer: 'Compact spaces are the primary reason homeowners choose sliding mechanisms over traditional swinging arcs. An electric sliding gate moves parallel to your boundary wall, maximizing every inch of Watford parking space.',
+        },
+        {
+          question: 'How do we manage access for multiple flats in a converted Watford house?',
+          answer: 'GSM modules allow visitors to ring individual apartments directly from the main entrance panel. Residents can simply press a key on their own mobile phone to slide the gate open.',
+        },
+        {
+          question: 'Can the gates be forced open by leverage if someone tries to break in?',
+          answer: 'Hydraulic blocking prevents the sliding gears from being manually turned when the motor is engaged. This robust physical security is essential for deterring burglaries in busy urban centers like Watford.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Space is tight on my urban driveway; what are my options?',
+          answer: 'Tight spaces often dictate outward opening configurations if your boundary line permits it legally. Alternatively, bi-folding mechanisms offer an incredible space saving solution for urban Watford driveways where traditional electric swing gates would fail.',
+        },
+        {
+          question: 'How do we manage access for multiple flats in a converted Watford house?',
+          answer: 'Apartment blocks are best served by GSM dialers allowing visitors to call individual flats via mobile networks. Residents simply press a key on their own phone to trigger the electric swing gate release remotely.',
+        },
+        {
+          question: 'Can the gates be forced open by leverage if someone tries to break in?',
+          answer: 'Anti leverage protection is provided by robust hydraulic locking valves within the motor casing. Once the electric swing gates complete their closing cycle, the system locks completely solid to deter burglaries in busy Watford centers.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Space is tight on my urban driveway; what are my wooden gate options?',
+          answer: 'Trackless bi-folds are incredibly space efficient, folding neatly back against the pillars to maximize parking area. If you only have a few meters between the pavement and your Watford front door, this is the perfect solution.',
+        },
+        {
+          question: 'How do we manage access for multiple flats in a converted Watford house?',
+          answer: 'Networked intercoms allow visitors to call individual apartments directly from the main entrance panel via mobile networks. Residents can simply press a key on their own phone to trigger the wooden driveway gates remotely.',
+        },
+        {
+          question: 'Can wooden gates be forced open by leverage if someone tries to break in?',
+          answer: 'Massive drop-bolts shoot a solid steel pin deeply into the ground whenever the entrance closes. This physical locking mechanism makes it practically impossible to pry the timber panels apart in busy Watford centers.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Space is tight on my urban driveway; what are my options?',
+          answer: 'Folding concertinas are incredibly space efficient, concertinaing back against the pillars to maximize parking area. If you only have a few meters between the pavement and your Watford front door, this is the perfect solution.',
+        },
+        {
+          question: 'How do we manage access for multiple flats in a converted Watford house?',
+          answer: 'Apartment networks allow visitors to call individual flats directly from the main entrance panel. Residents can simply press a key on their own phone to trigger the release mechanism remotely.',
+        },
+        {
+          question: 'Can the gates be forced open by leverage if someone tries to break in?',
+          answer: 'Hydraulic clamping provides immense resistance against any physical attempts to pry the leaves apart. Once the motors complete their closing cycle, your metal driveway gates lock completely solid to deter Watford burglaries.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Space is tight on my urban driveway; what are my options?',
+          answer: 'Bi-folding designs are incredibly space efficient, concertinaing back against the pillars to maximize parking area. If you only have a few meters between the pavement and your front door, this is the perfect solution. It allows you to fit an automated gate system where traditional swings would hit your vehicle.',
+        },
+        {
+          question: 'How do we manage access for multiple flats in a converted Watford house?',
+          answer: 'GSM dialers allow visitors to call individual apartments directly from the main entrance panel via mobile networks. Residents can simply press a key on their own phone to trigger the release mechanism remotely. This entirely avoids the need for complex, hardwired intercom cabling through the entire building.',
+        },
+        {
+          question: 'Can the gates be forced open by leverage if someone tries to break in?',
+          answer: 'Hydraulic locks provide immense resistance against any physical attempts to pry the leaves apart. Once the motors complete their closing cycle, the system locks completely solid. This robust physical security is essential for deterring burglaries in busy urban centers like Watford.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Space is tight on my urban driveway; my bi-fold gate is jamming.',
+          answer: 'Concertina joints endure complex mechanical stresses and require precise lubrication to fold smoothly. We will service the articulating hinges to ensure your Watford bi-folding boundary operates flawlessly again.',
+        },
+        {
+          question: 'How do we fix an intercom that calls the wrong apartment in our converted house?',
+          answer: 'Scrambled routing within the central dialer means the call buttons are triggering the wrong numbers. We can reprogram the master directory to ensure visitors reach the correct Watford flat.',
+        },
+        {
+          question: 'The hydraulic ram was forced open by vandals and is leaking.',
+          answer: 'Blown seals caused by violent leverage destroy the internal pressure needed to move the gate. We must strip the damaged motor and rebuild the hydraulic block to secure your Watford property.',
+        },
+      ],
+    },
     cityIntro: [
       'Watford combines Edwardian and inter-war residential character across Cassiobury and Nascot Wood, substantial post-war housing across Oxhey and Bushey Mill, and newer developments on the town\'s northern and eastern edges. The planning context is generally pragmatic - Watford Borough Council handles gate applications without the heightened scrutiny of the conservation-heavy adjacent districts - though specific conservation zones around the Town Hall and Cassiobury require particular care.',
       'Our Watford installer network reflects the town\'s mixed context, combining specialists experienced across the premium Cassiobury market, the practical mid-range of Callowland and Oxhey, and the newer development areas. Every referred installer has completed substantive Watford work and understands both the Watford Borough Council planning context and the specific subsoil and drainage considerations that affect gate installations across the town.',
@@ -1090,6 +3332,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Aquadrome borders elevate local humidity, heavily corroding untreated low-voltage wiring inside gate control boxes. In Rickmansworth, this invisible moisture damage causes erratic gate behavior, such as opening randomly in the middle of the night. Expert technicians resolve these terrifying ghost-faults by completely rewiring the affected logic boards, utilizing specialized waterproof gel-crimps and conformal coating sprays to immunize the new electrical connections against the damp river valley air.',
         'Marine grease must be applied to all exposed rams to repel moisture and prevent the telescopic arms from seizing. Preventative maintenance is the only way to protect automation hardware in this wet environment. Bi-annual servicing teams strip the dirt from the actuator arms, polishing the stainless steel shafts before packing them with water-displacing lubricants. This meticulous care ensures the motors run silently and efficiently despite the constant proximity to the River Colne.',
         'Smart integrations drop off Wi-Fi networks frequently if the router in the main house is upgraded or moved. When Rickmansworth residents can no longer open their gates via their smartphone app, tech-support engineers are dispatched. They reconfigure the IP bridges, install external Wi-Fi boosters to punch the signal through thick exterior walls, and update the app settings, restoring flawless cloud-based access control to the luxury property instantly.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do you provide composite materials that mimic wood for homes near the Aquadrome?',
+          answer: 'Woodgrain finishes offer the beautiful aesthetic of natural timber without any rotting risks. It is the perfect lightweight material for sliding gates situated in damp environments near Rickmansworth lakes.',
+        },
+        {
+          question: 'Are there safety rules regarding sliding gates near the pavement?',
+          answer: 'Pavement overhangs are strictly prohibited by UK highways regulations for any automated boundary. The sliding track must be installed entirely within your private Rickmansworth property line.',
+        },
+        {
+          question: 'What is the lifespan of a sliding gate motor?',
+          answer: 'Decade lifespans are easily achievable for high quality motors that are serviced annually. Keeping the floor track free from silt and debris is the most critical factor for longevity.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do you provide composite materials that mimic wood for homes near the Aquadrome?',
+          answer: 'Fake wood composite offers the beautiful aesthetic of natural timber without any rotting risks in damp environments. This lightweight material pairs effortlessly with modern electric swing gate motors for homes near the Rickmansworth lakes.',
+        },
+        {
+          question: 'Are there safety rules regarding gates opening outwards towards the pavement?',
+          answer: 'External swings over public footpaths are strictly prohibited by UK highways regulations for any boundary door. If your Rickmansworth property lacks internal space, we must design an inward bi-folding system to remain legally compliant.',
+        },
+        {
+          question: 'What is the lifespan of an underground automation motor?',
+          answer: 'Subterranean lifespans typically exceed a decade for high quality European motors that are serviced annually. Keeping the foundation boxes free from silt and ensuring the drainage works perfectly is key to your Rickmansworth installation longevity.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do you provide composite materials that mimic wood for homes near the Aquadrome?',
+          answer: 'Faux timber offers the beautiful aesthetic of natural wood without any rotting risks in damp environments. The material is lightweight and pairs effortlessly with modern automation for homes near the Rickmansworth lakes.',
+        },
+        {
+          question: 'Are there safety rules regarding wooden gates opening outwards towards the pavement?',
+          answer: 'Outward trajectories over public footpaths are strictly prohibited by UK highways regulations. If your Rickmansworth property lacks internal space, we must design a sliding or folding system to remain legally compliant.',
+        },
+        {
+          question: 'What is the lifespan of oak driveway gates?',
+          answer: 'Thirty years is a conservative estimate for high quality oak that is oiled regularly. Keeping the base clear of standing water is the key to longevity for your Rickmansworth installation.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do you provide composite materials that mimic wood but use a metal frame for homes near the Aquadrome?',
+          answer: 'Metal framework designs combined with woodgrain composite offer the beautiful aesthetic of natural timber without any rotting risks. It is perfect for damp environments near Rickmansworth lakes, pairing effortlessly with modern automation.',
+        },
+        {
+          question: 'Are there safety rules regarding gates opening outwards towards the pavement?',
+          answer: 'Pavement regulations strictly prohibit any boundary door from swinging outwards over a public footpath. If your Rickmansworth property lacks internal space, we must install a sliding mechanism to keep the metal driveway gates legal.',
+        },
+        {
+          question: 'What is the lifespan of an underground automation motor?',
+          answer: 'Buried actuators easily hit a ten-year lifespan if they are high quality and serviced regularly. Keeping the foundation boxes free from silt is the key to longevity for your Rickmansworth installation.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do you provide composite materials that mimic wood for homes near the Aquadrome?',
+          answer: 'Woodgrain composite offers the beautiful aesthetic of natural timber without any of the associated maintenance. It will never rot, warp, or require re-staining, making it perfect for damp environments near Rickmansworth lakes. The material is lightweight and pairs effortlessly with modern automated gate systems.',
+        },
+        {
+          question: 'Are there safety rules regarding gates opening outwards towards the pavement?',
+          answer: 'Highways regulations strictly prohibit any boundary door from swinging outwards over a public footpath. If your Rickmansworth property lacks internal space, we must install a sliding mechanism or a bi-folding alternative. Our surveyors will ensure your design is completely legal and safe for passing pedestrians.',
+        },
+        {
+          question: 'What is the lifespan of an underground automation motor?',
+          answer: 'Ten years is a conservative estimate for a high quality subterranean motor that is serviced regularly. Keeping the foundation boxes free from silt and ensuring the drainage works perfectly is the key to longevity. We only install premium European brands renowned for their incredible mechanical durability.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Do you repair rusted metal gates near the Aquadrome?',
+          answer: 'Corroded frames suffer structurally when exposed to the damp environments near the local lakes. We can cut away the rusted sections, weld fresh steel, and apply protective zinc to your Rickmansworth gates.',
+        },
+        {
+          question: 'The wooden panels on my gate have rotted at the bottom.',
+          answer: 'Spliced timber repairs allow us to replace the decayed bottom rail without rebuilding the entire structure. This traditional carpentry technique beautifully restores your Rickmansworth wooden entrance very cost-effectively.',
+        },
+        {
+          question: 'The underground motor box has filled with mud and silt.',
+          answer: 'Clogged drains prevent rainwater from escaping, causing the foundation box to become a destructive mud bath. We excavate the debris and flush the drainage pipes to protect your Rickmansworth submerged motors.',
+        },
       ],
     },
     cityIntro: [
@@ -1132,6 +3460,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Woodland moss builds up on photocells and control panel housings, causing false obstacle detections and short circuits. Properties hidden beneath the dense Chorleywood canopy require vigilant organic maintenance. Servicing teams actively scrub away this corrosive moss, trim back interfering branches, and treat the external plastic housings with specialized repellents to ensure the woodland environment doesn\'t paralyze the expensive automation system during the wet winter months.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Does a sloping driveway near Chorleywood Common prevent the use of sliding gates?',
+          answer: 'Cement bases must be poured to create a completely level platform for the sliding track. If we cannot build a level plinth, a cantilever system is the best alternative for uneven Chorleywood ground.',
+        },
+        {
+          question: 'Can I link the gate opening to my existing smart home system?',
+          answer: 'Home networking integration is easily achievable using Wi-Fi enabled relays connected to the sliding control board. You can ask your smart speaker to open the electric sliding gate when guests arrive.',
+        },
+        {
+          question: 'How often do wooden sliding gates need treating compared to metal ones?',
+          answer: 'Yearly oiling is generally required to keep natural hardwood sliding panels looking their absolute best. Metal electric sliding gates simply need a quick wipe down with soapy water occasionally.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Does a sloping driveway near Chorleywood Common prevent the use of swing gates?',
+          answer: 'Slope challenges are overcome by utilizing heavy duty ascending hinges that elevate the gate as it moves. This mechanical solution prevents the bottom edge from grounding out on the steep driveways common around Chorleywood Common.',
+        },
+        {
+          question: 'Can I link the gate opening to my existing smart home system?',
+          answer: 'Smart speakers can be linked via Wi-Fi enabled relays connected directly to the main control board. You can ask your digital assistant to open the electric swing gate as part of your Chorleywood arrival routines.',
+        },
+        {
+          question: 'How often do wooden gates need treating compared to metal ones?',
+          answer: 'Annual treatments with microporous oil are generally required to keep natural hardwoods looking their absolute best. Over time, UV rays will naturally silver the timber on your electric swing gate if left untreated in the Chorleywood weather.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Does a sloping driveway near Chorleywood Common prevent the use of wooden swing gates?',
+          answer: 'Customized hinges lift the timber frame smoothly as it swings inward over uneven ground. This prevents the heavy wood from scraping against the steep driveways common around Chorleywood Common.',
+        },
+        {
+          question: 'Can I link the wooden gate opening to my existing smart home system?',
+          answer: 'Spoken commands can easily trigger Wi-Fi enabled relays connected to the main control board. You can ask your smart speaker to open the wooden driveway gates as part of your Chorleywood arrival routines.',
+        },
+        {
+          question: 'How often do wooden gates need treating compared to metal ones?',
+          answer: 'Scheduled varnishing is generally required annually to keep natural hardwoods looking their absolute best. Over time, UV rays will naturally silver the timber if left untreated in the sunny Chorleywood weather.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Does a sloping driveway near Chorleywood Common prevent the use of sliding gates?',
+          answer: 'Concrete plinths must be constructed for a slider track to function safely without burning out the motor. If your boundary line follows a slope, we can use cantilever metal driveway gates to bridge the uneven ground.',
+        },
+        {
+          question: 'Can I link the gate opening to my existing smart home system?',
+          answer: 'Smart-home relays connect the main control board directly to your Wi-Fi network. You can ask your smart speaker to open the metal driveway gates as part of your Chorleywood arrival routines.',
+        },
+        {
+          question: 'How often do metal gates need treating compared to wooden ones?',
+          answer: 'Nil repainting is generally required for our powder-coated aluminum or galvanized steel boundaries. Metal alternatives simply need a quick wipe down with soapy water to maintain their flawless finish in the Chorleywood weather.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Does a sloping driveway near Chorleywood Common prevent the use of sliding gates?',
+          answer: 'Level tracking is absolutely mandatory for a slider to function safely without burning out the motor. If your boundary line follows a slope, we must build a level concrete plinth for the rail. Alternatively, cantilever designs can sometimes bridge uneven ground without needing a track anchored to the driveway.',
+        },
+        {
+          question: 'Can I link the gate opening to my existing smart home system?',
+          answer: 'Home automation integration is easily achievable using Wi-Fi enabled relays connected to the main control board. You can ask your smart speaker to open the automated gate system or include it in your "arrival" routines. This brings your Chorleywood property entrance right into the 21st century.',
+        },
+        {
+          question: 'How often do wooden gates need treating compared to metal ones?',
+          answer: 'Annual oiling is generally required to keep natural hardwoods looking their absolute best. Over time, UV rays will naturally silver the timber if left untreated in the sunny Hertfordshire weather. Metal alternatives simply need a quick wipe down with soapy water to maintain their flawless finish.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'My sloped driveway near Chorleywood Common puts huge strain on the gate motor.',
+          answer: 'Sloped trajectories demand immense torque, meaning standard motors burn out much faster on hills. We can upgrade your system to heavy-duty hydraulic rams designed explicitly for steep Chorleywood inclines.',
+        },
+        {
+          question: 'Can I link the gate repair to a smart home upgrade?',
+          answer: 'Networked relays can easily be installed alongside any standard mechanical repair we perform. This smart upgrade allows you to open your Chorleywood entrance using voice commands or smartphone apps.',
+        },
+        {
+          question: 'The gate motor is completely dead after a lightning storm.',
+          answer: 'Fried logic boards are incredibly common after severe electrical surges or local lightning strikes. We will replace the burnt control panel and install inline surge protectors for your Chorleywood home.',
+        },
+      ],
+    },
     cityIntro: [
       'Chorleywood sits firmly within the Chilterns AONB in South West Hertfordshire, with the AONB designation covering essentially the entire town. Three Rivers District Council planning officers apply the Chilterns management plan rigorously in Chorleywood, and specifications that generate no comment elsewhere in the district routinely face conditions or refusal here.',
       'Our Chorleywood installer network focuses specifically on specialists with documented AONB experience and genuine understanding of the Three Rivers pre-application process. The constrained planning environment means a well-chosen installer saves months of rework, and our referral criteria reflect that - minimum verified AONB installation experience, familiarity with Chilterns material conventions, and working knowledge of the Three Rivers conservation-area controls.',
@@ -1170,6 +3584,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Suburban tranquility is ruined by grinding gates with dry bearings or rusted hinges. In Croxley Green, homeowners invest in automated gates for convenience and security, not to wake the neighbors every morning. Routine maintenance completely eliminates these acoustic nuisances. Technicians lift the heavy gates, replace the shattered steel bearings, and lubricate all moving joints, ensuring the entrance operates with the whisper-quiet precision expected in this peaceful, family-focused village.',
         'Brushless drives throw error codes if the incoming voltage drops, needing specific reset protocols to clear the motherboard logic. When a power surge or brownout scrambles the automation brain, the gate will refuse to move. Croxley Green repair specialists plug diagnostic laptops directly into the control panel, clearing the fault memory, resetting the encoder limits, and testing the battery backups to guarantee the system returns to normal, reliable operation immediately.',
         'Pedestrian latches on side gates misalign as wooden posts warp during the changing seasons. Many automated setups here feature an adjacent, electrically locked foot-gate. When the timber swells in the winter, the magnetic lock fails to engage, leaving the boundary unsecure. Carpenters and gate engineers work together to shave down the swelling timber and install fully adjustable keep-plates, ensuring the pedestrian entrance locks securely with a satisfying click regardless of the weather.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'What are the benefits of a cantilever sliding gate over a tracked one?',
+          answer: 'Suspended frames glide entirely above the driveway surface, completely ignoring gravel, dirt, or minor slopes. This makes them incredibly reliable for Croxley Green properties that struggle with debris-filled floor tracks.',
+        },
+        {
+          question: 'Do you install induction loops so the gates open automatically when I drive out?',
+          answer: 'Underground induction loops detect the metallic mass of your vehicle approaching from the inside. The electric sliding gate will open seamlessly as you drive towards it, offering true hands-free convenience.',
+        },
+        {
+          question: 'Are keypad entry systems weather resistant?',
+          answer: 'Tactile keypads are built from vandal-proof stainless steel and fully sealed against heavy rain. Your Croxley Green entrance will remain easily accessible regardless of how bad the winter weather gets.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'What are the benefits of an articulated arm motor for older brick pillars?',
+          answer: 'Jointed motors reach around wide masonry columns to push the frame smoothly without deep structural modifications. This is very popular for preserving the original brickwork aesthetic while adding electric swing gates in Croxley Green.',
+        },
+        {
+          question: 'Do you install induction loops so the gates open automatically when I drive out?',
+          answer: 'Departure loops buried beneath the tarmac detect the metallic mass of your vehicle approaching from the inside. The electric swing gate opens seamlessly as you drive towards it, offering true hands free convenience for Croxley Green residents.',
+        },
+        {
+          question: 'Are keypad entry systems weather resistant?',
+          answer: 'Weatherproof buttons made from vandal resistant stainless steel are completely sealed against heavy rain and freezing temperatures. Your Croxley Green entrance will remain fully accessible regardless of how harsh the winter weather gets.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'What are the benefits of wooden gates for older brick pillars?',
+          answer: 'Gentle aesthetics blend perfectly with the vintage brickwork common in Croxley Green. We can design lightweight timber frames that do not put excessive structural strain on the original masonry columns.',
+        },
+        {
+          question: 'Do you install induction loops so the wooden gates open automatically when I drive out?',
+          answer: 'Underground wire-loops sense the metallic mass of your vehicle approaching from the inside of the property. The wooden driveway gates will open seamlessly as you drive towards them, offering true hands free convenience.',
+        },
+        {
+          question: 'Are keypad entry systems weather resistant?',
+          answer: 'Potted electronics inside the stainless steel keypads are completely protected against heavy rain and freezing temperatures. Your Croxley Green entrance will remain fully accessible regardless of how harsh the winter weather gets.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'What are the benefits of an articulated arm motor for older brick pillars?',
+          answer: 'Jointed actuators allow the motor to be mounted on awkwardly shaped columns without deep structural modifications. This is very popular for preserving the original brickwork common in Croxley Green while adding automation.',
+        },
+        {
+          question: 'Do you install induction loops so the gates open automatically when I drive out?',
+          answer: 'Paving sensors detect the metallic mass of your vehicle approaching from the inside of the property. The metal driveway gates will open seamlessly as you drive towards them, offering true hands-free convenience.',
+        },
+        {
+          question: 'Are keypad entry systems weather resistant?',
+          answer: 'Vandal-proof consoles are completely sealed against heavy rain and freezing temperatures. They feature tactile, illuminated buttons that keep your Croxley Green entrance accessible regardless of how bad the winter weather gets.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'What are the benefits of an articulated arm motor for older brick pillars?',
+          answer: 'Geometry flexibility is the main advantage, allowing the motor to be mounted on wide or awkwardly shaped columns. The jointed arm reaches around the masonry to push the frame smoothly without requiring deep structural modifications. This is very popular for preserving the original brickwork common in Croxley Green.',
+        },
+        {
+          question: 'Do you install induction loops so the gates open automatically when I drive out?',
+          answer: 'Subsurface cables detect the metallic mass of your vehicle approaching from the inside of the property. The automated gate system will open seamlessly as you drive towards it, offering true hands-free convenience. It makes leaving for work on cold mornings incredibly easy and comfortable.',
+        },
+        {
+          question: 'Are keypad entry systems weather resistant?',
+          answer: 'Vandal proof stainless steel keypads are completely sealed against heavy rain and freezing temperatures. They feature tactile, illuminated buttons that are easy to use even in pitch black conditions. Your Croxley Green entrance will remain accessible regardless of how bad the winter weather gets.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'What are the benefits of repairing an old articulated arm motor?',
+          answer: 'Articulated elbows are expensive to replace entirely, making mechanical repairs highly cost-effective for older pillars. We carry replacement joints to keep your existing Croxley Green automation running smoothly.',
+        },
+        {
+          question: 'The induction loop doesn\'t open the gate when I drive out anymore.',
+          answer: 'Severed loops under the tarmac happen frequently if the driveway settles or cracks over time. We can cut a fresh channel in the pavement and lay a new exit sensor for your Croxley Green home.',
+        },
+        {
+          question: 'Keypad entry buttons are frozen solid in the winter morning.',
+          answer: 'Iced contacts inside unheated keypads prevent the electrical signal from passing to the main board. Upgrading to a modern, thermally protected console solves this freezing issue for Croxley Green properties permanently.',
+        },
       ],
     },
     cityIntro: [
@@ -1212,6 +3712,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Digital keypads suffer from worn buttons after years of heavy use, locking out local delivery drivers and trusted service staff. A malfunctioning access panel causes massive daily frustration. Rapid-response teams swap the degraded rubber membrane keypads for ultra-durable, illuminated metallic variants. They quickly transfer the existing user PIN codes over to the new system, restoring seamless, highly secure access for the busy Abbots Langley household.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can we install a sliding system that matches the modern new builds in the village?',
+          answer: 'Sharp aesthetics featuring minimalist horizontal louvers perfectly complement contemporary Abbots Langley architecture. We can powder coat these sleek sliding frames to match your modern window profiles seamlessly.',
+        },
+        {
+          question: 'Is it safe to have sliding automation if we have a lot of local wildlife passing through?',
+          answer: 'Animal detection is handled by dual photocells installed at multiple heights across the opening. This prevents badgers or foxes from being accidentally trapped by the heavy sliding mechanism at night.',
+        },
+        {
+          question: 'How long does a typical sliding gate installation take from start to finish?',
+          answer: 'Installation schedules generally require three days to complete the groundworks, tracking, and electrical commissioning. Our teams work efficiently to minimize disruption, leaving your Abbots Langley property secure quickly.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can we install a system that matches the modern new builds in the village?',
+          answer: 'Contemporary builds demand sharp horizontal lines and minimalist aluminum designs perfectly suited to modern architecture. We powder coat these frames to match your Abbots Langley window profiles seamlessly for a stunning electric swing gate installation.',
+        },
+        {
+          question: 'Is it safe to have automation if we have a lot of local wildlife passing through?',
+          answer: 'Wildlife protection is ensured by installing dual photocells at different heights across the entrance span. This prevents badgers or foxes from being accidentally trapped while crossing your Abbots Langley driveway at night.',
+        },
+        {
+          question: 'How long does a typical installation take from start to finish?',
+          answer: 'Install times average around three days for a complete job including groundwork, hanging, and electrical commissioning. Our teams work efficiently to minimize disruption, leaving your Abbots Langley electric swing gates fully operational by the weekend.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can we install wooden gates that match the modern new builds in the village?',
+          answer: 'Crisp slats perfectly complement the sharp contemporary architecture of newer Abbots Langley homes. We construct these modern wooden driveway gates from premium cedar for a stunning, high end finish.',
+        },
+        {
+          question: 'Is it safe to have heavy wooden gates if we have a lot of local wildlife passing through?',
+          answer: 'Fauna protection is ensured by installing dual photocells at different heights across the entrance span. This prevents badgers or foxes from being accidentally trapped while crossing your Abbots Langley driveway at night.',
+        },
+        {
+          question: 'How long does a typical wooden gate installation take from start to finish?',
+          answer: 'Total deployment averages around three days for the carpentry, hanging, and electrical commissioning. Our teams work efficiently to minimize disruption, leaving your Abbots Langley property secure by the end of the week.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can we install a system that matches the modern new builds in the village?',
+          answer: 'Sharp geometries with clean horizontal lines perfectly complement contemporary architecture. We can powder coat the frames in sleek anthracite grey to match your modern Abbots Langley window profiles seamlessly.',
+        },
+        {
+          question: 'Is it safe to have automation if we have a lot of local wildlife passing through?',
+          answer: 'Twin lasers are installed at different heights to ensure smaller animals break the sensor before the mechanism closes. This prevents badgers or foxes from being accidentally trapped while crossing your Abbots Langley driveway at night.',
+        },
+        {
+          question: 'How long does a typical installation take from start to finish?',
+          answer: 'Three shifts is the average timeframe for a complete installation including groundwork, hanging, and electrical commissioning. Our teams work efficiently to minimize disruption, leaving your new metal driveway gates fully secure.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can we install a system that matches the modern new builds in the village?',
+          answer: 'Minimalist aluminum designs with sharp horizontal lines perfectly complement contemporary architecture. We can powder coat the frames in sleek anthracite grey to match your modern window profiles seamlessly. Your new automated gate system will look like an integral part of the original property design.',
+        },
+        {
+          question: 'Is it safe to have automation if we have a lot of local wildlife passing through?',
+          answer: 'Dual photocells are installed at different heights to ensure smaller animals break the beam before the mechanism closes. This prevents badgers or foxes from being accidentally trapped while crossing your Abbots Langley driveway at night. The safety protocols are highly sensitive to any unexpected obstructions.',
+        },
+        {
+          question: 'How long does a typical installation take from start to finish?',
+          answer: 'Three days is the average timeframe for a complete installation including groundwork, hanging, and electrical commissioning. Our teams work efficiently to minimize disruption, leaving your property secure at the end of each shift. You will be enjoying your new automated entrance before the end of the week.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The modern aluminum gates on our new build have dropped slightly.',
+          answer: 'Loose fixings on the pillar plates often happen as new structures settle during their first year. We simply realign the brackets and tighten the high-tensile bolts to lift your Abbots Langley gates perfectly.',
+        },
+        {
+          question: 'A badger chewed through the low-voltage wires for the safety beam.',
+          answer: 'Rodent damage is a frequent nuisance that completely disables the safety circuit, halting the motors. We will splice fresh wiring and enclose it in steel conduit to prevent local Abbots Langley wildlife from chewing it again.',
+        },
+        {
+          question: 'How long does a typical control board replacement take?',
+          answer: 'Swapping motherboards usually takes around two hours, including full system recalibration and remote syncing. Our swift local response gets your Abbots Langley automated gates functioning flawlessly the very same day.',
+        },
+      ],
+    },
     cityIntro: [
       'Abbots Langley combines the historic village centre around the Parish Church with substantial post-war residential expansion across Leavesden and the wider commuter belt toward Watford. The planning context from Three Rivers District Council is generally pragmatic outside the specific Parish Church conservation area.',
       'Our Abbots Langley installer network includes specialists with documented track records across the village and the Leavesden residential areas. Every referred installer has substantive Three Rivers planning experience and understands the practical installation conditions typical of the local clay substrate and mature garden settings.',
@@ -1250,6 +3836,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Conservation covenants dictate that boundary repairs must be executed almost invisibly. When heavy timber gates sag in Welwyn Garden City, standard, bulky galvanised brackets are visually unacceptable. Local technicians re-hang the dropping leaves using discreet, highly engineered steel reinforcements hidden from the street. This structural intervention restores perfect balance and prevents the automation motors from burning out, preserving both the mechanics and the strict aesthetic rules of the garden city.',
         'Root networks from the town\'s protected mature trees often crush underground conduit carrying vital power cables. When a gate suddenly loses power, diagnostic teams use advanced cable-tracing equipment to find the subterranean break without causing massive driveway disruption. They carefully excavate the specific area, splice in fresh steel-wire armored (SWA) cabling, and route it safely away from the aggressive tree roots, permanently restoring power to the perimeter.',
         'Audio crackle annoys homeowners during the rainy seasons, ruining their ability to screen visitors. Moisture seeping into the exterior intercom panel causes the microphone to short out. Engineers strip the housing, replace the corroded micro-switches, and apply specialized anti-condensation spray to the logic board. They then re-seal the unit with marine-grade silicone, ensuring crystal-clear communication is fully restored for the busy household.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do estate management scheme rules allow for horizontal sliding gates?',
+          answer: 'Planning restrictions often dictate boundary aesthetics to maintain the original town planning ethos. We frequently install hidden cantilever sliders behind established hedgerows to ensure full compliance. This preserves the green character of your property while drastically upgrading security.',
+        },
+        {
+          question: 'Can we automate a sliding gate on a narrow driveway?',
+          answer: 'Lateral sliding designs are exactly why sliding mechanisms are so popular for restricted frontages. Instead of swinging inward and hitting parked cars, the barrier glides neatly along your boundary line. This maximizes every inch of parking space for your Welwyn Garden City home.',
+        },
+        {
+          question: 'Are there options for wide, sweeping driveways typical of the West Side?',
+          answer: 'Massive spans require long, heavy duty frames that can traverse substantial distances without sagging. We utilize reinforced steel profiles driven by commercial grade motors to secure these prestigious addresses. Your entrance will look magnificent while operating with total reliability.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do estate management rules permit electric swing gates on period properties?',
+          answer: 'Estate covenants often strictly regulate front boundaries to maintain the distinct Garden City character. We specialize in navigating these local restrictions, usually by installing discreet automation behind your existing hedges or approved fencing.',
+        },
+        {
+          question: 'Can we automate a large swinging gate for the wide West Side plots?',
+          answer: 'Broad sweeps require high torque actuators capable of moving massive frames across expansive driveways. We engineer these structures to swing perfectly level, delivering an imposing entrance without compromising on modern mechanical reliability.',
+        },
+        {
+          question: 'Do you offer hardwood panels that look authentic?',
+          answer: 'Classic timber facades are crafted from premium natural woods to emulate original architectural features. They pair beautifully with concealed underground motors, keeping your Welwyn Garden City frontage looking wonderfully traditional.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do estate management scheme rules allow for large wooden gates here?',
+          answer: 'Garden City regulations often strictly control boundary aesthetics to preserve the original town planning ethos. We specialize in crafting traditional timber designs that frequently gain approval from local heritage officers.',
+        },
+        {
+          question: 'Can we automate the original wooden gates on our property?',
+          answer: 'Retrofitting automation onto older, heavy timber pairs is entirely possible with the right underground hydraulic motors. We carefully reinforce the existing wooden structure to handle mechanical stresses without altering its historic appearance.',
+        },
+        {
+          question: 'What kind of wood is best for the wide driveways typical of the West Side?',
+          answer: 'Substantial oak provides the immense structural rigidity required for the expansive frontages common in this area. These heavy timber frames span wide entrances flawlessly without sagging over time.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do metal gates comply with the strict Garden City planning regulations?',
+          answer: 'Heritage officers often favor subtle metalwork that respects the original town aesthetic rather than imposing solid walls. We frequently install discreet iron designs that blend seamlessly into the leafy Welwyn Garden City environment.',
+        },
+        {
+          question: 'Can you automate the original metal gates on my 1920s property?',
+          answer: 'Restoring vintage ironwork is entirely possible by sandblasting the rust and fitting modern underground motors. Your historical entrance retains its authentic charm while gaining flawless modern functionality.',
+        },
+        {
+          question: 'Are sliding metal gates better for the wide driveways on the West Side?',
+          answer: 'Broad frontages highly benefit from tracked metal sliders to avoid massive swinging arcs hitting parked cars. We engineer heavy-duty steel panels to secure these prestigious plots reliably.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do estate management scheme rules allow for automated entrances?',
+          answer: 'Garden City regulations often require boundary treatments to maintain the original ethos of the town. We frequently navigate these specific planning quirks to install discreet automation behind existing hedges or approved timber designs. Your property will remain compliant while enjoying enhanced security.',
+        },
+        {
+          question: 'Can you automate the original wooden gates on my property?',
+          answer: 'Restoring functionality to older, heavy timber pairs is entirely possible with the right underground hydraulic motors. We carefully reinforce the existing wooden structure to handle the automation stresses without altering its historic appearance. This preserves the classic Welwyn Garden City aesthetic beautifully.',
+        },
+        {
+          question: 'Are there options for wide, sweeping driveways typical of the West Side?',
+          answer: 'Sweeping arcs require careful geometry calculation to ensure the moving panels do not hit parked cars. We often recommend articulated arms or sliding setups for these expansive frontages. An automated gate system can easily manage the broad entrances found on these prestigious plots.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Do you repair automated gates hidden behind hedges on the West Side?',
+          answer: 'Disguised motors require precise calibration to ensure the foliage does not interfere with the moving parts. We carefully service these hidden systems to maintain the pristine aesthetic of your Welwyn Garden City boundary.',
+        },
+        {
+          question: 'My electric gate makes a grinding noise during frosty mornings; what is wrong?',
+          answer: 'Frozen condensation inside the gearbox often causes immense friction before the system warms up. We can strip the motor and apply low-temperature grease to resolve this seasonal Welwyn Garden City issue.',
+        },
+        {
+          question: 'How quickly can you fix a broken intercom near the town center?',
+          answer: 'Rapid troubleshooting is guaranteed with our fully equipped local response vans. We carry the necessary spare parts to get your access control working again flawlessly today.',
+        },
       ],
     },
     cityIntro: [
@@ -1292,6 +3964,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'PIN entries degrade from constant button mashing by delivery drivers and landscape crews. A malfunctioning keypad causes massive daily frustration, locking out authorized personnel. Rapid response teams extract the worn rubber membrane and install ultra-durable, illuminated stainless steel variants. They seamlessly transfer the existing master codes over to the new access control module, ensuring uninterrupted, highly secure access for the property.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Does living near the university mean I need higher security sliding gates?',
+          answer: 'University proximity around the residential streets can sometimes lead to increased opportunistic trespassing. A robust electric sliding gate with magnetic locking provides immense peace of mind. It ensures only authorized vehicles and guests can access your private Hatfield driveway.',
+        },
+        {
+          question: 'Will the clay soil in this area cause problems for the floor track?',
+          answer: 'Trench excavation is very common here and definitely requires professional groundworks to prevent track warping. We dig deep concrete trenches to ensure the steel running rail remains perfectly level and stable. This vital step keeps your mechanism running smoothly despite the Hertfordshire clay.',
+        },
+        {
+          question: 'Can we match the sliding gate to the historic styles near Hatfield House?',
+          answer: 'Forged steel can be custom built to echo the majestic architecture of the older local estates. We blend traditional blacksmithing techniques with modern sliding technology for a seamless result. Your new entrance will look like it has belonged there for centuries.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Should we install security gates if we live near the student areas?',
+          answer: 'University footfall occasionally increases the risk of casual trespassing around the local residential streets. An electric swing gate acts as a highly effective physical deterrent, ensuring your Hatfield driveway remains entirely private.',
+        },
+        {
+          question: 'Will the dense soil here affect the underground gate boxes?',
+          answer: 'Ground settling is a known issue with heavy Hertfordshire clay, which can misalign submerged components over time. We excavate extensive concrete footings to ensure your swinging mechanisms remain perfectly straight and functional for decades.',
+        },
+        {
+          question: 'Can you mimic the historic ironwork found near Hatfield House?',
+          answer: 'Aristocratic designs featuring intricate scrolls and finials can be authentically replicated by our master blacksmiths. These majestic swinging frames elevate the curb appeal of your property while incorporating top tier automation.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Does living near the university mean I need taller wooden gates?',
+          answer: 'Increased footfall around student residential streets can sometimes lead to opportunistic trespassing on private driveways. Installing a robust timber barrier provides immense peace of mind and deters unwanted access.',
+        },
+        {
+          question: 'Will the clay soil in this area cause problems for wooden gate posts?',
+          answer: 'Dense earth holds moisture significantly, which can rapidly accelerate rot in untreated timber supports. We set our pressure-treated posts deeply into domed concrete to ensure water drains away harmlessly.',
+        },
+        {
+          question: 'Can we match our wooden gates to the historic styles near Hatfield House?',
+          answer: 'Classic joinery techniques allow us to faithfully replicate the majestic architecture of the older local estates. Your new wooden driveway gates will look incredibly authentic while utilizing modern protective treatments.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Should we install tall metal gates near the student housing areas?',
+          answer: 'Security upgrades are highly recommended to deter opportunistic trespassing around busy university neighborhoods. Tall steel spikes combined with magnetic locks provide an impenetrable boundary for your Hatfield home.',
+        },
+        {
+          question: 'Will the local clay soil warp the metal gate posts?',
+          answer: 'Heavy earth shifting is countered by sinking galvanized steel posts deep into immense concrete footings. This ensures your Hatfield metal boundary remains perfectly aligned despite the challenging soil conditions.',
+        },
+        {
+          question: 'Can we match the metal gates to the historic wrought iron near Hatfield House?',
+          answer: 'Artisan blacksmiths specialize in forging majestic scrollwork and classic finials that echo the grand local estates. Your new metal driveway gates will look incredibly prestigious and historically accurate.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Does living near the university mean I need higher security features?',
+          answer: 'Student footfall around the residential streets can sometimes lead to increased opportunistic trespassing. Installing a robust physical barrier with magnetic locking provides immense peace of mind. An automated gate system ensures only authorized vehicles and guests can access your private Hatfield driveway.',
+        },
+        {
+          question: 'Will the clay soil in this area cause problems for underground boxes?',
+          answer: 'Dense earth is very common here and definitely requires professional drainage solutions during groundworks. We excavate deep soakaways beneath the motor housings to prevent flooding during heavy downpours. This vital step keeps your mechanism dry and extends the life of your equipment.',
+        },
+        {
+          question: 'Can we match the ironwork to the historic styles near Hatfield House?',
+          answer: 'Wrought iron replicas can be custom forged to echo the majestic architecture of the older estates. We blend traditional blacksmithing techniques with modern automation technology for a seamless result. Your new entrance will look like it has belonged there for centuries.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The gates at my student rental property are stuck open; can you secure them?',
+          answer: 'Compromised boundaries at rental properties must be dealt with immediately to protect the tenants and vehicles. We will manually lock the heavy frames and diagnose the electrical fault safely.',
+        },
+        {
+          question: 'Will the clay soil shift my underground gate motors over time?',
+          answer: 'Earth subsidence is a major cause of misaligned underground foundation boxes across the area. We can excavate the warped casings and pour fresh concrete to support your Hatfield motors permanently.',
+        },
+        {
+          question: 'Can you repair historic iron gates near Hatfield House that won\'t close?',
+          answer: 'Delicate realignments are absolutely vital when working on heritage metalwork to avoid snapping the old hinges. Our blacksmiths will gently restore the swinging arc of your historic gates perfectly.',
+        },
+      ],
+    },
     cityIntro: [
       'Hatfield combines the historic estate character around Hatfield House and Old Hatfield with extensive post-war New Town development across New Hatfield, South Hatfield, and the newer A1(M) corridor estates. The planning context varies substantially between these zones - conservation and heritage sensitivity near the estate, generally pragmatic treatment in the newer neighbourhoods.',
       'Our Hatfield installer network focuses on specialists with substantive track records across the borough\'s varied context, from the Old Hatfield conservation area through to the New Town estate developments. Every referred installer has documented Welwyn Hatfield Borough Council planning experience and understands the heritage sensitivities that apply near the Hatfield House estate.',
@@ -1330,6 +4088,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Ancient brickwork crumbles if a heavy wooden gate drops and tears its hinges. Structural interventions on these historic village properties require extreme care. Local specialists fabricate custom, elongated mounting plates to distribute the immense pulling force of the gate over a much wider area of the pillar. This protects the fragile heritage stonework from further damage while restoring perfect alignment to the entrance.',
         'Flood damage destroys underground logic boards if properties sit too close to the Mimram river. The high water table easily overwhelms standard sub-surface boxes. Technicians execute emergency electrical repairs, extracting the waterlogged equipment. Instead of reinstalling them in the damp ground, they frequently upgrade the system to elevated, marine-grade enclosures, completely immunizing the sensitive automation against future river valley flooding.',
         'Safety bumpers degrade and crack after exposure to severe freezing weather. Because these pressure edges are designed to halt the gate instantly upon contact, a perished rubber seal is a major safety hazard. Local engineers utilize calibrated force-testers to check these components. If they fail, fresh, highly responsive safety edges are immediately installed, ensuring the heavy automated barrier never accidentally crushes a family vehicle.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'How do we manage access if our driveway opens straight onto a busy village road?',
+          answer: 'High-velocity drives are crucial when pulling off the main thoroughfares to avoid blocking traffic. We install high speed sliding motors that clear the entrance in seconds. This allows you to safely transition from the road to your Welwyn property without causing congestion.',
+        },
+        {
+          question: 'Are keypad entry systems reliable during freezing winter weather?',
+          answer: 'Winterized touchpads feature frost resistant keypads built from durable stainless steel and fully sealed against the elements. The buttons remain highly responsive even when temperatures plummet during harsh rural nights. You will always be able to enter your home securely.',
+        },
+        {
+          question: 'Can a sliding barrier work on a gravel driveway?',
+          answer: 'Suspended cantilevers eliminate the need for floor tracks that can easily get jammed with loose stones. We highly recommend this trackless design that hovers just above the gravel surface instead. This completely eliminates the risk of blockages and ensures smooth daily operation.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'How do we avoid causing a traffic jam when turning into our driveway?',
+          answer: 'Fast acting hydraulics are absolutely crucial for homes situated directly on bustling village thoroughfares. Your electric swing gate will open in seconds, allowing you to pull off the busy Welwyn road safely and swiftly.',
+        },
+        {
+          question: 'Do keypad buttons freeze during the winter?',
+          answer: 'Winter chill will not affect our premium stainless steel entry pads designed for harsh conditions. The tactile buttons remain highly responsive, allowing you to type your PIN code easily even on frosty mornings.',
+        },
+        {
+          question: 'Can we install swinging gates over a loose gravel driveway?',
+          answer: 'Suspended operation is not possible for swinging arcs, so the bottom edge must clear the stones entirely. We precisely calculate the ground clearance to ensure your electric swing gate never drags across the loose Welwyn gravel.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'How do we manage access if our wooden gates open onto a busy village road?',
+          answer: 'Swift hydraulics are crucial when pulling off the main thoroughfares to avoid blocking local traffic. Your heavy timber leaves will open in seconds, allowing a safe transition onto your private property.',
+        },
+        {
+          question: 'Are keypad entry systems for wooden gates reliable during freezing winter weather?',
+          answer: 'Winterized consoles feature frost resistant buttons built from durable stainless steel. You will always be able to punch your access code easily despite the freezing rural chill.',
+        },
+        {
+          question: 'Can a sliding wooden gate work on a gravel driveway?',
+          answer: 'Trackless cantilevers eliminate the need for floor rails that easily get jammed with loose stones. Your wooden sliding panel will hover safely above the gravel surface for perfectly smooth daily operation.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'How do we avoid holding up traffic on the high street when entering our drive?',
+          answer: 'Rapid gearboxes are essential for properties situated directly on bustling village roads. Your metal boundary will swing open in seconds, allowing a completely safe transition off the busy Welwyn thoroughfare.',
+        },
+        {
+          question: 'Do keypad buttons freeze during the winter here?',
+          answer: 'Thermal pads prevent ice from building up on the metallic digital consoles during harsh frosts. You will always be able to type your access code easily despite the freezing rural chill.',
+        },
+        {
+          question: 'Can a sliding metal gate work on a loose gravel driveway?',
+          answer: 'Hovering frameworks completely bypass the need for floor tracks that easily get jammed with stones. Your heavy steel panel hovers safely above the Welwyn gravel for perfectly smooth daily operation.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'How do we manage access if our driveway opens straight onto a busy village road?',
+          answer: 'Fast automation is crucial when pulling off the main thoroughfares to avoid blocking local traffic. We install high speed hydraulic rams that clear the entrance in seconds. This allows you to safely transition from the road to your Welwyn property without causing congestion.',
+        },
+        {
+          question: 'Are keypad entry systems reliable during freezing winter weather?',
+          answer: 'Frost resistant keypads are built from durable stainless steel and fully sealed against the elements. The buttons remain highly responsive even when temperatures plummet during harsh winter nights. You will always be able to enter your home securely regardless of the chill.',
+        },
+        {
+          question: 'Can a sliding barrier work on a gravel driveway?',
+          answer: 'Loose stones can jam standard floor tracks if they are not swept regularly. We highly recommend a cantilever sliding design that hovers just above the gravel surface instead. This completely eliminates the risk of blockages and ensures smooth daily operation.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'A lorry clipped my driveway gate on the high street; can it be straightened?',
+          answer: 'Structural distortion usually means the damaged section needs cutting out and replacing entirely for safety. We will weld fresh steel into the frame to restore your Welwyn boundary to full strength.',
+        },
+        {
+          question: 'The safety beams on my gate are covered in road dirt and stopped working.',
+          answer: 'Filthy lenses block the infrared signal, causing the main control board to halt all movement immediately. A thorough cleaning and resealing of the photocell covers will fix this common Welwyn problem.',
+        },
+        {
+          question: 'Why does my gate remote only work intermittently?',
+          answer: 'Dying batteries are usually the culprit, but a damaged receiver antenna can also cause patchy signal dropouts. We will test the radio frequencies at your property to find the exact fault quickly.',
+        },
       ],
     },
     cityIntro: [
@@ -1372,6 +4216,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Network drops disconnect cellular intercoms in secluded valley locations. When the GSM module loses 4G signal, delivery drivers cannot dial the homeowner\'s phone. Tech-savvy engineers upgrade the communication hardware by installing high-gain external cellular antennas. This massively boosts the signal strength, ensuring the resident regains absolute, reliable control over their driveway access directly from their mobile device, regardless of their isolation.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Will the noise of the sliding motor disturb my neighbors in this quiet village?',
+          answer: 'Soundproof enclosures are a hallmark of our premium brushless 24V motor range. The mechanism glides open with barely a whisper, making it perfect for the tranquil environment around the Digswell Viaduct. You can arrive home late without waking anyone nearby.',
+        },
+        {
+          question: 'Do you offer timber sliding designs that blend with the wooded surroundings?',
+          answer: 'Sustainable hardwoods look spectacular against the leafy backdrop of the local landscape. We use natural wood that ages gracefully and complements the rural charm of Digswell perfectly. The electric sliding motor is hidden away to keep the focus on the beautiful craftsmanship.',
+        },
+        {
+          question: 'What happens if a delivery driver backs into the closed gate?',
+          answer: 'Shear pins are designed to protect the main gearbox during unexpected collision impacts. If a vehicle strikes the barrier forcefully, only a small, inexpensive component breaks to save the expensive motor. We can usually repair this quickly to restore your security.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Will the gate motors disrupt the peace of this quiet village?',
+          answer: 'Quiet gliding is guaranteed by utilizing frictionless bearings and advanced 24V brushless drives. You can confidently cycle your electric swing gate late at night without disturbing the serene Digswell environment.',
+        },
+        {
+          question: 'Can you install gates that match the local wooded landscape?',
+          answer: 'Woodland integration is easily achieved by selecting sustainable hardwoods that age naturally into the background. The automation remains hidden, allowing the natural timber to harmonize perfectly with the surrounding Digswell trees.',
+        },
+        {
+          question: 'What happens if a car slightly bumps the gate while it is moving?',
+          answer: 'Impact buffers and sheer pins are engineered to break safely under sudden extreme pressure. This protects the highly expensive internal motor gears from catastrophic damage if your swinging entrance is accidentally struck.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Will the noise of automated wooden gates disturb my neighbors in this quiet village?',
+          answer: 'Whisper quiet operation is a hallmark of our premium brushless motors paired with heavy timber. The natural wood absorbs sound vibrations, making it perfect for the tranquil environment around the Digswell Viaduct.',
+        },
+        {
+          question: 'Do you offer timber designs that blend with the local wooded surroundings?',
+          answer: 'Sustainable hardwoods look spectacular against the leafy backdrop of the local landscape and age gracefully. We carefully source natural materials that complement the rural charm of Digswell perfectly.',
+        },
+        {
+          question: 'What happens if a delivery driver backs into my closed wooden gate?',
+          answer: 'Impact absorption is a natural benefit of thick wooden panels compared to rigid metal frames. If a vehicle strikes the barrier, we can often replace individual damaged planks rather than the entire structure.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Will the noise of automated metal gates disturb my neighbors in this quiet village?',
+          answer: 'Frictionless joints guarantee that our premium brushless motors operate with barely a whisper. You can confidently cycle your heavy steel boundary late at night without disturbing the serene Digswell environment.',
+        },
+        {
+          question: 'Do you offer metal designs that blend with the local wooded landscape?',
+          answer: 'Earth tones applied via powder coating help metalwork harmonize with the surrounding natural greenery. We carefully source paint finishes that complement the leafy rural charm of Digswell perfectly.',
+        },
+        {
+          question: 'What happens if a delivery driver backs into my metal gate?',
+          answer: 'Thick gauges of tubular steel provide immense structural resistance against minor vehicle impacts. If the boundary is struck forcefully, our local welders can usually repair the damaged section directly.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Will the noise of the motors disturb my neighbors in this quiet village?',
+          answer: 'Silent operation is a hallmark of our premium brushless 24V motor range. The mechanism glides open with barely a whisper, making it perfect for the tranquil environment around the Digswell Viaduct. You can arrive home late without waking anyone nearby.',
+        },
+        {
+          question: 'Do you offer timber designs that blend with the wooded surroundings?',
+          answer: 'Natural wood finishes look spectacular against the leafy backdrop of the local landscape. We source sustainable hardwoods that age gracefully and complement the rural charm of Digswell. The automation is hidden away to keep the focus on the beautiful craftsmanship.',
+        },
+        {
+          question: 'What happens if a delivery driver backs into the closed gate?',
+          answer: 'Impact damage occasionally happens, but our systems are designed with sheer pins to protect the main gearbox. If a vehicle strikes the barrier forcefully, only a small, inexpensive component breaks to save the expensive motor. We can usually repair this quickly to restore your automated gate system.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The noise of my sliding gate is echoing across the valley; can you quieten it?',
+          answer: 'Rumbling tracks indicate the nylon support wheels have completely worn down to the metal bearings. We will install premium polyurethane rollers to make your Digswell sliding gate virtually silent.',
+        },
+        {
+          question: 'Do you service wooden gates that are rubbing against the ground?',
+          answer: 'Swollen timber often drags during the wet winter months if the hinges were not installed with enough tolerance. We can easily adjust the pivot geometry to lift your heavy wooden gates clear of the driveway.',
+        },
+        {
+          question: 'My automated gate keeps blowing fuses in the main control box.',
+          answer: 'Electrical shorts inside the underground cabling or motor windings will cause the safety breakers to trip continuously. We will perform a comprehensive insulation test at your Digswell home to locate the exact short circuit.',
+        },
+      ],
+    },
     cityIntro: [
       'Digswell sits in the Welwyn Hatfield district, a village of substantial Edwardian and Arts and Crafts character anchored by the Grade II listed Digswell Viaduct and the Digswell Conservation Area that covers the historic core. Gate projects here are rarely casual decisions. Welwyn Hatfield Borough Council planning officers assess material, height, and streetscape impact within the conservation zone, and even outside the formal boundary the village character creates expectations that generic product installations rarely satisfy.',
       'Our Digswell installer network focuses on specialists with genuine village track records, specifically gate contractors who understand Welwyn Hatfield planning conditions and the design sensibilities that successful Digswell applications require. Every referred installer has completed a minimum of six verifiable projects in the village or immediate surrounds before receiving any enquiry from us.',
@@ -1410,6 +4340,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Luxury ironwork grinds terribly when the internal steel bearings shatter under immense weight. This horrific noise completely ruins the tranquil atmosphere of these elite avenues. Vetted mechanics utilize heavy lifting gantries to safely remove the monumental gates. They extract the destroyed bearings, press in heavy-duty replacements, and pack the joints with high-viscosity marine grease, restoring whisper-quiet, frictionless operation to the premium estate.',
         'Soakaway drainage blocks up with silt and driveway run-off, directly threatening the hidden underground motors. Annual maintenance is the only way to save this expensive subterranean hardware. Servicing crews lift the gates, manually pump out the foundation chambers, and aggressively flush the drainage pipes. This crucial preventative care stops groundwater from pooling and destroying the logic boards during the wet British winters.',
         'Optical readers fail when the lenses of biometric fingerprint scanners get scratched by dirt or vandalism. High-net-worth homeowners relying on keyless access are instantly locked out when these high-tech components degrade. Brookmans Park gate specialists replace the fragile optical sensors, update the unit\'s firmware, and re-enroll the authorized family members, quickly restoring the elite VIP entry experience expected at these sprawling mansions.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'What are the most popular sliding styles for the large detached homes here?',
+          answer: 'Luxurious aluminum installations are highly sought after by residents wanting a modern, imposing entrance. These thick, zero maintenance frames provide total privacy from the road while looking incredibly prestigious. An electric sliding gate of this caliber perfectly suits the character of Brookmans Park.',
+        },
+        {
+          question: 'Can we integrate a smart intercom that calls my phone directly?',
+          answer: 'Networked intercoms route visitor alerts straight to your smartphone no matter where you are. You can visually identify the caller and press a button on your screen to slide the barrier open. This is highly convenient for managing access while you are commuting.',
+        },
+        {
+          question: 'Do heavy gates require three phase power to operate?',
+          answer: 'Household voltage is entirely sufficient for even our largest hydraulic sliding motors. We run an armored cable from your consumer unit out to the entrance pillars. The internal transformers handle the heavy lifting without needing complex industrial power supplies.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'What type of gate suits the large modern homes in this area?',
+          answer: 'Prestige properties often benefit from grand, powder coated aluminum setups featuring sharp contemporary lines. These visually striking electric swing gates offer uncompromising privacy and security fitting for a Brookmans Park estate.',
+        },
+        {
+          question: 'Can my smartphone open the gates for guests?',
+          answer: 'Dialing modules connect the main entrance intercom directly to your mobile device via cellular networks. You can see who is visiting and swing the barrier open from anywhere in the world.',
+        },
+        {
+          question: 'Do we need a special industrial power supply for heavy gates?',
+          answer: 'Electrical transformers built into our control boards step down standard domestic mains power efficiently. This means your Brookmans Park installation runs flawlessly on a regular 230V household supply without tripping breakers.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'What are the most popular wooden styles for the large detached homes here?',
+          answer: 'Imposing hardwood installations are highly sought after by residents wanting a luxurious, highly private entrance. These thick wooden frames provide total seclusion from the road while matching the prestigious Brookmans Park character.',
+        },
+        {
+          question: 'Can we integrate a smart intercom into a solid timber gate?',
+          answer: 'Flush mounting allows us to recess high definition camera units directly into the wood for a seamless finish. You can visually identify callers on your smartphone before opening your beautiful entrance.',
+        },
+        {
+          question: 'Do heavy wooden gates require three phase power to operate automatically?',
+          answer: 'Standard voltage from a regular household supply is entirely sufficient for our largest hydraulic rams. We run an armored cable safely underground to power your heavy timber entrance effortlessly.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'What are the most popular metal styles for the large detached homes here?',
+          answer: 'Solid aluminum installations are highly sought after by residents wanting a luxurious, zero-maintenance entrance. These thick metal frames provide total seclusion from the road while matching the prestigious Brookmans Park character.',
+        },
+        {
+          question: 'Can we integrate a smart intercom into a metal gate?',
+          answer: 'Integrated cameras are flush-mounted seamlessly into the steel pillars for a highly professional finish. You can visually identify callers on your smartphone before opening your beautiful entrance.',
+        },
+        {
+          question: 'Do heavy metal gates require three-phase power to operate automatically?',
+          answer: 'Domestic supplies of standard voltage are entirely sufficient for our largest hydraulic rams. We run an armored cable safely underground to power your heavy steel entrance effortlessly.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'What are the most popular styles for the large detached homes here?',
+          answer: 'Grand aluminum installations are highly sought after by residents wanting a modern, imposing entrance. These thick, zero maintenance frames provide total privacy from the road while looking incredibly luxurious. An automated gate system of this caliber perfectly suits the prestige of Brookmans Park.',
+        },
+        {
+          question: 'Can we integrate a smart intercom that calls my phone directly?',
+          answer: 'Cloud connected intercoms route calls straight to your smartphone no matter where you are. You can visually identify the visitor and press a button on your screen to open the barrier. This is highly convenient for managing access while you are commuting or traveling.',
+        },
+        {
+          question: 'Do heavy gates require three phase power to operate?',
+          answer: 'Standard residential mains power is entirely sufficient for even our largest hydraulic motors. We run an armored cable from your consumer unit out to the entrance pillars. The internal transformers handle the heavy lifting without needing complex industrial power supplies.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Do you repair premium aluminum gates on the large detached estates here?',
+          answer: 'Luxury installations require specialized knowledge and handling to avoid scratching the powder-coated finishes during repair work. We expertly maintain the high-end automation systems keeping these prestigious Brookmans Park properties secure.',
+        },
+        {
+          question: 'The keypad on my pillar has gone completely dead; can it be fixed?',
+          answer: 'Corroded terminals behind the keypad faceplate happen frequently if the weather seal degrades over time. We can rewire the console or fit a brand new, fully waterproof unit for your entrance.',
+        },
+        {
+          question: 'My underground motor box is full of water after heavy rain.',
+          answer: 'Blocked soakaways trap rainwater around the delicate electronics, leading to catastrophic motor failure if left unchecked. We will pump out your Brookmans Park foundation boxes and clear the drainage pipes instantly.',
+        },
       ],
     },
     cityIntro: [
@@ -1452,6 +4468,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'App connectivity disconnects if the house router reboots or the Wi-Fi password changes. When Cuffley residents can no longer open their gates via their smartphone, tech-support engineers are dispatched. They reconfigure the IP bridges, install external wireless boosters to punch the signal through thick exterior walls, and sync the local network, restoring flawless cloud-based access control to the luxury property instantly.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Is it possible to automate a sliding entrance on a very steep hill?',
+          answer: 'Severe inclines require specialized cantilever tracking to suspend the gate completely level above the slope. This prevents the bottom edge from grounding out on the steep driveways common around Cuffley. We survey the incline carefully to engineer the perfect mechanical sliding solution for your property.',
+        },
+        {
+          question: 'How do we secure a wide frontage that backs onto the woods?',
+          answer: 'Woodland perimeters are vastly improved by spanning the gap with a heavy duty sliding mechanism. This creates a solid line of defense that deters trespassing from the surrounding wooded areas. The robust locking mechanism ensures the barrier cannot be pushed open manually.',
+        },
+        {
+          question: 'Can the system automatically turn on our driveway lights when we arrive?',
+          answer: 'Synchronised lighting is easily programmed into the main automation control board. When your Cuffley gates begin sliding open, your pillar and driveway lights will activate instantly. It creates a highly welcoming and safe environment during dark winter evenings.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Our driveway slopes upwards aggressively; can we still have swinging gates?',
+          answer: 'Ascending geometry is achieved by fitting specialized rising hinges that angle the leaves skyward as they open. This ensures the frame smoothly clears the steep inclines frequently encountered on Cuffley properties.',
+        },
+        {
+          question: 'How do we secure a wide plot that backs onto the dense woods?',
+          answer: 'Forest borders demand sturdy physical boundaries to deter unauthorized access from the rear treeline. A robust electric swing gate combined with magnetic locking provides a formidable perimeter defense for your home.',
+        },
+        {
+          question: 'Can the gate trigger our exterior house lights?',
+          answer: 'Approach lighting can be synchronized to activate the moment your automation sequence begins. This brilliantly illuminates your Cuffley driveway, making late night arrivals much safer and highly welcoming.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Is it possible to install wooden swinging gates on a very steep hill?',
+          answer: 'Specialized hardware including bespoke rising hinges will physically lift the heavy timber upwards as it opens. This completely prevents the bottom edge from grounding out on the steep driveways common around Cuffley.',
+        },
+        {
+          question: 'How do we secure a wide timber frontage that backs onto the woods?',
+          answer: 'Perimeter defense is vastly improved by spanning the gap with a solid, gapless wooden structure. This deters trespassing from the surrounding forest while blending naturally into the treeline.',
+        },
+        {
+          question: 'Can the wooden gate system automatically turn on our driveway lights?',
+          answer: 'Integrated relays connect the main automation board directly to your exterior illumination circuit. Your Cuffley driveway will light up instantly the moment your wooden boundary begins to open.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Is it possible to install swinging metal gates on a very steep hill?',
+          answer: 'Ascending arcs are achieved by fitting specialized rising hinges that angle the heavy steel skyward. This completely prevents the bottom edge from grounding out on the steep driveways common around Cuffley.',
+        },
+        {
+          question: 'How do we secure a wide frontage that backs onto the dense woods?',
+          answer: 'Impenetrable palisades provide a formidable physical defense against unauthorized access from the rear treeline. A robust steel perimeter ensures your home remains safe while blending into the forest backdrop.',
+        },
+        {
+          question: 'Can the metal gate system automatically turn on our driveway lights?',
+          answer: 'Lighting relays connect the main automation board directly to your exterior illumination circuit. Your Cuffley driveway will light up instantly the moment your steel boundary begins to open.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Is it possible to automate an entrance on a very steep hill like some of the roads here?',
+          answer: 'Extreme gradients require specialized rising hinges to lift the frame upwards as it opens inwards. This prevents the bottom edge from grounding out on the steep driveways common around Cuffley. We survey the incline carefully to engineer the perfect mechanical solution for your property.',
+        },
+        {
+          question: 'How do we secure a wide frontage that backs onto the woods?',
+          answer: 'Perimeter security is vastly improved by spanning the gap with a heavy duty sliding mechanism. This creates a solid line of defense that deters trespassing from the surrounding forested areas. The robust locking mechanism ensures the barrier cannot be pushed open manually.',
+        },
+        {
+          question: 'Can the system automatically turn on our driveway lights when we arrive?',
+          answer: 'Lighting synchronization is easily programmed into the main automation control board. When your Cuffley gates begin to open, your pillar and driveway lights will illuminate instantly. It creates a highly welcoming and safe environment during dark winter evenings.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The steep driveway is burning out my gate motor; what can be done?',
+          answer: 'Overworked gears strip quickly when standard motors are forced to push heavy gates up severe inclines. We can upgrade your Cuffley system to a heavy-duty hydraulic ram designed explicitly for hills.',
+        },
+        {
+          question: 'Can you repair a gate that backs onto the woods and was damaged by a falling branch?',
+          answer: 'Crushed panels are carefully assessed to see if we can press out the dents or if replacement is necessary. Our welding team will restore the structural integrity of your Cuffley boundary swiftly.',
+        },
+        {
+          question: 'The lights on my gate pillar have stopped flashing when the gate moves.',
+          answer: 'Blown bulbs or severed low-voltage wires are the typical causes of a dead warning beacon. We will replace the warning light to ensure your automated entrance complies with all safety regulations.',
+        },
+      ],
+    },
     cityIntro: [
       'Cuffley sits in the south of the Welwyn Hatfield borough, adjacent to the Greater London boundary and on the direct Kings Cross rail line. The village combines a historic core with substantial post-war residential development, with the commuter profile driving strong demand for premium access control integration across the gate market.',
       'Our Cuffley installer network includes specialists with track records across the village. Every referred installer has documented Welwyn Hatfield planning experience and understands the article 4 restrictions that apply in specific Cuffley streets.',
@@ -1490,6 +4592,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Gale forces sheer the mounting bolts on the exposed ridges of the Lea Valley. When a massive agricultural gate catches a winter storm, the leverage can rip the hinges clean off the posts. Mobile repair units arrive with heavy-duty arc welders to execute emergency structural repairs. They splice in reinforced steel plating, vastly upgrading the strength of the entrance to survive the punishing rural weather.',
         'Power reserves deplete rapidly during harsh winters for off-grid, solar-powered agricultural gates. Because these remote entrances sit far from the main mains supply, failing batteries leave the gate dead. Routine maintenance crews test the voltage drop on the battery banks. If they are failing to hold a charge, technicians swap them for deep-cycle marine variants and clean the solar arrays, ensuring the boundary remains powered year-round.',
         'Rising hinges lose their tension over time on the steep driveways that characterize the village. When these articulated joints wear out, the heavy gates grind directly into the tarmac, overloading the drive motor. Local repair experts replace the worn pivot pins and recalibrate the lift-angle, ensuring the massive wooden leaves gracefully clear the rising ground without burning out the expensive electronic control boards.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'We live near the golf course; are there discreet options that will not ruin our view?',
+          answer: 'Low-profile tracking provides the ultimate invisible sliding solution for scenic locations. The mechanics are kept low to the ground, leaving only your elegant ironwork or timber visible. This preserves your beautiful Essendon vistas while providing top tier security.',
+        },
+        {
+          question: 'Do your wooden sliding gates require constant repainting to survive the weather?',
+          answer: 'Penetrating sealants protect the timber grain to block moisture and prevent rotting. You will only need to apply a fresh coat every couple of years to keep the wood looking pristine. It is a very simple maintenance routine to protect your beautiful sliding entrance.',
+        },
+        {
+          question: 'Can agricultural machinery still access my paddocks if I install a sliding gate?',
+          answer: 'Agricultural dimensions can be easily accommodated with telescopic sliding frames that retract very compactly. This ensures tractors and horse boxes can pass through your Essendon property without snagging. The industrial grade motors handle the extra weight of these massive spans effortlessly.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'We have a beautiful view of the golf course; are there invisible automation options?',
+          answer: 'Submerged drive units are buried entirely below the surface, hiding the mechanical elements completely. This keeps your Essendon sightlines totally uncluttered, preserving your scenic countryside views beautifully.',
+        },
+        {
+          question: 'How much maintenance do timber gates actually need?',
+          answer: 'Protective oils should be reapplied every twelve to eighteen months to seal the grain against moisture. This simple routine prevents rotting and keeps your electric swing gate looking spectacular year round.',
+        },
+        {
+          question: 'Can horse boxes fit through standard residential gates?',
+          answer: 'Paddock access typically requires oversized widths, so we install extended swinging leaves supported by reinforced steel pillars. These heavy duty setups easily accommodate agricultural vehicles passing through your Essendon estate.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'We live near the golf course; are there discreet wooden gates that will not ruin our view?',
+          answer: 'Open pickets provide security at the base while leaving the top section visually permeable. This clever design maintains your beautiful Essendon vistas without sacrificing the safety of your home.',
+        },
+        {
+          question: 'Do your wooden gates require constant repainting to survive the weather?',
+          answer: 'Deep penetrating oils seal the grain effectively to block moisture and prevent rotting long term. You will only need to apply a fresh coat every couple of years to keep the timber pristine.',
+        },
+        {
+          question: 'Can agricultural machinery still access my paddocks if I install wooden gates?',
+          answer: 'Farm dimensions can be easily accommodated with extra wide timber frames supported by reinforced posts. This ensures tractors and horse boxes can pass through your Essendon property safely.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'We live near the golf course; are there discreet metal gates that will not ruin our view?',
+          answer: 'Spaced railings provide security at the base while leaving the top section visually permeable. This clever design maintains your beautiful Essendon vistas without sacrificing the safety of your home.',
+        },
+        {
+          question: 'Do your metal gates require constant repainting to survive the weather?',
+          answer: 'Oven baked polymers seal the galvanized steel effectively to block moisture and prevent rust entirely. You will never need to apply wet paint to keep the metalwork looking pristine.',
+        },
+        {
+          question: 'Can agricultural machinery still access my paddocks if I install metal gates?',
+          answer: 'Oversized clearances can be easily accommodated with extra-wide steel frames supported by reinforced posts. This ensures tractors and horse boxes can pass through your Essendon property safely.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'We live near the golf course; are there discreet options that will not ruin our view?',
+          answer: 'Subterranean motors provide the ultimate invisible automation solution for scenic locations. The mechanics are hidden entirely below ground, leaving only your elegant ironwork or timber visible. This preserves your beautiful Essendon vistas while providing top tier security.',
+        },
+        {
+          question: 'Do your wooden gates require constant repainting to survive the weather?',
+          answer: 'Protective oils penetrate deep into the timber grain to block moisture and prevent rotting. You will only need to apply a fresh coat every couple of years to keep the wood looking pristine. It is a very simple maintenance routine to protect your beautiful entrance.',
+        },
+        {
+          question: 'Can agricultural machinery still access my paddocks if I install a gate?',
+          answer: 'Oversized openings can be easily accommodated with telescopic sliding frames that retract compactly. This ensures tractors and horse boxes can pass through your Essendon property without snagging the pillars. The industrial grade motors handle the extra weight of these massive spans effortlessly.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'My gates won\'t close fully and there\'s a gap in the middle.',
+          answer: 'Misaligned leaves occur when the heavy support pillars start to lean slightly over time. We can adjust the hinges to bring your Essendon gates back together for a perfect, secure fit.',
+        },
+        {
+          question: 'The wooden gates on my paddock have rotted at the hinges.',
+          answer: 'Decayed joints must be cut away and spliced with fresh hardwood to restore the structural strength. This traditional carpentry technique will save your Essendon timber gates from needing a full replacement.',
+        },
+        {
+          question: 'Do you fix broken solar panels that power rural gates?',
+          answer: 'Smashed glass on the photovoltaic array completely destroys its ability to charge the deep cycle batteries. We can mount a fresh solar panel to get your remote Essendon entrance working perfectly again.',
+        },
       ],
     },
     cityIntro: [
@@ -1532,6 +4720,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Exit loops shift under the gravel over time, breaking the automatic departure function. When residents drive up to leave and the gates remain stubbornly closed, the sub-surface magnetic sensor is usually at fault. Technicians recalibrate the sensitivity on the main control board. If the underground wire has snapped, they expertly cut a discreet new channel into the driveway, laying a fresh loop to restore hands-free exits.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Will flooding near the River Lea damage the electric sliding motors?',
+          answer: 'Elevated platforms are a serious necessity for motors placed near the riverbank. In flood prone areas of Lemsford, we strongly recommend elevating the sliding motor on a plinth. This keeps all the sensitive electronics safely above the high water line.',
+        },
+        {
+          question: 'Do you restore old wrought iron before turning it into a sliding gate?',
+          answer: 'Sandblasted restoration is part of our service for clients wanting to retain historic metalwork on a new track. We blast the old rust away, weld it to a horizontal frame, and apply a fresh powder coating. Your revitalized ironwork is then fitted with a modern electric sliding system for flawless daily use.',
+        },
+        {
+          question: 'Can we use a keypad code for the gardener and a different one for the cleaner?',
+          answer: 'Assigned passcodes can be programmed into the digital keypad to track exactly who is entering. You can easily give specific numbers to different tradespeople and delete them when the job is done. It gives you total granular control over access to your Lemsford home.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Is it safe to install electric motors on properties prone to river flooding?',
+          answer: 'Raised plinths are strongly recommended to mount the actuators safely above any potential high water marks. This strategic elevation protects the sensitive electronics from the River Lea during wet Lemsford winters.',
+        },
+        {
+          question: 'Do you refurbish old metal gates before automating them?',
+          answer: 'Shotblasted metal is completely stripped of old rust and paint before being structurally repaired in our workshop. We then apply a tough powder coating before re-hanging your historic gates with brand new swinging motors.',
+        },
+        {
+          question: 'Can we assign a temporary code for the weekly cleaner?',
+          answer: 'Tradesperson entry is easily managed by programming dedicated, temporary PINs into the digital keypad. You have full administrative control to delete the code from your Lemsford system whenever necessary.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Will flooding near the River Lea damage my wooden gates?',
+          answer: 'Elevated clearances are strongly recommended for properties located near the riverbank to avoid standing water. We hang the timber slightly higher than normal to protect the base from swelling during wet seasons.',
+        },
+        {
+          question: 'Do you offer automated wooden gates that look like traditional five bar styles?',
+          answer: 'Rural aesthetics can easily be preserved by adding discrete ram motors to classic agricultural profiles. You get the beautiful traditional country look combined with effortless modern convenience for your Lemsford home.',
+        },
+        {
+          question: 'Can we use a keypad code for the gardener and a different one for the cleaner?',
+          answer: 'Granular control is provided by digital consoles that let you program multiple unique access PINs. You can easily give specific numbers to different tradespeople working at your Lemsford property.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Will flooding near the River Lea rust my metal gates?',
+          answer: 'Submersible coatings are strongly recommended for properties located near the riverbank to avoid oxidation. We utilize marine-grade finishes to protect the steel base from degrading during wet Lemsford seasons.',
+        },
+        {
+          question: 'Do you offer automated metal gates that look like traditional farm styles?',
+          answer: 'Tubular profiles can easily mimic classic agricultural shapes while utilizing discrete ram motors. You get the beautiful traditional country look combined with effortless modern convenience for your Lemsford home.',
+        },
+        {
+          question: 'Can we use a keypad code for the gardener and a different one for the cleaner?',
+          answer: 'Administrative controls let you program multiple unique access PINs directly into the digital console. You can easily give specific numbers to different tradespeople working at your Lemsford property.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Will flooding near the River Lea damage the underground motors?',
+          answer: 'Waterlogged ground is a serious threat to standard underground boxes placed too close to the riverbank. In flood prone areas of Lemsford, we strongly recommend surface mounted articulated arms instead. This keeps all the sensitive electronics and motors safely above the water line.',
+        },
+        {
+          question: 'Do you restore old wrought iron before automating it?',
+          answer: 'Complete refurbishment is part of our service for clients wanting to retain historic metalwork. We sandblast the old rust away, repair broken welds, and apply a fresh powder coating. Your revitalized ironwork is then fitted with a modern automated gate system for flawless daily use.',
+        },
+        {
+          question: 'Can we use a keypad code for the gardener and a different one for the cleaner?',
+          answer: 'Multiple PINs can be programmed into the digital keypad to track exactly who is entering. You can easily assign specific codes to different tradespeople and delete them when the job is done. It gives you total granular control over access to your Lemsford home.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Flooding from the River Lea ruined my underground gate motors; can they be salvaged?',
+          answer: 'Submerged electronics are usually destroyed, but the mechanical drive components can sometimes be stripped, cleaned, and saved. We will evaluate the damage at your Lemsford home and rebuild whatever is viable.',
+        },
+        {
+          question: 'My traditional five-bar gate has dropped and drags on the gravel.',
+          answer: 'Fatigued metal in the top hinge strap slowly stretches under the immense weight of the timber. We will replace the ironmongery and lift your Lemsford farm gate back to its correct height.',
+        },
+        {
+          question: 'The intercom rings but I can\'t hear the person at the gate.',
+          answer: 'Blown speakers inside the external call point are highly common after years of exposure to damp weather. We will swap the microphone and speaker module to restore crystal clear audio immediately.',
+        },
+      ],
+    },
     cityIntro: [
       'Lemsford is a village in the Welwyn Hatfield district, sitting on the River Lea with the listed Lemsford Mill at its core and substantial period and listed building stock around the historic village centre. The approaches to Brocket Hall give the parish a distinctive estate-village character, and the Lemsford Conservation Area covers the historic core. Gate installations here sit within a planning context where Welwyn Hatfield Borough Council assesses material, height, and streetscape impact carefully, and where listed building consent frequently layers onto planning permission for properties within the curtilage of designated buildings.',
       'Our Lemsford installer network includes specialists with documented village track records and genuine Welwyn Hatfield planning experience. Every referred installer has completed at least six verifiable Lemsford or immediately adjacent projects before receiving any enquiry, and understands the design sensibilities that successful applications require in this particularly sensitive Mill-centred village setting.',
@@ -1570,6 +4844,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Roadway proximity means broken gates leave the property totally exposed to the bustling A1(M) corridor. When an automated system fails to close, rapid-response repair teams are dispatched instantly. They diagnose motherboard faults, replace blown fuses caused by power surges, and execute emergency motor swaps. This ensures the perimeter is secured before they leave the site, restoring crucial privacy to the roadside residents.',
         'Warped tracks happen as heavy delivery vehicles constantly depress the concrete foundation. When a sliding gate hits these dips, the motor\'s obstacle detection triggers falsely, leaving the gate stuck halfway open. Expert Stanborough technicians cut out the buckled rail sections, re-level the foundation with rapid-setting industrial epoxy, and weld in fresh steel to guarantee flawless, frictionless lateral movement.',
         'Capacitor blowouts follow severe electrical storms sweeping across the open lakes. If a gate hums loudly but refuses to move, the starting capacitor inside the motor has likely failed. Repair engineers diagnose this fault instantly with a multimeter. They replace the inexpensive cylindrical component on-site, instantly restoring the motor\'s ability to generate the initial torque required to swing the heavy gates open.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'We get a lot of traffic heading to the lakes; how do we stop cars turning around in our drive?',
+          answer: 'Physical barricades are the only foolproof way to stop unauthorized vehicles using your frontage as a turning circle. A fast sliding gate keeps your boundary sealed against lost drivers visiting the nearby lakes. It ensures your Stanborough driveway remains strictly private property.',
+        },
+        {
+          question: 'Are there safety sensors to protect children playing near the entrance?',
+          answer: 'Redundant lasers are a mandatory safety requirement we install on every single family home project. These invisible optical lines constantly monitor the closing area and will instantly halt the motors if broken. You can relax knowing the mechanism will never close on a child or pet.',
+        },
+        {
+          question: 'What finishes last longest on metal sliding gates in this area?',
+          answer: 'Zinc undercoating beneath a heavy duty powder coat provides the absolute longest lifespan. This dual layer defense stops rust dead in its tracks and resists fading from UV exposure. It is the perfect low maintenance choice for your new boundary.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'People keep turning around in our driveway; what is the best deterrent?',
+          answer: 'Lake visitors frequently get lost, making a prominent physical barrier essential for protecting your frontage. A fast closing electric swing gate prevents unauthorized vehicles from using your Stanborough property as a turning circle.',
+        },
+        {
+          question: 'How do you stop the gates crushing a child or pet?',
+          answer: 'Invisible barriers created by dual photocells project across the threshold to detect any physical obstruction. The electric swing gate will freeze and reverse instantly if the optical line is broken by a person or animal.',
+        },
+        {
+          question: 'What paint finish survives the damp weather best?',
+          answer: 'Double zinc primers followed by a baked topcoat offer the ultimate defense against rust and flaking. This resilient finish ensures your metal boundaries withstand the wet Hertfordshire climate effortlessly.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'We get a lot of traffic heading to the lakes; how do we stop cars turning around in our drive?',
+          answer: 'Impenetrable barriers constructed from solid hardwood are the only foolproof way to stop unauthorized vehicles. A sturdy wooden driveway gate keeps your Stanborough boundary sealed against lost lake visitors.',
+        },
+        {
+          question: 'Are there safety sensors to protect children playing near the wooden entrance?',
+          answer: 'Optical curtains are a mandatory safety requirement we install on every single automated family home project. These invisible beams instantly halt the heavy swinging timber if a child breaks the line.',
+        },
+        {
+          question: 'What finishes last longest on wooden gates in this area?',
+          answer: 'Microporous stains allow the natural wood to breathe while providing a highly water resistant exterior shell. This is the absolute best low maintenance choice for your new Stanborough boundary.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'People keep turning around in our driveway; what is the best deterrent?',
+          answer: 'Immovable barricades constructed from thick steel are the only foolproof way to stop unauthorized vehicles. A sturdy metal driveway gate keeps your Stanborough boundary sealed against lost lake visitors.',
+        },
+        {
+          question: 'Are there safety sensors to protect children playing near the metal entrance?',
+          answer: 'Infrared beams are a mandatory safety requirement we install on every single automated family home project. These invisible lines instantly halt the heavy swinging steel if a child breaks the barrier.',
+        },
+        {
+          question: 'What paint finish lasts longest on metal gates in this area?',
+          answer: 'Dual layering with zinc primers followed by a tough topcoat offers the ultimate defense against flaking. This is the absolute best low-maintenance choice for your new Stanborough boundary.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'We get a lot of traffic heading to the lakes; how do we stop cars turning around in our drive?',
+          answer: 'Physical deterrence is the only foolproof way to stop unauthorized vehicles using your frontage as a turning circle. A fast closing automated gate system keeps your boundary sealed against lost drivers visiting the nearby lakes. It ensures your Stanborough driveway remains strictly private property.',
+        },
+        {
+          question: 'Are there safety sensors to protect children playing near the entrance?',
+          answer: 'Double photocells are a mandatory safety requirement we install on every single family home project. These invisible beams constantly monitor the closing area and will instantly halt the motors if broken. You can relax knowing the mechanism will never close on a child or pet.',
+        },
+        {
+          question: 'What finishes last longest on metal gates in this area?',
+          answer: 'Galvanized steel dipped in a heavy duty powder coat provides the absolute longest lifespan. This dual layer defense stops rust dead in its tracks and resists fading from UV exposure. It is the perfect low maintenance choice for your new boundary.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Someone backed into my gate while turning around; can the frame be straightened?',
+          answer: 'Twisted chassis rails are incredibly dangerous because they bind the automation motors and snap the internal gears. We will cut out the bent steel and weld your Stanborough gates back to factory straightness.',
+        },
+        {
+          question: 'The safety edge on my gate was ripped off by a passing car.',
+          answer: 'Severed profiles mean the anti-crush system is offline, which is a major legal liability for the homeowner. We will urgently fit a new pressure-sensitive edge to make your Stanborough driveway safe again.',
+        },
+        {
+          question: 'My gate motor makes a loud whining noise but moves very slowly.',
+          answer: 'Depleted capacitors lose their ability to deliver the starting torque required to move heavy loads. Swapping this small cylindrical component will usually restore the lost power to your Stanborough motors.',
+        },
       ],
     },
     cityIntro: [
@@ -1612,6 +4972,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Footgate hardware misaligns as timber posts swell during the wet winter months. Many automated setups feature an adjacent, electrically locked pedestrian gate. When the wood expands, the magnetic lock fails to engage, leaving the boundary unsecure. Carpenters shave down the swelling timber and install fully adjustable keep-plates, ensuring the pedestrian entrance locks securely with a satisfying click regardless of the seasonal weather.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do you offer contemporary styles that suit the newer housing developments here?',
+          answer: 'Horizontal louvers made from lightweight aluminum are incredibly popular for modern sliding gates. They offer an architectural look that provides excellent privacy from the road without appearing overly heavy. An electric sliding gate perfectly completes the high tech feel of these newer Woolmer Green homes.',
+        },
+        {
+          question: 'How loud is the warning beeper when the gates move?',
+          answer: 'Muted alarms can be adjusted or even disabled entirely depending on your preference. If you live close to your neighbors, we can easily silence the buzzer to prevent annoyance. Flashing LED warning lights provide a silent but effective visual safety cue instead.',
+        },
+        {
+          question: 'Will a power cut trap my car on the driveway?',
+          answer: 'Onboard accumulators are wired directly into the sliding control panel to provide backup power during outages. You will retain full functional control of your entrance for several cycles until the mains electricity returns. Every installation also includes a physical release key just in case.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Are there gate styles that suit the new contemporary housing developments?',
+          answer: 'Minimalist profiles constructed from lightweight aluminum provide a sleek, architectural aesthetic highly suited to modern builds. These horizontal slatted designs perfectly complement the newer properties springing up around Woolmer Green.',
+        },
+        {
+          question: 'Can we disable the warning beeper so it doesn\'t annoy the neighbors?',
+          answer: 'Warning signals can be easily muted or replaced with a silent, flashing amber LED instead. This provides vital visual safety cues while keeping your electric swing gate operation completely peaceful.',
+        },
+        {
+          question: 'Will a blackout leave us locked out of our own driveway?',
+          answer: 'Battery reserves tucked inside the main control box take over seamlessly when mains power fails. You will still enjoy several full swinging cycles to enter your Woolmer Green home safely during an outage.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do you offer contemporary wooden styles that suit the newer housing developments here?',
+          answer: 'Sleek cedar slats are incredibly popular for matching the sharp architectural lines of modern properties. They offer a highly contemporary look that provides excellent privacy for newer Woolmer Green homes.',
+        },
+        {
+          question: 'How loud is the warning beeper when the wooden gates move?',
+          answer: 'Adjustable alarms can be turned down or completely disabled depending on your exact preference. If you live closely to your neighbors, we can mute the buzzer and use silent flashing lights instead.',
+        },
+        {
+          question: 'Will a power cut trap my car behind the heavy wooden gates?',
+          answer: 'Backup accumulators are wired directly into the main control panel to provide emergency power during outages. You will retain full functional control of your heavy timber entrance until the mains electricity returns.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do you offer contemporary metal styles that suit the newer housing developments here?',
+          answer: 'Sleek louvers crafted from aluminum are incredibly popular for matching the sharp lines of modern properties. They offer a highly contemporary look that provides excellent privacy for newer Woolmer Green homes.',
+        },
+        {
+          question: 'How loud is the warning beeper when the metal gates move?',
+          answer: 'Audible alerts can be turned down or completely disabled depending on your exact preference. If you live closely to your neighbors, we can mute the buzzer and use silent flashing lights instead.',
+        },
+        {
+          question: 'Will a power cut trap my car behind the heavy metal gates?',
+          answer: 'Standby accumulators are wired directly into the main control panel to provide emergency energy during outages. You will retain full functional control of your heavy steel entrance until the mains electricity returns.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do you offer contemporary styles that suit the newer housing developments here?',
+          answer: 'Sleek louvres made from lightweight aluminum are incredibly popular for modern properties. They offer a crisp, architectural look that provides excellent privacy from the road without appearing overly heavy. An automated gate system perfectly completes the high tech feel of these newer Woolmer Green homes.',
+        },
+        {
+          question: 'How loud is the warning beeper when the gates move?',
+          answer: 'Audible warnings can be adjusted or even disabled entirely depending on your preference. If you live close to your neighbors, we can easily mute the buzzer to prevent annoyance. Flashing LED warning lights provide a silent but effective visual safety cue instead.',
+        },
+        {
+          question: 'Will a power cut trap my car on the driveway?',
+          answer: 'Emergency batteries are wired directly into the control panel to provide backup power during outages. You will retain full functional control of your entrance for several cycles until the mains electricity returns. Every installation also includes a physical release key just in case.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Do you repair sleek aluminum gates on the modern estates here?',
+          answer: 'Scratched extrusions are carefully buffed or color-matched to ensure the repair is completely invisible. We are highly experienced in maintaining the contemporary automated entrances found across Woolmer Green.',
+        },
+        {
+          question: 'The warning buzzer on my gate won\'t turn off.',
+          answer: 'Stuck relays inside the main logic board cause the audible alarm to sound continuously. We can quickly replace the faulty circuit board to restore peace and quiet to your neighborhood.',
+        },
+        {
+          question: 'My electric gate battery backup is completely dead.',
+          answer: 'Expired cells must be responsibly recycled and replaced with high-quality sealed lead-acid batteries. We will test the charging circuit to ensure your Woolmer Green gates survive the next power cut.',
+        },
+      ],
+    },
     cityIntro: [
       'Woolmer Green is a village in the Welwyn Hatfield district, sitting on the historic line of the old Great North Road between Welwyn and Knebworth and characterised by its ribbon development, historic cottages along the London Road core, and the Woolmer Green Conservation Area. Gate installations here sit within a planning context where Welwyn Hatfield Borough Council assesses material, height, and streetscape impact carefully within the conservation boundary, particularly on plots directly fronting the historic route.',
       'Our Woolmer Green installer network includes specialists with documented village track records and genuine Welwyn Hatfield planning experience. Every referred installer has completed at least six verifiable Woolmer Green or immediately adjacent projects before receiving any enquiry from us, and understands the design sensibilities that successful conservation area applications require in the old Great North Road villages.',
@@ -1650,6 +5096,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Aristocratic entrances require VIP callouts when automation fails, prioritizing complete privacy and rapid turnarounds. If an electric gate fails on a high-net-worth estate, it represents a massive security breach. Dedicated engineering teams provide rapid, discreet diagnostics, swapping blown motherboards or failed hydraulic locks instantly. They carry commercial-grade replacement parts to ensure the perimeter is fully secured, protecting high-profile residents from unauthorized intrusion.',
         'Underground shafts snap if heavy gates drop out of plumb. The incredible weight of bespoke ironwork causes hinges to gradually slip out of alignment, putting massive shearing force on the subterranean motor gears. Knebworth maintenance experts proactively adjust the geometric hang of these monumental gates during routine servicing, taking the pressure off the gearboxes and extending the lifespan of the expensive luxury hardware by several years.',
         'Remote diagnostics alert maintenance companies before the gate physically breaks down. Elite installations frequently feature smart control boards connected to the cloud. They report errors, low battery voltages, or obstacle detection faults directly to the servicing engineers. This proactive smart technology ensures potential mechanical issues are identified and resolved before the automated gate ever fails, providing unparalleled, continuous security for the homeowner.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can we design a grand sliding entrance fitting for a property near the Knebworth House estate?',
+          answer: 'Gold finials can be fabricated to your exact specifications on a sliding frame. We frequently create majestic portals that echo the stately homes of the area without needing swing space. These impressive structures are fully supported by heavy duty automation technology.',
+        },
+        {
+          question: 'Is an intercom range long enough for a house set far back from the road?',
+          answer: 'Mobile transceivers utilize cellular networks rather than Wi-Fi to bridge massive distances. Even if your Knebworth home is hundreds of meters from the road, the call quality will be flawless. It connects directly to your mobile or landline seamlessly.',
+        },
+        {
+          question: 'How do we stop the wind blowing solid wooden sliding gates open?',
+          answer: 'Geared resistance naturally holds a sliding gate firmly in place against strong gusts. Unlike swinging doors, sliders do not catch the wind like a sail, making them vastly superior for exposed areas. Your entrance will remain completely secure during severe weather.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can you build a grand entrance worthy of a property near the historic estate?',
+          answer: 'Regal archways and intricate golden finials can be custom forged to create a truly majestic boundary. We pair these imposing structures with heavy duty underground motors to secure your Knebworth home in style.',
+        },
+        {
+          question: 'Is the intercom range strong enough if the house is far from the road?',
+          answer: 'Distant relays utilizing GSM cellular technology bypass the need for Wi-Fi or long data cables entirely. The entrance panel dials your phone directly, ensuring flawless communication regardless of the distance.',
+        },
+        {
+          question: 'How do we stop heavy wooden gates blowing open in a storm?',
+          answer: 'Geared locking mechanisms within the hydraulic rams hold the leaves firmly closed against immense wind pressure. This prevents the swinging panels from snapping their hinges during violent UK weather fronts.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can we design a grand wooden entrance fitting for a property near the historic estate?',
+          answer: 'Majestic oak archways can be custom built to your exact specifications by our master carpenters. We frequently create imposing timber portals that echo the stately homes of the Knebworth area beautifully.',
+        },
+        {
+          question: 'Is an intercom range long enough for a house set far back from the road?',
+          answer: 'Cellular dialers utilize mobile phone networks to bridge massive distances flawlessly without expensive data cables. Even if your Knebworth home is hundreds of meters from the road, the connection remains perfect.',
+        },
+        {
+          question: 'How do we stop the wind blowing solid wooden gates open?',
+          answer: 'Magnetic latches are highly recommended for closed timber designs exposed to strong seasonal gusts. These electromagnets hold the leaves together with incredible force, taking the wind pressure off the motors.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can we design a grand metal entrance fitting for a property near the historic estate?',
+          answer: 'Golden crests and intricate spearheads can be custom built to your exact specifications by our master blacksmiths. We frequently create imposing steel portals that echo the stately homes of the Knebworth area beautifully.',
+        },
+        {
+          question: 'Is an intercom range long enough for a house set far back from the road?',
+          answer: 'Sim cards inside our dialers utilize mobile phone networks to bridge massive distances flawlessly. Even if your Knebworth home is hundreds of meters from the road, the audio connection remains perfect.',
+        },
+        {
+          question: 'How do we stop the wind blowing solid metal gates open?',
+          answer: 'Magnetic clamping is highly recommended for closed metal designs exposed to strong seasonal gusts. These powerful electromagnets hold the leaves together with incredible force, taking the wind pressure off the motors.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can we design a grand entrance fitting for a property near the Knebworth House estate?',
+          answer: 'Bespoke ironwork featuring intricate scrollwork and gold finials can be fabricated to your exact specifications. We frequently create majestic double swing portals that echo the stately homes of the area. These impressive structures are fully supported by heavy duty automation technology.',
+        },
+        {
+          question: 'Is an intercom range long enough for a house set far back from the road?',
+          answer: 'Dedicated GSM units utilize cellular networks rather than Wi-Fi or radio frequencies to bridge massive distances. Even if your Knebworth home is hundreds of meters from the road, the call quality will be flawless. It connects directly to your mobile or landline seamlessly.',
+        },
+        {
+          question: 'How do we stop the wind blowing solid wooden gates open?',
+          answer: 'Electromagnetic latches are highly recommended for closed panel designs exposed to strong gusts. These electromagnets hold the leaves together with thousands of pounds of force once closed. This takes the immense wind pressure off the motors and prevents the hinges from snapping.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Can you repair the grand entrance gates on my historic property?',
+          answer: 'Aristocratic ironwork demands exceptional care to ensure the ornate details are not damaged during mechanical servicing. Our technicians will treat your Knebworth estate boundaries with the utmost respect while upgrading the motors.',
+        },
+        {
+          question: 'The mobile phone intercom is dialing the wrong number.',
+          answer: 'Corrupted SIM cards or glitchy software inside the GSM dialer frequently cause routing errors. We will reprogram the master directory so your Knebworth gate calls the correct smartphone every time.',
+        },
+        {
+          question: 'My heavy wooden gates are snapping the hinges in the wind.',
+          answer: 'Inadequate brackets cannot handle the immense sail effect created by solid timber panels during a storm. We will weld much thicker, wrap-around hinges to secure your Knebworth entrance permanently.',
+        },
       ],
     },
     cityIntro: [
@@ -1692,6 +5224,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Radio frequency receivers lose sync after local power cuts or severe electrical storms. Codicote residents frequently find themselves locked out when their clickers stop working entirely. Instead of replacing the expensive radio system, local technicians simply clear the receiver\'s memory and reprogram the rolling-code remotes. They also test the backup battery systems, ensuring the gates can still be operated during future rural power outages.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Are telescopic sliding gates a good option for the tight driveways in the village center?',
+          answer: 'Concertina panels are absolute lifesavers when lateral parking space is limited near the High Street. The leaves slide neatly behind each other, requiring less than half the run-back of traditional styles. This lets you fit a sliding gate on a very narrow Codicote boundary.',
+        },
+        {
+          question: 'Do you install underground cabling neatly across manicured lawns?',
+          answer: 'Subterranean plows are used by our trenching teams to bury armored cables with minimal disruption to your grass. We carefully lift the turf and reinstate it once the power lines are safely laid deeply underground. The visual impact on your landscaping is practically invisible within a few weeks.',
+        },
+        {
+          question: 'Can the automation be linked to my existing garage door remote?',
+          answer: 'Radio cloning receivers can usually be wired into your new sliding control board to sync with older remotes. This allows you to use a single fob to operate both your garage and your new electric sliding gate. It is a highly convenient upgrade for your daily routine.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Our driveway is incredibly short; can we still have automated gates?',
+          answer: 'Concertina leaves are the ultimate problem solver, folding in half as they swing to minimize the required arc. This brilliant bi-folding setup allows you to park extremely close to your Codicote boundary line safely.',
+        },
+        {
+          question: 'Do you rip up the whole lawn to lay the electrical cables?',
+          answer: 'Grass trenching is performed surgically using a mole plow to bury armored lines with minimal surface disruption. We carefully reinstate the turf, leaving your Codicote landscaping looking untouched within just a few weeks.',
+        },
+        {
+          question: 'Can I use my garage remote to open the new gates?',
+          answer: 'Universal remotes can be synchronized by adding a compatible radio receiver to your new control board. This allows you to command both your garage door and electric swing gate from the exact same fob.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Are bi-folding wooden gates a good option for the tight driveways in the village center?',
+          answer: 'Articulated panels are absolute lifesavers when parking space is extremely limited near the High Street. The timber leaves fold back compactly against the pillars, requiring less than half the normal swing arc.',
+        },
+        {
+          question: 'Do you install underground cabling neatly across manicured lawns?',
+          answer: 'Subsurface plows are used by our trenching teams to bury armored electrical cables with minimal turf disruption. The visual impact on your beautiful Codicote landscaping is practically invisible within a few short weeks.',
+        },
+        {
+          question: 'Can the wooden gate automation be linked to my existing garage door remote?',
+          answer: 'Radio syncing allows us to wire a compatible receiver directly into your new timber control board. This lets you use a single fob to operate both your garage and your new Codicote entrance.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Are bi-folding metal gates a good option for the tight driveways in the village center?',
+          answer: 'Jointed panels are absolute lifesavers when parking space is extremely limited near the High Street. The steel leaves fold back compactly against the pillars, requiring less than half the normal swing arc.',
+        },
+        {
+          question: 'Do you install underground cabling neatly across manicured lawns?',
+          answer: 'Subterranean drilling is used by our trenching teams to bury armored electrical cables with minimal turf disruption. The visual impact on your beautiful Codicote landscaping is practically invisible within a few short weeks.',
+        },
+        {
+          question: 'Can the metal gate automation be linked to my existing garage door remote?',
+          answer: 'Frequency matching allows us to wire a compatible receiver directly into your new steel control board. This lets you use a single fob to operate both your garage and your new Codicote entrance.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Are bi-folding gates a good option for the tight driveways in the village center?',
+          answer: 'Concertina designs are absolute lifesavers when parking space is limited near the High Street. The leaves fold back compactly against the brick pillars, requiring less than half the swing arc of traditional styles. This lets you park your car right up to the boundary in Codicote.',
+        },
+        {
+          question: 'Do you install underground cabling neatly across manicured lawns?',
+          answer: 'Trenching teams use specialized mole plows to bury armored cables with minimal disruption to your grass. We carefully lift the turf and reinstate it once the power lines are safely laid deeply underground. The visual impact on your landscaping is practically invisible within a few weeks.',
+        },
+        {
+          question: 'Can the automation be linked to my existing garage door remote?',
+          answer: 'Universal receivers can usually be wired into your new control board to sync with older remotes. This allows you to use a single fob to operate both your garage and your new automated gate system. It is a highly convenient upgrade for your daily routine.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The bi-folding gates on my tight driveway keep jamming halfway.',
+          answer: 'Seized joints in the folding mechanism create massive resistance that forces the motor to trip its safety overload. We will thoroughly degrease and lubricate the articulating arms to restore your Codicote gates.',
+        },
+        {
+          question: 'An underground cable was cut while doing garden work; can you fix it?',
+          answer: 'Spliced repairs are perfectly safe if they are sealed within a waterproof, resin-filled junction box. We will trace the break and restore the power safely beneath your Codicote lawn.',
+        },
+        {
+          question: 'I lost my only gate remote; how do I get a new one?',
+          answer: 'Replacement fobs are kept in stock and can be synced directly to your main receiver on-site. We will also wipe the memory of the lost remote to keep your Codicote home secure.',
+        },
+      ],
+    },
     cityIntro: [
       'Codicote is a village in the North Hertfordshire district with a genuinely historic core along the High Street and substantial residential development across the surrounding streets. The conservation area shapes planning substantially in the village core, with generally pragmatic North Hertfordshire District Council treatment across the post-war residential areas.',
       'Our Codicote installer network includes specialists with substantive track records across the village. Every referred installer has documented North Herts planning experience and understands the design sympathy that successful conservation-area applications require.',
@@ -1730,6 +5348,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Tractor impacts crush the structural crossbeams on wide agricultural entrances. Instead of throwing away the expensive bespoke ironwork, local engineers provide comprehensive on-site structural repairs. They utilize mobile welding units to cut out the mangled sections and splice in fresh, reinforced steel. This specialized agricultural repair service ensures the massive boundaries are restored to full strength quickly, saving the farm owner immense replacement costs.',
         'Motor overloads burn out electromechanical drives pushing against extreme crosswinds. If a solid gate is blown backward, light-duty motors will snap internally. Kimpton repair teams replace these destroyed units with heavy-duty hydraulic actuators. These feature mechanical locking valves that hold the gate rigid when closed, preventing the wind from forcing the leaves open and protecting the property from severe storm damage.',
         'Frost build-up derails sliding gates during freezing winter mornings. Ice freezes to the floor tracks, causing the motor\'s obstacle detection to trigger falsely and leaving the homeowner trapped. Preventative servicing before the winter hits is vital. Technicians install specialized track-clearing brushes on the leading edge of the gate and increase the motor\'s torque settings slightly, ensuring highly reliable access during the harshest weather.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'We have a lot of horses passing by; will the gate sensors be triggered by them?',
+          answer: 'Equine bypass algorithms can be precisely tuned to only acknowledge large metallic objects like cars. This ignores passing livestock, pedestrians, or wildlife moving past your Kimpton boundary. Your sliding entrance will remain firmly shut until an actual vehicle approaches the driveway.',
+        },
+        {
+          question: 'Are there rust-proof options for gates under heavy tree cover?',
+          answer: 'Aircraft-grade metal is the definitive solution for damp, shaded areas where traditional steel might eventually corrode. The aluminum naturally resists oxidation and requires virtually zero upkeep beyond an occasional wash. It is the smartest investment for heavily wooded properties.',
+        },
+        {
+          question: 'How quickly can a broken motor be repaired?',
+          answer: 'Regional engineers carry fully stocked vans to resolve most mechanical sliding failures on the very first visit. If a component fails, our rapid response team will diagnose and swap the part immediately. We prioritize keeping your electric sliding gate secure and operational at all times.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'We get a lot of horses passing by; will they accidentally trigger the gate to open?',
+          answer: 'Hoofed animal movements are completely ignored by highly tuned induction loops buried under the driveway. These sensors only trigger the electric swing gate when a large metallic mass like a car approaches your Kimpton property.',
+        },
+        {
+          question: 'What is the best material for gates constantly shaded by large trees?',
+          answer: 'Aircraft aluminum is inherently rustproof, making it the perfect choice for damp, heavily wooded environments. It requires zero protective treatments, remaining immaculate despite the shady conditions on your boundary.',
+        },
+        {
+          question: 'How quickly can a broken motor be repaired?',
+          answer: 'Immediate diagnostics are carried out by our local response teams who arrive with fully stocked vans. We prioritize rapid part replacements to ensure your electric swing gate remains secure and operational.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'We have a lot of horses passing by; will the gate sensors be triggered by them?',
+          answer: 'Metallic mass detectors buried under the tarmac are specifically calibrated to only recognize vehicles. This ignores passing livestock or wildlife, ensuring your Kimpton boundary remains firmly shut for animals.',
+        },
+        {
+          question: 'Are there rot-proof options for wooden gates under heavy tree cover?',
+          answer: 'Treated Iroko is a phenomenal African hardwood that naturally resists fungal decay in damp, shaded areas. It is the smartest timber investment for heavily wooded properties across the local region.',
+        },
+        {
+          question: 'How quickly can a broken automation motor be repaired?',
+          answer: 'Mobile technicians carry fully stocked vans to resolve most mechanical failures on the very first visit. We prioritize keeping your heavy wooden gates secure and operational at all times.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'We have a lot of horses passing by; will the metal gate sensors be triggered by them?',
+          answer: 'Magnetic resonance detectors buried under the tarmac are specifically calibrated to only recognize large vehicles. This ignores passing livestock or wildlife, ensuring your Kimpton boundary remains firmly shut for animals.',
+        },
+        {
+          question: 'Are there rust-proof options for metal gates under heavy tree cover?',
+          answer: 'Untreated aluminum naturally resists oxidation in damp, shaded areas where traditional iron might eventually corrode. It is the smartest metal investment for heavily wooded properties across the local region.',
+        },
+        {
+          question: 'How quickly can a broken automation motor be repaired?',
+          answer: 'Rapid dispatch ensures mobile technicians arrive with fully stocked vans to resolve most mechanical failures immediately. We prioritize keeping your heavy steel gates secure and operational at all times.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'We have a lot of horses passing by; will the gate sensors be triggered by them?',
+          answer: 'Directional sensors can be precisely calibrated to only detect large metallic objects like cars. This ignores passing livestock, pedestrians, or wildlife moving past your Kimpton boundary. Your entrance will remain firmly shut until an actual vehicle approaches the driveway.',
+        },
+        {
+          question: 'Are there rust-proof options for gates under heavy tree cover?',
+          answer: 'Aluminum fabrication is the definitive solution for damp, shaded areas where traditional steel might eventually corrode. The metal naturally resists oxidation and requires virtually zero upkeep beyond an occasional wash. It is the smartest investment for heavily wooded properties.',
+        },
+        {
+          question: 'How quickly can a broken motor be repaired?',
+          answer: 'Local technicians carry fully stocked vans to resolve most mechanical failures on the very first visit. If a component fails, our rapid response team will diagnose and swap the part immediately. We prioritize keeping your automated gate system secure and operational at all times.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The induction loop doesn\'t open the gate for horses, but cars work fine.',
+          answer: 'Magnetic tuning ensures the underground wire only reacts to large masses of metal like a vehicle. This is actually functioning correctly, preventing your Kimpton livestock from escaping onto the road.',
+        },
+        {
+          question: 'The wooden gates under the trees are covered in green slime and sticking.',
+          answer: 'Algae buildup traps moisture against the timber, causing it to swell and rub against the driveway surface. We can shave the bottom rails and treat the wood to prevent future Kimpton fungal growth.',
+        },
+        {
+          question: 'My motor was smashed by a delivery van; is the whole system ruined?',
+          answer: 'Shattered casings often mean the internal gears are destroyed, requiring a complete replacement of that specific arm. We will quote you for a new operator while keeping the rest of your Kimpton setup intact.',
+        },
       ],
     },
     cityIntro: [
@@ -1772,6 +5476,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Condensation issues short out the main logic boards, causing gates to open by themselves or refuse to close. Whitwell repair specialists utilize conformal coating sprays and install specialized anti-condensation heaters inside the control boxes. They meticulously clean the corroded contact points to revive the logic board, saving residents thousands of pounds in unnecessary replacement costs and restoring total perimeter security.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can we automate a five-bar wooden gate to slide instead of swing?',
+          answer: 'Rustic aesthetics can easily be preserved by mounting traditional agricultural styles onto a concealed sliding track. You get a beautifully traditional country look combined with effortless modern convenience that saves driveway space. This is highly popular for older homes in Whitwell.',
+        },
+        {
+          question: 'Does living in a valley affect the wireless intercom signal?',
+          answer: 'Valley deadzones can occasionally disrupt signals if relying on older radio frequency handsets. We bypass this issue entirely by hardwiring a dedicated data cable from the house to the entrance. This guarantees perfect audio clarity and instant video streaming every single time.',
+        },
+        {
+          question: 'What safety features prevent the sliding gates crushing a vehicle?',
+          answer: 'Rubberised bumpers combined with dual infrared beams create a comprehensive safety net along the entire sliding track. The instant any resistance is detected, the motors halt and briefly reverse to free the obstruction. It is physically impossible for the barrier to crush your car.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can you automate a traditional wooden five-bar gate?',
+          answer: 'Farmhouse styling is beautifully preserved by mounting discrete ram actuators directly onto classic timber rails. You gain all the modern convenience of an electric swing gate without losing the rustic Whitwell charm.',
+        },
+        {
+          question: 'Does living in a deep valley ruin the wireless intercom signal?',
+          answer: 'Signal degradation is a common issue in valleys, which is why we hardwire data cables for absolute reliability. This physical connection guarantees perfect video and audio quality from your boundary straight into your home.',
+        },
+        {
+          question: 'What safety features stop the gates from damaging my car?',
+          answer: 'Cushioning strips fitted to the leading edges contain sensitive microswitches that detect any physical contact. The motors will halt immediately if the barrier brushes against your vehicle, preventing any serious cosmetic damage.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can we automate a five-bar wooden gate typical of the farms around here?',
+          answer: 'Discrete actuators can easily be mounted onto traditional agricultural styles to preserve the countryside aesthetic. You get all the modern convenience without losing the wonderful rustic charm of Whitwell.',
+        },
+        {
+          question: 'Does living in a valley affect the wireless intercom signal?',
+          answer: 'Hardwired connections bypass valley deadzones entirely by running a dedicated data cable from the house. This guarantees perfect audio clarity and instant video streaming for your entrance every single time.',
+        },
+        {
+          question: 'What safety features prevent the heavy wooden gates from crushing a vehicle?',
+          answer: 'Compressible edges combined with dual infrared beams create a comprehensive safety net around the movement zone. The instant any resistance is detected, the motors halt and briefly reverse to free the obstruction.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can we automate a metal gate that looks like traditional farm styles?',
+          answer: 'Discreet rams can easily be mounted onto five-bar steel styles to preserve the countryside aesthetic. You get all the modern convenience without losing the wonderful rustic charm of Whitwell.',
+        },
+        {
+          question: 'Does living in a valley affect the wireless intercom signal?',
+          answer: 'Wired networks bypass valley deadzones entirely by running a dedicated data cable from the house. This guarantees perfect audio clarity and instant video streaming for your entrance every single time.',
+        },
+        {
+          question: 'What safety features prevent the heavy metal gates from crushing a vehicle?',
+          answer: 'Rubberized crush edges combined with dual infrared beams create a comprehensive safety net around the movement zone. The instant any resistance is detected, the motors halt and briefly reverse to free the obstruction.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can we automate a five-bar wooden gate typical of the farms around here?',
+          answer: 'Countryside aesthetics can easily be preserved by adding discrete ram motors to traditional agricultural styles. These actuators are mounted halfway up the timber and painted to blend in with the wood. You get the convenience of automation without losing the rustic charm of Whitwell.',
+        },
+        {
+          question: 'Does living in a valley affect the wireless intercom signal?',
+          answer: 'Signal dropouts can occasionally happen in deep valleys if relying on older radio frequency handsets. We bypass this issue entirely by hardwiring a dedicated CAT6 data cable from the house to the entrance. This guarantees perfect audio clarity and instant video streaming every single time.',
+        },
+        {
+          question: 'What safety features prevent the gates crushing a vehicle?',
+          answer: 'Pressure edges combined with dual infrared beams create a comprehensive safety net around the movement zone. The instant any resistance is detected, the motors halt and briefly reverse to free the obstruction. It is physically impossible for the barrier to crush your car.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Can you repair the automation on my rustic five-bar gate?',
+          answer: 'Broken linkages connecting the motor to the timber rail are the most common failure point on these setups. We will fabricate stronger steel brackets to get your Whitwell country gate moving again reliably.',
+        },
+        {
+          question: 'The gate opens fine but takes forever to close.',
+          answer: 'Sluggish valves inside a hydraulic motor restrict the oil flow as it tries to return to the reservoir. We will flush the contaminated fluid and rebuild the pressure block for your Whitwell property.',
+        },
+        {
+          question: 'My gate crushes my car if I stop in the middle of the driveway.',
+          answer: 'Blind spots in the infrared beam coverage allow the system to close while a vehicle is still present. We will install additional photocells at different heights to ensure your Whitwell driveway is completely safe.',
+        },
+      ],
+    },
     cityIntro: [
       'Whitwell is a village in the North Hertfordshire district, sitting in the Mimram valley and characterised by the historic flint-and-brick cottages along High Street and the Whitwell Conservation Area that covers the village core. Gate installations here sit within a sensitive planning context where North Hertfordshire District Council planning officers assess material, height, and streetscape impact carefully within the conservation boundary.',
       'Our Whitwell installer network includes specialists with genuine village track records and documented planning experience within the conservation area. Every referred installer has completed a minimum of six verifiable Whitwell or immediately adjacent projects before receiving any enquiry from us, and understands the material sensibilities that successful applications require in the Mimram valley villages.',
@@ -1810,6 +5600,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Rural seclusion means broken intercoms completely isolate the homeowner. Running hardwired communication cables across a massive estate is prone to failure if rodents chew the lines. To solve this efficiently, Datchworth repair specialists frequently abandon the faulty hardwired cables entirely, upgrading the system to a secure GSM cellular intercom that restores flawless, wireless access control across the massive estate instantly.',
         'Insect infestations inside the main control panel are a leading cause of motherboard failure in these leafy plots. The warmth of the electrical components attracts wildlife, causing short circuits that fry the logic boards. Repair specialists execute a complete motherboard replacement, thoroughly seal the cable entry points with silicone, and place desiccant packets inside the housing to completely bug-proof the sensitive new electronics.',
         'Worn limit switches prevent the gate from knowing when to stop, causing the motors to grind relentlessly against the physical stops. Vetted technicians use digital multimeters to trace this fault quickly. By replacing the inexpensive micro-switches and recalibrating the motor\'s internal encoder, they restore precise opening and closing cycles without having to unnecessarily dismantle the beautiful entrance structures.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Our driveway is on a sharp bend; how do we ensure we can see traffic when leaving?',
+          answer: 'Obscured sightlines require fast acting automation and careful placement of the sliding boundary to maximize visibility. We can integrate wide angle mirrors onto the pillars or ensure the gate retracts fully out of sight. Safety is our primary concern when designing your Datchworth entrance.',
+        },
+        {
+          question: 'Are keypad codes secure against hackers?',
+          answer: 'Hardwired consoles do not transmit wireless signals, making them completely immune to electronic interception or cloning. The access codes are stored locally on the encrypted control board locked inside a secure housing. It is a remarkably robust and safe method of entry control.',
+        },
+        {
+          question: 'Do you offer maintenance plans to keep the timber sliding gates looking fresh?',
+          answer: 'Timber rejuvenation can be included in our annual servicing packages to maintain the rich color of hardwood panels. Our engineers will gently sand away any weathering and apply a fresh coat of UV resistant oil. Your electric sliding gate will always look like it was just installed.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Our entrance is on a blind bend; what is the safest automation option?',
+          answer: 'Blind corners require maximum road visibility, which we achieve by positioning the swinging arc deeper into your property. This allows you to pull off the dangerous Datchworth road completely before the electric swing gate closes behind you.',
+        },
+        {
+          question: 'Are the access codes safe from being hacked by criminals?',
+          answer: 'Encrypted keypads are hardwired directly to the control board, emitting absolutely zero wireless signals. This makes them physically impossible to clone or intercept, offering ironclad security for your entrance.',
+        },
+        {
+          question: 'Do you offer maintenance plans for the wooden panels?',
+          answer: 'Hardwood restoration is included in our premium service tiers to keep the timber looking rich and vibrant. Our engineers will gently sand the panels and apply fresh UV protective oils to your electric swing gate annually.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Our driveway is on a sharp bend; how do we ensure we can see traffic when leaving?',
+          answer: 'Strategic placement of the boundary line deeper into your property maximizes visibility on blind corners. We can also integrate wide angle mirrors onto the wooden pillars for extra safety in Datchworth.',
+        },
+        {
+          question: 'Are keypad codes for wooden gates secure against hackers?',
+          answer: 'Wired keypads do not transmit wireless signals, making them completely immune to electronic interception or cloning. The access codes are stored securely on the encrypted control board locked inside the housing.',
+        },
+        {
+          question: 'Do you offer maintenance plans to keep the timber looking fresh?',
+          answer: 'Routine sanding and oiling can be included in our annual servicing packages to maintain the rich color. Our engineers will ensure your wooden driveway gates always look like they were just installed.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Our driveway is on a sharp bend; how do we ensure we can see traffic when leaving?',
+          answer: 'Recessed boundaries push the entrance line deeper into your property to maximize visibility on blind corners. We can also integrate wide-angle mirrors onto the metal pillars for extra safety in Datchworth.',
+        },
+        {
+          question: 'Are keypad codes for metal gates secure against hackers?',
+          answer: 'Physical cabling ensures the keypads do not transmit wireless signals, making them completely immune to electronic interception. The access codes are stored securely on the encrypted control board locked inside the housing.',
+        },
+        {
+          question: 'Do you offer maintenance plans to keep the metal looking fresh?',
+          answer: 'Annual valeting and hinge lubrication can be included in our servicing packages to maintain the flawless finish. Our engineers will ensure your metal driveway gates always look like they were just installed.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Our driveway is on a sharp bend; how do we ensure we can see traffic when leaving?',
+          answer: 'Blind corners require fast acting automation and careful placement of the boundary line to maximize visibility. We can integrate wide angle mirrors onto the pillars or install an outward swinging mechanism if space permits. Safety is our primary concern when designing your Datchworth entrance.',
+        },
+        {
+          question: 'Are keypad codes secure against hackers?',
+          answer: 'Hardwired keypads do not transmit wireless signals, making them immune to electronic interception or cloning. The access codes are stored locally on the encrypted control board locked inside a secure housing. It is a remarkably robust and safe method of entry control.',
+        },
+        {
+          question: 'Do you offer maintenance plans to keep the timber looking fresh?',
+          answer: 'Wood treatments can be included in our annual servicing packages to maintain the rich color of hardwood panels. Our engineers will gently sand away any weathering and apply a fresh coat of UV resistant micro-porous oil. Your automated gate system will always look like it was just installed.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The mirror on my gate pillar was smashed; do you replace these?',
+          answer: 'Shattered convex mirrors are a huge safety hazard for properties situated on blind corners. We will mount a new, high-visibility acrylic mirror to ensure you can exit your Datchworth driveway safely.',
+        },
+        {
+          question: 'The keypad wires were pulled out by vandals.',
+          answer: 'Ripped cables must be re-terminated and sealed inside a vandal-proof steel enclosure to prevent a recurrence. We will restore your Datchworth entry console and make it much harder to tamper with.',
+        },
+        {
+          question: 'The varnish on my wooden gates is peeling badly; do you restore this?',
+          answer: 'Flaking finishes leave the raw timber completely exposed to the elements and vulnerable to rot. We offer a full sanding and re-oiling service to keep your Datchworth boundaries protected and beautiful.',
+        },
       ],
     },
     cityIntro: [
@@ -1852,6 +5728,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Digital access keypads take a beating from heavy daily use and exposure to the elements. For Hertford homeowners relying on PIN codes for cleaners or dog walkers, a broken keypad causes massive logistical headaches. Repair crews swiftly replace worn, unresponsive rubber buttons with ultra-durable, vandal-resistant stainless steel variants. They reprogram the master codes and ensure the new access control module interfaces perfectly with the existing automation motherboard.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can sliding gates be fitted on properties facing the River Lea?',
+          answer: 'Riverside installations require special marine-grade coatings to prevent corrosion. We ensure your sliding frame withstands the constant moisture near the Hertford waterways without rusting.',
+        },
+        {
+          question: 'Do you need planning permission for a solid sliding gate in the town center?',
+          answer: 'Heritage officers often scrutinize solid boundaries in conservation areas like central Hertford. We recommend installing an open-slatted sliding design to appease local planners while securing your home.',
+        },
+        {
+          question: 'How do sliding mechanisms cope with busy commuter mornings?',
+          answer: 'Commuter urgency is easily handled by our rapid-transit gearboxes. Your electric sliding gate will open swiftly, ensuring you never miss your train from Hertford East.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Are swinging models suitable for properties near Hertford Castle?',
+          answer: 'Castle aesthetics demand sympathetic design when upgrading boundaries in conservation areas. We can install traditional ironwork that swings inwards, keeping your Hertford property secure while perfectly matching the historic surroundings.',
+        },
+        {
+          question: 'What is the best swinging gate material for damp areas close to the River Lea?',
+          answer: 'Rust immunity is essential when installing any metal boundary near local waterways. We strongly advise using powder coated aluminum to eliminate corrosion risks for your Hertford electric swing gate entirely.',
+        },
+        {
+          question: 'Will the swinging arc block traffic on busy town center roads?',
+          answer: 'Inward movement ensures your barrier never encroaches onto public highways or pavements. Your electric swing gate retracts safely into your driveway, allowing you to pull off the Hertford street without causing a queue.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do wooden gates work well near the historic Hertford Castle area?',
+          answer: 'Castle boundaries require sympathetic materials that respect the conservation zone. We use traditional oak to ensure your boundary completely honors the local heritage.',
+        },
+        {
+          question: 'Will dampness from the River Lea rot the wood?',
+          answer: 'Marine grade varnishes are applied to combat the riverside moisture effectively. Your timber entrance will survive the damp Hertford winters without degrading.',
+        },
+        {
+          question: 'Are sliding wooden gates an option for the busy town center?',
+          answer: 'Lateral retracting mechanisms save immense space where driveways are short. You can park vehicles right up to your Hertford boundary line securely.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Are metal gates suitable for properties near Hertford Castle?',
+          answer: 'Regal aesthetics demand sympathetic design when upgrading boundaries in conservation areas. We can install traditional ironwork that keeps your Hertford property secure while perfectly matching the historic surroundings.',
+        },
+        {
+          question: 'What is the best metal for damp areas close to the River Lea?',
+          answer: 'Absolute immunity to rust is essential when installing any boundary near local waterways. We strongly advise using powder coated aluminum to eliminate corrosion risks for your Hertford metal driveway gate entirely.',
+        },
+        {
+          question: 'Will the swinging arc block traffic on busy town center roads?',
+          answer: 'Interior swinging ensures your barrier never encroaches onto public highways or pavements. Your metal driveway gate retracts safely into your driveway, allowing you to pull off the Hertford street without causing a queue.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can you automate gates for listed buildings near Hertford Castle?',
+          answer: 'Heritage planning experts on our team handle all the paperwork for listed properties. We ensure your new setup complies with strict local conservation rules while providing top security.',
+        },
+        {
+          question: 'What is the best gate material for damp areas close to the River Lea?',
+          answer: 'Rust prevention is essential when installing near waterways like the Lea. We strongly advise using powder coated aluminum to eliminate any risk of corrosion over time.',
+        },
+        {
+          question: 'Will the gates block traffic on busy roads in the town center?',
+          answer: 'Swift mechanics ensure your barrier opens the moment you approach your Hertford property. This allows you to pull straight off the busy streets without causing a queue.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The historic gates near Hertford Castle are dragging; can you repair them?',
+          answer: 'Historic restorations demand immense care to preserve original ironwork while upgrading hinges. We gently lift and realign your classic Hertford boundaries without causing structural damage.',
+        },
+        {
+          question: 'The intercom keeps shorting out near the River Lea.',
+          answer: 'Lea moisture seeps into standard entry panels and corrodes the delicate internal wiring rapidly. We will fit a fully waterproof intercom to survive the damp Hertford environment perfectly.',
+        },
+        {
+          question: 'A delivery truck backed into my gate mechanism; how fast can you fix it?',
+          answer: 'Congested streets require rapid responses to prevent your property from being exposed to the public overnight. Our Hertford technicians carry spare drive arms to execute emergency structural repairs immediately.',
+        },
+      ],
+    },
     cityIntro: [
       'Hertford is shaped by a dense concentration of conservation areas, listed buildings, and the historic centre that radiates from Fore Street and Parliament Square. Gate installations here require genuine sensitivity to the conservation context, and East Hertfordshire District Council planning treatment of applications reflects the heritage value of the streetscape.',
       'Our Hertford installer network focuses on specialists with documented experience in the conservation zones and familiarity with the additional consent requirements that apply where listed building status is relevant. Every referred installer has completed substantive Hertford work and understands both the planning and the practical considerations specific to the town\'s clay subsoil and river-adjacent installations.',
@@ -1890,6 +5852,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Malting architecture and beautiful 18th-century riverside gazebos define Ware, meaning boundary repairs must be executed almost invisibly. When traditional timber gates sag, standard, bulky galvanised brackets are visually unacceptable. Local technicians re-hang the dropping leaves using discreet, highly engineered steel reinforcements hidden from the street. This structural intervention restores perfect balance and prevents the automation motors from burning out, preserving both the mechanics and the strict aesthetic rules of the conservation area.',
         'Riverside dampness rusts articulated arms and linear actuators if they are left unserviced. Preventative maintenance is the only way to protect automation hardware in this wet environment near the River Lea. Bi-annual servicing teams strip the dirt from the actuator shafts, polishing the stainless steel before packing them with water-displacing lubricants. This meticulous care ensures the motors run silently and efficiently despite the constant humidity.',
         'Warped timber causes gates to jam tightly together in this damp valley microclimate. As wooden leaves absorb moisture, they become incredibly heavy, causing the joints to separate and the gate to drag. Carpenters and gate technicians work together to re-brace the heavy hardwood using discreet steel tension bands. They adjust the geometric hang of the entrance, saving the expensive automation motors from burning out due to excessive friction.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Are sliding gates suitable for the narrow streets near the gazebos?',
+          answer: 'Constricted lanes make swinging arcs impossible without hitting parked vehicles. A sleek sliding barrier is the perfect space-saving solution for tight Ware properties.',
+        },
+        {
+          question: 'Can I use a traditional wooden finish on a modern sliding frame?',
+          answer: 'Timber cladding allows you to face a rigid steel chassis with beautiful natural oak. You enjoy modern sliding functionality while maintaining the historic Ware riverside aesthetic.',
+        },
+        {
+          question: 'What happens if there is a power cut during a flood?',
+          answer: 'Elevated batteries remain safely above ground level to provide emergency backup power. You can always slide your entrance open manually using the mechanical release key.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'How do delivery vans access properties along the narrow streets in Ware?',
+          answer: 'Mobile granting allows you to open the driveway swinging entrance from your smartphone instantly. You can easily let couriers drop parcels safely while you commute away from Ware.',
+        },
+        {
+          question: 'Can I get wooden swing gates that match the historic riverside gazebos?',
+          answer: 'Artisan boards are designed specifically to echo local architectural styles seamlessly. They blend perfectly with the historic charm of Ware while hiding robust modern electric swing gate motors.',
+        },
+        {
+          question: 'Are there quiet swinging motors for closely packed terrace houses?',
+          answer: 'Silent hydraulics operate with virtually zero noise to keep your neighbors completely undisturbed. You can swing your Ware boundary open during early mornings without waking anyone nearby.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can we get wooden gates that match the historic riverside gazebos?',
+          answer: 'Artisan carpentry easily mimics the intricate details of the local architecture. Your new wooden driveway gates will blend beautifully with the historic Ware aesthetic.',
+        },
+        {
+          question: 'How do we secure a narrow driveway on the older streets?',
+          answer: 'Bifolding frames fold neatly to maximize parking in tight spaces. This is perfect for the constricted residential roads throughout Ware.',
+        },
+        {
+          question: 'Are keypad entries weather resistant?',
+          answer: 'Sealed digital pads completely resist heavy rain and freezing temperatures. You can access your Ware property effortlessly no matter the weather.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'How do delivery vans access properties along the narrow streets in Ware?',
+          answer: 'App unlocking allows you to open the driveway entrance from your smartphone instantly. You can easily let couriers drop parcels safely while you commute away from Ware.',
+        },
+        {
+          question: 'Can I get metal gates that match the historic riverside gazebos?',
+          answer: 'Blacksmith artistry easily mimics the intricate details of the local architecture. Your new metal driveway gates will blend beautifully with the historic Ware aesthetic.',
+        },
+        {
+          question: 'Are there quiet swinging motors for closely packed terrace houses?',
+          answer: 'Noiseless hydraulics operate with virtually zero sound to keep your neighbors completely undisturbed. You can swing your Ware boundary open during early mornings without waking anyone nearby.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'How do delivery vans access properties along the narrow streets in Ware?',
+          answer: 'Remote granting allows you to open the driveway from your smartphone instantly. You can easily let couriers drop parcels safely while you commute into London.',
+        },
+        {
+          question: 'Can I get wooden gates that match the historic riverside gazebos?',
+          answer: 'Crafted timber panels are designed specifically to echo local architectural styles. They blend perfectly with the historic charm of Ware while hiding robust modern motors.',
+        },
+        {
+          question: 'Are there quiet gate motors for closely packed terrace houses?',
+          answer: 'Frictionless drives operate with virtually zero noise to keep your neighbors happy. You can come and go during early mornings without waking anyone nearby.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The gates on our riverside gazebo property are completely stuck.',
+          answer: 'Riverside gazebos suffer from high humidity that rusts internal motor gears if poorly maintained. We will strip the rusted components and rebuild the drive unit for your Ware home.',
+        },
+        {
+          question: 'Our bi-folding gate keeps jamming in the narrow alleyway.',
+          answer: 'Restricted alleys force bi-folding setups to perform tight maneuvers that strain articulating joints. We thoroughly clean and lubricate these complex mechanisms to restore smooth operation in Ware.',
+        },
+        {
+          question: 'I need an urgent gate repair before leaving for work in London.',
+          answer: 'Morning trains dictate strict schedules, which is why we offer priority early callouts for commuters. We will resolve the fault swiftly so you can leave your Ware driveway on time.',
+        },
       ],
     },
     cityIntro: [
@@ -1932,6 +5980,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Intercom buzzing is a highly frustrating issue that plagues many local properties after heavy rainstorms. When moisture penetrates the exterior call panel, the audio feed degrades or the keypad buttons short-circuit. Bishops Stortford repair specialists excel at diagnosing these low-voltage communication faults. They replace corroded micro-switches, upgrade the internal wiring, and re-seal the exterior housing with waterproof silicone to restore crystal-clear visitor screening.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Will a sliding gate block noise from the airport traffic?',
+          answer: 'Dense paneling provides a highly effective acoustic barrier against passing vehicles and aircraft. A solid electric sliding gate significantly reduces noise pollution for your Bishops Stortford garden.',
+        },
+        {
+          question: 'How wide can a sliding gate be for a commercial yard?',
+          answer: 'Commercial spans can reach over fifteen meters using heavy-duty telescopic configurations. These industrial sliding systems are ideal for securing large transport depots around Bishops Stortford.',
+        },
+        {
+          question: 'Are keypad intercoms vandal-proof?',
+          answer: 'Toughened keypads utilize thick stainless steel construction to resist physical damage. Your entrance control system will remain secure against both harsh weather and potential vandalism.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Will airplane noise from Stansted affect the voice intercom on the gate?',
+          answer: 'Acoustic filtering technology is built into our external call points specifically for this reason. It actively blocks heavy background sounds so you can clearly hear visitors at your Bishops Stortford home.',
+        },
+        {
+          question: 'Do you install heavy duty security swing gates for large commuter properties?',
+          answer: 'Commanding frameworks made from solid steel offer the ultimate defense against opportunistic crime. These electric swing gates are highly popular for affluent homes near the M11 corridor around Bishops Stortford.',
+        },
+        {
+          question: 'What happens if there is a power cut while I am rushing to the station?',
+          answer: 'Keyed overrides allow you to manually unlock the swinging motors with a physical key. This guarantees you will never be stuck inside your Bishops Stortford driveway when trying to catch a train.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do solid wooden gates reduce noise from the nearby airport?',
+          answer: 'Thick hardwood acts as a brilliant acoustic barrier against aircraft roar. Your Bishops Stortford garden will feel noticeably quieter and more peaceful.',
+        },
+        {
+          question: 'What wood is best for heavy commuter traffic use?',
+          answer: 'Robust Iroko handles the immense stress of constant automated cycles. This dense African timber will outlast softer woods on busy Bishops Stortford driveways.',
+        },
+        {
+          question: 'Will the gates lock automatically when we leave?',
+          answer: 'Programmed timers ensure the entrance secures itself behind your vehicle. You never have to worry about leaving your boundary open again.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Will airplane noise from Stansted affect the voice intercom on the metal gate?',
+          answer: 'Noise cancellation technology is built into our external call points specifically for this reason. It actively blocks heavy background sounds so you can clearly hear visitors at your Bishops Stortford home.',
+        },
+        {
+          question: 'Do you install heavy duty security gates for large commuter properties?',
+          answer: 'Dominant frameworks made from solid steel offer the ultimate defense against opportunistic crime. These metal driveway gates are highly popular for affluent homes near the M11 corridor around Bishops Stortford.',
+        },
+        {
+          question: 'What happens if there is a power cut while I am rushing to the station?',
+          answer: 'Manual keys allow you to physically unlock the motors with a secure tool. This guarantees you will never be stuck inside your Bishops Stortford driveway when trying to catch a train.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Will airplane noise from Stansted affect the voice intercom?',
+          answer: 'Noise cancellation technology is built into our external call points specifically for this reason. It filters out heavy background sounds so you can clearly hear visitors at your Bishops Stortford home.',
+        },
+        {
+          question: 'Do you install heavy duty security gates for large commuter properties?',
+          answer: 'Imposing structures made from solid steel offer the ultimate defense against opportunistic crime. These setups are highly popular for affluent homes near the M11 corridor.',
+        },
+        {
+          question: 'What happens if there is a power cut while I am rushing to the station?',
+          answer: 'Failsafe mechanisms allow you to manually release the lock with a physical key. This guarantees you will never be stuck inside your driveway when trying to catch a train.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The gate rattles constantly whenever planes take off from Stansted.',
+          answer: 'Flightpath vibrations shake loose the mounting bolts on heavier steel boundaries over time. We will install high-tensile, lock-nut fixings to ensure your Bishops Stortford entrance remains completely solid.',
+        },
+        {
+          question: 'Someone tried to force my gate open near the M11; is the motor ruined?',
+          answer: 'Corridor crime necessitates strong hydraulic locks that resist physical tampering from opportunistic thieves. We will inspect the gearbox and replace any sheared pins at your Bishops Stortford address.',
+        },
+        {
+          question: 'The exit loop fails when I rush out to catch the train.',
+          answer: 'Station runs mean vehicles pass over underground sensors too quickly for older loops to register. We can upgrade the sensitivity of your Bishops Stortford exit detector to catch fast-moving cars safely.',
+        },
+      ],
+    },
     cityIntro: [
       'Bishops Stortford combines a substantial historic core with extensive post-war and recent residential development across Thorley Park, Bishops Park, and the Stansted-adjacent estates. The town\'s commuter profile - driven by the 40-minute Liverpool Street connection - shapes the gate market toward higher average specifications and substantial demand for access control integration.',
       'Our Bishops Stortford installer network combines specialists with track records across the town\'s mixed context, from the Castle Street and Windhill conservation areas through to the Thorley Park developments. Every referred installer has documented East Hertfordshire planning experience and understands the specific Essex-border conditions - agricultural proximity, salt-air exposure - that affect installation longevity in the area.',
@@ -1970,6 +6104,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Essex borders give Sawbridgeworth a distinctly semi-rural feel, demanding heavy-duty repair strategies to handle massive agricultural boundaries. When a commercial-grade sliding gate derails or an oversized swinging leaf snaps its bottom hinge, standard DIY fixes are completely useless. Specialized mobile repair units arrive equipped with heavy-duty arc welders, lifting gantries, and industrial-grade replacement bearings to physically rebuild broken entrances on-site, securing the vast rural property with minimal downtime.',
         'Agricultural impacts from tractors, horseboxes, or delivery vans frequently bend the structural crossbeams of these rural gates. Instead of throwing away the expensive bespoke ironwork or timber, local engineers provide comprehensive on-site structural repairs. They utilize mobile welding units to cut out crushed sections and splice in fresh, reinforced steel. This specialized repair service ensures massive boundaries are restored to full strength quickly and cost-effectively.',
         'Solar reserves deplete rapidly during harsh winters for off-grid, solar-powered gates. Because many of these remote Sawbridgeworth entrances sit far from the main mains supply, failing batteries leave the gate dead. Routine maintenance crews test the voltage drop on the battery banks. If they are failing to hold a charge, technicians swap them for deep-cycle marine variants and clean the solar arrays, ensuring the boundary remains powered year-round.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Is a sliding gate safe for households with young children?',
+          answer: 'Infrared curtains project an invisible safety net across the entire sliding zone. If a child breaks the beam, the electric sliding gate immediately stops and retracts.',
+        },
+        {
+          question: 'Do sliding tracks get jammed with mud near Pishiobury Park?',
+          answer: 'Floating chassis designs hover entirely above the ground, making them immune to mud and gravel. This cantilever setup is highly recommended for rural Sawbridgeworth properties near the park.',
+        },
+        {
+          question: 'Can the gate automatically close at night?',
+          answer: 'Evening lockdowns are easily programmed into the smart control panel. Your entrance will automatically secure itself at a specific time every night for total peace of mind.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Are there swinging options that suit properties near Pishiobury Park?',
+          answer: 'Graceful entryways featuring sweeping ironwork look magnificent against rural Hertfordshire backdrops. We match these classic electric swing gate designs with subterranean motors to keep the modern technology completely hidden.',
+        },
+        {
+          question: 'How does wet weather near the River Stort affect the swinging electronics?',
+          answer: 'Waterproof casings protect every single wire from damp and frost effortlessly. Your Sawbridgeworth electric swing gate installation will function flawlessly regardless of how wet the local climate gets.',
+        },
+        {
+          question: 'Can visitors use a keypad to trigger the swing gate?',
+          answer: 'Numerical keypads provide a very simple way for guests to gain entry securely. You simply give them a temporary pin code which swings the Sawbridgeworth boundary open automatically.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can you install rural wooden gates near Pishiobury Park?',
+          answer: 'Countryside aesthetics are perfectly captured using classic five bar designs. We automate these rustic panels so your Sawbridgeworth home looks wonderfully traditional.',
+        },
+        {
+          question: 'How do you prevent the wooden posts rotting in the wet ground?',
+          answer: 'Concrete footings encase the pressure treated supports to prevent moisture absorption. Your Sawbridgeworth wooden driveway gates will remain standing strong for decades.',
+        },
+        {
+          question: 'Can delivery drivers call me from the gate?',
+          answer: 'Smart intercoms dial your smartphone directly from the entrance pillar. You can chat with couriers anywhere while securing your property.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Are there rural options that suit properties near Pishiobury Park?',
+          answer: 'Elegant metalwork featuring sweeping lines looks magnificent against rural Hertfordshire backdrops. We match these classic metal driveway gate designs with subterranean motors to keep the modern technology completely hidden.',
+        },
+        {
+          question: 'How does wet weather near the River Stort affect the electronics?',
+          answer: 'IP68 housings protect every single wire from damp and frost effortlessly. Your Sawbridgeworth metal driveway gate installation will function flawlessly regardless of how wet the local climate gets.',
+        },
+        {
+          question: 'Can visitors use a keypad to trigger the gate?',
+          answer: 'Numbered pads provide a very simple way for guests to gain entry securely. You simply give them a temporary pin code which swings the Sawbridgeworth boundary open automatically.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Are there automated options that suit properties near Pishiobury Park?',
+          answer: 'Elegant portals featuring sweeping ironwork look magnificent against rural backdrops. We match these classic designs with subterranean motors to keep the modern technology completely hidden.',
+        },
+        {
+          question: 'How does wet weather near the River Stort affect the electronics?',
+          answer: 'Hermetically sealed control boxes protect every single wire from damp and frost. Your Sawbridgeworth installation will function flawlessly regardless of how wet the local climate gets.',
+        },
+        {
+          question: 'Can visitors use a keypad to enter my driveway?',
+          answer: 'Numerical pads provide a very simple way for guests to gain entry securely. You simply give them a temporary pin code which you can easily delete later.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The safety beams keep tripping at night near Pishiobury Park.',
+          answer: 'Park deer occasionally wander past and break the infrared beam, halting the closing cycle entirely. We can adjust the sensor delay or reposition the photocells to minimize wildlife interference in Sawbridgeworth.',
+        },
+        {
+          question: 'My underground motor box is full of muddy water.',
+          answer: 'Stort humidity corrodes submerged electronics if the primary drainage soakaways become blocked with silt. We will extract the mud and rebuild the flooded motors to secure your Sawbridgeworth property.',
+        },
+        {
+          question: 'The keypad rejects all our regular access codes suddenly.',
+          answer: 'Guest pins sometimes cause software conflicts if the memory board becomes overloaded with temporary data. We will flash the logic board and reset your Sawbridgeworth entry system to factory reliability.',
+        },
       ],
     },
     cityIntro: [
@@ -2012,6 +6232,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Biometric malfunctions occur if the optical lenses of fingerprint scanners get scratched by abrasive dirt or vandalism. High-net-worth homeowners relying on keyless access are instantly locked out when these high-tech components degrade. Gate specialists replace the fragile optical sensors, upgrade the unit\'s firmware, and re-enroll the authorized users, quickly restoring the elite, keyless entry experience expected at these sprawling luxury mansions.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do sliding gates look too industrial for a historic village?',
+          answer: 'Wrought replicas offer the visual charm of traditional ironwork built onto a horizontal slider. Your Much Hadham boundary will look incredibly authentic while utilizing modern electric technology.',
+        },
+        {
+          question: 'How long does the installation take?',
+          answer: 'Three workdays is the standard timeframe for laying the concrete track and wiring the motor. We minimize disruption so your Much Hadham home is secured as quickly as possible.',
+        },
+        {
+          question: 'Can we give the postman a special access code?',
+          answer: 'Dedicated PINs allow trusted delivery workers to enter during specified daylight hours. You can easily restrict their code from working at night via the master console.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do modern swinging gates ruin the aesthetic of Much Hadham\'s historic red brick homes?',
+          answer: 'Respectful aesthetics ensures we only propose swinging designs that enhance the local architecture. We frequently use traditional oak or wrought iron to maintain the prestigious village feel.',
+        },
+        {
+          question: 'How do we secure a very long driveway leading up to a manor house?',
+          answer: 'Cellular intercoms use mobile networks to bridge massive gaps between the road and the property. You can trigger the electric swing gate from the boundary easily without needing miles of expensive cabling.',
+        },
+        {
+          question: 'Is it possible to have an exit loop so the gates swing open automatically when leaving?',
+          answer: 'Subsurface sensors detect the metal chassis of your vehicle as you approach the exit. This triggers the electric swing gate to open immediately, allowing a smooth departure from Much Hadham.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Will modern gate automation ruin the look of my historic brick home?',
+          answer: 'Invisible drive units are hidden underground to preserve the pristine aesthetics. Your Much Hadham wooden driveway gates will look purely historical from the street.',
+        },
+        {
+          question: 'Can we carve our family name into the gate?',
+          answer: 'Bespoke engraving allows you to personalize the timber panels beautifully. This custom touch looks magnificent on affluent Much Hadham properties.',
+        },
+        {
+          question: 'How do we handle power cuts?',
+          answer: 'Emergency decoupling keys let you manually push the heavy panels open. You are never trapped behind your entrance during a local blackout.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do modern metal gates ruin the aesthetic of Much Hadham\'s historic red brick homes?',
+          answer: 'Vintage styling ensures we only propose designs that enhance the local architecture. We frequently use traditional wrought iron to maintain the prestigious village feel.',
+        },
+        {
+          question: 'How do we secure a very long driveway leading up to a manor house?',
+          answer: 'Wireless bridges use mobile networks to connect massive gaps between the road and the property. You can trigger the metal driveway gate from the boundary easily without needing miles of expensive cabling.',
+        },
+        {
+          question: 'Is it possible to have an exit loop so the gates swing open automatically when leaving?',
+          answer: 'Buried magnetometers detect the metal chassis of your vehicle as you approach the exit. This triggers the metal driveway gate to open immediately, allowing a smooth departure from Much Hadham.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do modern gates ruin the aesthetic of Much Hadham\'s historic red brick homes?',
+          answer: 'Sympathetic styling ensures we only propose designs that enhance the local architecture. We frequently use traditional oak or wrought iron to maintain the prestigious village feel.',
+        },
+        {
+          question: 'How do we secure a very long driveway leading up to a manor house?',
+          answer: 'Distance spanning intercoms use cellular networks to bridge massive gaps between the road and the property. You can answer calls from the boundary easily without needing miles of expensive cabling.',
+        },
+        {
+          question: 'Is it possible to have an exit loop so the gates open automatically when leaving?',
+          answer: 'Buried sensors detect the metal chassis of your vehicle as you approach the exit. This triggers the automated gate system to open immediately, allowing a smooth departure from Much Hadham.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The heavy gates are pulling the old brick pillars over; can you help?',
+          answer: 'Antique brickwork fractures under the immense torque generated by modern hydraulic rams pulling heavy timber. We will install independent steel reinforcement posts to bear the load safely in Much Hadham.',
+        },
+        {
+          question: 'Our gate won\'t open from the house intercom anymore.',
+          answer: 'Wireless bridges drop their connection if dense foliage grows between the transmitter and the gate. We will prune the sightline and boost the antenna signal for your Much Hadham entrance.',
+        },
+        {
+          question: 'The gate opens randomly when no cars are present.',
+          answer: 'Exit magnetometers glitch when exposed to severe ground frost or shifting driveway tarmac. We can recalibrate the underground loop to stop these phantom openings at your Much Hadham estate.',
+        },
+      ],
+    },
     cityIntro: [
       'Much Hadham is a genuinely historic village in the East Hertfordshire district, with a substantial conservation area along the High Street and a dense concentration of listed buildings including the Bishop\'s Palace. The planning context from East Hertfordshire District Council requires genuine sensitivity to the heritage context.',
       'Our Much Hadham installer network focuses on specialists with documented experience in the conservation area and familiarity with the listed building consent process. Every referred installer has substantive East Herts planning experience.',
@@ -2050,6 +6356,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Ash valley topography exposes Little Hadham properties to severe winter storms and howling crosswinds, leading to unique seasonal gate failures. When water gets inside an electromechanical motor housing and freezes, the expanding ice can shatter the internal gearing completely. Local repair experts replace these destroyed units with sealed, cold-weather rated hydraulic actuators that utilize antifreeze-treated oil, guaranteeing the heavy boundaries will power open regardless of how far the temperature drops.',
         'Drive burnout occurs when electromechanical arms are pushed against extreme crosswinds. If a solid gate is blown backward, light-duty motors will snap internally. Little Hadham repair teams replace these destroyed units with heavy-duty hydraulic actuators. These feature mechanical locking valves that hold the gate rigid when closed, preventing the wind from forcing the leaves open and protecting the property from severe storm damage.',
         'Freezing temperatures heavily impact sliding gate operations. Ice builds up on the floor tracks, causing the gate to derail or the motor\'s obstacle detection to trigger falsely, leaving the homeowner trapped. Preventative servicing before the winter hits is vital. Technicians install specialized track-clearing brushes on the leading edge of the gate and increase the motor\'s torque settings slightly to help it push through light snow.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Will the new bypass traffic affect how quickly we need our gate to open?',
+          answer: 'Swift entry prevents you from holding up vehicles on newly diverted busy roads. Our fast electric sliding gates ensure you transition safely onto your Little Hadham driveway.',
+        },
+        {
+          question: 'Can a sliding gate handle agricultural vehicles?',
+          answer: 'Farming machinery requires vast horizontal clearances, which is easily achieved by installing an extra-wide sliding frame. The robust floor track supports immense weights without buckling under heavy farm traffic.',
+        },
+        {
+          question: 'What maintenance is required for wooden sliding gates?',
+          answer: 'Annual staining protects the natural timber from UV damage and moisture ingress. A quick coat of microporous oil keeps your Little Hadham entrance looking pristine.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can automation be added to heavy farm swing gates facing the countryside?',
+          answer: 'Colossal rams are specifically built to push large agricultural barriers with immense ease. They provide excellent security for rural Little Hadham properties that back onto open fields.',
+        },
+        {
+          question: 'Will the new A120 bypass traffic affect how quickly we need our swing gates to close?',
+          answer: 'Accelerated shutting programming ensures the entrance secures itself the moment your car passes through safely. This keeps your Little Hadham home safe from passing traffic and wandering wildlife.',
+        },
+        {
+          question: 'What maintenance is needed for swinging properties exposed to high winds?',
+          answer: 'Periodic adjustments of hinges and a quick grease of the moving joints is highly recommended. Our engineers can handle this annual electric swing gate checkup to keep your system perfectly balanced.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can heavy farm gates be automated here?',
+          answer: 'Colossal hydraulic rams easily push massive agricultural timber boundaries open. We ensure your Little Hadham rural entrance operates reliably every single day.',
+        },
+        {
+          question: 'Does the new bypass traffic mean we need faster gates?',
+          answer: 'Swift gearboxes ensure you get off the road extremely quickly. This prevents dangerous tailbacks when pulling into your Little Hadham property.',
+        },
+        {
+          question: 'Do wooden gates need constant repainting?',
+          answer: 'Protective microporous stains require just a quick top coat annually. It is a very simple routine to keep the wood pristine.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can automation be added to heavy farm gates facing the countryside?',
+          answer: 'Giant rams are specifically built to push large agricultural barriers with immense ease. They provide excellent security for rural Little Hadham properties that back onto open fields.',
+        },
+        {
+          question: 'Will the new A120 bypass traffic affect how quickly we need our gates to close?',
+          answer: 'Quick lockdown programming ensures the entrance secures itself the moment your car passes through safely. This keeps your Little Hadham home safe from passing traffic and wandering wildlife.',
+        },
+        {
+          question: 'What maintenance is needed for properties exposed to high winds?',
+          answer: 'Hinge adjustments and a quick grease of the moving joints is highly recommended. Our engineers can handle this annual metal driveway gate checkup to keep your system perfectly balanced.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can automation be added to heavy farm gates facing the countryside?',
+          answer: 'Massive actuators are specifically built to push large agricultural barriers with ease. They provide excellent security for rural Little Hadham properties that back onto open fields.',
+        },
+        {
+          question: 'Will the new A120 bypass traffic affect how quickly we need our gates to close?',
+          answer: 'Rapid shutting programming ensures the entrance secures itself the moment your car passes through. This keeps your home safe from passing traffic and wandering wildlife.',
+        },
+        {
+          question: 'What maintenance is needed for properties exposed to high winds?',
+          answer: 'Routine tightening of hinges and a quick grease of the moving joints is highly recommended. Our engineers can handle this annual checkup to keep your system perfectly balanced.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'A tractor smashed the motor housing on my farm gate; is it fixable?',
+          answer: 'Farming implements crush standard residential motors instantly due to their immense weight and blind spots. We will install commercial-grade, impact-resistant drive units for your rural Little Hadham boundary.',
+        },
+        {
+          question: 'The gate gets stuck halfway during the busy morning traffic rush.',
+          answer: 'Diverted traffic hits local roads hard, and heavy usage overheats older motors lacking thermal protection. We will service the internal cooling systems to ensure your Little Hadham gates survive peak hours.',
+        },
+        {
+          question: 'High winds bent the solid metal gate panels; can they be straightened?',
+          answer: 'Violent winds twist closed-face designs easily, snapping the hinges and warping the steel frame. We will remove the damaged panels for professional workshop straightening and re-hang your Little Hadham gates securely.',
+        },
       ],
     },
     cityIntro: [
@@ -2092,6 +6484,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Rubber extrusions degrade and crack after exposure to severe freezing weather. Because these pressure edges are designed to halt the gate instantly upon contact, a perished rubber seal is a major safety hazard near the busy high street. Local engineers utilize calibrated force-testers to check these components. If they fail, fresh, highly responsive safety edges are immediately installed, ensuring the heavy automated barrier never accidentally crushes a family vehicle.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Does the damp air from the marina damage the sliding motors?',
+          answer: 'Moisture sealed casings shield all sensitive electronics from the humid riverside atmosphere. Your Stanstead Abbotts electric sliding gate will operate flawlessly regardless of the damp weather.',
+        },
+        {
+          question: 'Can I control the gate from my boat?',
+          answer: 'Cellular software lets you trigger the sliding mechanism from anywhere with a mobile signal. You can open your driveway before you even dock at the marina.',
+        },
+        {
+          question: 'Do sliding gates lock automatically?',
+          answer: 'Mechanical deadlocks engage the second the barrier reaches the fully closed position. This provides exceptional physical security against forced entry attempts.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'My house is near the marina; will the damp air rust the swinging motors?',
+          answer: 'Nautical grade coatings protect the external casings of all our hydraulic operators from relentless moisture. They are perfectly suited for protecting electric swing gates in the humid environments found around the Stanstead Abbotts waterways.',
+        },
+        {
+          question: 'How do we stop people parking in our drive when the level crossing is closed?',
+          answer: 'Immediate bolting prevents the swinging barrier from being pushed open by frustrated drivers. A robust electric swing gate establishes a clear, impenetrable boundary for your private property in Stanstead Abbotts.',
+        },
+        {
+          question: 'Can I get a matching pedestrian swing gate for walking down to the river?',
+          answer: 'Complementary footpaths are easily created by installing a smaller swinging door alongside the main entrance. Both access points can be managed from the very same master fob securely.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Does the damp marina air affect the wooden gate motors?',
+          answer: 'Weatherproof enclosures shield the electronics from the humid riverside atmosphere perfectly. Your Stanstead Abbotts automated entrance will never short out from dampness.',
+        },
+        {
+          question: 'Can we stop people turning around in our driveway?',
+          answer: 'Formidable timber boundaries physically block unauthorized vehicles from using your frontage. This keeps your Stanstead Abbotts property completely private and secure.',
+        },
+        {
+          question: 'Are safety edges reliable on heavy wooden gates?',
+          answer: 'Sensitive bumpers instantly halt the motor if the wood touches anything. This completely prevents the heavy panels from crushing objects or people.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'My house is near the marina; will the damp air rust the metal gates?',
+          answer: 'Shipyard grade coatings protect the external casings of all our metal from relentless moisture. They are perfectly suited for protecting metal driveway gates in the humid environments found around the Stanstead Abbotts waterways.',
+        },
+        {
+          question: 'How do we stop people parking in our drive when the level crossing is closed?',
+          answer: 'Unyielding barriers establish a clear, impenetrable boundary for your private property. A robust metal driveway gate prevents frustrated drivers from turning around in Stanstead Abbotts.',
+        },
+        {
+          question: 'Can I get a matching pedestrian gate for walking down to the river?',
+          answer: 'Coordinated footpaths are easily created by installing a smaller door alongside the main entrance. Both access points can be managed from the very same master fob securely.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'My house is near the marina; will the damp air rust the gate motors?',
+          answer: 'Marine coatings protect the external casings of all our hydraulic operators from moisture. They are perfectly suited for the humid environments found around the Stanstead Abbotts waterways.',
+        },
+        {
+          question: 'How do we stop people parking in our drive when the level crossing is closed?',
+          answer: 'Instant locking prevents the barrier from being pushed open by frustrated drivers. A robust automated gate system establishes a clear, impenetrable boundary for your private property.',
+        },
+        {
+          question: 'Can I get a matching pedestrian gate for walking down to the river?',
+          answer: 'Coordinated pathways are easily created by installing a smaller door alongside the main entrance. Both access points can be managed from the very same master fob.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The control board keeps blowing fuses near the marina.',
+          answer: 'Marina condensation shorts the printed circuit boards if the main electrical housing is poorly sealed. We will replace the blown components and install moisture-absorbing gel packs for your Stanstead Abbotts home.',
+        },
+        {
+          question: 'Someone manually pushed the gates open when the crossing was down.',
+          answer: 'Level crossings create frustrating traffic delays, prompting angry drivers to force private boundaries open violently. We will replace the busted hydraulic valves and fit magnetic locks to your Stanstead Abbotts entrance.',
+        },
+        {
+          question: 'The pedestrian access gate will not open with my main fob.',
+          answer: 'Pedestrian fobs desync from the secondary relay channel after prolonged power cuts or battery changes. We will reprogram the receiver to ensure one click opens your Stanstead Abbotts side gate perfectly.',
+        },
+      ],
+    },
     cityIntro: [
       'Stanstead Abbotts combines a genuinely historic core along the River Lea with substantial residential development across the surrounding streets. The conservation area around the High Street and the listed properties near St Andrews Church shape planning substantially, with river-adjacent foundation considerations affecting installations across parts of the village.',
       'Our Stanstead Abbotts installer network focuses on specialists with documented experience across both the conservation context and the specific river-adjacent installation conditions. Every referred installer has substantive East Herts planning experience and understands the listed building consent requirements where applicable.',
@@ -2130,6 +6608,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Wooded inclines drop sharply toward the New River, meaning gates drag heavily if the rising hinges lose their tension over time. Because almost every driveway in Great Amwell features a steep gradient, the specialized lifting hardware works incredibly hard. When these articulated hinges wear out, the gate grinds into the tarmac, overloading the motor. Local repair experts replace the worn pivot pins and recalibrate the lift-angle, ensuring graceful operation.',
         'Pivot angles get thrown out of alignment on steep driveways if the motor brackets shift even a fraction of an inch. This causes the gate to shudder violently as it opens. Great Amwell technicians utilize digital angle finders to perfect the motor geometry. They unbolt the arms, reposition the mounting plates for optimal mechanical advantage, and weld them firmly into place, instantly transforming a jerky, noisy gate into a beautifully smooth entrance.',
         'Cellular disconnects silence intercoms in secluded valley locations. When the GSM module loses 4G signal, delivery drivers cannot dial the homeowner\'s phone. Tech-savvy engineers upgrade the communication hardware by installing high-gain external cellular antennas. This massively boosts the signal strength, ensuring the resident regains absolute, reliable control over their driveway access directly from their mobile device, regardless of their isolation.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can we install a sliding gate on an uneven driveway near the nature reserve?',
+          answer: 'Hovering structures bypass uneven terrain completely by floating above the driveway surface. A cantilever sliding system is the only safe option for sloped Great Amwell plots.',
+        },
+        {
+          question: 'Are there quiet motors to avoid disturbing the local wildlife?',
+          answer: 'Silent cogwork provides whisper-quiet operation that will not spook animals. Your electric sliding gate will glide open silently, maintaining the peaceful nature reserve environment.',
+        },
+        {
+          question: 'How do we power a gate located far from the house?',
+          answer: 'Underground conduit allows our electricians to safely run armored power cables across long distances. We ensure reliable mains electricity reaches your Great Amwell boundary flawlessly.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can you install swinging gates on a steep driveway near the nature reserve?',
+          answer: 'Ascending hinges are utilized to lift the electric swing gate upwards as it arcs inwards. This completely prevents the bottom frame from scraping against the sloped terrain common in Great Amwell.',
+        },
+        {
+          question: 'Do your wooden swing gates use sustainable timber?',
+          answer: 'Ethical sourcing guarantees all our hardwood panels come from certified sustainable forests globally. This allows you to upgrade your Great Amwell home while respecting the surrounding natural environment.',
+        },
+        {
+          question: 'How do we handle power supply if the swing gates are far from the main house?',
+          answer: 'Underground channeling is required to lay an armored electrical line safely under the ground. We manage this entire process to bring reliable mains power directly to your Great Amwell swinging entrance.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can you fit wooden gates on a sloped driveway near the nature reserve?',
+          answer: 'Ascending mechanics lift the panels upward to clear steep gradients smoothly. This prevents the timber from dragging across uneven Great Amwell driveways.',
+        },
+        {
+          question: 'Do you use sustainable wood?',
+          answer: 'Eco certified lumber is explicitly sourced for every project we undertake. You can enhance your Great Amwell boundary while protecting the global environment.',
+        },
+        {
+          question: 'How do we power a gate far from the house?',
+          answer: 'Armored trenching safely runs mains electricity deep underground to the perimeter. Your entrance will have reliable power regardless of the distance.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can you install metal gates on a steep driveway near the nature reserve?',
+          answer: 'Elevated hinges are utilized to lift the metal gate upwards as it arcs inwards. This completely prevents the bottom frame from scraping against the sloped terrain common in Great Amwell.',
+        },
+        {
+          question: 'Do your gates use sustainable materials?',
+          answer: 'Recycled steel is heavily featured in our raw material sourcing to lower the carbon footprint. This allows you to upgrade your Great Amwell home while respecting the surrounding natural environment.',
+        },
+        {
+          question: 'How do we handle power supply if the gates are far from the main house?',
+          answer: 'Protective conduits safely route armored electrical lines safely under the ground. We manage this entire process to bring reliable mains power directly to your Great Amwell entrance.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can you install sliding gates on a steep driveway near the nature reserve?',
+          answer: 'Slanted tracking is incredibly dangerous and absolutely never recommended for any sliding mechanism. Instead, we use specialized cantilever systems that hover over the uneven Great Amwell terrain safely.',
+        },
+        {
+          question: 'Do your wooden gates use sustainable timber?',
+          answer: 'Ethical sourcing guarantees all our hardwood panels come from certified sustainable forests. This allows you to upgrade your home while respecting the surrounding natural environment.',
+        },
+        {
+          question: 'How do we handle power supply if the gates are far from the main house?',
+          answer: 'Trench digging is required to lay an armored electrical line safely under the ground. We manage this entire process to bring reliable mains power directly to your entrance.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The gate motor smells like it is burning when it opens up the hill.',
+          answer: 'Slanted driveways wear out standard gearboxes rapidly because the motor works against extreme gravity. We will install a heavy-duty actuator explicitly engineered to handle steep Great Amwell inclines smoothly.',
+        },
+        {
+          question: 'Do you use environmentally friendly parts for gate repairs?',
+          answer: 'Recycled components replace broken steel and aluminum parts whenever structurally safe to do so. We prioritize sustainable repair practices while maintaining your Great Amwell boundary to the highest standards.',
+        },
+        {
+          question: 'A badger dug up the underground power cable for the gate.',
+          answer: 'Deep trenching protects the electrical lines, but persistent wildlife can sometimes expose shallow wiring. We will repair the severed cable and encase it in thick steel conduit for your Great Amwell property.',
+        },
       ],
     },
     cityIntro: [
@@ -2172,6 +6736,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Footgate locking mechanisms misalign as wooden posts warp during the changing seasons. Many automated setups here feature an adjacent, electrically locked pedestrian gate. When the timber swells in the winter, the magnetic lock fails to engage, leaving the boundary unsecure. Carpenters and gate engineers work together to shave down the swelling timber and install fully adjustable keep-plates, ensuring the pedestrian entrance locks securely with a satisfying click.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'What are the benefits of a sliding gate for tight Victorian streets?',
+          answer: 'Lateral movement ensures the barrier never swings outwards into your limited parking area. An electric sliding gate maximizes space for vehicles in tightly packed Bengeo neighborhoods.',
+        },
+        {
+          question: 'Do you offer lightweight aluminum sliding designs?',
+          answer: 'Extruded aluminum provides the robust look of solid steel but weighs a fraction of the amount. This drastically reduces wear and tear on the sliding motor over its lifespan.',
+        },
+        {
+          question: 'Can I integrate my existing security cameras with the gate?',
+          answer: 'Unified networks allow you to link the entrance control board directly to your smart home setup. You can view the Bengeo boundary live and slide the gate open from one screen.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'We live on a tight Victorian street in Bengeo; can we have electric swing gates?',
+          answer: 'Bi folding variants concertina back upon themselves, requiring significantly less driveway depth to operate. This allows you to fit a secure swinging entrance even in restricted Bengeo parking areas.',
+        },
+        {
+          question: 'Are there swinging designs that offer total privacy from passing pedestrians?',
+          answer: 'Solid facias block all lines of sight from the pavement into your front garden. These heavy panels look incredibly smart while keeping your property entirely hidden from view.',
+        },
+        {
+          question: 'What happens to the underground swinging motors if the road floods during a storm?',
+          answer: 'Flood resistant ratings mean our premium foundation boxes can handle temporary water logging without failing. Proper soakaways are also installed to ensure water drains rapidly away from the electric swing gate mechanisms.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Are there space-saving wooden gates for tight Victorian streets?',
+          answer: 'Concertina leaves fold compactly to fit restricted parking areas flawlessly. This is the ultimate solution for tight Bengeo residential plots.',
+        },
+        {
+          question: 'Do solid wooden gates offer good privacy from the pavement?',
+          answer: 'Gapless boarding blocks all sightlines into your front garden entirely. Passersby cannot peer into your private Bengeo courtyard at all.',
+        },
+        {
+          question: 'What happens if the road floods into the gate motors?',
+          answer: 'Submersible foundations handle temporary waterlogging without breaking the electrical components. Proper drainage ensures the mechanisms survive torrential downpours safely.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'We live on a tight Victorian street in Bengeo; can we have metal gates?',
+          answer: 'Folding variants concertina back upon themselves, requiring significantly less driveway depth to operate. This allows you to fit a secure metal entrance even in restricted Bengeo parking areas.',
+        },
+        {
+          question: 'Are there designs that offer total privacy from passing pedestrians?',
+          answer: 'Solid infills block all lines of sight from the pavement into your front garden. These heavy panels look incredibly smart while keeping your property entirely hidden from view.',
+        },
+        {
+          question: 'What happens to the underground motors if the road floods during a storm?',
+          answer: 'Submerged boxes feature proper soakaways to ensure water drains rapidly away from the mechanisms. Premium foundation units can handle temporary water logging without failing the metal driveway gate.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'We live on a tight Victorian street in Bengeo; can we have automated gates?',
+          answer: 'Compact folding designs retract entirely within their own space, making them perfect for restricted parking areas. They deliver top tier security without swinging outwards and hitting your car.',
+        },
+        {
+          question: 'Are there designs that offer total privacy from passing pedestrians?',
+          answer: 'Opaque boarding blocks all lines of sight from the pavement into your front garden. These solid panels look incredibly smart while keeping your property entirely hidden from view.',
+        },
+        {
+          question: 'What happens to the underground motors if the road floods during a storm?',
+          answer: 'Submersible ratings mean our premium foundation boxes can handle temporary water logging without failing. Proper soakaways are also installed to ensure water drains rapidly away from the mechanisms.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The folding gate on my tight street refuses to close properly.',
+          answer: 'Bifolding arms seize if road grit from narrow Victorian streets gets compacted into the central hinges. We will thoroughly degrease the joints and apply marine-grade lubricant to fix your Bengeo entrance.',
+        },
+        {
+          question: 'The solid gate caught the wind and snapped the motor bracket.',
+          answer: 'Opaque boarding catches severe gusts like a sail, putting catastrophic strain on standard mounting hardware. We will weld heavy-duty, reinforced brackets to secure your Bengeo gates permanently against storm damage.',
+        },
+        {
+          question: 'Water is pooling around the base of my underground gate motors.',
+          answer: 'Sunken pits flood if the local drainage system becomes overwhelmed during sudden torrential downpours. We will install automated sump pumps inside the foundation boxes to protect your Bengeo electronics continuously.',
+        },
+      ],
+    },
     cityIntro: [
       'Bengeo is a residential district on the northern edge of Hertford, characterised by substantial Victorian terraces, Edwardian villas, and inter-war detached housing. The district sits within the wider East Hertfordshire planning context, with conservation area controls applying in parts and generally pragmatic treatment elsewhere.',
       'Our Bengeo installer network includes specialists with track records across the district. Every referred installer has documented East Herts planning experience.',
@@ -2210,6 +6860,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Bypass proximity means broken gates leave the property totally exposed to the bustling A602 corridor. When an automated system fails to close, rapid-response repair teams are dispatched instantly to Watton-at-Stone. They diagnose motherboard faults, replace blown fuses caused by power surges, and execute emergency motor swaps. This ensures the perimeter is secured before they leave the site, restoring crucial privacy to the roadside residents.',
         'Distorted ground-tracks must be leveled perfectly to restore smooth operation. As heavy delivery vehicles constantly drive over the entrance, the concrete foundation can sink, bending the steel floor track. When the gate hits these dips, the motor\'s obstacle detection triggers falsely. Expert technicians cut out the warped track sections, re-level the foundation with rapid-setting industrial epoxy, and weld in fresh steel to guarantee flawless lateral movement.',
         'Induction coils shift under the gravel over time, breaking the automatic departure function. When residents drive up to leave and the gates remain stubbornly closed, the sub-surface magnetic sensor is usually at fault. Technicians recalibrate the sensitivity on the main control board. If the underground wire has snapped, they expertly cut a discreet new channel into the Watton-at-Stone driveway, laying a fresh loop to restore hands-free exits.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Are sliding gates better than swinging gates for windy areas?',
+          answer: 'Horizontal stability makes sliding mechanisms far superior in exposed, windy locations. They do not act like sails, meaning the motor never struggles against strong Watton-at-Stone gusts.',
+        },
+        {
+          question: 'How do we stop leaves from jamming the track?',
+          answer: 'Nylon sweepers are attached to the leading edge to push debris off the rail automatically. A quick brush of the floor track once a month also helps prevent build up.',
+        },
+        {
+          question: 'Can we have a sliding gate that mimics a traditional five-bar farm gate?',
+          answer: 'Farmhouse aesthetics are easily replicated by building a wooden five-bar design onto a sliding chassis. You get classic rural charm with the convenience of electric sliding technology.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can we automate a swing gate that opens outward to save driveway space?',
+          answer: 'Exterior arcs can be installed provided your property does not boundary a public highway. This is a brilliant solution for shorter driveways in Watton-at-Stone that need maximum parking capacity.',
+        },
+        {
+          question: 'How do we stop farm animals from triggering the swinging safety sensors?',
+          answer: 'Elevated lasers are positioned strategically so that small animals pass underneath without causing a reaction. The electric swing gate system only halts when a large object like a vehicle breaks the optical line.',
+        },
+        {
+          question: 'Is the paint finish on metal swing gates guaranteed against chipping?',
+          answer: 'Oven cured enamels create a rock hard shell over the steel frame that is incredibly tough. It easily withstands flying gravel and daily wear, keeping your Watton-at-Stone entrance looking brand new.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can a wooden gate open outwards to save space?',
+          answer: 'Exterior swinging is permitted as long as it avoids public footpaths. This cleverly maximizes the internal parking area for your Watton-at-Stone home.',
+        },
+        {
+          question: 'How do we stop farm animals triggering the sensors?',
+          answer: 'Elevated photocells allow small livestock to pass under the safety beam. The wooden driveway gates only react to large metallic vehicles.',
+        },
+        {
+          question: 'Is the wood treated against insects?',
+          answer: 'Deep infusion preservatives repel woodboring insects and prevent fungal infestations. Your Watton-at-Stone entrance will remain structurally immaculate for decades.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can we automate a metal gate that opens outward to save driveway space?',
+          answer: 'Outward swinging is permitted provided your property does not boundary a public highway. This is a brilliant solution for shorter driveways in Watton-at-Stone that need maximum parking capacity.',
+        },
+        {
+          question: 'How do we stop farm animals from triggering the safety sensors?',
+          answer: 'Raised beams are positioned strategically so that small animals pass underneath without causing a reaction. The metal driveway gate system only halts when a large object like a vehicle breaks the optical line.',
+        },
+        {
+          question: 'Is the paint finish on metal gates guaranteed against chipping?',
+          answer: 'Thermosetting polymers create a rock hard shell over the steel frame that is incredibly tough. It easily withstands flying gravel and daily wear, keeping your Watton-at-Stone entrance looking brand new.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can we automate a gate that opens outward to save driveway space?',
+          answer: 'Outward swinging arms can be installed provided your property does not boundary a public highway. This is a brilliant solution for shorter driveways in Watton-at-Stone that need maximum parking capacity.',
+        },
+        {
+          question: 'How do we stop farm animals from triggering the safety sensors?',
+          answer: 'Heightened beams are positioned strategically so that small animals pass underneath without causing a reaction. The system only halts when a large object like a vehicle breaks the optical line.',
+        },
+        {
+          question: 'Is the paint finish on metal gates guaranteed against chipping?',
+          answer: 'Baked enamels create a rock hard shell over the steel frame that is incredibly tough. It easily withstands flying gravel and daily wear, keeping your entrance looking brand new.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'My outward swinging gate hit a parked car; can you adjust the limit?',
+          answer: 'Outward swings overextend dangerously if the mechanical hard-stops or internal limit switches fail unexpectedly. We will recalibrate the end-of-travel settings to ensure your Watton-at-Stone gate stops exactly where it should.',
+        },
+        {
+          question: 'Farm animals keep triggering the gate to open at night.',
+          answer: 'Raised photocells miss small livestock, but a poorly tuned induction loop will react to large animals. We will adjust the metallic sensitivity to keep your Watton-at-Stone boundary locked against wandering livestock.',
+        },
+        {
+          question: 'The powder coating is peeling off my metal gates after a minor collision.',
+          answer: 'Polymer shells chip upon impact, leaving the raw steel completely exposed to aggressive rust formation. We will sand back the damaged area and apply color-matched protective enamels for your Watton-at-Stone property.',
+        },
       ],
     },
     cityIntro: [
@@ -2252,6 +6988,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Deliberate damage and vandalism repairs are occasionally needed on street-facing intercom panels in busier neighborhoods. Smashed keypads or snapped audio microphones destroy the homeowner\'s ability to screen visitors safely. Vetted installers swap out the broken plastic components for ruggedized, marine-grade stainless steel access panels. These vandal-resistant upgrades ensure the communication hardware survives the harsh suburban environment while maintaining a clean, professional aesthetic for the Puckeridge family home.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Will highway noise from the A10 interfere with the gate intercom?',
+          answer: 'Focused microphones filter out background traffic roar to ensure crystal clear communication. You will easily hear visitors buzzing your Puckeridge property without any annoying static.',
+        },
+        {
+          question: 'Can I get a bespoke ironwork sliding gate?',
+          answer: 'Custom forging allows us to create beautiful ornate metalwork that slides as one solid piece. We can perfectly match the historic architectural feel of older Puckeridge homes.',
+        },
+        {
+          question: 'What happens to the gate during a power cut?',
+          answer: 'Manual overrides feature a secure decoupling key that disengages the mechanical drive instantly. You can physically push the electric sliding gate open until the electricity returns.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Will the traffic noise from the A10 interfere with the swinging gate intercom?',
+          answer: 'Audio isolation microphones focus exclusively on the voice of the person standing at the pillar. This totally eliminates highway roar, ensuring you can hear every word spoken clearly at your Puckeridge home.',
+        },
+        {
+          question: 'Can we have swing gates that look like the old coaching inn entrances?',
+          answer: 'Vintage recreation is a specialty of our custom fabrication workshop here in Hertfordshire. We can build and automate magnificent timber arches that perfectly match the old Puckeridge aesthetic.',
+        },
+        {
+          question: 'What is the fastest way to trigger the swing gates when arriving home?',
+          answer: 'Vehicle remotes allow you to click a button from the comfort of your car seat. The electric swing gate will be fully open by the time you pull off the main road.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Will highway noise from the A10 interfere with the gate intercom?',
+          answer: 'Acoustic filtering microphones eliminate background traffic roar for crystal clear audio. You will hear every visitor perfectly at your Puckeridge boundary.',
+        },
+        {
+          question: 'Can we get wooden gates that look like the old coaching inns?',
+          answer: 'Vintage carpentry techniques recreate those historic archways with stunning accuracy. We easily match the old world charm of Puckeridge village.',
+        },
+        {
+          question: 'What is the fastest way to open the gate when arriving?',
+          answer: 'Dashboard clickers let you trigger the entrance from down the street. The boundary is completely open before you even pull up.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Will the traffic noise from the A10 interfere with the gate intercom?',
+          answer: 'Directional microphones focus exclusively on the voice of the person standing at the pillar. This totally eliminates highway roar, ensuring you can hear every word spoken clearly at your Puckeridge home.',
+        },
+        {
+          question: 'Can we have metal gates that look like the old coaching inn entrances?',
+          answer: 'Period replications are a specialty of our custom fabrication workshop here in Hertfordshire. We can build magnificent iron arches that perfectly match the old Puckeridge aesthetic.',
+        },
+        {
+          question: 'What is the fastest way to trigger the gates when arriving home?',
+          answer: 'In-car remotes allow you to click a button from the comfort of your seat. The metal driveway gate will be fully open by the time you pull off the main road.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Will the traffic noise from the A10 interfere with the gate intercom?',
+          answer: 'Directional microphones focus exclusively on the voice of the person standing at the pillar. This totally eliminates highway roar, ensuring you can hear every word spoken clearly.',
+        },
+        {
+          question: 'Can we have gates that look like the old coaching inn entrances?',
+          answer: 'Historic replication is a specialty of our custom fabrication workshop. We can build and automate magnificent timber arches that perfectly match the old Puckeridge aesthetic.',
+        },
+        {
+          question: 'What is the fastest way to open the gates when arriving home?',
+          answer: 'Dashboard transmitters allow you to click a button from the comfort of your car seat. The barrier will be fully open by the time you pull off the main road.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'I cannot hear the intercom over the noise of the A10 traffic.',
+          answer: 'A10 traffic drones out standard microphones, making communication impossible during peak highway hours. We will install a noise-canceling entry panel to restore crystal clear audio to your Puckeridge home.',
+        },
+        {
+          question: 'The heavy wooden gates on our historic inn property have dropped.',
+          answer: 'Coaching replications drop as the immense weight of the timber slowly pulls the hinges from the masonry. We will fit specialized adjustable wrap-around hinges to lift your Puckeridge boundaries back into perfect alignment.',
+        },
+        {
+          question: 'The remote control built into my car visor stopped opening the gate.',
+          answer: 'Seat clickers unsync if the main receiver board experiences a power surge during a thunderstorm. We will re-pair your vehicle transmitter to the master logic board instantly in Puckeridge.',
+        },
+      ],
+    },
     cityIntro: [
       'Puckeridge is a village in the East Hertfordshire district combining a historic core along the High Street with substantial residential development across the surrounding streets. The conservation area shapes planning substantially in the village core, with generally pragmatic East Hertfordshire District Council treatment across the post-war residential areas.',
       'Our Puckeridge installer network includes specialists with track records across the village. Every referred installer has documented East Herts planning experience and understands the design sympathy that successful conservation-area applications require.',
@@ -2290,6 +7112,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Northern markets and Georgian buildings characterize Buntingford\'s highly conserved center, meaning structural interventions on historic village properties require extreme care. Local specialists fabricate custom, elongated mounting plates to distribute the immense pulling force of the gate motor over a much wider area of the pillar. This protects the fragile heritage stonework from further damage while restoring perfect alignment to the automated entrance.',
         'Submerged driveshafts snap if heavy gates drop out of plumb. The incredible weight of bespoke ironwork causes hinges to gradually slip out of alignment, putting massive shearing force on the subterranean motor gears. Buntingford maintenance experts proactively adjust the geometric hang of these monumental gates during routine servicing, taking the pressure off the gearboxes and extending the lifespan of the expensive luxury hardware by several years.',
         'Telemetry data sent to servicing engineers via cloud connectivity ensures predictive maintenance. Elite installations frequently feature smart control boards that report errors, low battery voltages, or obstacle detection faults directly to the maintenance company. This proactive technology ensures potential mechanical issues are identified and resolved before the automated gate ever fails, providing unparalleled, continuous security for the Buntingford homeowner.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do you provide sliding gates for modern new build estates?',
+          answer: 'Minimalist louvers offer a sleek, contemporary look that suits new Buntingford developments perfectly. We powder coat these lightweight sliding panels in stylish shades like anthracite grey.',
+        },
+        {
+          question: 'How do visitors exit the driveway?',
+          answer: 'Subsurface loops detect vehicles driving towards the exit and trigger the opening sequence automatically. This provides a seamless, hands-free departure for guests leaving your Buntingford home.',
+        },
+        {
+          question: 'Are sliding gates guaranteed against rust?',
+          answer: 'Zinc galvanizing protects the raw steel core from any corrosive elements before painting. This robust treatment process ensures your electric sliding gate will not rust for decades.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do you provide automated swing gates for the new housing developments here?',
+          answer: 'Contemporary exteriors demand clean lines and minimalist materials like powder coated aluminum. We regularly fit these contemporary swinging styles to match the latest architectural trends in Buntingford.',
+        },
+        {
+          question: 'How long does a typical swinging installation take in this area?',
+          answer: 'Total deployment usually takes around three days for the groundwork and electrical commissioning. Our team works cleanly and efficiently to minimize any disruption to your Buntingford home.',
+        },
+        {
+          question: 'Can the swing gates automatically lock at night for extra security?',
+          answer: 'Automated curfews can be programmed into the logic board to enforce a hard lockdown after dark. This means the electric swing gate will only respond to authorized fobs until the morning.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do you provide modern wooden gates for the new housing developments?',
+          answer: 'Horizontal cedar slats perfectly match the sharp lines of contemporary architecture. We regularly install these modern wooden driveway gates throughout new Buntingford estates.',
+        },
+        {
+          question: 'How long does a typical installation take?',
+          answer: 'Comprehensive fitting usually wraps up within three consecutive working days. We secure your Buntingford property swiftly with minimal daily disruption.',
+        },
+        {
+          question: 'Can the gates lock themselves at night?',
+          answer: 'Automated schedules enforce a hard lockdown when the sun goes down. The system rejects all codes until morning for maximum security.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do you provide automated metal gates for the new housing developments here?',
+          answer: 'Modernist profiles demand clean lines and minimalist materials like powder coated aluminum. We regularly fit these contemporary styles to match the latest architectural trends in Buntingford.',
+        },
+        {
+          question: 'How long does a typical metal installation take in this area?',
+          answer: 'Complete handover usually takes around three days for the groundwork and electrical commissioning. Our team works cleanly and efficiently to minimize any disruption to your Buntingford home.',
+        },
+        {
+          question: 'Can the gates automatically lock at night for extra security?',
+          answer: 'Nightly curfews can be programmed into the logic board to enforce a hard lockdown after dark. This means the metal driveway gate will only respond to authorized fobs until the morning.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do you provide automated gates for the new housing developments here?',
+          answer: 'Modern facades demand clean lines and minimalist materials like powder coated aluminum. We regularly fit these contemporary styles to match the latest architectural trends in Buntingford.',
+        },
+        {
+          question: 'How long does a typical installation take in this area?',
+          answer: 'Full completion usually takes around three days for the groundwork and electrical commissioning. Our team works cleanly and efficiently to minimize any disruption to your home.',
+        },
+        {
+          question: 'Can the gates automatically lock at night for extra security?',
+          answer: 'Scheduled timers can be programmed into the logic board to enforce a hard lockdown after dark. This means the automated gate system will only respond to authorized fobs until the morning.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The sleek aluminum gates on my new build are scraping the driveway.',
+          answer: 'Modernist profiles warp slightly during their first year of seasonal temperature changes, throwing off clearances. We will finely adjust the mounting plates to lift your Buntingford gates clear of the tarmac smoothly.',
+        },
+        {
+          question: 'Does the developer warranty cover gate repairs on new estates?',
+          answer: 'Handover protocols involve strict warranty terms, but mechanical damage from vehicles is rarely covered. We provide independent, rapid repair services for any broken automation on new Buntingford developments.',
+        },
+        {
+          question: 'The gates locked me out at 8 PM and won\'t accept any codes.',
+          answer: 'Curfew programming glitches occasionally if the internal clock battery dies, resetting the time to midnight. We will replace the coin battery and correct the automated schedule for your Buntingford property.',
+        },
       ],
     },
     cityIntro: [
@@ -2332,6 +7240,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Wireless sync receivers lose connection after local power cuts or severe electrical storms. Residents frequently find themselves locked out when their clickers stop working entirely. Instead of replacing the expensive radio system, local technicians simply clear the receiver\'s memory and reprogram the rolling-code remotes. They also test the backup battery systems, ensuring the gates can still be operated during future rural power outages.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'My house is near the ford; will splashing damage the sliding motor?',
+          answer: 'Sealed electronics boast high IP ratings that easily repel splashing water and heavy rain. Your Braughing installation is completely safe from the damp conditions near the ford.',
+        },
+        {
+          question: 'Can a sliding gate secure a very wide rural driveway?',
+          answer: 'Expansive widths are effortlessly managed by our heavy-duty commercial sliding frames. These robust structures provide uncompromising security for large Braughing countryside estates.',
+        },
+        {
+          question: 'Do I need to lubricate the sliding wheels?',
+          answer: 'Enclosed bearings are pre-packed with grease and designed to be maintenance-free for life. You never need to manually lubricate the wheels on your electric sliding gate.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'My house is near the ford; will splashing water damage the swinging electronics?',
+          answer: 'Moisture defense on our control boards is rated extremely high to combat splashing and heavy rain. Living near the Braughing ford poses absolutely no threat to our sealed electric swing gate units.',
+        },
+        {
+          question: 'Can we install a traditional five bar gate with modern swinging motors?',
+          answer: 'Country aesthetics are easily automated using discreet surface mounted rams that blend with the timber. You get a beautifully traditional Braughing rural look combined with effortless electric swing gate convenience.',
+        },
+        {
+          question: 'Do I need to lubricate the swinging hinges myself?',
+          answer: 'Teflon coated joints require zero manual maintenance and will never squeak during operation. They are completely hassle free, providing years of silent, perfectly smooth swinging movement.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'My house is near the ford; will splashing rot the wooden gates?',
+          answer: 'Nautical grade sealants repel splashing water from the Braughing ford effortlessly. Your timber panels will shed water rather than absorbing it.',
+        },
+        {
+          question: 'Can we install a traditional five bar gate here?',
+          answer: 'Pastoral styling is maintained while adding modern surface mounted automation rams. You get absolute convenience without losing the Braughing countryside vibe.',
+        },
+        {
+          question: 'Do I need to grease the gate hinges?',
+          answer: 'Sealed joints require no manual lubrication to stay perfectly smooth. They swing silently without any tedious ongoing maintenance from you.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'My house is near the ford; will splashing water damage the electronics?',
+          answer: 'Water shedding on our control boards is rated extremely high to combat splashing and heavy rain. Living near the Braughing ford poses absolutely no threat to our sealed metal driveway gate units.',
+        },
+        {
+          question: 'Can we install a traditional five bar gate with modern metal motors?',
+          answer: 'Rural charm is easily maintained using discreet surface mounted rams that blend with the gate. You get a beautifully traditional Braughing look combined with effortless metal driveway gate convenience.',
+        },
+        {
+          question: 'Do I need to lubricate the hinges myself?',
+          answer: 'Self-lubricating joints require zero manual maintenance and will never squeak during operation. They are completely hassle free, providing years of silent, perfectly smooth movement.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'My house is near the ford; will splashing water damage the gate electronics?',
+          answer: 'Ingress protection on our control boards is rated extremely high to combat splashing and heavy rain. Living near the Braughing ford poses absolutely no threat to our sealed automation units.',
+        },
+        {
+          question: 'Can we install a traditional five bar gate with modern motors?',
+          answer: 'Rustic profiles are easily automated using discreet surface mounted rams that blend with the timber. You get a beautifully traditional country look combined with effortless modern convenience.',
+        },
+        {
+          question: 'Do I need to lubricate the hinges myself?',
+          answer: 'Self lubricating hinges require zero manual maintenance and will never squeak during operation. They are completely hassle free, providing years of silent, perfectly smooth movement.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Splashback from the local ford has ruined the gate control board.',
+          answer: 'Ford water splashes heavily onto lower pillars, easily bypassing standard IP-rated electrical enclosures. We will relocate the main control unit higher up the wall to protect your Braughing entrance completely.',
+        },
+        {
+          question: 'My traditional five-bar gate is swollen and won\'t latch shut.',
+          answer: 'Rustic timber swells during extended wet periods, causing the locking pin to miss the receiver plate entirely. We will shave the leading edge and adjust the catch to secure your Braughing country gate.',
+        },
+        {
+          question: 'The gate hinges are squealing loudly when opening.',
+          answer: 'Teflon hinges seize eventually if fine dust mixes with the internal grease, creating a grinding paste. We will flush the joints and repack them with premium lubricant to silence your Braughing gates.',
+        },
+      ],
+    },
     cityIntro: [
       'Braughing is a village in the East Hertfordshire district, sitting in the Rib valley and characterised by its ford crossing, substantial listed building stock along The Street, and the Braughing Conservation Area that covers the historic core. The picturesque village character creates a sensitive planning context where East Hertfordshire District Council assesses material, height, and streetscape impact carefully, and where listed building consent layers onto planning permission for the many properties within the curtilage of designated buildings.',
       'Our Braughing installer network includes specialists with documented village track records and genuine East Herts planning experience in the Rib valley villages. Every referred installer has completed at least six verifiable Braughing or immediately adjacent projects before receiving any enquiry from us, and understands the design sensibilities that successful conservation area applications require in this particularly sensitive village setting.',
@@ -2370,6 +7364,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Rib river topography creates sweeping, curved driveways that frequently slope steeply, causing rising hinges to lose their tension over time. When these articulated joints wear out, the heavy gates grind directly into the tarmac, overloading the drive motor. Local Standon repair experts replace the worn pivot pins and recalibrate the lift-angle, ensuring the massive wooden leaves gracefully clear the rising ground without burning out the expensive electronic control boards.',
         'Masonry sinking is a common geographical issue in this hilly area. As the ground shifts over time, the gate posts move out of plumb, causing the heavy leaves to bind together in the center. Standon gate technicians utilize heavy-duty winches to realign the structures. They frequently replace rigid hinges with fully adjustable, multi-directional variants, allowing the homeowner to easily re-level the gates themselves if the historic pillars continue to settle.',
         'Internal moisture shorts out the main logic boards, causing gates to open by themselves or refuse to close. Repair specialists utilize conformal coating sprays and install specialized anti-condensation heaters inside the control boxes. They meticulously clean the corroded contact points to revive the logic board, saving Standon residents thousands of pounds in unnecessary replacement costs and restoring total perimeter security.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'How do we secure our property during the Standon Calling festival?',
+          answer: 'Rigid deadbolts engage automatically, ensuring nobody can physically force the sliding barrier open. This gives you ultimate peace of mind when large crowds visit the village.',
+        },
+        {
+          question: 'Can solar panels run a heavy sliding gate reliably?',
+          answer: 'Sunlight harvesting struggles during the dark UK winters, leading to unreliable performance. We always recommend a hardwired mains connection for residential electric sliding gates.',
+        },
+        {
+          question: 'Can the intercom take pictures of callers?',
+          answer: 'Photographic memory captures a snapshot of everyone who presses the call button on the pillar. You can review this gallery later to see who visited your Standon property.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'How do we secure our property during the busy Standon Calling festival weekend?',
+          answer: 'Unbreakable deadbolts utilizing industrial electromagnets ensure nobody can force your electric swing gates open. This gives you absolute peace of mind when thousands of visitors pass through the village.',
+        },
+        {
+          question: 'Are solar panels enough to power heavy swing gates all year round?',
+          answer: 'Overcast skies severely limit solar charging, making it unreliable for primary residential entrances in the UK. We strongly recommend a hardwired mains connection to keep your Standon electric swing gate running perfectly.',
+        },
+        {
+          question: 'Can the intercom take a picture of anyone who presses the buzzer?',
+          answer: 'Photographic logging is included in our premium video monitors, saving the face of every caller. You can review this gallery later to see who visited your Standon home while you were out.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'How do we secure our property during the busy festival weekend?',
+          answer: 'Indestructible deadbolts ensure nobody can physically push the timber panels open. You get total peace of mind during the busy Standon Calling events.',
+        },
+        {
+          question: 'Are solar panels enough to power wooden gates all year?',
+          answer: 'Winter gloom severely limits the charging capacity of solar setups. We insist on hardwired mains connections for reliable Standon residential gates.',
+        },
+        {
+          question: 'Can the intercom take a picture of anyone who presses the buzzer?',
+          answer: 'Snapshot logging saves the face of every caller to internal memory. You can review exactly who visited your Standon home today.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'How do we secure our property during the busy Standon Calling festival weekend?',
+          answer: 'Fortified deadbolts utilizing industrial electromagnets ensure nobody can force your metal driveway gates open. This gives you absolute peace of mind when thousands of visitors pass through the village.',
+        },
+        {
+          question: 'Are solar panels enough to power heavy metal gates all year round?',
+          answer: 'Cloud cover severely limits solar charging, making it unreliable for primary residential entrances in the UK. We strongly recommend a hardwired mains connection to keep your Standon metal driveway gate running perfectly.',
+        },
+        {
+          question: 'Can the intercom take a picture of anyone who presses the buzzer?',
+          answer: 'Image capture is included in our premium video monitors, saving the face of every caller. You can review this gallery later to see who visited your Standon home while you were out.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'How do we secure our property during the busy Standon Calling festival weekend?',
+          answer: 'Impenetrable locking systems utilizing industrial electromagnets ensure nobody can force your gates open. This gives you absolute peace of mind when thousands of visitors pass through the village.',
+        },
+        {
+          question: 'Are solar panels enough to power heavy gates all year round?',
+          answer: 'Winter gloom severely limits solar charging, making it unreliable for primary residential entrances in the UK. We strongly recommend a hardwired mains connection to keep your automated gate system running perfectly.',
+        },
+        {
+          question: 'Can the intercom take a picture of anyone who presses the buzzer?',
+          answer: 'Snapshot memory is included in our premium video monitors, logging the face of every caller. You can review this gallery later to see who visited your Standon home while you were out.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Someone forced the gate open during the music festival; is the motor broken?',
+          answer: 'Calling crowds push boundaries aggressively, which often snaps the shear pin inside the drive mechanism. We will replace this inexpensive sacrificial part to restore your Standon automated gate securely.',
+        },
+        {
+          question: 'My solar powered gate stopped working halfway through winter.',
+          answer: 'Solar charging fails entirely when short, gloomy days cannot replenish the deep cycle batteries adequately. We will replace the depleted cells and offer a mains-charging upgrade for your Standon property.',
+        },
+        {
+          question: 'The video intercom is recording a black screen instead of faces.',
+          answer: 'Snapshot memory wipes itself if the internal SD card corrupts from constant voltage fluctuations. We will install a fresh, high-endurance memory card to restore visitor logging at your Standon home.',
+        },
       ],
     },
     cityIntro: [
@@ -2412,6 +7492,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Subterranean flora and root intrusion from protected mature trees often crushes underground conduit carrying vital power cables. When a gate suddenly loses power, diagnostic teams use advanced cable-tracing equipment to find the subterranean break without causing massive driveway disruption. They carefully excavate the specific area, splice in fresh steel-wire armored (SWA) cabling, and route it safely away from the aggressive tree roots, permanently restoring power to the perimeter.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do strong winds across the airfield affect sliding gates?',
+          answer: 'Tracked stability ensures horizontal sliding models remain completely unaffected by heavy crosswinds. They are vastly superior to swinging gates for exposed Hunsdon locations.',
+        },
+        {
+          question: 'Can we track who uses the gate with their PIN code?',
+          answer: 'Digital auditing records every single access event directly to the smart control panel. You can monitor exactly when contractors or family members enter your Hunsdon estate.',
+        },
+        {
+          question: 'How quickly can a broken sliding motor be fixed?',
+          answer: 'Express dispatches ensure our local technicians diagnose and repair mechanical faults swiftly. We carry spare parts to fix your electric sliding gate on the very first visit.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do strong winds across the old airfield affect large wooden swing gates?',
+          answer: 'Fierce crosswinds put massive strain on solid swinging panels, which is why we recommend slatted designs instead. Allowing air to flow through the structure stops the electric swing gate motors from fighting the wind.',
+        },
+        {
+          question: 'Can we track who enters our Hunsdon estate using the gate system?',
+          answer: 'Usage tracking can be downloaded directly from the smart control panel to your phone. This shows you exactly which pin code or fob triggered your electric swing gate at any given time.',
+        },
+        {
+          question: 'Is there a manual release if the swinging system breaks down completely?',
+          answer: 'Physical bypassing mechanisms are standard on every motor we install across the region. You simply insert a secure key to decouple the drive and push the Hunsdon entrance open manually.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do strong winds across the airfield affect large wooden gates?',
+          answer: 'Fierce gales easily damage solid timber, so we recommend permeable slats. Letting the wind blow through protects your Hunsdon wooden driveway gates.',
+        },
+        {
+          question: 'Can we track who enters our estate?',
+          answer: 'Digital auditing records every pin code used directly to your smartphone. You always know when contractors access your Hunsdon property.',
+        },
+        {
+          question: 'Is there a manual release if the system breaks down?',
+          answer: 'Mechanical bypassing lets you use a key to decouple the motors. You can push the entrance open yourself in an emergency.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do strong winds across the old airfield affect large metal gates?',
+          answer: 'Severe gusts put massive strain on solid panels, which is why we recommend slatted designs instead. Allowing air to flow through the structure stops the metal driveway gate motors from fighting the wind.',
+        },
+        {
+          question: 'Can we track who enters our Hunsdon estate using the gate system?',
+          answer: 'Audit logs can be downloaded directly from the smart control panel to your phone. This shows you exactly which pin code or fob triggered your metal driveway gate at any given time.',
+        },
+        {
+          question: 'Is there a manual release if the system breaks down completely?',
+          answer: 'Keyed bypasses are standard on every motor we install across the region. You simply insert a secure key to decouple the drive and push the Hunsdon entrance open manually.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do strong winds across the old airfield affect large wooden gates?',
+          answer: 'Gale forces put massive strain on solid panels, which is why we recommend slatted designs instead. Allowing air to flow through the structure stops the motors from fighting the wind.',
+        },
+        {
+          question: 'Can we track who enters our Hunsdon estate using the gate system?',
+          answer: 'Activity logs can be downloaded directly from the smart control panel to your phone. This shows you exactly which pin code or fob was used at any given time.',
+        },
+        {
+          question: 'Is there a manual release if the system breaks down completely?',
+          answer: 'Clutch override mechanisms are standard on every motor we install across the region. You simply insert a secure key to decouple the drive and push the entrance open manually.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The gates blew open during a storm and smashed the motor casings.',
+          answer: 'Airfield breezes batter solid panels with immense force, literally ripping standard motors apart at the seams. We will install high-wind hydraulic operators to protect your exposed Hunsdon boundary moving forward.',
+        },
+        {
+          question: 'Can you retrieve the access logs from a dead control board?',
+          answer: 'Usage logs corrupt when the motherboard burns out, making data recovery practically impossible on-site. We will install a brand new system featuring cloud-based backups for your Hunsdon estate security.',
+        },
+        {
+          question: 'The manual release key snapped off inside the lock.',
+          answer: 'Bypass keys snap easily if forced while the gate is under severe mechanical or wind tension. We will drill out the broken cylinder and replace the lock assembly for your Hunsdon automated gates.',
+        },
+      ],
+    },
     cityIntro: [
       'Hunsdon is a village in the East Hertfordshire district, characterised by the Tudor-era Hunsdon House, St Dunstan\'s church, substantial listed building stock along High Street, and the Hunsdon Conservation Area that covers the historic core. Gate installations here sit within a planning context where East Hertfordshire District Council assesses material, height, and streetscape impact carefully within the conservation boundary, and where listed building consent frequently layers onto planning requirements for the many properties within the curtilage of designated buildings.',
       'Our Hunsdon installer network includes specialists with genuine village track records and documented East Herts planning experience. Every referred installer has completed at least six verifiable Hunsdon or immediately adjacent projects before receiving any enquiry from us, and understands the design sensibilities that successful conservation area applications require in this historically significant village setting.',
@@ -2450,6 +7616,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Cobbled streets make Hitchin properties incredibly susceptible to waterlogged gate hardware. When ancient brick pillars shift or custom ironwork sags in this historic town, heavy-handed repairs are unacceptable. Specialized conservation technicians use discreet steel tension bands and hidden structural anchors to brace failing boundaries. This expert intervention ensures the gate operates smoothly again without ruining the unblemished, historic streetscape of the highly conserved town center.',
         'Sunken boxes destroy underground logic boards if foundation drainage isn\'t pumped out regularly. The high water table is the absolute nemesis of hidden gate motors. Emergency repair callouts frequently involve extracting completely submerged drive units. Technicians rebuild the motors in the workshop, replacing rusted stators and waterlogged capacitors, before reinstalling them with vastly improved, industrial-scale soakaway networks to prevent the disaster from recurring.',
         'Broken keypads take a beating from heavy daily use and exposure to the elements. For Hitchin homeowners relying on PIN codes for cleaners or dog walkers, a broken button causes massive logistical headaches. Repair crews swiftly replace worn, unresponsive rubber membranes with ultra-durable, vandal-resistant stainless steel variants. They reprogram the master codes and ensure the new access control module interfaces perfectly with the existing automation motherboard.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can sliding models complement the cobbled streets of the town center?',
+          answer: 'Authentic ironwork easily blends with the historic Hitchin aesthetic while hiding a modern sliding mechanism. We custom forge these designs to ensure your entrance respects the traditional charm of the area.',
+        },
+        {
+          question: 'Are there rust resistant sliding gates for homes near the River Hiz?',
+          answer: 'Protective galvanization is standard on all our riverside installations to combat the elevated moisture levels. Your heavy steel frame will remain completely immune to oxidation despite the damp environment.',
+        },
+        {
+          question: 'How do we prevent pedestrians squeezing past when the gate opens?',
+          answer: 'Narrow gaps are eliminated by installing mesh panels or closely spaced vertical bars. The electric sliding gate maintains absolute perimeter security without sacrificing visibility onto the street.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can swing gates suit the cobbled streets of the town center?',
+          answer: 'Historic authenticity demands careful consideration when installing automation in vintage areas. We custom forge ironwork to match the classic Hitchin style perfectly, ensuring your swinging boundary respects the local heritage.',
+        },
+        {
+          question: 'Are there rust resistant options for homes near the River Hiz?',
+          answer: 'Hot-dip galvanization provides the ultimate defense against elevated moisture levels near waterways. Your swinging steel frame will never suffer from oxidation, no matter how damp the riverside environment gets.',
+        },
+        {
+          question: 'How do we prevent pedestrians getting hit when the gate opens?',
+          answer: 'Inward arcs are strictly enforced for properties bordering public footpaths to ensure pedestrian safety. The electric swing gate retracts safely into your Hitchin driveway, preventing any accidents on the street.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can wooden gates match the cobbled streets of the town center?',
+          answer: 'Heritage carpentry ensures your timber entrance perfectly aligns with the historic Hitchin aesthetic. We carefully construct beautiful wooden boundaries that respect the vintage character of the area entirely.',
+        },
+        {
+          question: 'Are there rust-free hinges for wooden gates near the River Hiz?',
+          answer: 'Chromium hinges are exclusively used on all our riverside installations to combat elevated moisture. Your wooden driveway gates will swing smoothly without bleeding rust stains down the timber.',
+        },
+        {
+          question: 'How do we prevent pedestrians squeezing past when the wooden gate opens?',
+          answer: 'Precise measuring is achieved by surveying the brickwork perfectly to eliminate any side gaps. The wooden driveway gate provides absolute perimeter security without compromising visibility onto the street.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can metal gates match the cobbled streets of the town center?',
+          answer: 'Ironwork replication ensures your new boundary respects the historic aesthetic perfectly. We craft these metal driveway gates to blend seamlessly with the classic Hitchin environment.',
+        },
+        {
+          question: 'Are there rust-free options for metal gates near the River Hiz?',
+          answer: 'Advanced galvanization protects the steel against the elevated moisture found near the waterways. Your Hitchin metal entrance will remain completely free of oxidation and rust.',
+        },
+        {
+          question: 'How do we prevent pedestrians squeezing past when the gate opens?',
+          answer: 'Precise tolerances are achieved by measuring the brickwork accurately to eliminate gaps. The metal driveway gate provides absolute perimeter security for your Hitchin home.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can you install gates that match the cobbled streets of the town center?',
+          answer: 'Cobblestone aesthetics are beautifully complemented by our ornate wrought iron designs. We specialize in crafting traditional styles that perfectly suit the historic heart of Hitchin.',
+        },
+        {
+          question: 'Do you offer solutions for properties backing onto the River Hiz?',
+          answer: 'Riverside locations demand high quality rustproofing to survive the elevated moisture levels. We utilize galvanized steel frames to ensure your boundary remains structurally sound for decades.',
+        },
+        {
+          question: 'How do we prevent delivery drivers from tailgating us into our driveway?',
+          answer: 'Anti-tailgating logic closes the barrier instantly once your vehicle clears the photoelectric threshold. This aggressive setting ensures nobody can slip into your private space uninvited.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'My automated gate is stuck halfway open near the town center.',
+          answer: 'Emergency unblocking is a priority service we offer for high traffic areas. Our Hitchin engineers will manually release the motor and repair the electronic fault quickly.',
+        },
+        {
+          question: 'Can you fix a rusted iron gate near the River Hiz?',
+          answer: 'Extensive oxidation requires cutting away the damaged metal and welding fresh steel into place. We will structurally restore your historic Hitchin ironwork and apply rustproof treatments.',
+        },
+        {
+          question: 'The intercom screen is flickering and won\'t connect.',
+          answer: 'Bad wiring connections often degrade over time due to ground movement or moisture ingress. We will test the data cables beneath your Hitchin driveway and install a fresh monitor.',
+        },
       ],
     },
     cityIntro: [
@@ -2492,6 +7744,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Sync errors cause warped timber gates to jam tightly together. As wooden leaves absorb moisture, they become incredibly heavy, causing the joints to separate and the gate to drag. Carpenters and gate technicians work together to re-brace the heavy hardwood using discreet steel tension bands. They adjust the geometric hang of the entrance and resync the dual-motor timing, saving the expensive automation motors from burning out due to excessive friction.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Are horizontal sliding setups permitted under Garden City heritage guidelines?',
+          answer: 'Planning applications for subtle boundary treatments are frequently approved if they respect the original town ethos. We often install wood cladded sliding systems behind mature hedges to stay fully compliant.',
+        },
+        {
+          question: 'Will a solid sliding barrier block the wind across my front garden?',
+          answer: 'Aerodynamic stress is a genuine concern for completely closed panels in exposed areas. We always recommend semi-open sliding designs to let Letchworth gales pass through without straining the motor.',
+        },
+        {
+          question: 'Can my smartphone app show me if the sliding entrance was left open?',
+          answer: 'Live diagnostics instantly send push alerts to your phone if the mechanism fails to close properly. You can secure your Letchworth property remotely with just one tap on your screen.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Are swinging setups permitted under Garden City heritage guidelines?',
+          answer: 'Thoughtful applications are often required for boundary modifications in this historic area. We frequently install subtle timber swinging gates that blend flawlessly with the original Letchworth architectural vision.',
+        },
+        {
+          question: 'Will a solid swing gate block the wind across my front garden?',
+          answer: 'Fierce gales can put enormous stress on fully closed panels that act like giant sails. We highly advise semi-open wooden designs to let Letchworth winds pass through without straining the swinging motors.',
+        },
+        {
+          question: 'Can my smartphone app show me if the entrance was left open?',
+          answer: 'Remote monitoring instantly sends push notifications to your phone if the mechanism fails to lock. You can secure your Letchworth property with one simple tap on your smartphone screen.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Are solid wooden gates permitted under Garden City heritage guidelines?',
+          answer: 'Zoning officers frequently approve natural timber boundaries that respect the original town ethos. We design subtle wooden driveway gates that blend flawlessly with the established Letchworth landscaping.',
+        },
+        {
+          question: 'Will a solid wooden gate block the wind across my front garden?',
+          answer: 'Howling drafts can put enormous stress on fully closed timber panels that act like sails. We highly advise slatted wooden designs to let Letchworth winds pass through without straining the hinges.',
+        },
+        {
+          question: 'Can my smartphone app show me if the wooden entrance was left open?',
+          answer: 'Cellular alerts instantly send push notifications to your phone if the timber frame fails to close. You can secure your Letchworth property with one simple tap on your screen.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Are solid metal gates permitted under Garden City heritage guidelines?',
+          answer: 'Heritage planners frequently approve subtle wrought iron designs that respect the original town ethos. We build metal driveway gates that harmonize flawlessly with the established Letchworth landscaping.',
+        },
+        {
+          question: 'Will a solid metal gate block the wind across my front garden?',
+          answer: 'Spaced pickets allow howling drafts to pass straight through the structure without straining the motors. We highly advise these open metal designs for exposed Letchworth properties.',
+        },
+        {
+          question: 'Can my smartphone app show me if the metal entrance was left open?',
+          answer: 'Status notifications instantly send alerts to your phone if the steel frame fails to close. You can monitor your Letchworth boundary securely with one simple tap.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Are automated setups permitted under the Garden City heritage guidelines?',
+          answer: 'Strict adherence to local architectural covenants is a core part of our design process. We frequently secure planning approval for discreet timber styles that respect the original Letchworth vision.',
+        },
+        {
+          question: 'Will a heavy solid gate block the wind across my exposed front garden?',
+          answer: 'Solid construction creates a massive sail effect that requires extremely powerful hydraulic rams. We highly recommend adding subtle viewing gaps to reduce the aerodynamic strain on your equipment.',
+        },
+        {
+          question: 'Can my smartphone app show me if the entrance was left open?',
+          answer: 'Real-time status alerts will immediately notify you if the mechanism fails to lock properly. You can easily check the companion app to ensure your property remains perfectly secure.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The wooden gates on my heritage property have dropped.',
+          answer: 'Sagging timber puts immense stress on standard hinges and ruins the original Letchworth aesthetic. We can fit adjustable brackets to lift your heavy wooden frames back to perfection.',
+        },
+        {
+          question: 'The safety edge on my gate is torn.',
+          answer: 'Ripped profiles mean the crushing sensors are completely disabled, making the boundary illegal. We will fit brand new safety edges to ensure your Letchworth property remains compliant.',
+        },
+        {
+          question: 'My electric gate closes but bounces back open immediately.',
+          answer: 'Limit calibration errors cause the motor to think it has hit an obstacle when it simply reached the end. We will adjust the travel settings to secure your Letchworth entrance flawlessly.',
+        },
+      ],
+    },
     cityIntro: [
       'Letchworth is a designated Garden City and the world\'s first, with a specific planning heritage that distinguishes it from every other Hertfordshire town. The Letchworth Garden City Heritage Foundation operates a Scheme of Management that imposes design controls above and beyond the ordinary statutory planning process - gate installations interact with both North Hertfordshire District Council and the Heritage Foundation, and proceeding without engaging the Foundation creates problems later.',
       'Our Letchworth installer network focuses on specialists with documented experience of both the North Herts planning context and the Heritage Foundation approvals process. Every referred installer has completed substantive Letchworth work and understands the design restraint that characterises successful gate applications in the town - restrained specifications that reference the original Parker and Unwin vocabulary rather than generic contemporary installations.',
@@ -2530,6 +7868,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Coaching routes put extreme mechanical strain on the gates serving busy families in Baldock. The constant opening and closing wears down the internal gearing of surface-mounted motors. Preventative maintenance here focuses heavily on replacing these worn internal components before they shatter. Technicians grease the drive shafts, adjust the mechanical limits, and tighten all structural mounting bolts, preventing heavy vibrations from tearing the motor off the boundary wall.',
         'Worn gears usually happen when fast-moving automated gates are forced against strong winds or hit an unexpected obstacle. Instead of recommending a complete system overhaul, local engineers provide targeted structural repairs. They extract snapped bolts, re-tap the steel mounting brackets, and upgrade the hardware to high-tensile steel variants. This reinforces the physical connection between the motor and the gate, drastically improving resilience.',
         'Intercom static is a highly frustrating issue that plagues many local properties after heavy rainstorms. When moisture penetrates the exterior call panel, the audio feed degrades or the keypad buttons short-circuit. Baldock repair specialists excel at diagnosing these low-voltage communication faults. They replace corroded micro-switches, upgrade the internal wiring, and re-seal the exterior housing with waterproof silicone to restore crystal-clear visitor screening.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do you cater to older properties situated along the Great North Road?',
+          answer: 'Vintage styles look incredible when mounted onto our modern, concealed sliding chassis. This allows you to upgrade your Baldock home with robust electric technology without losing its historic character.',
+        },
+        {
+          question: 'Are there quiet sliding systems available so I do not disturb my neighbors?',
+          answer: 'Frictionless bearings guarantee the gate glides along its track with barely a whisper. You can leave for an early morning commute without waking anyone in the adjacent houses.',
+        },
+        {
+          question: 'What happens if a visitor breaks the safety beam while the gate is sliding?',
+          answer: 'Immediate halting occurs the second any object interrupts the invisible infrared safety curtain. The motors instantly reverse direction to ensure nobody gets trapped by the heavy metal frame.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do you cater to older properties situated along the Great North Road?',
+          answer: 'Vintage replicas look absolutely incredible when combined with our modern electric swinging chassis. This allows you to upgrade your Baldock home with robust security technology without sacrificing its vintage character.',
+        },
+        {
+          question: 'Are there quiet swinging systems available so I do not disturb my neighbors?',
+          answer: 'Acoustic dampening ensures the hydraulic rams operate with barely a whisper during every cycle. You can leave for an early morning commute without waking anyone in the adjacent Baldock houses.',
+        },
+        {
+          question: 'What happens if a visitor breaks the safety beam while the gate is swinging?',
+          answer: 'Sudden stops occur the exact moment any object interrupts the invisible infrared safety curtain. The swinging motors instantly reverse direction to ensure nobody gets trapped by the heavy metal frame.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do you cater to older properties situated along the Great North Road?',
+          answer: 'Centuries old homes look absolutely incredible when enhanced by our handcrafted wooden driveway gates. This allows you to upgrade your Baldock property with robust security without losing its historical charm.',
+        },
+        {
+          question: 'Are there quiet automation systems for wooden gates so I do not disturb neighbors?',
+          answer: 'Frictionless fluids guarantee the wooden panels glide open with barely a whisper during every cycle. You can leave for an early morning commute without waking anyone in the adjacent Baldock houses.',
+        },
+        {
+          question: 'What happens if a visitor breaks the safety beam while the wooden gate is moving?',
+          answer: 'Laser tripwires halt the motors the exact moment any object interrupts the invisible curtain. The automated system instantly reverses direction to ensure nobody gets trapped by the heavy timber.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do you cater to older properties situated along the Great North Road?',
+          answer: 'Vintage patinas can be applied to new metalwork to mimic the appearance of ancient iron. This allows you to secure your Baldock property with modern technology while retaining historical charm.',
+        },
+        {
+          question: 'Are there quiet automation systems for metal gates so I do not disturb neighbors?',
+          answer: 'Lubricated bearings guarantee the heavy panels glide open with barely a whisper. You can leave your closely packed Baldock street early without waking anyone nearby.',
+        },
+        {
+          question: 'What happens if a visitor breaks the safety beam while the metal gate is moving?',
+          answer: 'Immediate reversing occurs the exact moment any object interrupts the invisible laser curtain. The automated system ensures nobody gets trapped by the heavy metal frame.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do you cater to older properties situated along the Great North Road?',
+          answer: 'Historic facades pair wonderfully with our custom painted aluminum ranges. This allows you to upgrade your Baldock home with modern technology without ruining the vintage streetscape.',
+        },
+        {
+          question: 'Are there quiet systems available so I do not disturb my neighbors?',
+          answer: 'Whisper-quiet motors utilize advanced nylon gearing to completely eliminate mechanical grinding noises. Your neighbors will never hear you leaving for an early morning commute.',
+        },
+        {
+          question: 'What happens if a visitor breaks the safety beam while the gate is moving?',
+          answer: 'Instant reversal is triggered the moment any object interrupts the invisible infrared line. The motors immediately back away to prevent any risk of crushing or injury.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The sliding gate track is buckled near the Great North Road.',
+          answer: 'Twisted rails require us to break up the old concrete and pour a perfectly level new foundation. Our Baldock groundworks team handles this entire track replacement process seamlessly.',
+        },
+        {
+          question: 'Can you repair an old hydraulic motor that is leaking?',
+          answer: 'Ruptured seals destroy internal pressure, meaning the gate loses its ability to push heavy loads. We will rebuild the hydraulic block to get your Baldock automation functioning again.',
+        },
+        {
+          question: 'The gate remote only works from two meters away.',
+          answer: 'Shortened range indicates a failing receiver board or a severely corroded aerial cable. We will upgrade the radio module to restore impressive operating distances for your Baldock home.',
+        },
       ],
     },
     cityIntro: [
@@ -2572,6 +7996,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Winter frost depletes power reserves rapidly for off-grid, solar-powered gates. Because many of these remote Royston entrances sit far from the main mains supply, failing batteries leave the gate dead. Routine maintenance crews test the voltage drop on the battery banks. If they are failing to hold a charge, technicians swap them for deep-cycle marine variants and clean the solar arrays, ensuring the boundary remains powered year-round.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Is it possible to automate a sliding entrance on the steep slopes near Therfield Heath?',
+          answer: 'Incline tracking is incredibly dangerous, so we mandate cantilever setups for any sloped Royston boundary. The entire structure suspends itself above the gradient to ensure perfectly safe, level operation.',
+        },
+        {
+          question: 'Can I integrate a pedestrian gate for walking onto the heath?',
+          answer: 'Cohesive designs include a matching side gate that operates entirely independent of the main sliding motor. This provides highly convenient foot access without needing to cycle the large electric barrier.',
+        },
+        {
+          question: 'How long does the remote control battery usually last?',
+          answer: 'Two years is the standard operational lifespan for the lithium cells inside our premium fobs. The unit will clearly flash a warning indicator when a replacement is finally required.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Is it possible to automate a swinging entrance on the steep slopes near Therfield Heath?',
+          answer: 'Ascending mechanics utilizing specialized rising hinges are mandatory for any sloped Royston boundary. The entire structure lifts itself above the gradient to ensure perfectly safe, level swinging operation.',
+        },
+        {
+          question: 'Can I integrate a pedestrian gate for walking onto the heath?',
+          answer: 'Visual symmetry is achieved by installing a matching side gate that operates independently of the main motors. This provides highly convenient foot access without needing to cycle the large swinging barrier.',
+        },
+        {
+          question: 'How long does the remote control battery usually last?',
+          answer: 'Extended lifespans of roughly two years are standard for the lithium cells inside our premium fobs. The unit will clearly flash a warning indicator when a battery replacement is finally required.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Is it possible to install wooden gates on the steep slopes near Therfield Heath?',
+          answer: 'Gradient shaving along the bottom edge allows the timber to swing cleanly over steep driveways. The entire wooden structure clears the incline to ensure perfectly safe operation for your Royston home.',
+        },
+        {
+          question: 'Can I integrate a pedestrian wooden gate for walking onto the heath?',
+          answer: 'Side wickets are easily created by installing a smaller timber gate operating entirely independently. This provides highly convenient foot access without needing to cycle the large wooden barrier.',
+        },
+        {
+          question: 'How long does the wood treatment usually last?',
+          answer: 'Penetrating oils soak deeply into the grain, meaning you only need to re-stain every couple of years. The wood will clearly show when it needs another coat to survive the Royston winters.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Is it possible to install metal gates on the steep slopes near Therfield Heath?',
+          answer: 'Cantilever tracks allow the steel frame to hover above the steep inclines smoothly. The entire structure clears the gradient to ensure safe operation for your Royston home.',
+        },
+        {
+          question: 'Can I integrate a pedestrian metal gate for walking onto the heath?',
+          answer: 'Separate walkways are easily created by installing a matching side gate operating independently. This provides highly convenient foot access to the Royston countryside without cycling the large barrier.',
+        },
+        {
+          question: 'How long does the powder coating usually last?',
+          answer: 'Baked enamel outlasts traditional wet paint by decades, requiring zero re-coating. A simple wash keeps your metal driveway gates looking immaculate despite the Royston weather.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Is it possible to automate an entrance on the steep slopes near Therfield Heath?',
+          answer: 'Uphill gradients require specialized ascending hinges that lift the bottom edge vertically. This brilliant engineering solution prevents the frame from scraping against your Royston driveway surface.',
+        },
+        {
+          question: 'Can I integrate a pedestrian gate for walking onto the heath?',
+          answer: 'Matching side-gates offer a highly convenient way to exit on foot without operating the main motors. We install synchronized locks so both entrances work from the same master fob.',
+        },
+        {
+          question: 'How long does the remote control battery usually last?',
+          answer: 'Twenty-four months is the average lifespan for a lithium cell inside our premium key fobs. The unit will flash a warning light when it is finally time to swap the battery.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'My gate motor burns out trying to push up the steep hill.',
+          answer: 'Gradient strain destroys standard gearboxes quickly because they fight extreme gravity every single cycle. We can upgrade your Royston system to a heavy-duty actuator designed explicitly for inclines.',
+        },
+        {
+          question: 'High winds near Therfield Heath snapped the motor bracket.',
+          answer: 'Fractured mountings must be cut away and replaced with heavily reinforced steel plates. We will weld stronger fixings to secure your Royston property against future gales.',
+        },
+        {
+          question: 'The keypad accepts my code but the gate ignores it.',
+          answer: 'Disconnected relays inside the console fail to pass the open command to the master logic board. We will replace the faulty keypad to restore access to your Royston driveway.',
+        },
+      ],
+    },
     cityIntro: [
       'Royston sits at the northern edge of Hertfordshire on the Cambridgeshire border, with the town\'s character shaped by its market town heritage, its position on the chalk hills, and the A505 corridor commuter profile. The planning context from North Hertfordshire District Council is generally pragmatic outside the High Street and Priory Gardens conservation areas.',
       'Our Royston installer network includes specialists with documented experience across the town\'s varied context - the historic core, the post-war residential development, and the exposed ridgeline properties that require specific structural and wind-load considerations. Every referred installer has substantive North Herts planning experience.',
@@ -2610,6 +8120,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Commuter frequency makes Stevenage one of the most bustling commuter hubs, demanding that repair work must be executed rapidly. When a discreet underground motor fails or a heavy gate begins to split, local specialists perform surgical interventions. They carefully excavate damaged foundation boxes without disturbing surrounding block-paving, replace the faulty drive arm, and seamlessly reinstate the driveway to get families back on the road instantly.',
         'Bent tracks must be carefully leveled if they snap under the immense weight of the gates. Standard galvanised replacements look jarringly out of place on these properties. Master blacksmiths in the Stevenage repair network heat and shape bespoke replacement hinges or weld fresh track sections, matching the exact profile of the originals. This ensures the mechanical repair is completely unnoticeable to the naked eye.',
         'Faulty sensors occur if the optical lenses of infrared beams get scratched by abrasive dirt or vandalism. Homeowners relying on these safety beams are instantly locked out when the gates freeze in the open position. Gate specialists replace the fragile optical sensors, upgrade the unit\'s firmware, and realign the beams across the threshold, quickly restoring the safe, automated entry experience expected at these family homes.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Do you supply heavy duty sliding gates for the industrial estates here?',
+          answer: 'Reinforced frameworks are absolutely essential for surviving the rigorous daily use of Stevenage business parks. We install massive commercial sliders that provide uncompromising security for large transport and logistics hubs.',
+        },
+        {
+          question: 'Can we link the access control to our office building swipe cards?',
+          answer: 'RFID readers wire directly into the main entry panel to accept your existing corporate staff badges. This creates a highly secure, unified transit system from the car park into the building.',
+        },
+        {
+          question: 'What is the most reliable motor for a busy urban driveway?',
+          answer: 'Oil bath technology constantly lubricates the internal gears to prevent overheating during continuous operation. These specialized motors are explicitly engineered to handle heavy residential traffic flawlessly.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Do you supply heavy duty swinging gates for the industrial estates here?',
+          answer: 'Commercial steel is absolutely essential for surviving the rigorous daily use of Stevenage business parks. We install massive swinging structures that provide uncompromising security for large transport and logistics hubs.',
+        },
+        {
+          question: 'Can we link the access control to our office building swipe cards?',
+          answer: 'Corporate integration allows RFID readers to wire directly into the main swinging entry panel. This creates a highly secure, unified transit system from the car park into the building.',
+        },
+        {
+          question: 'What is the most reliable motor for a busy urban driveway?',
+          answer: 'Constant lubrication inside oil bath gearboxes prevents overheating during continuous operation. These specialized motors are explicitly engineered to handle heavy residential swinging traffic flawlessly.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Do you supply heavy duty wooden gates for commercial estates here?',
+          answer: 'Warehouse timber is absolutely essential for surviving the rigorous daily use of Stevenage business environments. We install massive wooden structures that provide uncompromising security for large transport hubs.',
+        },
+        {
+          question: 'Can we link the gate access control to our office building swipe cards?',
+          answer: 'Badge readers wire directly into the main entry panel to accept your existing corporate credentials. This creates a highly secure, unified transit system through your Stevenage wooden driveway gates.',
+        },
+        {
+          question: 'What is the most reliable wood for a busy urban driveway?',
+          answer: 'Cured heartwood constantly proves its worth by resisting impacts and wear during continuous operation. These specialized hardwoods are explicitly engineered to handle heavy residential traffic flawlessly.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Do you supply heavy duty metal gates for commercial estates here?',
+          answer: 'Industrial steel is absolutely essential for surviving the rigorous daily use of business environments. We install massive metal structures providing uncompromising security for large Stevenage transport hubs.',
+        },
+        {
+          question: 'Can we link the gate access control to our office building swipe cards?',
+          answer: 'Proximity readers wire directly into the main entry panel to accept corporate credentials. This creates a highly secure transit system through your Stevenage metal driveway gates.',
+        },
+        {
+          question: 'What is the most reliable metal for a busy urban driveway?',
+          answer: 'Reinforced alloys constantly prove their worth by resisting impacts during continuous operation. These specialized metals handle heavy residential traffic flawlessly across Stevenage.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Do you supply heavy duty gates for the industrial estates here?',
+          answer: 'Commercial boundaries demand rugged cantilever systems designed for continuous, high cycle operations. We install massive steel profiles that can withstand the daily rigors of Stevenage business parks.',
+        },
+        {
+          question: 'Can we link the access control to our office building swipe cards?',
+          answer: 'Proximity readers can be easily wired into the main entry panel to accept your existing staff badges. This creates a seamless transition from the car park directly into the workplace.',
+        },
+        {
+          question: 'What is the most reliable motor for a busy urban driveway?',
+          answer: 'Oil-bathed gearboxes offer unparalleled durability by constantly lubricating all internal moving parts. They are explicitly designed to handle heavy usage without ever overheating or failing.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Do you repair massive commercial gates on the industrial estates?',
+          answer: 'Business disruptions are minimized by our rapid response teams handling heavy duty commercial breakdowns. We repair the oversized industrial boundaries across Stevenage efficiently to keep your depot secure.',
+        },
+        {
+          question: 'The underground motor box is totally flooded.',
+          answer: 'Submerged operators fail rapidly if the primary drainage soakaways become clogged with silt and dirt. We will extract the mud and rebuild the flooded motors to secure your Stevenage property.',
+        },
+        {
+          question: 'Our apartment block gate is stuck open again.',
+          answer: 'Communal mechanisms endure massive cycle counts that wear down limit switches much faster than residential setups. We stock commercial grade parts to keep your shared Stevenage entrance working smoothly.',
+        },
       ],
     },
     cityIntro: [
@@ -2652,6 +8248,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Swollen timber heavily impacts sliding gate operations. As wood expands, it binds against the guide rollers, causing the motor\'s obstacle detection to trigger falsely and leaving the homeowner trapped. Preventative servicing before the winter hits is vital. Technicians shave down the expanding timber, adjust the upper nylon guide rollers, and increase the motor\'s torque settings slightly to help it push through the resistance.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'We live near the watermill; do you offer moisture resistant sliding motors?',
+          answer: 'IP67 rated enclosures house all the delicate electrical components to prevent condensation damage. Your Stotfold installation will remain fully functional even during the wettest winter conditions.',
+        },
+        {
+          question: 'Can agricultural vehicles fit through your sliding driveway gates?',
+          answer: 'Wide clearances are effortlessly achieved using robust telescopic frames that stack very compactly. This ensures massive farm machinery can access your rural Stotfold property without clipping the pillars.',
+        },
+        {
+          question: 'Do you offer maintenance contracts for older existing sliding systems?',
+          answer: 'System health checks are available for any electric setup, regardless of who originally installed it. Our engineers perform comprehensive diagnostics to bring your boundary up to modern safety standards.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'We live near the watermill; do you offer moisture resistant swinging motors?',
+          answer: 'Impermeable cases house all the delicate electrical components to prevent condensation damage. Your Stotfold swinging installation will remain fully functional even during the wettest winter conditions.',
+        },
+        {
+          question: 'Can agricultural vehicles fit through your swinging driveway gates?',
+          answer: 'Broad access is effortlessly achieved using robust outward swinging frames designed for farms. This ensures massive farm machinery can enter your rural Stotfold property without clipping the pillars.',
+        },
+        {
+          question: 'Do you offer maintenance contracts for older existing swinging systems?',
+          answer: 'Retrospective servicing is available for any electric setup, regardless of who originally installed it. Our engineers perform comprehensive diagnostics to bring your swinging boundary up to modern safety standards.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'We live near the watermill; do you offer moisture resistant wooden gates?',
+          answer: 'Resinous woods like cedar repel water brilliantly to prevent condensation damage internally. Your Stotfold wooden installation will remain fully functional even during the wettest winter conditions.',
+        },
+        {
+          question: 'Can agricultural vehicles fit through your wooden driveway gates?',
+          answer: 'Tractor spans are effortlessly achieved using robust outward swinging frames designed for farms. This ensures massive farm machinery can enter your rural Stotfold property without clipping the timber.',
+        },
+        {
+          question: 'Do you offer maintenance contracts for older existing wooden gates?',
+          answer: 'Remedial carpentry is available for any timber setup, regardless of who originally installed it. Our carpenters perform comprehensive diagnostics to bring your wooden boundary up to modern safety standards.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'We live near the watermill; do you offer moisture resistant metal gates?',
+          answer: 'Submersion grade coatings repel water brilliantly to prevent condensation damage internally. Your Stotfold metal installation remains fully functional even during the wettest winter conditions.',
+        },
+        {
+          question: 'Can agricultural vehicles fit through your metal driveway gates?',
+          answer: 'Farm profiles are effortlessly achieved using robust outward swinging frames. This ensures massive farm machinery enters your rural Stotfold property without clipping the steel.',
+        },
+        {
+          question: 'Do you offer maintenance contracts for older existing metal gates?',
+          answer: 'Diagnostic servicing is available for any metal setup, regardless of who originally installed it. Our engineers perform comprehensive health checks to bring your Stotfold boundary up to modern safety standards.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'We live near the watermill; do you offer moisture resistant control panels?',
+          answer: 'Watertight enclosures house every single electrical component to prevent condensation damage. Your Stotfold installation will remain fully operational even during the dampest winter months.',
+        },
+        {
+          question: 'Can agricultural vehicles fit through your standard driveway gates?',
+          answer: 'Farm machinery requires significantly wider spans which we achieve using robust telescopic frames. These multi-leaf designs fold back compactly to maximize the available drive-through width.',
+        },
+        {
+          question: 'Do you offer maintenance contracts for older existing systems?',
+          answer: 'Comprehensive servicing is available even if we did not install the original equipment. Our engineers will perform a full diagnostic check to bring your boundary up to modern safety standards.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The gate makes a horrible grinding sound when moving.',
+          answer: 'Crushed bearings inside the motor casing create violent metallic noises and resist movement entirely. We must extract the drive unit from your Stotfold home for a full bench rebuild.',
+        },
+        {
+          question: 'Moisture from the watermill keeps shorting the control board.',
+          answer: 'Constant dampness ruins printed circuit boards if the main electrical housing lacks proper sealing. We will fit a marine grade enclosure to protect your Stotfold electronics completely.',
+        },
+        {
+          question: 'The manual release key snapped inside the lock.',
+          answer: 'Jammed overrides happen when owners force the key while the gate is under severe mechanical tension. We will drill out the broken cylinder and replace the lock assembly for your Stotfold gates.',
+        },
+      ],
+    },
     cityIntro: [
       'Stotfold sits on the Bedfordshire side of the county boundary immediately north of Hitchin and Letchworth, falling under Central Bedfordshire Council rather than a Hertfordshire authority. The town combines a historic core around the restored Stotfold Mill and the High Street with substantial estate development across the rest of the town, and gate installations here sit within a planning context where conservation considerations tighten near the Mill and relax across the newer residential areas.',
       'Our Stotfold installer network includes specialists with documented track records across both the historic core and the estate developments, and genuine Central Bedfordshire planning experience. Every referred installer has completed at least six verifiable Stotfold or immediately adjacent projects before receiving any enquiry from us, and understands the planning context on both sides of the Herts-Beds boundary.',
@@ -2690,6 +8372,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Conservation repairs sit right at the forefront of gate maintenance in Ashwell. When ancient boundaries fail, the expensive ironwork drags heavily. Highly trained local technicians execute careful structural repairs, utilizing lifting gantries to reposition dropped leaves. They replace rusted hinge pins and implement vastly improved mounting brackets to prevent catastrophic dragging from destroying the original, historic driveway surfaces that characterize this stunning village.',
         'Historic hinges fail frequently after decades of use. If a gate hums loudly but refuses to move, the mechanical friction has likely overpowered the motor. Ashwell repair engineers diagnose this fault instantly. They replace the inexpensive cylindrical bearings on-site and pump the joints full of high-viscosity marine grease, instantly restoring the motor\'s ability to swing the heavy timber or steel leaves open effortlessly.',
         'Biometric failures degrade access after exposure to severe freezing weather. Because fingerprint scanners are designed to read precise dermal layers, a perished or frozen sensor is a major headache. Local engineers utilize specialized heating elements and protective hoods to shield these components. If they fail completely, fresh, highly responsive biometric pads are immediately installed, ensuring the heavy automated barrier never locks the homeowner out.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Will a modern aluminum sliding gate look out of place in this historic village?',
+          answer: 'Hammered textures can be applied to lightweight metals to mimic the appearance of traditional cast iron. You get the vintage aesthetic perfect for Ashwell without the massive weight of solid steel.',
+        },
+        {
+          question: 'Are keypad entry systems reliable during heavy snow?',
+          answer: 'Thermal pads prevent ice buildup on the buttons during freezing countryside winters. You will always be able to punch your code quickly and get out of the cold.',
+        },
+        {
+          question: 'Can the sliding gate system be powered by a solar panel?',
+          answer: 'Photovoltaic arrays struggle to charge deep cycle batteries effectively during overcast UK winter weeks. We generally advise digging a trench for a mains cable to guarantee ultimate reliability.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Will a modern aluminum swinging gate look out of place in this historic village?',
+          answer: 'Forged textures can be applied to lightweight metals to mimic the appearance of traditional cast iron. You get the vintage aesthetic perfect for Ashwell without the massive weight of solid steel swinging panels.',
+        },
+        {
+          question: 'Are keypad entry systems reliable during heavy snow?',
+          answer: 'Heated buttons prevent ice buildup on the digital consoles during freezing countryside winters. You will always be able to punch your code quickly to open the swinging boundary.',
+        },
+        {
+          question: 'Can the swinging gate system be powered by a solar panel?',
+          answer: 'Dim daylight heavily restricts solar charging for deep cycle batteries during the UK winter. We generally advise digging a trench for a mains cable to guarantee ultimate swinging reliability.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Will a modern automated wooden gate look out of place in this historic village?',
+          answer: 'Aged patinas can be applied to the timber to mimic the appearance of ancient woodwork. You get the vintage aesthetic perfect for Ashwell without sacrificing the strength of new wooden panels.',
+        },
+        {
+          question: 'Are keypad entry systems reliable during heavy snow?',
+          answer: 'Snow shields prevent ice buildup on the digital consoles during freezing countryside winters. You will always be able to punch your code quickly to open the wooden boundary.',
+        },
+        {
+          question: 'Can the automated wooden gate be powered by a solar panel?',
+          answer: 'Overcast months heavily restrict solar charging for deep cycle batteries during the UK winter. We generally advise digging a trench for a mains cable to guarantee ultimate reliability.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Will a modern automated metal gate look out of place in this historic village?',
+          answer: 'Forged textures mimic the appearance of traditional cast iron beautifully. You get the vintage aesthetic perfect for Ashwell without sacrificing the strength of new steel panels.',
+        },
+        {
+          question: 'Are keypad entry systems reliable during heavy snow?',
+          answer: 'Defrosting elements prevent ice buildup on the digital consoles during freezing countryside winters. You will always be able to punch your code quickly to open the Ashwell boundary.',
+        },
+        {
+          question: 'Can the automated metal gate be powered by a solar panel?',
+          answer: 'Winter darkness heavily restricts solar charging for deep cycle batteries during the UK winter. We advise digging a trench for a mains cable to guarantee ultimate reliability for your Ashwell home.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Will a modern aluminum gate look out of place in this historic village?',
+          answer: 'Textured finishes can be applied to lightweight metals to mimic the appearance of cast iron. You get the aesthetic benefits of a traditional Ashwell entrance without the massive weight.',
+        },
+        {
+          question: 'Are keypad entry systems reliable during heavy snow?',
+          answer: 'Heated keypads prevent ice buildup on the buttons during freezing countryside winters. You will always be able to punch in your code quickly and get out of the cold.',
+        },
+        {
+          question: 'Can the gate system be powered by a solar panel?',
+          answer: 'Off-grid solutions work brilliantly during summer but struggle to charge fully during overcast winter weeks. We generally advise trenching a mains cable for ultimate reliability year round.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'A delivery van dented our wrought iron gate.',
+          answer: 'Bending ironwork requires careful heating and manipulation to restore the shape without weakening the metal. Our blacksmiths will execute this repair flawlessly to preserve your historic Ashwell aesthetic.',
+        },
+        {
+          question: 'The photocells are frozen solid and the gate will not close.',
+          answer: 'Iced lenses scatter the infrared beam, tricking the safety circuit into sensing a permanent obstacle. We can install heated sensor covers to beat the freezing Ashwell countryside winters.',
+        },
+        {
+          question: 'The solar powered gate battery is completely dead.',
+          answer: 'Drained accumulators cannot hold a charge after years of battling dark UK winters. We will replace the dead cells and test the solar charging array at your Ashwell property.',
+        },
       ],
     },
     cityIntro: [
@@ -2732,6 +8500,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Battery depletion silences intercoms in secluded valley locations. When the wireless keypad module loses power, delivery drivers cannot dial the homeowner. Tech-savvy engineers upgrade the communication hardware by installing high-capacity lithium cells and external antennas. This massively boosts the signal strength and power reserve, ensuring the resident regains absolute, reliable control over their driveway access directly from their mobile device.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'How do we secure our sliding boundary facing the open Chiltern Hills?',
+          answer: 'Deeply anchored steel posts are sunk into heavy concrete to prevent the moving leaves from swaying. This creates an incredibly rigid physical barrier that defies strong winds and deters rural trespassers.',
+        },
+        {
+          question: 'Do your wooden sliding gates require constant oiling to prevent rot?',
+          answer: 'Factory impregnated timbers drastically reduce the need for manual upkeep over their lifetime. A simple wash down every spring keeps your Pirton entrance looking exceptionally handsome.',
+        },
+        {
+          question: 'Is it possible to have the sliding gates close automatically behind my car?',
+          answer: 'Auto shutting timers are easily activated within the logic board to secure your property hands free. The electric sliding gate simply waits for you to pass before locking itself securely behind you.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'How do we secure our swinging boundary facing the open Chiltern Hills?',
+          answer: 'Concrete anchors hold deep rooted pillars firmly to prevent the moving leaves from sagging. This creates an incredibly rigid physical swinging barrier that defies strong winds and deters rural trespassers.',
+        },
+        {
+          question: 'Do your wooden swinging gates require constant oiling to prevent rot?',
+          answer: 'Injected preservatives drastically reduce the need for manual timber upkeep over their lifetime. A simple wash down every spring keeps your Pirton swinging entrance looking exceptionally handsome.',
+        },
+        {
+          question: 'Is it possible to have the swinging gates close automatically behind my car?',
+          answer: 'Delayed closing timers are easily activated within the logic board to secure your property hands free. The electric swing gate simply waits for you to pass before locking itself securely behind you.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'How do we secure our wooden boundary facing the open Chiltern Hills?',
+          answer: 'Massive pillars hold deep rooted hinges firmly to prevent the heavy timber leaves from sagging. This creates an incredibly rigid physical wooden barrier that defies strong winds and deters trespassers.',
+        },
+        {
+          question: 'Do your wooden gates require constant oiling to prevent rot?',
+          answer: 'Submersion treatments drastically reduce the need for manual timber upkeep over their lifetime. A simple wash down every spring keeps your Pirton wooden entrance looking exceptionally handsome.',
+        },
+        {
+          question: 'Is it possible to have the wooden gates close automatically behind my car?',
+          answer: 'Automated sequences are easily activated within the control board to secure your property hands free. The wooden driveway gate simply waits for you to pass before locking itself securely behind you.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'How do we secure our metal boundary facing the open Chiltern Hills?',
+          answer: 'Deep anchors hold the heavy steel posts firmly to prevent the leaves from sagging. This creates an incredibly rigid physical metal barrier that defies strong winds and deters trespassers.',
+        },
+        {
+          question: 'Do your metal gates require constant painting to prevent rust?',
+          answer: 'Galvanized protection drastically reduces the need for manual upkeep over their lifetime. A simple wash down every spring keeps your Pirton metal entrance looking exceptionally handsome.',
+        },
+        {
+          question: 'Is it possible to have the metal gates close automatically behind my car?',
+          answer: 'Logic boards feature closing timers that secure your property hands free. The metal driveway gate simply waits for you to pass before locking itself securely in Pirton.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'How do we secure our property boundary facing the open Chiltern Hills?',
+          answer: 'Immovable steel pillars must be sunk deeply into concrete to anchor the moving leaves securely. This creates an incredibly strong physical barrier that cannot be easily breached.',
+        },
+        {
+          question: 'Do your wooden gates require constant oiling to prevent rot?',
+          answer: 'Pressure-treated timbers are infused with preservatives that drastically reduce the need for manual upkeep. A simple wash down every spring keeps your Pirton entrance looking fantastic.',
+        },
+        {
+          question: 'Is it possible to have the gates close automatically behind my car?',
+          answer: 'Countdown timers are easily activated within the logic board to secure your property hands free. The barrier simply waits for you to pass before locking itself safely behind you.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The wind on the Chiltern Hills keeps blowing the solid gates open.',
+          answer: 'Gale leverage overpowers standard motors, forcing the internal clutch to slip backward. We will install heavy duty magnetic locks to take the wind pressure off your Pirton motors.',
+        },
+        {
+          question: 'The wooden farm gate has rotted at the hinge point.',
+          answer: 'Decayed structural joints must be cut out and spliced with fresh, pressure treated hardwood. We will execute this traditional carpentry repair to save your Pirton agricultural gate.',
+        },
+        {
+          question: 'The flashing warning light on the pillar is smashed.',
+          answer: 'Broken beacons violate machinery safety regulations and must be replaced immediately. We will fit a new LED warning light to keep your Pirton driveway completely legal.',
+        },
+      ],
+    },
     cityIntro: [
       'Pirton is a village in the North Hertfordshire district, characterised by its historic village-green layout around the Great Green and Little Green, the Norman motte and bailey earthworks, and the Pirton Conservation Area that covers the historic core. The Chilterns-edge setting adds a second layer of material expectation, and the combination means gate installations here sit within a sensitive planning context where North Hertfordshire District Council assesses material, height, and streetscape impact carefully.',
       'Our Pirton installer network includes specialists with documented village track records and demonstrated planning experience within the conservation area. Every referred installer has completed at least six verifiable Pirton or immediately adjacent projects before receiving any enquiry, and understands the design sensibilities that successful North Hertfordshire applications require in the village-green settlements.',
@@ -2770,6 +8624,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Heavy traffic mixes Victorian properties with substantial modern builds, meaning repairmen must handle both contemporary sliding gates and historic period hardware. Standard replacement parts rarely fit the unique boundaries found in the older sections of Ickleford. Local experts utilize custom machining to execute repairs. They fabricate bespoke brass bushes for worn hinges and uniquely angled mounting brackets, ensuring the repair perfectly honors the property\'s specific aesthetic requirements.',
         'Stripped pinions throw error codes if the incoming voltage drops, needing specific reset protocols to clear the motherboard logic. When a power surge scrambles the automation brain, the gate will refuse to move. Ickleford repair specialists plug diagnostic laptops directly into the control panel, clearing the fault memory, resetting the encoder limits, and testing the battery backups to guarantee the system returns to normal, reliable operation immediately.',
         'Vandalism damage misaligns locking mechanisms as metal posts expand during the summer months. Many automated setups here feature an adjacent, electrically locked pedestrian gate. When the metal swells in the heat, the magnetic lock fails to engage, leaving the boundary unsecure. Metalworkers and gate engineers work together to grind down the swelling points and install fully adjustable keep-plates, ensuring the pedestrian entrance locks securely with a satisfying click.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'We live on a tight bend; is a sliding gate the safest option?',
+          answer: 'Maximum visibility is maintained because the barrier retracts completely behind your boundary wall. This ensures you can pull out safely onto the winding Ickleford roads without any obstructions.',
+        },
+        {
+          question: 'Does the system have a manual release if the electricity fails?',
+          answer: 'Emergency unlocking is achieved by turning a personalized key directly on the motor housing. You can easily push the heavy sliding frame open yourself until the local power is restored.',
+        },
+        {
+          question: 'Can I use my smart speaker to open the sliding gates for guests?',
+          answer: 'Home assistants connect seamlessly via a secure Wi-Fi relay module hidden inside the control box. You can simply ask your virtual helper to open the barrier from your kitchen.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'We live on a tight bend; is a swing gate the safest option?',
+          answer: 'Restricted sightlines dictate that outward swinging models are often safer to maximize internal turning circles. This ensures you can pull out safely onto the winding Ickleford roads without any driveway obstructions.',
+        },
+        {
+          question: 'Does the system have a manual release if the electricity fails?',
+          answer: 'Physical decoupling is achieved by turning a personalized key directly on the motor housing. You can easily push the heavy swinging frame open yourself until the local Ickleford power is restored.',
+        },
+        {
+          question: 'Can I use my smart speaker to open the swinging gates for guests?',
+          answer: 'Digital assistants connect seamlessly via a secure Wi-Fi relay module hidden inside the control box. You can simply ask your virtual helper to trigger the swinging barrier from your kitchen.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'We live on a tight bend; is a wooden swing gate the safest option?',
+          answer: 'Lateral retraction dictates that sliding models are often safer to maximize internal turning circles. This ensures you can pull out safely onto the winding Ickleford roads without any driveway obstructions.',
+        },
+        {
+          question: 'Does the system have a manual release if the electricity fails?',
+          answer: 'Clutch releases are operated by turning a personalized key directly on the motor housing. You can easily push the heavy timber frame open yourself until the local Ickleford power is restored.',
+        },
+        {
+          question: 'Can I use my smart speaker to open the wooden gates for guests?',
+          answer: 'Voice hubs connect seamlessly via a secure Wi-Fi module hidden inside the control box. You can simply ask your virtual helper to trigger the wooden barrier from your kitchen.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'We live on a tight bend; is a metal swing gate the safest option?',
+          answer: 'Retracting sliders are often safer to maximize internal turning circles on dangerous corners. This ensures you can pull out safely onto the winding Ickleford roads without any driveway obstructions.',
+        },
+        {
+          question: 'Does the system have a manual release if the electricity fails?',
+          answer: 'Mechanical disengagement is operated by turning a personalized key directly on the motor housing. You can easily push the heavy steel frame open yourself until the local Ickleford power is restored.',
+        },
+        {
+          question: 'Can I use my smart speaker to open the metal gates for guests?',
+          answer: 'Internet relays connect seamlessly via a secure module hidden inside the control box. You can simply ask your virtual helper to trigger the metal barrier from your Ickleford kitchen.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'We live on a tight bend; can we install an outward swinging gate?',
+          answer: 'Public highways regulations strictly forbid any boundary door from opening out over the pavement. We will utilize a sliding mechanism instead to maximize your internal Ickleford parking space safely.',
+        },
+        {
+          question: 'Does the system have a manual release if the electricity fails?',
+          answer: 'Mechanical uncoupling is achieved by turning a personalized key directly on the motor housing. You can easily push the heavy frame open yourself until power is restored.',
+        },
+        {
+          question: 'Can I use my smart speaker to open the gates for guests?',
+          answer: 'Voice activation is highly popular and easily integrated via a secure Wi-Fi relay module. You can simply ask your virtual assistant to open the barrier from your kitchen.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The bi-folding gate keeps jamming on the tight bend.',
+          answer: 'Seized articulating joints create massive resistance that trips the motor safety overload. We will degrease and lubricate the folding mechanism to restore your Ickleford entrance perfectly.',
+        },
+        {
+          question: 'An underground cable was severed by gardening tools.',
+          answer: 'Spliced conductors are perfectly safe if sealed within a waterproof, resin filled junction box. We will trace the break and restore the electrical feed safely beneath your Ickleford lawn.',
+        },
+        {
+          question: 'The intercom screen in the hallway is totally black.',
+          answer: 'Blown internal fuses or a failed power supply unit usually cause dead monitors. We can fix the indoor handset to restore video feeds from your Ickleford boundary instantly.',
+        },
       ],
     },
     cityIntro: [
@@ -2812,6 +8752,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Cellular drops shift under the gravel over time, breaking the automatic departure intercom. When residents drive up to leave and the gates remain stubbornly closed, the communication board is usually at fault. Technicians recalibrate the sensitivity on the main control unit. If the antenna has snapped, they expertly mount a discreet new high-gain aerial onto the St Ippolyts pillar, restoring clear, hands-free audio exits.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'What is the best material for sliding gates exposed to strong winds on the hill?',
+          answer: 'Permeable designs utilizing tubular steel allow violent gusts to pass straight through the structure. This stops your motors from fighting immense wind pressures during fierce St Ippolyts autumn storms.',
+        },
+        {
+          question: 'Do you install discrete automation that does not ruin the look of the village?',
+          answer: 'Camouflaged motors hide neatly behind the gate piers to minimize their visual impact. Nobody passing your St Ippolyts home will even notice the entrance is fully automated.',
+        },
+        {
+          question: 'Can delivery drivers call my mobile from the gate?',
+          answer: 'Cellular dialing means the external call button rings your personal smartphone immediately. You can instruct the courier where to leave your parcel even while you are sitting at work.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'What is the best material for swinging gates exposed to strong winds on the hill?',
+          answer: 'Permeable structures utilizing tubular steel allow violent gusts to pass straight through the gates. This stops your motors from fighting immense wind pressures during fierce St Ippolyts autumn storms.',
+        },
+        {
+          question: 'Do you install discrete automation that does not ruin the look of the village?',
+          answer: 'Underground chambers hide the motors neatly beneath the tarmac to minimize their visual impact. Nobody passing your St Ippolyts home will even notice the swinging entrance is fully automated.',
+        },
+        {
+          question: 'Can delivery drivers call my mobile from the gate?',
+          answer: 'Direct dialing means the external call button rings your personal smartphone immediately. You can instruct the courier where to leave your parcel even while you are sitting at work.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'What is the best wood design for gates exposed to strong winds on the hill?',
+          answer: 'Windproof slats allow violent gusts to pass straight through the timber without resistance. This stops your posts from fighting immense wind pressures during fierce St Ippolyts autumn storms.',
+        },
+        {
+          question: 'Do you install discrete automation that does not ruin the look of the village?',
+          answer: 'Buried operators hide the motors neatly beneath the tarmac to minimize their visual impact. Nobody passing your St Ippolyts home will even notice the wooden entrance is fully automated.',
+        },
+        {
+          question: 'Can delivery drivers call my mobile from the gate?',
+          answer: 'Vocal triggering means the external call button rings your personal smartphone immediately. You can instruct the courier where to leave your parcel even while you are sitting at work.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'What is the best metal design for gates exposed to strong winds on the hill?',
+          answer: 'Open bars allow violent gusts to pass straight through the steel without resistance. This stops your motors from fighting immense wind pressures during fierce St Ippolyts autumn storms.',
+        },
+        {
+          question: 'Do you install discrete automation that does not ruin the look of the village?',
+          answer: 'Hidden compartments hide the motors neatly beneath the tarmac to minimize their visual impact. Nobody passing your St Ippolyts home will even notice the metal entrance is fully automated.',
+        },
+        {
+          question: 'Can delivery drivers call my mobile from the gate?',
+          answer: 'Phone dialers mean the external call button rings your personal smartphone immediately. You can instruct the courier where to leave your parcel even while you are sitting away from St Ippolyts.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'What is the best material for gates exposed to strong winds on the hill?',
+          answer: 'Tubular steel offers immense strength while allowing violent gusts to pass straight through. This prevents your motors from struggling against extreme wind pressures during autumn storms.',
+        },
+        {
+          question: 'Do you install discrete automation that does not ruin the look of the village?',
+          answer: 'Flush-mounted underground boxes hide the entire drive mechanism neatly beneath the tarmac. Nobody passing your St Ippolyts home will ever realize the entrance is fully automated.',
+        },
+        {
+          question: 'Can delivery drivers call my mobile from the gate?',
+          answer: 'Telephone integration means the external call button dials your personal number immediately. You can instruct the courier where to leave your parcel even while you are at work.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The sliding gate track is full of leaves and jamming.',
+          answer: 'Compacted woodland debris binds the nylon support wheels, causing tremendous strain on the motor. We will clear the floor rail and install fresh rollers to get your St Ippolyts gate gliding properly.',
+        },
+        {
+          question: 'My electric gate battery backup failed during a storm.',
+          answer: 'Dead standby batteries lose their capacity after three years of passive use. We can easily swap out the expired cells to ensure your St Ippolyts home remains accessible.',
+        },
+        {
+          question: 'The hydraulic pump is leaking fluid all over the driveway.',
+          answer: 'Blown gaskets destroy the internal pressure needed to swing heavy metal gates. We must strip the damaged motor and rebuild the hydraulic block to secure your St Ippolyts property.',
+        },
+      ],
+    },
     cityIntro: [
       'St Ippolyts is a village in the North Hertfordshire district, sitting on the Chilterns-edge ridge south of Hitchin and characterised by its distinctive church dedicated to Hippolytus, its rural lanes, and the St Ippolyts Conservation Area that covers the historic core. The ridge setting and the mixed chalk-clay geology create a distinctive planning context where North Hertfordshire District Council assesses material, height, and streetscape impact carefully within the conservation boundary.',
       'Our St Ippolyts installer network includes specialists with documented village track records and demonstrated planning experience within the conservation area. Every referred installer has completed at least six verifiable St Ippolyts or immediately adjacent projects before receiving any enquiry, and understands the design sensibilities that successful North Hertfordshire applications require in the ridge villages south of Hitchin.',
@@ -2850,6 +8876,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'High winds form a linear layout where homes pull directly off bustling rural routes, meaning high cycle usage puts extreme mechanical strain on the gates. The constant opening and closing wears down the internal gearing of surface-mounted motors. Preventative maintenance in Weston focuses heavily on replacing these worn internal components before they shatter, greasing the drive shafts, and adjusting mechanical limits to prevent vibrations from tearing the motor off the wall.',
         'Solar drains strip internal nylon gears if the gate hits debris or ice on the floor track. This sacrificial gear is designed to shatter to protect the expensive electric motor from burning out, but it leaves the property entirely unsecure. Repair engineers quickly strip down the motor housing, extract the shredded plastic gear, and install a fresh pinion, restoring automated movement to the heavy steel boundary in under an hour.',
         'Dropped leaves and vandalism repairs are occasionally needed on street-facing intercom panels in busier neighborhoods. Smashed keypads or snapped audio microphones destroy the homeowner\'s ability to screen visitors safely. Vetted installers swap out the broken plastic components for ruggedized, marine-grade stainless steel access panels. These vandal-resistant upgrades ensure the communication hardware survives the harsh environment while maintaining a clean, professional aesthetic for the Weston family home.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can an electric sliding motor manage the heavy wooden panels common in rural areas?',
+          answer: 'Extreme torque is generated by our premium hydraulic drives to push extremely heavy timber. We carefully calculate the exact power required to slide your Weston gates effortlessly.',
+        },
+        {
+          question: 'Will frost damage the safety photocells during winter?',
+          answer: 'Defrosting elements keep the optical lenses completely clear of ice and morning dew. Your safety systems will never be compromised by the freezing rural climate.',
+        },
+        {
+          question: 'Do you handle all the groundworks and electrical trenching?',
+          answer: 'End-to-end management means our team handles the entire digging and installation process. You will not need to hire any external contractors to finish your electric sliding boundary.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can an electric swinging motor manage the heavy wooden panels common in rural areas?',
+          answer: 'Phenomenal torque is generated by our premium hydraulic drives to push extremely heavy timber. We carefully calculate the exact power required to swing your Weston gates effortlessly.',
+        },
+        {
+          question: 'Will frost damage the swinging safety photocells during winter?',
+          answer: 'Active heaters keep the optical lenses completely clear of ice and morning dew. Your swinging safety systems will never be compromised by the freezing rural Weston climate.',
+        },
+        {
+          question: 'Do you handle all the groundworks and electrical trenching?',
+          answer: 'Total oversight means our team handles the entire digging and installation process. You will not need to hire any external contractors to finish your electric swinging boundary.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can an electric motor manage the heavy wooden panels common in rural areas?',
+          answer: 'Immense pushing is generated by our premium hydraulic drives to move extremely heavy timber. We carefully calculate the exact power required to operate your Weston wooden gates effortlessly.',
+        },
+        {
+          question: 'Will frost damage the safety photocells during winter?',
+          answer: 'Thermal resistors keep the optical lenses completely clear of ice and morning dew. Your safety systems will never be compromised by the freezing rural Weston climate.',
+        },
+        {
+          question: 'Do you handle all the groundworks and electrical trenching?',
+          answer: 'Absolute coordination means our team handles the entire digging and installation process. You will not need to hire any external contractors to finish your wooden boundary.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can an electric motor manage the heavy metal panels common in rural areas?',
+          answer: 'Maximum torque is generated by our premium hydraulic drives to move extremely heavy steel. We carefully calculate the exact power required to operate your Weston metal gates effortlessly.',
+        },
+        {
+          question: 'Will frost damage the safety photocells during winter?',
+          answer: 'Heated lenses keep the optical systems completely clear of ice and morning dew. Your safety systems will never be compromised by the freezing rural Weston climate.',
+        },
+        {
+          question: 'Do you handle all the groundworks and electrical trenching?',
+          answer: 'Comprehensive management means our team handles the entire digging and installation process. You will not need to hire any external contractors to finish your Weston metal boundary.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can an automated gate manage the heavy wooden panels common in rural areas?',
+          answer: 'Massive torque is generated by our premium hydraulic rams to push extremely heavy timber. We carefully calculate the exact leverage required to move your Weston gates effortlessly.',
+        },
+        {
+          question: 'Will frost damage the safety photocells during winter?',
+          answer: 'Internal heaters keep the optical lenses completely clear of ice and morning dew. Your safety systems will never be compromised by the freezing rural climate.',
+        },
+        {
+          question: 'Do you handle all the groundworks and electrical trenching?',
+          answer: 'Complete project management means our team handles the entire digging and installation process. You will not need to hire any external contractors to finish your boundary.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The gate crushes the gravel when it opens.',
+          answer: 'Incorrect clearances can be fixed by adjusting the hinge geometry to lift the gate slightly. This stops the base from bulldozing the loose stones on your Weston driveway.',
+        },
+        {
+          question: 'Tree sap has glued the sliding gate shut.',
+          answer: 'Sticky residues require heavy degreasers and pressure washing to clear the track completely. We will restore the smooth rolling action of your Weston sliding gate effortlessly.',
+        },
+        {
+          question: 'The motor runs but the gate does not move at all.',
+          answer: 'Sheared drive pins or stripped nylon gears cause the motor to spin freely without engaging. We can rebuild the broken gearbox to get your Weston automated gates moving properly.',
+        },
       ],
     },
     cityIntro: [
@@ -2892,6 +9004,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Network drops sent to servicing engineers via cloud connectivity ensures predictive maintenance. Elite installations frequently feature smart control boards that report errors, low battery voltages, or obstacle detection faults directly to the maintenance company. This proactive technology ensures potential mechanical issues are identified and resolved before the automated gate ever fails, providing unparalleled, continuous security for the Graveley homeowner.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Are there fast opening options to avoid blocking the busy village road?',
+          answer: 'Rapid transit motors can cycle a residential entrance in under ten seconds flat. This ensures you can pull off the road swiftly without causing a hazard in Graveley.',
+        },
+        {
+          question: 'Do you offer intercoms with a video feed?',
+          answer: 'Crisp displays mounted inside your hallway provide crystal clear footage of anyone at your perimeter. You can thoroughly vet all unexpected callers before deciding to unlock the barrier.',
+        },
+        {
+          question: 'How do we stop the sliding gates from scraping on our uneven gravel drive?',
+          answer: 'Floating mechanisms solve this problem perfectly by suspending the entire moving frame in mid air. It glides smoothly above the loose Graveley stones without ever snagging or jamming.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Are there fast opening options to avoid blocking the busy village road?',
+          answer: 'Express motors can cycle a residential entrance in under ten seconds flat. This ensures you can pull off the road swiftly without causing a hazard in Graveley.',
+        },
+        {
+          question: 'Do you offer intercoms with a video feed?',
+          answer: 'Premium displays mounted inside your hallway provide crystal clear footage of anyone at your perimeter. You can thoroughly vet all unexpected callers before deciding to unlock the swinging barrier.',
+        },
+        {
+          question: 'How do we stop the swinging gates from scraping on our uneven gravel drive?',
+          answer: 'Angled hinges solve this problem perfectly by lifting the entire moving frame upwards slightly. It swings smoothly above the loose Graveley stones without ever snagging or jamming.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Are there fast opening options to avoid blocking the busy village road?',
+          answer: 'Swift gearings can cycle a residential timber entrance in under ten seconds flat. This ensures you can pull off the road safely without causing a hazard in Graveley.',
+        },
+        {
+          question: 'Do you offer intercoms with a video feed?',
+          answer: 'Hallway monitors provide crystal clear footage of anyone standing at your perimeter. You can thoroughly vet all unexpected callers before deciding to unlock the wooden barrier.',
+        },
+        {
+          question: 'How do we stop the wooden gates from scraping on our uneven gravel drive?',
+          answer: 'Elevated sweeping solves this problem perfectly by lifting the entire timber frame upwards slightly. It opens smoothly above the loose Graveley stones without ever snagging or jamming.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Are there fast opening options to avoid blocking the busy village road?',
+          answer: 'Quickened cycles can open a residential steel entrance in under ten seconds flat. This ensures you can pull off the road safely without causing a hazard in Graveley.',
+        },
+        {
+          question: 'Do you offer intercoms with a video feed?',
+          answer: 'Color screens provide crystal clear footage of anyone standing at your perimeter. You can thoroughly vet all unexpected Graveley callers before deciding to unlock the metal barrier.',
+        },
+        {
+          question: 'How do we stop the metal gates from scraping on our uneven gravel drive?',
+          answer: 'Suspended tracking solves this problem perfectly by lifting the entire steel frame upwards. It glides smoothly above the loose Graveley stones without ever snagging or jamming.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Are there fast opening options to avoid blocking the busy village road?',
+          answer: 'High-speed motors can cycle a residential entrance in under ten seconds flat. This ensures you can pull off the road rapidly without causing a hazard in Graveley.',
+        },
+        {
+          question: 'Do you offer intercoms with a video feed?',
+          answer: 'Color screens mounted inside your hallway provide crystal clear footage of anyone at your perimeter. You can thoroughly vet all unexpected callers before deciding to unlock the barrier.',
+        },
+        {
+          question: 'How do we stop the gates from scraping on our uneven gravel drive?',
+          answer: 'Trackless cantilevers solve this problem perfectly by suspending the entire moving frame in mid air. It glides smoothly above the loose stones without ever snagging or jamming.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The intercom calls the wrong mobile number.',
+          answer: 'Software glitches inside the GSM dialer frequently cause routing errors to saved phones. We will reprogram the master directory so your Graveley gate calls the correct smartphone every time.',
+        },
+        {
+          question: 'A tractor clipped the gate post and knocked it over.',
+          answer: 'Tilted columns must be fully excavated and reset with fresh concrete to support the heavy frame. Our groundworks team handles this intense structural repair for rural Graveley properties perfectly.',
+        },
+        {
+          question: 'The wooden gates are completely covered in moss and sticking.',
+          answer: 'Damp algae traps moisture against the timber, causing it to swell and rub against the driveway. We can shave the bottom rails and treat the wood to prevent future Graveley fungal growth.',
+        },
+      ],
+    },
     cityIntro: [
       'Graveley is a village in the North Hertfordshire district, characterised by its historic core along the High Street, substantial listed building stock, and the Graveley Conservation Area that protects the village layout. Despite its proximity to Stevenage, the parish retains a strong rural village character. Gate installations here sit within a planning context where North Hertfordshire District Council assesses material, height, and streetscape impact carefully within the conservation boundary, and where listed building consent may layer onto planning requirements for properties within the curtilage of designated buildings.',
       'Our Graveley installer network includes specialists with documented village track records and genuine North Herts planning experience. Every referred installer has completed at least six verifiable Graveley or immediately adjacent projects before receiving any enquiry from us, and understands the design sensibilities that successful conservation area applications require in the villages on the Stevenage fringes.',
@@ -2930,6 +9128,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Valley dampness and highly picturesque architecture make Walkern one of the most rigorously conserved villages, where heritage boundaries demand surgical precision during repair operations. When traditional timber gates begin to rot, throwing them away ruins the historic aesthetic. Local maintenance experts carefully strip back decaying wood, treating joints with high-strength wood hardeners and splicing in fresh, treated hardwood to save the homeowner the immense cost of commissioning a brand-new gate.',
         'Condensation shorts breathe new life into weathering historic control boards. While European oak ages beautifully, severe electrical rot can set into the panels if left completely untreated for decades. Walkern maintenance experts carefully strip back the decaying wiring, treating the joints with high-strength dielectric grease and injecting epoxy resins to restore structural rigidity to the box. This specialized conservation repair preserves the quintessential beauty of the entrance.',
         'Exit loops lose connection after local power cuts or severe electrical storms. Residents frequently find themselves trapped when their ground sensors stop working entirely. Instead of replacing the expensive magnetic system, local technicians simply clear the receiver\'s memory and reprogram the loop sensitivity limits. They also test the backup battery systems, ensuring the gates can still be operated during future rural power outages.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Can you replicate the historic wrought iron styles seen around the village?',
+          answer: 'Artisan forging allows us to recreate ornate scrollwork with absolute precision. We can easily match the vintage aesthetic of your Walkern property perfectly onto a sliding frame.',
+        },
+        {
+          question: 'What happens if a fox runs past the sensors at night?',
+          answer: 'Intelligent filtering ensures small animals moving under the beams are completely ignored. The motors will only halt if a larger mass like a vehicle is actively detected.',
+        },
+        {
+          question: 'Can we have a dedicated button just to open the gate slightly for pedestrians?',
+          answer: 'Pedestrian modes are standard on all our remote fobs for quick foot access. One click opens the boundary just enough to let someone walk through comfortably.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Can you replicate the historic wrought iron swinging styles seen around the village?',
+          answer: 'Traditional metalworking allows us to recreate ornate scrollwork with absolute precision. We can easily match the vintage aesthetic of your Walkern property perfectly onto a swinging frame.',
+        },
+        {
+          question: 'What happens if a fox runs past the swinging sensors at night?',
+          answer: 'Smart filtering ensures small animals moving under the beams are completely ignored. The swinging motors will only halt if a larger mass like a vehicle is actively detected.',
+        },
+        {
+          question: 'Can we have a dedicated button just to open the gate slightly for pedestrians?',
+          answer: 'Walking modes are standard on all our remote fobs for quick foot access. One click opens the swinging boundary just enough to let someone walk through comfortably.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Can you replicate the historic wooden styles seen around the village?',
+          answer: 'Master joiners allow us to recreate ornate timber paneling with absolute precision. We can easily match the vintage aesthetic of your Walkern property perfectly onto a new wooden frame.',
+        },
+        {
+          question: 'What happens if a fox runs past the gate sensors at night?',
+          answer: 'Fox filtering ensures small creatures moving under the beams are completely ignored. The gate motors will only halt if a larger mass like a vehicle is actively detected.',
+        },
+        {
+          question: 'Can we have a dedicated button just to open the wooden gate slightly for pedestrians?',
+          answer: 'Pedestrian clicks are standard on all our remote fobs for quick foot access. One touch opens the wooden boundary just enough to let someone walk through comfortably.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Can you replicate the historic metal styles seen around the village?',
+          answer: 'Expert forging allows us to recreate ornate iron scrollwork with absolute precision. We can easily match the vintage aesthetic of your Walkern property perfectly onto a new metal frame.',
+        },
+        {
+          question: 'What happens if a fox runs past the gate sensors at night?',
+          answer: 'Ground filtering ensures small creatures moving under the beams are completely ignored. The gate motors will only halt if a larger mass like a vehicle is actively detected in Walkern.',
+        },
+        {
+          question: 'Can we have a dedicated button just to open the metal gate slightly for pedestrians?',
+          answer: 'Partial opening is standard on all our remote fobs for quick foot access. One touch opens the metal boundary just enough to let someone walk through comfortably.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Can you replicate the historic wrought iron styles seen around the village?',
+          answer: 'Authentic blacksmithing techniques allow us to recreate ornate scrollwork with absolute precision. We can easily match the vintage aesthetic of your Walkern property perfectly.',
+        },
+        {
+          question: 'What happens if a fox runs past the sensors at night?',
+          answer: 'Pet-friendly calibration ensures small animals moving under the beams are completely ignored. The motors will only halt if a larger mass like a vehicle is detected.',
+        },
+        {
+          question: 'Can we have a dedicated button just to open the gate slightly for pedestrians?',
+          answer: 'Partial opening modes are standard on all our remote fobs for quick foot access. One click opens the boundary just enough to let someone walk through comfortably.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Can you repair the automation on my rustic five bar gate?',
+          answer: 'Fractured linkages connecting the motor to the timber rail are the most common failure point. We will fabricate stronger steel brackets to get your Walkern country gate moving again reliably.',
+        },
+        {
+          question: 'The gate opens fine but takes three minutes to close.',
+          answer: 'Clogged valves inside a hydraulic motor restrict the oil flow as it tries to return to the reservoir. We will flush the contaminated fluid and rebuild the pressure block for your Walkern property.',
+        },
+        {
+          question: 'The mirror on my gate pillar was smashed by vandals.',
+          answer: 'Shattered convex mirrors are a huge safety hazard for properties situated on blind corners. We will mount a new acrylic mirror to ensure you can exit your Walkern driveway safely.',
+        },
       ],
     },
     cityIntro: [
@@ -2972,6 +9256,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Telemetry faults short out the main logic boards, causing gates to open by themselves or refuse to close. Repair specialists utilize conformal coating sprays and install specialized anti-condensation heaters inside the control boxes. They meticulously clean the corroded contact points to revive the logic board, saving Benington residents thousands of pounds in unnecessary replacement costs and restoring total perimeter security.',
       ],
     },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'Will a large solid sliding gate block the view of Benington Lordship from our garden?',
+          answer: 'Spaced pickets provide security at the base while leaving the top section fully open. This clever compromise maintains your beautiful countryside vistas without sacrificing safety.',
+        },
+        {
+          question: 'Do you provide a warranty on the sliding motor and parts?',
+          answer: 'Manufacturer guarantees typically cover all moving mechanics for a minimum of two years. We pride ourselves on rapid local support if anything goes wrong at your Benington address.',
+        },
+        {
+          question: 'Are keypad codes easy to change if we get a new gardener?',
+          answer: 'Console management allows you to delete old access PINs directly from the master board. You can easily revoke entry privileges the moment a contractor finishes their work.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'Will a large solid swinging gate block the view of Benington Lordship from our garden?',
+          answer: 'Gapped vertical bars provide security at the base while leaving the top section fully open. This clever compromise maintains your beautiful countryside vistas without sacrificing swinging safety.',
+        },
+        {
+          question: 'Do you provide a warranty on the swinging motor and parts?',
+          answer: 'Factory backing typically covers all moving mechanics for a minimum of two years. We pride ourselves on rapid local support if anything goes wrong at your Benington address.',
+        },
+        {
+          question: 'Are keypad codes easy to change if we get a new gardener?',
+          answer: 'Intuitive programming allows you to delete old access PINs directly from the master board. You can easily revoke swinging entry privileges the moment a contractor finishes their work.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'Will a large solid wooden gate block the view of Benington Lordship from our garden?',
+          answer: 'Dwarf walls provide security at the base while leaving the top section fully open. This clever compromise maintains your beautiful countryside vistas without sacrificing safety.',
+        },
+        {
+          question: 'Do you provide a warranty on the wooden gates?',
+          answer: 'Wood warranties typically cover all structural defects for a minimum of five years. We pride ourselves on rapid local support if anything goes wrong at your Benington address.',
+        },
+        {
+          question: 'Are keypad codes easy to change if we get a new gardener?',
+          answer: 'Admin pins allow you to delete old access codes directly from the main board. You can easily revoke entry privileges the moment a contractor finishes their work.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'Will a large solid metal gate block the view of Benington Lordship from our garden?',
+          answer: 'Half-height walls provide security at the base while leaving the top section fully transparent. This clever compromise maintains your beautiful Benington vistas without sacrificing safety.',
+        },
+        {
+          question: 'Do you provide a warranty on the metal gates?',
+          answer: 'Steel guarantees typically cover all structural defects for a minimum of ten years. We pride ourselves on rapid local support if anything goes wrong at your Benington address.',
+        },
+        {
+          question: 'Are keypad codes easy to change if we get a new gardener?',
+          answer: 'Master passwords allow you to delete old access codes directly from the main board. You can easily revoke entry privileges the moment a contractor finishes their work.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'Will a large solid gate block the view of Benington Lordship from our garden?',
+          answer: 'Half-boarded designs provide security at the base while leaving the top section fully open. This clever compromise maintains your beautiful countryside vistas without sacrificing safety.',
+        },
+        {
+          question: 'Do you provide a warranty on the motor and parts?',
+          answer: 'Guarantee periods typically cover all moving mechanics for a minimum of two years. We pride ourselves on rapid local support if anything goes wrong at your Benington address.',
+        },
+        {
+          question: 'Are keypad codes easy to change if we get a new gardener?',
+          answer: 'Quick-change programming allows you to delete old access PINs directly from the master console. You can easily revoke entry privileges the moment a contractor finishes their work.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'Someone forced the gate open while the motor was locked.',
+          answer: 'Violent leverage often snaps the sacrificial shear pin inside the drive mechanism. We will replace this inexpensive part to restore your Benington automated gate securely.',
+        },
+        {
+          question: 'The video intercom records a black screen instead of faces.',
+          answer: 'Corrupted memory wipes itself if the internal SD card degrades from constant voltage fluctuations. We will install a high endurance card to restore visitor logging at your Benington home.',
+        },
+        {
+          question: 'The hinges on my heavy oak gates are screaming.',
+          answer: 'Dry friction happens when fine dust mixes with the internal grease, creating a grinding paste. We will flush the joints and repack them with premium lubricant to silence your Benington gates.',
+        },
+      ],
+    },
     cityIntro: [
       'Benington is a village in the East Hertfordshire district, characterised by its distinctive village green, the substantial Benington Lordship estate and its renowned gardens, the historic core along Town Lane, and the Benington Conservation Area that covers the village centre. Gate installations here sit within a planning context where East Hertfordshire District Council assesses material, height, and streetscape impact carefully, and where listed building consent may layer onto planning requirements for the many properties within the curtilage of designated buildings.',
       'Our Benington installer network includes specialists with documented village track records and genuine East Herts planning experience. Every referred installer has completed at least six verifiable Benington or immediately adjacent projects before receiving any enquiry from us, and understands the design sensibilities that successful conservation area applications require in the Lordship-adjacent villages.',
@@ -3010,6 +9380,92 @@ export const CITY_INTROS: Record<string, CityIntro> = {
         'Rural isolation meets sprawling luxury estates, demanding VIP emergency repair services that prioritize complete privacy and rapid turnarounds. If an electric gate fails on a high-net-worth Ardeley estate, it represents a massive security breach. Dedicated engineering teams provide rapid, discreet diagnostics, swapping blown motherboards or failed hydraulic locks instantly. They carry commercial-grade replacement parts to ensure the perimeter is fully secured, protecting high-profile residents from unauthorized intrusion.',
         'Insect nests grind terribly when they build up inside the internal steel bearings under immense weight. This horrific noise completely ruins the tranquil atmosphere of these elite avenues. Vetted mechanics utilize heavy lifting gantries to safely remove the monumental gates. They extract the destroyed bearings, press in heavy-duty replacements, and pack the joints with high-viscosity marine grease, restoring whisper-quiet, frictionless operation to the premium Ardeley estate.',
         'Limit switches and root intrusion from protected mature trees often crushes underground conduit carrying vital power cables. When a gate suddenly loses power, diagnostic teams use advanced cable-tracing equipment to find the subterranean break without causing massive driveway disruption. They carefully excavate the specific area, splice in fresh steel-wire armored (SWA) cabling, and route it safely away from the aggressive tree roots, permanently restoring power to the perimeter.',
+      ],
+    },
+    faqs: {
+      'electric-sliding-gates': [
+        {
+          question: 'We live on a working farm; can your sliding gates handle heavy tractor use?',
+          answer: 'Farm spec hardware is absolutely mandatory for environments experiencing constant heavy plant traffic. We specify oversized bearings and reinforced steel to survive the brutal Ardeley farming conditions.',
+        },
+        {
+          question: 'How do we secure the property against thieves targeting rural areas?',
+          answer: 'Magnetic holding brackets secure the leading edge firmly against the receiving pillar. This physical locking mechanism makes it practically impossible to pry the panels apart.',
+        },
+        {
+          question: 'Is it possible to hide the control box out of sight?',
+          answer: 'Distant wiring allows us to place the unsightly electrical panel inside a nearby garage or shed. This keeps your entrance looking immaculately clean and completely uncluttered.',
+        },
+      ],
+      'electric-swing-gates': [
+        {
+          question: 'We live on a working farm; can your swinging gates handle heavy tractor use?',
+          answer: 'Agricultural grade components are absolutely mandatory for environments experiencing constant heavy plant traffic. We specify oversized bearings and reinforced steel to survive the brutal Ardeley farming conditions.',
+        },
+        {
+          question: 'How do we secure the property against thieves targeting rural areas?',
+          answer: 'Ground locking mechanisms drop a solid steel pin deeply into the driveway whenever the entrance closes. This physical locking defense makes it practically impossible to pry the swinging panels apart.',
+        },
+        {
+          question: 'Is it possible to hide the control box out of sight?',
+          answer: 'Concealed wiring allows us to place the unsightly electrical panel inside a nearby garage or shed. This keeps your swinging entrance looking immaculately clean and completely uncluttered.',
+        },
+      ],
+      'wooden-driveway-gates': [
+        {
+          question: 'We live on a working farm; can your wooden gates handle heavy tractor use?',
+          answer: 'Thickened rails are absolutely mandatory for environments experiencing constant heavy plant traffic. We specify oversized posts and dense timber to survive the brutal Ardeley farming conditions.',
+        },
+        {
+          question: 'How do we secure the property against thieves targeting rural areas?',
+          answer: 'Plunging locks drop a solid steel pin deeply into the driveway whenever the entrance closes. This physical locking defense makes it practically impossible to pry the wooden panels apart.',
+        },
+        {
+          question: 'Is it possible to hide the control box out of sight?',
+          answer: 'Shed mounting allows us to place the unsightly electrical panel inside a nearby garage. This keeps your wooden entrance looking immaculately clean and completely uncluttered.',
+        },
+      ],
+      'metal-driveway-gates': [
+        {
+          question: 'We live on a working farm; can your metal gates handle heavy tractor use?',
+          answer: 'Oversized tubing is absolutely mandatory for environments experiencing constant heavy plant traffic. We specify oversized posts and dense steel to survive the brutal Ardeley farming conditions.',
+        },
+        {
+          question: 'How do we secure the property against thieves targeting rural areas?',
+          answer: 'Subsurface locking drops a solid steel pin deeply into the driveway whenever the entrance closes. This physical locking defense makes it practically impossible to pry the metal panels apart.',
+        },
+        {
+          question: 'Is it possible to hide the control box out of sight?',
+          answer: 'Remote positioning allows us to place the unsightly electrical panel inside a nearby garage. This keeps your Ardeley metal entrance looking immaculately clean and completely uncluttered.',
+        },
+      ],
+      'automated-gate-systems': [
+        {
+          question: 'We live on a working farm; can your gates handle heavy tractor use?',
+          answer: 'Industrial-grade hardware is absolutely mandatory for environments experiencing constant heavy plant traffic. We specify oversized bearings and reinforced steel to survive the brutal Ardeley farming conditions.',
+        },
+        {
+          question: 'How do we secure the property against thieves targeting rural areas?',
+          answer: 'Solenoid drop-bolts shoot a solid steel pin deeply into the ground whenever the entrance closes. This physical locking mechanism makes it practically impossible to pry the panels apart.',
+        },
+        {
+          question: 'Is it possible to hide the control box out of sight?',
+          answer: 'Remote mounting allows us to place the unsightly electrical panel inside a nearby garage or shed. This keeps your entrance looking immaculately clean and completely uncluttered.',
+        },
+      ],
+      'gate-repair-and-maintenance': [
+        {
+          question: 'The gates locked me out at 8 PM and won\'t accept my code.',
+          answer: 'Clock batteries die eventually, resetting the internal time to midnight and glitching the curfew schedule. We will replace the coin battery and correct the automated programming for your Ardeley property.',
+        },
+        {
+          question: 'A badger chewed through the low voltage safety wires.',
+          answer: 'Pest damage completely disables the safety circuit, forcing the control board to halt the motors. We will splice fresh wiring and enclose it in steel conduit to prevent local Ardeley wildlife issues.',
+        },
+        {
+          question: 'How long does a control board replacement take?',
+          answer: 'Swapping motherboards usually takes around two hours, including full system recalibration and remote syncing. Our swift local response gets your Ardeley automated gates functioning flawlessly the very same day.',
+        },
       ],
     },
     cityIntro: [
