@@ -1,262 +1,341 @@
+// app/services/[serviceSlug]/[locationSlug]/ServiceLocationClient.tsx
 'use client';
 
 import { useState } from 'react';
+import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { CheckCircle, Star, MapPin } from 'lucide-react';
-import type { Service } from '@/data/services';
-import type { AreaHub } from '@/data/locations';
-import type { ServiceLocationContent } from '@/data/serviceLocationData';
-import type { AreaContent } from '@/data/areaContent';
-import { services } from '@/data/services';
-import { AREA_HUBS } from '@/data/locations';
+import { CheckCircle, MapPin, Star, Clock, Shield, Award, Users } from 'lucide-react';
+import { services, getServiceBySlug } from '@/data/services';
+import { LOCATIONS, getCityBySlug } from '@/data/locations';
+import { CITY_INTROS, ServiceSlug } from '@/data/city-intros';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { LeadFormModal } from '@/components/LeadFormModal';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
-import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { HeritageHeroMoney } from '@/components/HeritageHeroMoney';
 import { FAQ } from '@/components/FAQ';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { Testimonials } from '@/components/Testimonials';
+import { LeadFormModal } from '@/components/LeadFormModal';
+import { PricingSection } from '@/components/PricingSection';
+import { NearbyAreasGrid } from '@/components/NearbyAreasGrid';
+import { siteConfig } from '@/data/site';
 
-interface Props {
-  service: Service;
-  hub: AreaHub;
-  content: ServiceLocationContent;
-  areaContent: AreaContent | undefined;
-}
 
-export function ServiceLocationClient({ service, hub, content, areaContent }: Props) {
-  const [modal, setModal] = useState(false);
+const serviceLocationContent: Record<string, {
+  intro: (city: string) => string[];
+  steps: (city: string) => string[];
+  whyPoints: (city: string) => string[];
+}> = {
+  'electric-sliding': {
+    intro: (city) => [
+      `Sliding gate projects in ${city} typically start with a physical constraint that rules out swing gates. A short approach that does not allow swing leaves to clear. A gradient that would cause swing gates to scrape or jam. An opening wide enough that swing leaf weight would overload the hinge posts. A sliding gate resolves all of these by travelling along the boundary rather than sweeping through an arc.`,
+      `Ground-track and cantilever are the two configurations installed across Hertfordshire. Ground-track is the standard on level or near-level sites. Cantilever systems suspend the gate above the surface and are specified where gradient, surface finish, or ground conditions make a track impractical. Your installer confirms which suits the ${city} site at the survey.`,
+    ],
+    steps: (city) => [
+      `Submit your ${city} postcode, approximate opening width, and available boundary space. We identify up to three sliding gate specialists covering ${city}.`,
+      `Each installer arranges a free site visit to measure the opening, assess run-back, check gradient, and confirm the right track configuration.`,
+      `You receive a written quote covering gate fabrication, track or cantilever foundation, motor, photocells, and any access control.`,
+      `If bespoke gates are being fabricated, workshop lead time is typically 2 to 4 weeks from confirmed order.`,
+      `On installation day, the track foundation is excavated and poured, and conduit is laid for motor and intercom cabling.`,
+      `Track is set and levelled, gate hung and adjusted, motor and rack fitted, and photocells wired to BS EN 12453.`,
+      `System commissioned. Travel limits calibrated, remotes programmed, app access configured, manual release demonstrated.`,
+    ],
+    whyPoints: (city) => [
+      `Sliding gate specialists covering ${city} have hands-on experience with the terrain and property types across this part of Hertfordshire.`,
+      `Every installation commissioned to BS EN 12453 with safety testing documented at handover.`,
+      `Free site survey and itemised written quote from each ${city} installer before any commitment.`,
+      `FAAC, BFT, CAME, and Nice motor systems stocked with established parts networks for long-term maintenance.`,
+    ],
+  },
+  'electric-swing': {
+    intro: (city) => [
+      `Swing gates are the most widely installed format on detached properties in ${city}. Paired leaves opening from a central point deliver a visual presence that other formats do not match. The motor technology is mature, the range of materials is broad, and the installer population capable of delivering reliable results is substantial.`,
+      `Motor type defines the entrance aesthetic. Underground motors, concealed below the post, are the standard specification on premium ${city} properties. Ram-arm motors mount on the rear face and are the practical choice on retrofits where post foundations prevent excavation. The installer assesses which fits your post condition and gate weight at the survey.`,
+    ],
+    steps: (city) => [
+      `Provide your ${city} details with gate type, opening width, and budget. We match you with up to three swing gate specialists.`,
+      `Each installer visits, measures the opening, walks the full swing arc, checks pillar condition, and recommends motor type.`,
+      `Written quotes cover gate fabrication, post foundations, motor, safety sensors, and access control.`,
+      `Where new gates are being fabricated, allow 2 to 5 weeks for manufacture.`,
+      `On site, post foundations are set, underground chambers excavated where specified, and conduit installed.`,
+      `Gates hung and aligned, motors fitted, photocells positioned for full coverage, all wiring completed.`,
+      `System programmed and tested to BS EN 12453. Limits set, devices paired, manual release demonstrated, commissioning record provided.`,
+    ],
+    whyPoints: (city) => [
+      `Swing gate installers covering ${city} understand the property types, driveway geometries, and planning context across this part of Hertfordshire.`,
+      `Underground and surface motor options with honest guidance on which suits your situation.`,
+      `BS EN 12453 commissioning documented on every installation.`,
+      `Separate written warranties for gate and automation from every ${city} installer in our network.`,
+    ],
+  },
+  'wooden-gates': {
+    intro: (city) => [
+      `Hardwood gates are a natural choice for many ${city} properties. The Chilterns AONB, the Green Belt villages, the conservation areas, and the stock of period houses and converted agricultural buildings across Hertfordshire all create contexts where timber is the material that sits most naturally. Where planning officers are involved, hardwood is typically the specification that generates least resistance.`,
+      `Fabrication is bespoke for the majority of timber gate projects in ${city}. Iroko is the default for most installations. European oak is chosen where the grain character is the design feature. Accoya, with its 50-year guarantee, is the specification where low maintenance is the firm priority.`,
+    ],
+    steps: (city) => [
+      `Submit your enquiry and we match you with hardwood gate specialists covering ${city} who have bespoke timber experience in this part of Hertfordshire.`,
+      `Your installer visits, discusses the design brief, shows timber samples, confirms automation needs, and measures the entrance.`,
+      `Fabrication drawings produced for approval. No timber ordered until the design is confirmed.`,
+      `Gates made in the workshop. Allow 3 to 5 weeks from confirmed order.`,
+      `Gates hung on galvanised or stainless ironmongery and the initial treatment coat applied on site.`,
+      `Automation fitted and commissioned to BS EN 12453 if included.`,
+      `Written maintenance schedule for the specified timber species handed over at completion.`,
+    ],
+    whyPoints: (city) => [
+      `Timber specialists covering ${city} understand the AONB, Green Belt, and conservation area planning context and advise on the right specification.`,
+      `Iroko, European oak, and Accoya all available with clear guidance on which suits your needs.`,
+      `Free site survey and approval drawings before any ${city} installer begins work.`,
+      `FSC-certified timber available from every fabricator in our network on request.`,
+    ],
+  },
+  'metal-gates': {
+    intro: (city) => [
+      `Metal gate work in ${city} ranges from bespoke wrought iron entrance treatments on established properties to contemporary aluminium sliding gates on modern builds. The specification decision that separates lasting installations from those needing attention within five years is the surface treatment: hot-dip galvanising before powder coating on every steel and iron gate, without exception.`,
+      `For ${city} properties on heavy clay soils, post foundation specification takes on particular importance. Clay swells with winter moisture and shrinks in dry summers, which can move posts and misalign gates. Installers in our ${city} network specify foundation depth and reinforcement for the actual soil type at your property.`,
+    ],
+    steps: (city) => [
+      `Submit your ${city} enquiry and we match you with metal gate fabricators covering your area and material preference.`,
+      `Your installer visits, reviews examples, discusses design, material, colour, and automation, and measures the opening.`,
+      `CAD drawings produced for approval. 3D renders available on complex projects.`,
+      `Gate fabricated, shot-blasted, hot-dip galvanised, and powder-coated. Allow 3 to 6 weeks from drawing sign-off.`,
+      `Gate hung on new or existing posts, with foundations assessed and upgraded where needed.`,
+      `Automation and access control installed, wired, and fully tested.`,
+      `Written handover covers gate warranty, automation warranty, and finish maintenance guidance.`,
+    ],
+    whyPoints: (city) => [
+      `Metal gate specialists covering ${city} specify hot-dip galvanising before powder coating as standard on all steel and iron.`,
+      `CAD drawings approved before fabrication starts so you see exactly what is being made.`,
+      `Free site survey and design consultation with each ${city} specialist, no commitment until drawings and quote are approved.`,
+      `Separate gate and automation warranties provided in writing by every ${city} installer.`,
+    ],
+  },
+  'automated-systems': {
+    intro: (city) => [
+      `Automation retrofits are among the highest-demand projects for installers covering ${city}. The brief is familiar: manual gates that are sound and suit the property, but the daily inconvenience of manual operation has become unacceptable. The retrofit adds motor and access control without replacing the gates.`,
+      `Access control often delivers the most practical value. Video intercom on a smartphone lets you manage the entrance from anywhere. Proximity readers open the gate as the car approaches. For ${city} homeowners with vehicle security concerns, a closed automated gate with recording and auto-close provides a real deterrent layer.`,
+    ],
+    steps: (city) => [
+      `Submit your ${city} enquiry. We match you with automation engineers who carry out retrofits regularly and stock the main motor brands.`,
+      `Your installer visits to assess gate weight, hinge condition, post alignment, and foundation depth, then recommends motor type.`,
+      `Motor and access control agreed in writing. Any structural work quoted and confirmed before automation equipment is ordered.`,
+      `Motors fitted, underground chambers excavated where specified, photocells and safety edges positioned, access control cabling completed.`,
+      `System commissioned to BS EN 12453 with force measurement, all access devices programmed and tested.`,
+      `Handover includes manual release demo, remote programming, app setup, and written declaration of conformity.`,
+    ],
+    whyPoints: (city) => [
+      `Automation engineers covering ${city} complete a structural assessment before specifying any motor.`,
+      `FAAC, BFT, CAME, Nice, and Beninca available with established Hertfordshire parts support.`,
+      `BS EN 12453 compliance documented at handover on every ${city} project.`,
+      `Video intercom, proximity readers, keypads, and smart home integration available on any ${city} retrofit.`,
+    ],
+  },
+  'gate-repair': {
+    intro: (city) => [
+      `Repair callouts in ${city} follow predictable patterns. Motor wear from poor lubrication. Board failure from moisture ingress. Photocell drift from frost or impact causing false stops. Hinge wear producing a dropping leaf the motor struggles to move. Most resolve in one visit when the engineer has the right parts.`,
+      `Motor brand matters for repair speed. FAAC, BFT, CAME, Nice, and Beninca all maintain UK parts supply for at least a decade after production ends. An engineer covering ${city} who stocks these brands resolves most faults first-visit. An obscure motor creates delays and higher costs. Annual servicing catches developing faults before they cause failures.`,
+    ],
+    steps: (city) => [
+      `Submit your ${city} repair enquiry. We connect you with gate engineers who stock parts for FAAC, BFT, CAME, Nice, and Beninca.`,
+      `The engineer runs a structured diagnostic covering motor, board, sensors, drive, hinges, and gate structure.`,
+      `Written fault explanation and repair quote provided before any work begins.`,
+      `If the fault can be fixed from van stock, the repair is completed immediately and the system tested.`,
+      `Where a part must be ordered, the gate is secured manually and a return visit scheduled. Lead times typically 1 to 5 days.`,
+      `After repair, all systems tested: motor limits, sensors, battery, and access devices.`,
+      `Written service report covering work completed, parts used, and any future recommendations provided.`,
+    ],
+    whyPoints: (city) => [
+      `Engineers covering ${city} target 24 to 48 hour attendance, same-day for gates stuck open.`,
+      `Written diagnosis and quote before any work starts on every ${city} callout.`,
+      `Van stock for FAAC, BFT, CAME, Nice, and Beninca. Majority of ${city} repairs completed first-visit.`,
+      `Annual service contracts available for scheduled maintenance.`,
+    ],
+  },
+};
 
-  const cityName    = hub.name;
-  const related     = services.filter(s => s.id !== service.id);
-  const nearbyCities = AREA_HUBS.filter(h => h.region === hub.region && h.slug !== hub.slug);
 
-  const serif = (size: number | string, extra?: React.CSSProperties) => ({
-    fontFamily: 'var(--font-cormorant), Georgia, serif',
-    fontSize: size,
-    fontStyle: 'italic' as const,
-    fontWeight: 400 as const,
-    color: 'var(--ink)',
-    lineHeight: 1.18,
-    ...extra,
-  });
+export default function ServiceLocationClient({ params }: { params: { serviceSlug: string; locationSlug: string } }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const service = getServiceBySlug(params.serviceSlug);
+  const cityName = getCityBySlug(params.locationSlug);
+  if (!service || !cityName) notFound();
+
+  const allCities = Object.values(LOCATIONS).flat();
+  const content = serviceLocationContent[service.id] || serviceLocationContent['electric-swing'];
+
+  // Prefer hand-written city-specific intro; fall back to templated content if not yet written
+  const cityIntroData = CITY_INTROS[params.locationSlug];
+  const cityIntroParagraphs = cityIntroData?.intros?.[service.slug as ServiceSlug];
+  const intro = cityIntroParagraphs && cityIntroParagraphs.length > 0
+    ? cityIntroParagraphs
+    : content.intro(cityName);
+
+  const steps = content.steps(cityName);
+  const whyPoints = content.whyPoints(cityName);
+
+  const benefits = [
+    { icon: <Award className="w-6 h-6" />, title: 'Minimum 50 Residential Installs', desc: `Every ${cityName} installer in our network specialises in gate installation and has a verified project history before receiving a single referral from us.` },
+    { icon: <Clock className="w-6 h-6" />, title: 'Site Survey Within the Week', desc: `Most installers covering ${cityName} can offer a free site survey slot within 7 days, with evening and Saturday appointments available.` },
+    { icon: <Shield className="w-6 h-6" />, title: 'Insured and Warranted', desc: `Public liability cover and written warranties on both the gate and the automation are required from every installer before we refer any ${cityName} enquiries.` },
+    { icon: <Users className="w-6 h-6" />, title: 'Matched to Your Gate Type', desc: `We connect you with ${cityName} installers who have specific experience with ${service.title.toLowerCase()}, not a general list of whoever is available.` },
+  ];
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${siteConfig.url}/services/${service.slug}/${params.locationSlug}/#service`,
+    name: `${service.title} in ${cityName}`,
+    serviceType: service.title,
+    url: `${siteConfig.url}/services/${service.slug}/${params.locationSlug}/`,
+    description: `Find vetted ${service.title.toLowerCase()} specialists in ${cityName}, Hertfordshire. Free site survey, written quotes, no obligation.`,
+    provider: { '@id': `${siteConfig.url}/#organization` },
+    areaServed: {
+      '@type': 'City',
+      name: cityName,
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Hertfordshire' },
+    },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'GBP',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'GBP',
+        description: `${service.title} installation quotes for homeowners in ${cityName}`,
+      },
+    },
+  };
 
   return (
     <>
-      <LeadFormModal isOpen={modal} onClose={() => setModal(false)} defaultService={service.title} defaultCity={cityName} />
-      <Header onOpenModal={() => setModal(true)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <Header onOpenModal={() => setIsModalOpen(true)} />
+      <main className="flex-grow">
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[
+            { label: 'Gate Types', href: '/services/' },
+            { label: service.title, href: `/services/${service.slug}/` },
+            { label: cityName }
+          ]} />
+        </div>
+        <HeritageHeroMoney
+          eyebrow={`${service.title} · ${cityName}`}
+          headline={<>{service.title} in <em>{cityName}.</em></>}
+          lede={`Hertfordshire ${service.title.toLowerCase()} specialists covering ${cityName}. Site survey at no charge, written quotes, no obligation to proceed.`}
+          image={service.image}
+          imageLabel={`${service.title}, ${cityName}`}
+          city={cityName}
+          service={service.title}
+        />
 
-      <main>
-        {/* ── Hero ──────────────────────────────────────────────── */}
-        <section className="hero-dark" style={{ minHeight: 380 }}>
-          <div className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url('${service.image}')`, opacity: 0.38 }} />
-          <div className="g-bot" />
-
-          <div className="relative z-10 container-width py-12 md:py-16 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-10 items-end">
-              <div>
-                <Breadcrumbs dark items={[
-                  { label: 'Services', href: '/services/' },
-                  { label: service.title, href: `/services/${service.slug}/` },
-                  { label: cityName },
-                ]} />
-
-                <div className="loc-pill mt-5 mb-4">
-                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand)', display: 'inline-block' }} />
-                  {service.title} specialists in {cityName}
+        <div className="container-width py-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {benefits.map((benefit, idx) => (
+              <div key={idx} className="flex items-start gap-4 p-5 bg-gray-50 rounded-xl border border-gray-100">
+                <div className="bg-brand-100 p-2 rounded-lg text-brand-600">{benefit.icon}</div>
+                <div>
+                  <h3 className="font-bold text-gray-900">{benefit.title}</h3>
+                  <p className="text-sm text-gray-600">{benefit.desc}</p>
                 </div>
+              </div>
+            ))}
+          </div>
 
-                <h1 style={{ ...serif('clamp(30px,4.5vw,52px)' as any, { color: '#fff', marginBottom: 14 }) }}>
-                  {content.heroHeading}
-                </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-2">
 
-                <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,0.65)', maxWidth: 480, lineHeight: 1.75, marginBottom: 18 }}>
-                  {content.heroParagraph}
-                </p>
+              <section className="mb-12">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
+                  {service.title} in {cityName}: What to Expect
+                </h2>
+                <div className="prose prose-gray max-w-none text-gray-600 space-y-4">
+                  {intro.map((p, i) => <p key={i}>{p}</p>)}
+                </div>
+              </section>
 
-                <div className="flex flex-col gap-2 mb-4">
-                  {content.heroBullets.map((b, i) => (
-                    <div key={i} className="flex items-center gap-2.5">
-                      <CheckCircle size={12} style={{ color: 'var(--brand)', flexShrink: 0 }} />
-                      <span style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: 12, fontWeight: 300, color: 'rgba(255,255,255,0.68)' }}>{b}</span>
+              <NearbyAreasGrid cityName={cityName} serviceSlug={service.slug} serviceName={service.title} />
+
+              <section className="mb-12">
+                <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">How {service.title} Installation Works in {cityName}</h2>
+                <div className="space-y-4">
+                  {steps.map((step, i) => (
+                    <div key={i} className="flex gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                      <div className="flex-shrink-0 w-8 h-8 bg-brand-500 text-white rounded-full flex items-center justify-center font-bold text-sm">{i + 1}</div>
+                      <p className="text-gray-700 font-medium pt-1">{step}</p>
                     </div>
                   ))}
                 </div>
+              </section>
 
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="flex gap-0.5">
-                    {[1,2,3,4,5].map(i => (
-                      <Star key={i} size={11} style={{ fill: 'var(--brand)', color: 'var(--brand)' }} />
-                    ))}
-                  </div>
-                  <span style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: 10, fontWeight: 300, color: 'rgba(255,255,255,0.38)' }}>
-                    Vetted {service.title.toLowerCase()} specialists across {cityName}
-                  </span>
+              <PricingSection cityName={cityName} serviceId={service.id} serviceName={service.title} />
+
+              <section className="mb-12">
+                <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">Why Get {service.title} in {cityName} Through Us?</h3>
+                <div className="space-y-3">
+                  {whyPoints.map((point, i) => (
+                    <div key={i} className="flex items-start gap-3 bg-brand-50 p-4 rounded-xl border border-brand-100">
+                      <CheckCircle className="w-5 h-5 text-brand-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-800 font-medium text-sm">{point}</span>
+                    </div>
+                  ))}
                 </div>
+              </section>
 
-                <button onClick={() => setModal(true)} className="btn-primary lg:hidden">
-                  Find my specialist
-                </button>
-              </div>
-
-              <div className="hidden lg:block">
-                <HeroLeadForm city={cityName} service={service.title} />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Mobile form */}
-        <div className="lg:hidden px-5 py-6" style={{ background: 'var(--parchment)', borderBottom: '0.5px solid var(--border)' }}>
-          <HeroLeadForm city={cityName} service={service.title} />
-        </div>
-
-        {/* ── Body ──────────────────────────────────────────────── */}
-        <div className="container-width py-14 md:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-10 lg:gap-14">
-
-            <div>
-              {/* Intro — area+service specific */}
-              <h2 style={serif('clamp(20px,2.5vw,28px)' as any, { marginBottom: 14 })}>{content.introH2}</h2>
-              <div className="space-y-4 mb-12">
-                {content.introParagraphs.map((p, i) => <p key={i} className="body-md">{p}</p>)}
-              </div>
-
-              {/* Area-specific insight */}
-              <h2 style={serif('clamp(20px,2.5vw,26px)' as any, { marginBottom: 14 })}>{content.areaSpecificH2}</h2>
-              <div className="pull-quote mb-12">
-                <p>{content.areaSpecificParagraph}</p>
-              </div>
-
-              {/* Who is it for */}
-              <h2 style={serif('clamp(20px,2.5vw,26px)' as any, { marginBottom: 14 })}>{content.whoIsItForH2}</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-12">
-                {content.whoIsItFor.map((p, i) => (
-                  <div key={i} className="flex items-start gap-3 card-parchment p-3.5 rounded-md">
-                    <CheckCircle size={13} style={{ color: 'var(--brand)', flexShrink: 0, marginTop: 1 }} />
-                    <span className="body-md">{p}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Process */}
-              <h2 style={serif('clamp(20px,2.5vw,26px)' as any, { marginBottom: 14 })}>{content.processH2}</h2>
-              <div className="space-y-3 mb-12">
-                {[
-                  `Free initial consultation to discuss your ${cityName} situation and objectives`,
-                  `Specialist matched to your service need and area profile within 24 hours`,
-                  `Detailed instructions gathered, draft prepared, and review arranged on your schedule`,
-                  `Final document signed, witnessed, and stored with guidance on periodic review`,
-                ].map((step, i) => (
-                  <div key={i} className="step-row">
-                    <span className="step-num">{i + 1}</span>
-                    <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: 13, fontWeight: 400, color: 'var(--ink)' }}>{step}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Area client profile */}
-              {areaContent?.clientProfile && (
+              {service.faqs.length > 0 && (
                 <div className="mb-12">
-                  <h2 style={serif('clamp(20px,2.5vw,26px)' as any, { marginBottom: 14 })}>
-                    {areaContent.clientProfile.heading}
-                  </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {areaContent.clientProfile.points.map((p, i) => (
-                      <div key={i} className="flex items-start gap-3 card-parchment p-3.5 rounded-md">
-                        <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--brand)', flexShrink: 0, marginTop: 7 }} />
-                        <span className="body-md">{p}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <FAQ faqs={service.faqs} title={`${service.title} in ${cityName}: Common Questions`} />
                 </div>
               )}
 
-              {/* Nearby areas */}
-              {nearbyCities.length > 0 && (
-                <div className="mb-12">
-                  <h2 style={serif('clamp(20px,2.5vw,26px)' as any, { marginBottom: 12 })}>
-                    {service.title} in nearby areas
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                    {nearbyCities.slice(0, 6).map(h => (
-                      <Link key={h.slug} href={`/services/${service.slug}/${h.slug}/`} className="card p-3 group"
-                        style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                        <MapPin size={10} style={{ color: 'var(--brand)', flexShrink: 0 }} />
-                        <span style={{ fontFamily: 'var(--font-cormorant), serif', fontSize: 14, color: 'var(--ink)', transition: 'color 0.12s' }}
-                          className="group-hover:text-brand-500">
-                          {h.name}
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {content.faqs.length > 0 && (
-                <FAQ faqs={content.faqs} title={`${service.title} in ${cityName} — common questions`} />
-              )}
+              <section className="mt-12 mb-12">
+                <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">What Homeowners Are Saying</h2>
+                <Testimonials limit={2} />
+              </section>
             </div>
 
-            {/* Sidebar */}
-            <aside>
-              <div className="lg:sticky" style={{ top: 28 }}>
-                <div className="sidebar-box">
-                  <h3 style={serif(20, { marginBottom: 6 })}>Get matched in {cityName}</h3>
-                  <p className="body-sm mb-4">
-                    Vetted {service.title.toLowerCase()} specialists covering {cityName}. Free, within 24 hours.
-                  </p>
-                  <button onClick={() => setModal(true)} className="btn-primary w-full justify-center">
-                    Find a specialist
-                  </button>
-                </div>
-
-                <div className="sidebar-box">
-                  <p className="eyebrow mb-2">Typical cost</p>
-                  <p style={serif(24, { marginBottom: 3 })}>£150 – £550</p>
-                  <p className="body-sm">Fixed-fee quote before work begins</p>
-                </div>
-
-                <div className="sidebar-box">
-                  <p className="eyebrow mb-3">Will writing in {cityName}</p>
-                  <Link href={`/location/${hub.slug}/`}
-                    style={{ fontFamily: 'var(--font-cormorant), serif', fontSize: 15, color: 'var(--stone)', textDecoration: 'none', lineHeight: 1.4, display: 'block', transition: 'color 0.12s' }}
-                    className="hover:text-brand-500">
-                    All estate planning services in {cityName} →
-                  </Link>
-                </div>
-
-                <div className="sidebar-box">
-                  <p className="eyebrow mb-3">Other services in {cityName}</p>
-                  <div className="space-y-2">
-                    {related.slice(0, 4).map(s => (
-                      <Link key={s.id} href={`/services/${s.slug}/${hub.slug}/`}
-                        className="block body-md" style={{ transition: 'color 0.12s' }}>
-                        {s.title} in {cityName}
-                      </Link>
+            <aside className="lg:col-span-1">
+              <div className="sticky top-28 space-y-8">
+                <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                  <h3 className="text-lg font-display font-bold text-gray-900 mb-4">Other Gate Types in {cityName}</h3>
+                  <ul className="space-y-2 mb-8">
+                    {services.filter(s => s.id !== service.id).map(s => (
+                      <li key={s.id}>
+                        <Link href={`/services/${s.slug}/${params.locationSlug}/`} className="block px-4 py-3 rounded-lg bg-gray-50 border border-gray-100 hover:border-brand-300 hover:bg-brand-50 text-gray-700 hover:text-brand-700 transition-all text-sm font-medium">
+                          {s.title} in {cityName}
+                        </Link>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
+                  <h3 className="text-lg font-display font-bold text-gray-900 mb-4">{service.title} Elsewhere in Hertfordshire</h3>
+                  <ul className="space-y-2">
+                    {allCities.filter(c => c !== cityName).slice(0, 5).map(city => {
+                      const slug = city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                      return (
+                        <li key={city}>
+                          <Link href={`/services/${service.slug}/${slug}/`} className="block px-4 py-3 rounded-lg bg-gray-50 border border-gray-100 hover:border-brand-300 hover:bg-brand-50 text-gray-700 hover:text-brand-700 transition-all text-sm font-medium">
+                            {service.title} in {city}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+                <div className="bg-brand-900 text-white p-6 rounded-2xl shadow-lg">
+                  <h3 className="text-lg font-display font-bold mb-3">From &pound;99/month</h3>
+                  <p className="text-brand-100 text-sm mb-4">0% finance available at most {cityName} installers. Spread the cost of {service.title.toLowerCase()} over 6 to 36 months with nothing to pay upfront.</p>
+                  <button onClick={() => setIsModalOpen(true)} className="block w-full bg-white text-brand-900 text-center font-bold py-3 px-6 rounded-xl hover:bg-brand-50 transition-colors text-sm">Get Free Quotes</button>
                 </div>
               </div>
             </aside>
           </div>
 
-          {/* Bottom CTA */}
-          <div style={{ background: 'var(--ink)', borderRadius: 8, padding: '40px 36px', textAlign: 'center', marginTop: 24 }}>
-            <h2 style={serif('clamp(22px,3vw,34px)' as any, { color: '#fff', marginBottom: 12 })}>
-              Get {service.title} advice in {cityName}
-            </h2>
-            <p className="body-lg mb-6 mx-auto" style={{ maxWidth: 560, color: 'rgba(255,255,255,0.55)' }}>
-              {content.ctaParagraph}
-            </p>
-            <button onClick={() => setModal(true)}
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color: 'var(--ink)', fontFamily: 'var(--font-inter), sans-serif', fontSize: 13, fontWeight: 500, padding: '13px 28px', borderRadius: 4, border: 'none', cursor: 'pointer' }}>
-              Get your free quotes
-            </button>
+          <div className="bg-brand-900 rounded-2xl p-8 md:p-12 text-center mt-12">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">Get {service.title} Quotes in {cityName}</h2>
+            <p className="text-brand-200 mb-8 max-w-2xl mx-auto">Submit your enquiry in under two minutes. We will match you with up to three vetted {cityName} installers for free site surveys, written quotes, and no obligation at any stage.</p>
+            <button onClick={() => setIsModalOpen(true)} className="bg-white text-brand-900 font-bold text-lg py-4 px-10 rounded-xl hover:bg-brand-50 transition-colors">Get Your Free Quotes</button>
           </div>
         </div>
       </main>
-
       <Footer />
     </>
   );
