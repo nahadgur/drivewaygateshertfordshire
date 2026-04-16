@@ -10,17 +10,17 @@ import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { siteConfig } from '@/data/site';
 
-// Update these to match your actual live service x location pages
+// Curated sidebar links to real Hertfordshire service x location pages
 const SIDEBAR_SERVICE_LINKS = [
-  { label: 'Electric Sliding Gates in St Albans', href: '/services/electric-sliding-gates/sevenoaks/' },
-  { label: 'Electric Swing Gates in Harpenden', href: '/services/electric-swing-gates/tunbridge-wells/' },
-  { label: 'Wooden Driveway Gates in Berkhamsted', href: '/services/wooden-driveway-gates/cranbrook/' },
-  { label: 'Metal Driveway Gates in Hertford', href: '/services/metal-driveway-gates/canterbury/' },
-  { label: 'Automated Gate Systems in Welwyn Garden City', href: '/services/automated-gate-systems/maidstone/' },
-  { label: 'Electric Sliding Gates in Watford', href: '/services/electric-sliding-gates/dartford/' },
-  { label: 'Electric Swing Gates in Radlett', href: '/services/electric-swing-gates/tonbridge/' },
-  { label: 'Gate Repair and Maintenance in Hitchin', href: '/services/gate-repair-and-maintenance/folkestone/' },
-  { label: 'Metal Driveway Gates in Ware', href: '/services/metal-driveway-gates/faversham/' },
+  { label: 'Electric Sliding Gates in St Albans', href: '/services/electric-sliding-gates/st-albans/' },
+  { label: 'Electric Swing Gates in Harpenden', href: '/services/electric-swing-gates/harpenden/' },
+  { label: 'Wooden Driveway Gates in Berkhamsted', href: '/services/wooden-driveway-gates/berkhamsted/' },
+  { label: 'Metal Driveway Gates in Hertford', href: '/services/metal-driveway-gates/hertford/' },
+  { label: 'Automated Gate Systems in Welwyn Garden City', href: '/services/automated-gate-systems/welwyn-garden-city/' },
+  { label: 'Electric Sliding Gates in Watford', href: '/services/electric-sliding-gates/watford/' },
+  { label: 'Electric Swing Gates in Radlett', href: '/services/electric-swing-gates/radlett/' },
+  { label: 'Gate Repair and Maintenance in Hitchin', href: '/services/gate-repair-and-maintenance/hitchin/' },
+  { label: 'Metal Driveway Gates in Ware', href: '/services/metal-driveway-gates/ware/' },
 ];
 
 function BlogCtaBanner({ onOpenModal }: { onOpenModal: () => void }) {
@@ -338,37 +338,6 @@ export default function BlogPostClient({ params }: { params: { slug: string } })
             </aside>
           </div>
         </div>
-
-        {/* Bottom related articles */}
-        {bottomRelated.length > 0 && (
-          <section className="section-padding bg-gray-50">
-            <div className="container-width">
-              <h2 className="text-2xl font-display font-bold text-gray-900 mb-8">More articles you might like</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {bottomRelated.map(a => (
-                  <Link
-                    key={a.slug}
-                    href={`/blog/${a.slug}/`}
-                    className="group flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:border-brand-200 transition-all"
-                  >
-                    <div className="relative h-40 overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={a.featuredImage} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent" />
-                      <span className="absolute top-3 left-3 px-2 py-0.5 bg-brand-500/90 text-white text-[9px] font-bold uppercase rounded-full">{a.category}</span>
-                    </div>
-                    <div className="p-5 flex-grow flex flex-col">
-                      <h3 className="text-base font-display font-bold text-gray-900 group-hover:text-brand-600 transition-colors mb-2 leading-snug">{a.title}</h3>
-                      <span className="text-brand-600 font-bold text-xs flex items-center gap-1 mt-auto pt-2">
-                        Read article <ArrowRight className="w-3 h-3" />
-                      </span>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
 
       </main>
       <Footer />

@@ -49,6 +49,7 @@ export function Header({ onOpenModal }: HeaderProps) {
             <Link href="/costs/" className="text-[13px] font-medium text-ink-soft hover:text-brass-deep transition-colors">Costs</Link>
             <Link href="/guides/" className="text-[13px] font-medium text-ink-soft hover:text-brass-deep transition-colors">Guides</Link>
             <Link href="/planning-permissions/" className="text-[13px] font-medium text-ink-soft hover:text-brass-deep transition-colors">Planning</Link>
+            <Link href="/blog/" className="text-[13px] font-medium text-ink-soft hover:text-brass-deep transition-colors">Blog</Link>
             <button onClick={onOpenModal} className="ml-2 btn-primary text-[12px] py-3 px-6">Request Quotes</button>
           </nav>
 
@@ -71,6 +72,7 @@ export function Header({ onOpenModal }: HeaderProps) {
             <Link href="/costs/" className="block py-3 text-base font-medium text-ink">Costs</Link>
             <Link href="/guides/" className="block py-3 text-base font-medium text-ink">Guides</Link>
             <Link href="/planning-permissions/" className="block py-3 text-base font-medium text-ink">Planning</Link>
+            <Link href="/blog/" className="block py-3 text-base font-medium text-ink">Blog</Link>
             <div className="pt-6">
               <button onClick={() => { onOpenModal?.(); setMobileOpen(false); }} className="block w-full btn-primary">Request Quotes</button>
             </div>
