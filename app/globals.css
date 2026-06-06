@@ -161,7 +161,11 @@
     font-family: 'Space Grotesk', sans-serif;
     margin-bottom: 4px;
   }
-  .form-heritage input::placeholder, .form-heritage select { color: rgba(245,237,224,0.4); }
+  .form-heritage input::placeholder { color: rgba(245,237,224,0.4); }
+  /* Faint placeholder look only while nothing is chosen; a selected gate type stays full cream */
+  .form-heritage select:required:invalid { color: rgba(245,237,224,0.4); }
+  /* The native dropdown menu renders on a white background, so force dark-on-white options for legibility */
+  .form-heritage option { color: var(--ink); background-color: #ffffff; }
   .form-heritage input:focus, .form-heritage select:focus, .form-heritage textarea:focus { outline: none; border-bottom-color: var(--brass); }
   .form-heritage button[type="submit"],
   .form-heritage .form-submit {
