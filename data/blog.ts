@@ -790,11 +790,44 @@ const article20: BlogArticle = {
 };
 
 
+const article21: BlogArticle = {
+  slug: 'power-to-a-gate-down-a-long-hertfordshire-farm-drive',
+  title: "Running Power to a Gate Down a Long Hertfordshire Farm Drive",
+  metaTitle: "Running Power to a Gate Down a Long Farm Drive Hertfordshire | Mains vs Solar",
+  metaDescription: "No mains at the gate down a long Hertfordshire farm track? Compare trenching a mains run, solar with battery, and low-voltage options for rural Green Belt plots.",
+  category: 'Automation',
+  publishDate: '2026-06-22',
+  featuredImage: '/images/gates/herts-grand-iron-gates-brick-piers-tree-lined-drive.png',
+  excerpt: "Rural Hertfordshire homes often sit a long way back from the lane, and getting reliable power to the gate is the question that decides the whole project. The three honest routes compared.",
+  content: [
+    { type: 'p', text: "Plenty of rural Hertfordshire homes sit a long way back from the lane. A farmhouse off a track near Ardeley, a converted barn outside Braughing, a smallholding up a private drive between Codicote and Kimpton: the house has power, but the spot where you actually want the gate is fifty, a hundred, sometimes two hundred metres away with nothing but hedge and verge in between. The gate hardware is the easy part. Getting reliable power to it is the question that decides the whole project." },
+    { type: 'p', text: "There are three honest routes, and the right one depends on the length of the run, the ground it crosses, and whether your plot carries a planning designation that limits what you can dig." },
+    { type: 'h2', text: "Trenching a mains spur to the gate" },
+    { type: 'p', text: "The most robust answer is a buried mains spur from the house consumer unit out to the gate, terminating in a small weatherproof enclosure with its own RCD. Armoured cable in a trench at the correct depth, ducted under the drive where vehicles cross, is the version most installers prefer because it gives the motor a steady supply and leaves headroom for an intercom, lighting, and a camera later." },
+    { type: 'p', text: "The catch is cost, and it scales with distance. A short hop is trivial. A 120 metre run across a paddock means a meaningful length of SWA cable, a trencher on hire, and reinstatement of any drive or hardstanding you cut through. Over long distances voltage drop becomes a genuine design factor, so the cable has to be sized up rather than run at the minimum gauge. None of this is exotic, but it is the line item that surprises people who priced the gate and motor first." },
+    { type: 'p', text: "Ground matters too. Much of rural Hertfordshire sits on clay, and a wet clay trench backfilled badly will move. Where the run crosses an established field boundary or mature trees, root protection and a sensible route planned around them save grief. If you are weighing trenching against the alternatives, the wider trade-offs sit alongside the rest of the [automated gate systems](/services/automated-gate-systems/) we cover, because the power method shapes which motor and accessories are realistic." },
+    { type: 'h2', text: "Solar with battery storage" },
+    { type: 'p', text: "Where the run is genuinely long, or where digging is awkward, a self-contained solar setup is often the better economic call. A panel on or beside the gate pillar charges a sealed battery, and the battery drives a low-current motor through its daily cycles. No trench, no cable, no reinstatement." },
+    { type: 'p', text: "Solar suits a gate that opens and closes a sensible number of times a day rather than one on a busy commercial yard. The sizing question is honest daylight and duty cycle, not headline panel wattage. A south-facing pillar with a clear sky line will keep a domestic gate running comfortably through a Hertfordshire winter if the battery is specified with the short, grey days of December in mind rather than a sunny brochure photograph. Shade from the hedgerow or a stand of trees is the usual thing that undermines a solar gate, so the panel position is worth getting right at survey rather than after." },
+    { type: 'p', text: "The honest limitation is appetite for power. Solar runs the motor well. Adding a power-hungry video intercom, floodlighting, and a heated lock to the same battery starts to stretch it, and that is the point where a mains spur quietly wins on capability even if it costs more to install." },
+    { type: 'h2', text: "Low-voltage and hybrid runs" },
+    { type: 'p', text: "Between the two sits a middle ground. A 24 volt motor fed from a transformer near the house can run further on a thinner cable than full mains, and some installs pair a modest solar panel with a trickle mains feed so the battery never runs flat in a dark spell. These hybrid arrangements are common on the longer Hertfordshire drives where neither pure mains nor pure solar is a clean fit, and they are worth raising at survey so the motor and controller are chosen to match from the start." },
+    { type: 'h2', text: "The planning angle on a rural drive" },
+    { type: 'p', text: "Power is not only an electrical question on a rural plot. Much of Hertfordshire's open countryside is Green Belt, and the western districts around Berkhamsted, Tring and Aldbury fall inside the Chilterns National Landscape, where permitted development rights are tighter." },
+    { type: 'p', text: "The gate itself usually sits within ordinary rules. Under the [national permitted development guidance for gates, fences and walls](https://www.planningportal.co.uk/permission/common-projects/fences-gates-and-garden-walls/planning-permission), a gate next to a highway used by vehicles must not exceed one metre in height without consent, while elsewhere on the boundary the threshold is two metres. Those rights can be removed by an Article 4 direction or a planning condition, which is exactly the sort of local variation that turns up across Hertfordshire's districts, so the height that is fine for a neighbour may not be fine for you." },
+    { type: 'p', text: "The trenching is where rural designations bite harder than people expect. In the Green Belt, the national framework treats most new development as inappropriate and protects the openness of the land, and [engineering operations are only acceptable where they preserve that openness](https://www.gov.uk/guidance/national-planning-policy-framework/13-protecting-green-belt-land). A buried cable run is not the kind of thing that lights up a planning office on its own, but a long trench combined with new hardstanding, pillars and lighting can tip a scheme into territory the local authority wants to look at. Before committing to a route, it is worth reading our notes on [planning permissions across Hertfordshire](/planning-permissions/), because the district you sit in changes the answer." },
+    { type: 'h2', text: "Working out your run" },
+    { type: 'p', text: "The decision comes down to a few measurements taken on site: the distance from a usable power source to the gate, the surface the cable would cross, the daily open-and-close count, and how much you want to power beyond the motor itself. A short run to a busy gate with intercom and cameras points to mains. A long run to a quiet domestic gate points to solar. The awkward middle, which is most rural Hertfordshire drives, usually lands on a hybrid that someone has actually sized rather than guessed." },
+    { type: 'p', text: "If you tell us the rough length of your drive, the ground it crosses, and whether your plot sits in the Green Belt or the Chilterns, [send the details through and we will match you to a local installer](/contact/) who fits power to long rural drives in this county rather than treating every gate as if it were ten metres from the house." }
+  ],
+};
+
 export const blogArticles: BlogArticle[] = [
   article1, article2, article3, article4, article5,
   article6, article7, article8, article9, article10,
   article11, article12, article13, article14, article15,
   article16, article17, article18, article19, article20,
+  article21,
 ];
 
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
