@@ -822,12 +822,58 @@ const article21: BlogArticle = {
   ],
 };
 
+const article22: BlogArticle = {
+  slug: 'gate-intercom-keypad-access-control-hertfordshire',
+  title: 'Gate Intercoms, Keypads and Access Control in Hertfordshire',
+  metaTitle: 'Gate Intercoms, Keypads and Access Control Hertfordshire | Entry Options Explained',
+  metaDescription: 'Video intercom, audio intercom, keypad, remote fob, smartphone app, and ANPR for an automated Hertfordshire driveway gate. How to choose, wired versus GSM, and pairing access control with security.',
+  category: 'Automation',
+  publishDate: '2026-06-23',
+  featuredImage: '/images/gates/herts-video-intercom-flush-mounted-pillar-detail.png',
+  excerpt: 'Once you have chosen a gate and a motor, the next decision is how people actually open it. Here is a plain guide to the entry options for a Hertfordshire driveway gate and how to choose for a family home.',
+  content: [
+    { type: 'p', text: 'Once you have settled on a gate and a motor, the next question is how people actually get through it. The access control is the part of the system you and your visitors touch every day, so it is worth thinking about properly rather than accepting whatever the installer fits as standard. A handset in the car is the bare minimum. A well-specified Hertfordshire installation usually combines two or three entry methods so that family, expected visitors, and delivery drivers each have a sensible way in without compromising the security the gate is there to provide.' },
+    { type: 'p', text: 'This guide runs through the common options, how they differ, and how to pick a combination that suits a family home rather than a commercial yard.' },
+    { type: 'h2', text: 'Remote fobs and handsets' },
+    { type: 'p', text: 'The remote handset is the workhorse of almost every domestic gate. It is reliable, needs no wiring beyond the receiver at the gate, and works the moment you are in range. Most homes keep one fob per car plus a spare by the door. The limitation is obvious: the fob only helps the people who carry one, so it does nothing for a visitor or a delivery driver who arrives when nobody is watching the drive. That is why fobs are usually paired with at least one other method rather than relied on alone.' },
+    { type: 'h2', text: 'Keypads and proximity readers' },
+    { type: 'p', text: 'A keypad lets anyone with the code open the gate, which is useful for family members without a fob, for cleaners or gardeners on a regular visit, and for older children. The practical weakness is that codes get shared and rarely get changed, so a keypad on its own slowly leaks access over time. Choosing a unit that supports multiple codes, and changing the one you hand to a contractor afterwards, keeps that in check. A proximity reader works on the same idea but uses a tag or card held near the reader instead of a typed code, which removes the shared-code problem at the cost of having to issue and track tags.' },
+    { type: 'h2', text: 'Audio and video intercoms' },
+    { type: 'p', text: 'An intercom is the method that deals with the unexpected caller. An audio intercom lets you speak to whoever is at the gate and release it from inside the house. A video intercom adds a camera so you can see who is there before you decide, which is the more security-relevant choice and the one most Hertfordshire homeowners prefer once they have compared the two. The camera also acts as a quiet deterrent and, on systems that record, as an evidence source if anything happens at the entrance.' },
+    { type: 'h2', text: 'Smartphone app control and ANPR' },
+    { type: 'p', text: 'Smartphone control connects the gate to your home network or a mobile signal so you can see callers and open the gate from your phone wherever you are. That is genuinely useful for letting in a delivery while you are out or checking the drive from work. The honest caveat is that anything connected to the internet needs a sensible password and the occasional firmware update, so treat it like any other connected device in the house. Automatic number plate recognition, where a camera reads a known vehicle plate and opens the gate without any action from the driver, is increasingly available on domestic systems and suits a household that wants hands-free entry for its own cars while keeping everyone else on the intercom.' },
+    { type: 'internal-link', href: '/blog/electric-gate-automation-retrofit-hertfordshire/', text: 'Adding Electric Automation to Existing Gates in Hertfordshire', context: 'Access control is usually specified alongside the motor, whether on a new gate or a retrofit to existing gates.' },
+    { type: 'internal-link', href: '/blog/driveway-gates-home-security-hertfordshire/', text: 'Driveway Gates and Home Security in Hertfordshire', context: 'A recording video intercom and auto-close are the access-control choices that add the most security value.' },
+    { type: 'h2', text: 'Wired versus GSM' },
+    { type: 'p', text: 'Many entry options come in two forms. A wired intercom runs a cable from the gate back to a handset inside the house, which is dependable and free of any monthly cost, but means getting a cable from the gate to the property. On a short suburban drive that is straightforward. On a long rural Hertfordshire drive it can be the awkward part of the job, much like getting power down the same route. A GSM intercom sidesteps the cable by using a mobile SIM to call your phone instead, so the gate can be a long way from the house with no answer panel indoors at all. The trade-offs are a small ongoing SIM cost and a dependence on a decent mobile signal at the gate, which is worth checking on site before you commit, particularly in the more rural parts of the county where coverage varies.' },
+    { type: 'h2', text: 'Choosing a sensible combination for a family home' },
+    { type: 'p', text: 'For most family homes a workable setup is fobs for the cars, a video intercom for callers, and one more convenience method such as a keypad or app control for the times a fob is not to hand. Keep the number of people who hold codes or tags small, enable auto-close so the gate is never left open by accident, and position the intercom and any reader where a driver can reach them without getting out of the car. The right mix depends on the property and how the household uses the entrance, which is exactly the sort of thing a good local installer will talk through at survey rather than fitting a one-size package.' },
+    { type: 'list', items: [
+      'Fobs for the household cars, with a spare kept by the door',
+      'A video intercom for unexpected callers, with recording where security matters',
+      'A keypad or app control as a backup for when a fob is not to hand',
+      'Auto-close enabled so the gate is never left open by accident',
+      'Wired entry on short drives, GSM where the gate is far from the house and the signal is good',
+    ]},
+    { type: 'p', text: 'Under the Health and Safety Executive guidance, a powered gate must be safe for everyone who uses or passes it, and the access control sits within that wider safety picture rather than apart from it.' },
+    { type: 'external-link', href: 'https://www.hse.gov.uk/work-equipment-machinery/powered-gates.htm', text: 'HSE guidance on powered gates and their safe operation', source: 'Health and Safety Executive', rel: 'noopener noreferrer' },
+    { type: 'external-link', href: 'https://www.gate-safe.org/', text: 'Gate Safe advice on specifying and maintaining automated gates safely', source: 'Gate Safe', rel: 'noopener noreferrer' },
+    { type: 'p', text: 'If you tell us how your household uses the drive and where the gate will sit, we can match you to a local installer who specifies access control to suit the property rather than fitting whatever comes in the box.' },
+    { type: 'cta' },
+    { type: 'related-articles', articles: [
+      { slug: 'electric-gate-automation-retrofit-hertfordshire', title: 'Adding Electric Automation to Existing Gates in Hertfordshire', category: 'Automation' },
+      { slug: 'driveway-gates-home-security-hertfordshire', title: 'Driveway Gates and Home Security in Hertfordshire: What Actually Works', category: 'Security' },
+      { slug: 'choosing-gate-installer-hertfordshire', title: 'How to Choose a Driveway Gate Installer in Hertfordshire', category: 'Buying Guide' },
+    ]},
+  ],
+};
+
 export const blogArticles: BlogArticle[] = [
   article1, article2, article3, article4, article5,
   article6, article7, article8, article9, article10,
   article11, article12, article13, article14, article15,
   article16, article17, article18, article19, article20,
-  article21,
+  article21, article22,
 ];
 
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
