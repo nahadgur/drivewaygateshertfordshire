@@ -856,11 +856,6 @@ const article22: BlogArticle = {
     { type: 'p', text: 'Under the [Health and Safety Executive guidance on powered gates](https://www.hse.gov.uk/work-equipment-machinery/powered-gates.htm), a powered gate must be safe for everyone who uses or passes it, and the access control sits within that wider safety picture rather than apart from it. The same point runs through the [Gate Safe advice on specifying and maintaining automated gates safely](https://www.gate-safe.org/), which treats entry choices as part of a system that has to be safe by design.' },
     { type: 'p', text: 'If you tell us how your household uses the drive and where the gate will sit, we can match you to a local installer who specifies access control to suit the property rather than fitting whatever comes in the box.' },
     { type: 'cta' },
-    { type: 'related-articles', articles: [
-      { slug: 'electric-gate-automation-retrofit-hertfordshire', title: 'Adding Electric Automation to Existing Gates in Hertfordshire', category: 'Automation' },
-      { slug: 'driveway-gates-home-security-hertfordshire', title: 'Driveway Gates and Home Security in Hertfordshire: What Actually Works', category: 'Security' },
-      { slug: 'choosing-gate-installer-hertfordshire', title: 'How to Choose a Driveway Gate Installer in Hertfordshire', category: 'Buying Guide' },
-    ]},
   ],
 };
 

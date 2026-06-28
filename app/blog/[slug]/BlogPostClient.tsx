@@ -224,15 +224,6 @@ export default function BlogPostClient({ params }: { params: { slug: string } })
     (b): b is Extract<ContentBlock, { type: 'external-link' }> => b.type === 'external-link'
   );
 
-  const bottomRelated = blogArticles
-    .filter(a => a.slug !== article.slug)
-    .sort((a, b) => {
-      if (a.category === article.category && b.category !== article.category) return -1;
-      if (b.category === article.category && a.category !== article.category) return 1;
-      return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
-    })
-    .slice(0, 3);
-
   const blogPostingSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
