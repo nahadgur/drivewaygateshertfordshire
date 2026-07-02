@@ -10,6 +10,9 @@ export interface BlogArticle {
   featuredImage: string;
   excerpt: string;
   content: ContentBlock[];
+  /** Draft posts are excluded from the published list, so they 404 in prod
+   * (and in `next dev`) and never appear in the sitemap or blog index. */
+  draft?: boolean;
 }
 
 export type ContentBlock =
@@ -859,13 +862,92 @@ const article22: BlogArticle = {
   ],
 };
 
+const article23: BlogArticle = {
+  slug: 'replacing-driveway-gates-conservation-area-listed-building-hertfordshire',
+  title: 'Replacing Driveway Gates in a Hertfordshire Conservation Area or Listed Building',
+  metaTitle: 'Conservation Area and Listed Building Gate Rules Hertfordshire | Consent Explained',
+  metaDescription: 'Replacing driveway gates in a St Albans conservation area or at a listed Hertfordshire property? When a like-for-like replica is fine, when consent is needed, and how to specify a gate a conservation officer will pass.',
+  category: 'Planning',
+  publishDate: '2026-07-02',
+  featuredImage: '/images/gates/herts-blacksmith-ironwork-finial-scroll-macro.png',
+  excerpt: 'A gate that is simply worn out can often be replaced like for like without a planning application, but the rules change sharply once the property is listed or sits in a conservation area. Here is how the two regimes differ across Hertfordshire and how to specify a replacement that gets signed off.',
+  content: [
+    { type: 'p', text: 'Replacing a tired driveway gate sounds like the simplest job on a period property, and on an ordinary house it usually is. Hertfordshire complicates that assumption more than almost any other county. St Albans District alone has nineteen conservation areas and more than eight hundred listed buildings, and similar designations run through Hertford, Harpenden, Berkhamsted, Hitchin and dozens of villages. Whether you can swap a gate over on a weekend or need to apply for consent first depends entirely on which of two overlapping regimes your property falls under, and the two are often confused.' },
+    { type: 'p', text: 'The distinction matters because getting it wrong is not a paperwork slip. Carrying out work to a listed building without consent, where consent was needed, is a criminal offence rather than a retrospective planning matter, so the safe order of events is always to establish the designation first and specify the gate second.' },
+    { type: 'h2', text: 'Conservation area or listed building? They are not the same thing' },
+    { type: 'p', text: 'A conservation area is a designated stretch of townscape or village whose character the council has a duty to preserve. It covers everything within a drawn boundary, so your property can sit inside one without being individually special. A listed building is a single named structure protected in its own right for its architectural or historic interest, and that protection extends to structures within its curtilage. A house can be in a conservation area, listed, both, or neither, and the answer changes what you are allowed to do at the boundary. The first job on any Hertfordshire period property is to confirm which designations apply before you approach the district council, since [planning permission across the county](/planning-permissions/) turns on exactly that mix of listing and conservation status.' },
+    { type: 'h2', text: 'Ordinary gates: the like-for-like replacement rule' },
+    { type: 'p', text: 'If your property is not listed and not affected by an Article 4 direction, replacing a gate is generally permitted development. Under the [national permitted development rules for gates, fences and walls](https://www.planningportal.co.uk/permission/common-projects/fences-gates-and-garden-walls/planning-permission), a gate next to a highway used by vehicles must not exceed one metre in height, while elsewhere on the boundary the limit is two metres. Replacing an existing gate with one of the same height and position sits comfortably inside those thresholds. Being inside a conservation area does not, on its own, remove that right for a straightforward gate replacement, which surprises a lot of homeowners who assume the designation blocks everything.' },
+    { type: 'p', text: 'What a conservation area can do is remove permitted development rights through an Article 4 direction. Where one is in force, work that would normally be automatic, including altering or taking down a boundary gate, needs an application. Article 4 directions are applied selectively rather than blanket across a whole town, so two neighbours a street apart can face different rules. This is the same district-by-district variation that runs through the Hertfordshire planning patchwork, and it is worth reading how the rules shift for [gates in the Chilterns AONB and Green Belt](/blog/driveway-gates-hertfordshire-aonb-chilterns-green-belt/) if your property also carries a landscape designation on top of the conservation area.' },
+    { type: 'h2', text: 'Listed buildings: repair beats replacement, and consent is separate' },
+    { type: 'p', text: 'Listed status changes the picture completely. Where a gate, gate pier or boundary wall is part of a listed building or falls within its curtilage, it is protected as if it were part of the house itself. Historic England is clear in its guidance on [altering the area around a listed home](https://historicengland.org.uk/advice/your-home/improvement/alter-area-around-house/) that original boundary features should be repaired rather than replaced wherever possible, because an old gate, its ironwork and its hinges carry the historic character that the listing exists to protect. A rusted hinge or a rotten bottom rail is usually a repair job, not grounds for a new gate.' },
+    { type: 'p', text: 'When replacement genuinely is unavoidable, it needs listed building consent, and that is a separate application from planning permission. The two are assessed on different tests: planning looks at the impact on the area, listed building consent looks at the effect on the special interest of the building. A gate at a listed Hertfordshire farmhouse or a Georgian townhouse in the St Albans conservation core will typically need a like-for-like design in matching material, often hand-forged ironwork copied from the surviving original or from photographs, before an officer will pass it.' },
+    { type: 'h2', text: 'What a conservation officer actually looks for' },
+    { type: 'p', text: 'Whether the case is a listed building consent application or a conservation area matter, the officer is judging the same handful of things. Getting these right at the specification stage is usually the difference between a quick approval and a refusal that sends you back to the drawing board.' },
+    { type: 'list', items: [
+      'Material honesty: hand-forged wrought iron or seasoned hardwood on a period property, not powder-coated aluminium made to imitate iron',
+      'Design continuity: a profile that matches the surviving original gate, or the documented historic pattern for the property, rather than an off-the-shelf catalogue design',
+      'Proportion: a gate whose height, width and bar spacing suit the piers and the entrance rather than overpowering them',
+      'Reversibility: fixings that can be removed later without damaging historic gate piers or a listed boundary wall',
+      'Finish: traditional paint or a natural oiled timber finish over bright modern coatings that read as suburban',
+    ]},
+    { type: 'p', text: 'This is where the wrong quote costs the most time. A general installer may price a modern automated aluminium set that would be fine on a new build and refused outright at a listed address. Specifying to the period from the outset is exactly the skill the West Hertfordshire market expects, and the same standards that run through the [premium St Albans and Harpenden belt](/blog/driveway-gates-west-hertfordshire-st-albans-harpenden/) apply directly to conservation and listed work. It is also why matching the [wooden gate specification](/services/wooden-driveway-gates/) to the property, rather than defaulting to a stock design, tends to be the sensible starting point on older Hertfordshire houses.' },
+    { type: 'h2', text: 'Adding automation to a period or listed gate' },
+    { type: 'p', text: 'Homeowners often want to keep a heritage look but add modern convenience. That is usually achievable, but it needs handling carefully on a protected property. Underground motors are frequently preferred in sensitive settings because the mechanism is hidden and the gate face stays uncluttered, which reads far better to a conservation officer than a visible ram arm bolted to a historic pier. On a listed building, any fixing into original fabric, cable trenching through a protected boundary, or a new intercom pillar can itself need consent, so automation should be part of the same conversation as the gate rather than an afterthought. The same [planning rules for driveway gates in Hertfordshire](/blog/planning-permission-driveway-gates-hertfordshire/) decide where the consent thresholds bite for the automation too.' },
+    { type: 'h2', text: 'How to approach a Hertfordshire district council' },
+    { type: 'p', text: 'Ten district and borough councils cover Hertfordshire, and each administers its own conservation areas and Article 4 directions. St Albans, East Herts, Dacorum and the others each publish their designation maps and take pre-application enquiries. A short pre-application conversation with the conservation team, ideally with a drawing of the proposed gate and a photograph of the original, will tell you whether consent is needed and what design will satisfy the officer before you commit to fabrication. It is far cheaper to adjust a drawing than to remove a gate that has already been made and fitted.' },
+    { type: 'p', text: 'If you are weighing up a replacement at a listed or conservation-area property in Hertfordshire, tell us the property type, the designation, and what survives of the existing gate, and we will match you to a local installer who works to conservation standards and knows the relevant district team rather than one who treats every entrance as a standard job.' },
+    { type: 'cta' },
+  ],
+  draft: true,
+};
+
+const article24: BlogArticle = {
+  slug: 'driveway-gate-planning-rules-hertfordshire-district-councils',
+  title: 'Do Driveway Gate Planning Rules Differ Across Hertfordshire\'s Ten District Councils?',
+  metaTitle: 'Driveway Gate Planning by Hertfordshire District Council | Article 4 Patchwork',
+  metaDescription: 'Hertfordshire has ten district and borough councils, each running its own conservation areas and Article 4 directions. Why the planning answer for driveway gates changes depending on which district you live in.',
+  category: 'Planning',
+  publishDate: '2026-07-02',
+  featuredImage: '/images/gates/herts-ornate-iron-entrance-pillars-lanterns-driveway.png',
+  excerpt: 'The national rule for driveway gates is the same everywhere, but the exceptions are set locally. Hertfordshire runs ten separate planning authorities, and which one covers your property can change whether you need consent at all.',
+  content: [
+    { type: 'p', text: 'Two identical houses, one in Berkhamsted and one in Broxbourne, can face completely different answers to the same question about a driveway gate. The gate is the same, the height is the same, the national rules are the same, and yet one owner can fit it over a weekend while the other needs a planning application first. The reason is that residential planning in Hertfordshire is not run by one authority. It is run by ten, and each sets its own local exceptions on top of the national baseline.' },
+    { type: 'p', text: 'Hertfordshire County Council does not decide whether you can put up a gate. That job sits with the district or borough council for your area, and there are ten of them: St Albans, East Hertfordshire, Dacorum, Three Rivers, Welwyn Hatfield, Broxbourne, Hertsmere, North Hertfordshire, Stevenage and Watford. Each publishes its own conservation area boundaries, its own Article 4 directions and its own local plan policies on boundary treatments. The national permitted development rules give you a shared starting point, but the district is where the exceptions live.' },
+    { type: 'h2', text: 'The national baseline every district shares' },
+    { type: 'p', text: 'Before the local variation kicks in, there is a common rule that applies across the whole county. Under the [national permitted development rules for gates, fences and walls](https://www.planningportal.co.uk/permission/common-projects/fences-gates-and-garden-walls/planning-permission), a gate next to a highway used by vehicles must not exceed one metre in height, while elsewhere on the boundary the limit is two metres. Stay inside those thresholds on an ordinary, undesignated property and you generally do not need to apply, whichever of the ten districts you sit in.' },
+    { type: 'p', text: 'That baseline is genuinely uniform. Watford applies the same one and two metre figures as North Hertfordshire, and neither can lower them at will for a standard property. When [planning permission for driveway gates in Hertfordshire](/blog/planning-permission-driveway-gates-hertfordshire/) is actually triggered, the reasons the answer moves off that shared baseline are almost always local rather than county-wide.' },
+    { type: 'h2', text: 'Where districts diverge: the Article 4 direction' },
+    { type: 'p', text: 'The main tool a district uses to change the rules is the Article 4 direction. This is a formal step that removes a permitted development right in a defined area, so work that would normally be automatic instead needs a planning application. The government\'s own [guidance on when planning permission is required](https://www.gov.uk/guidance/when-is-permission-required) confirms that permitted development rights can be withdrawn this way, and boundary treatments including gates are a common target because they shape the street scene the designation exists to protect.' },
+    { type: 'p', text: 'The important thing for a Hertfordshire homeowner is that Article 4 directions are made district by district and street by street, not county-wide. St Albans City and District Council, for example, operates specific Article 4 directions within its conservation areas, including a long-standing one covering the Verulam and Fishpool Street area of the historic city. A neighbouring district may have none on a comparable street. Two properties a short drive apart, under two different councils, can therefore sit either side of that line, which is exactly why a blanket answer for the whole county is unsafe.' },
+    { type: 'h2', text: 'Conservation area density varies sharply by district' },
+    { type: 'p', text: 'The ten districts are also very unevenly weighted for conservation area coverage, and that shapes how likely you are to run into a local restriction in the first place. St Albans District carries nineteen conservation areas and more than eight hundred listed buildings, a concentration that puts a large share of its period housing stock under closer scrutiny. Dacorum, which stretches north from the edge of Watford up into the Chiltern Hills, runs around twenty-five conservation areas of its own. A largely post-war district has far fewer.' },
+    { type: 'p', text: 'Being inside a conservation area does not, by itself, stop a simple like-for-like gate replacement, but it does raise the bar on design and it is the setting where an Article 4 direction is most likely to apply. Where a property is also listed, or a gate or pier forms part of a listed structure, the position changes again and separate consent is involved. This is why [gate designs for older houses and period properties](/blog/driveway-gate-ideas-for-older-houses-and-period-properties/) in these districts are chosen with the heritage character in mind rather than defaulting to an off-the-shelf specification.' },
+    { type: 'h2', text: 'The landscape designations sit on top of the district map' },
+    { type: 'p', text: 'A second layer complicates the district picture further. Parts of western Hertfordshire, principally in Dacorum and Three Rivers, fall within the Chilterns National Landscape, and a broad swathe of the south of the county is Metropolitan Green Belt. These designations do not replace the district planning authority, they sit on top of it, so a property in the Chilterns is still administered by Dacorum but with an extra layer of landscape sensitivity applied. On a rural boundary that overlay is what shapes the material and design choices for [driveway gates in the Hertfordshire AONB and Green Belt](/blog/driveway-gates-hertfordshire-aonb-chilterns-green-belt/), and it means a homeowner in Berkhamsted may be weighing a district rule and a landscape rule at the same time.' },
+    { type: 'h2', text: 'How to find the answer for your own address' },
+    { type: 'p', text: 'The practical route through all of this is short. First, identify which of the ten districts covers your address, because that is the authority you deal with. Second, check whether your property sits in a conservation area, is listed, or is affected by an Article 4 direction, all of which each council publishes on its own designation maps. Third, where there is any doubt, use the pre-application service the districts run: a short conversation with the planning team, ideally with a drawing and a photograph of the existing entrance, will tell you whether consent is needed before you order anything.' },
+    { type: 'list', items: [
+      'Confirm the district: St Albans, East Hertfordshire, Dacorum, Three Rivers, Welwyn Hatfield, Broxbourne, Hertsmere, North Hertfordshire, Stevenage or Watford',
+      'Check the council\'s conservation area and Article 4 maps for your street specifically, not just your town',
+      'Establish whether the property is listed, which triggers a separate consent regardless of gate height',
+      'Note any landscape designation such as the Chilterns National Landscape or Green Belt that overlays the district rule',
+      'Use the district\'s pre-application service where the answer is not obvious, before committing to a specification',
+    ]},
+    { type: 'p', text: 'This is also where the choice of installer matters more than most people expect. An installer who works across the county knows that a design which passes without comment in one district can draw a refusal in another, and will steer the specification, particularly on a period property, toward something a conservation officer will accept. Matching the gate to the setting is the same discipline that runs through a well-specified [wooden driveway gate](/services/wooden-driveway-gates/) on an older Hertfordshire house, where the material and profile are chosen for the location rather than pulled from a standard catalogue.' },
+    { type: 'p', text: 'If you tell us your address and what you are planning at the entrance, we can point you to the district that governs it and match you to a local installer who already works with that council rather than one guessing at a county-wide rule that does not exist. Having the county-wide [planning permissions](/planning-permissions/) position clear in your head first makes that first conversation with the district a good deal shorter.' },
+    { type: 'cta' },
+  ],
+  draft: true,
+};
+
 export const blogArticles: BlogArticle[] = [
   article1, article2, article3, article4, article5,
   article6, article7, article8, article9, article10,
   article11, article12, article13, article14, article15,
   article16, article17, article18, article19, article20,
-  article21, article22,
-];
+  article21, article22, article23, article24,
+].filter(a => !a.draft);
 
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
   return blogArticles.find(a => a.slug === slug);
