@@ -63,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/planning-permissions/`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/how-we-match-you/`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/contact/`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/privacy/`, lastModified: new Date('2026-07-16'), changeFrequency: 'yearly', priority: 0.3 },
     { url: `${base}/join-our-network/`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
   ];
 

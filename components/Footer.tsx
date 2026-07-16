@@ -70,6 +70,7 @@ export function Footer() {
             <Link href="/planning-permissions/" className="hover:text-brass transition-colors">Planning</Link>
             <Link href="/blog/" className="hover:text-brass transition-colors">Blog</Link>
             <Link href="/contact/" className="hover:text-brass transition-colors">Contact</Link>
+            <Link href="/privacy/" className="hover:text-brass transition-colors">Privacy</Link>
             <Link href="/join-our-network/" className="hover:text-brass transition-colors">For Installers</Link>
           </div>
         </div>
