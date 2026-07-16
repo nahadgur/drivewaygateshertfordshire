@@ -1,8 +1,8 @@
 // app/layout.tsx
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import './globals.css';
 import { siteConfig } from '@/data/site';
+import { ConsentBanner } from '@/components/ConsentBanner';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -66,14 +66,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       </head>
       <body className="min-h-screen flex flex-col">
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-G446QSQFQT" strategy="afterInteractive" />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-G446QSQFQT');`}
-        </Script>
+        {/* GA4 is loaded inside ConsentBanner only after the visitor opts in (UK PECR) */}
         {children}
+        <ConsentBanner />
       </body>
     </html>
   );
