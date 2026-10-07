@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: siteConfig.name,
-    alternateName: siteConfig.tagline,
+    alternateName: ['DrivewayGatesHertfordshire'],
     url: siteConfig.url,
   };
 
